@@ -2032,7 +2032,7 @@ out:
 int
 nvidia_ioctl(
     struct inode *inode,
-    struct file *file,
+    struct file *file,  //内核中用inode结构表示具体的文件，而用file结构表示打开的文件描述符
     unsigned int cmd,
     unsigned long i_arg)
 {
