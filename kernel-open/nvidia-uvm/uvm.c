@@ -38,6 +38,23 @@
 
 #define NVIDIA_UVM_DEVICE_NAME          "nvidia-uvm"
 
+
+// allow an easy way to convert all debug printfs related to events
+// back and forth between 'info' and 'errors'
+#if defined(NV_DBG_EVENTS)
+#define NV_DBG_EVENTINFO NV_DBG_ERRORS
+#else
+#define NV_DBG_EVENTINFO NV_DBG_INFO
+#endif
+
+#if defined(HDA_MAX_CODECS)
+#define NV_HDA_MAX_CODECS HDA_MAX_CODECS
+#else
+#define NV_HDA_MAX_CODECS 8
+#endif
+
+
+
 static dev_t g_uvm_base_dev;
 static struct cdev g_uvm_cdev;
 
@@ -767,6 +784,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
 
     // When the VA space is associated with an mm, all vmas under the VA space
     // must come from that mm.
+    // 当虚拟地址空间VA可以和一个memory map联系上的时候，虚拟地址空间下的所有地址都必须来自于mm
     if (uvm_va_space_mm_enabled(va_space)) {
         UVM_ASSERT(va_space->va_space_mm.mm);
         if (va_space->va_space_mm.mm != current->mm)
@@ -776,6 +794,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     // UVM mappings are required to set offset == VA. This simplifies things
     // since we don't have to worry about address aliasing (except for fork,
     // handled separately) and it makes unmap_mapping_range simpler.
+    // UVM的映射需要设置偏移量为VA 
     if (vma->vm_start != (vma->vm_pgoff << PAGE_SHIFT)) {
         UVM_DBG_PRINT_RL("vm_start 0x%lx != vm_pgoff 0x%lx\n", vma->vm_start, vma->vm_pgoff << PAGE_SHIFT);
         return -EINVAL;
@@ -784,6 +803,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     // Enforce shared read/writable mappings so we get all fault callbacks
     // without the kernel doing COW behind our backs. The user can still call
     // mprotect to change protections, but that will only hurt user space.
+    // 强行执行共享的读/写映射，这样可以得到所有的故障回调。
     if ((vma->vm_flags & (VM_SHARED|VM_READ|VM_WRITE)) !=
                          (VM_SHARED|VM_READ|VM_WRITE)) {
         UVM_DBG_PRINT_RL("User requested non-shared or non-writable mapping\n");
@@ -795,6 +815,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     // map operation succeeded via an ioctl() call.  This is necessary to
     // safely handle MAP_FIXED, which needs to complete atomically to prevent
     // the loss of the virtual address range.
+    // 如果无法获取PM锁，则禁用VMA并且向调用者报告成功。
     if (!uvm_down_read_trylock(&g_uvm_global.pm.lock)) {
         uvm_disable_vma(vma);
         return 0;
@@ -803,6 +824,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     uvm_record_lock_mmap_lock_write(current->mm);
 
     // VM_MIXEDMAP      Required to use vm_insert_page
+    //					需要使用vm_insert_page
     //
     // VM_DONTEXPAND    mremap can grow a vma in place without giving us any
     //                  callback. We need to prevent this so our ranges stay
@@ -810,7 +832,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     //                  mremap from moving the mapping elsewhere, nor from
     //                  shrinking it. We can detect both of those cases however
     //                  with vm_ops->open() and vm_ops->close() callbacks.
-    //
+    //			
     // Using VM_DONTCOPY would be nice, but madvise(MADV_DOFORK) can reset that
     // so we have to handle vm_open on fork anyway. We could disable MADV_DOFORK
     // with VM_IO, but that causes other mapping issues.
@@ -819,6 +841,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     vma->vm_ops = &uvm_vm_ops_managed;
 
     // This identity assignment is needed so uvm_vm_open can find its parent vma
+    // 需要进行此标识分配，以便uvm_vm_open可以找到其父vma
     vma->vm_private_data = uvm_vma_wrapper_alloc(vma);
     if (!vma->vm_private_data) {
         ret = -ENOMEM;
@@ -830,6 +853,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
     // this va_space from being modified by the GPU fault path or from the ioctl
     // path where we don't have this mm for sure, so we have to lock the VA
     // space directly.
+    // 内核在写模式下采取了mmap_lock,直接锁定VA空间
     uvm_va_space_down_write(va_space);
 
     // uvm_va_range_create_mmap will catch collisions. Below are some example
@@ -843,6 +867,7 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
         // If the mmap is for a semaphore pool, the VA range will have been
         // allocated by a previous ioctl, and the mmap just creates the CPU
         // mapping.
+        // 如果mmap用于信号量池，则VA范围将由先前的ioctl分配，并且mmap只能创建cpu映射。
         va_range = uvm_va_range_find(va_space, vma->vm_start);
         if (va_range && va_range->node.start == vma->vm_start &&
                 va_range->node.end + 1 == vma->vm_end &&
@@ -876,7 +901,7 @@ out:
 
 static int uvm_mmap_entry(struct file *filp, struct vm_area_struct *vma)
 {
-   UVM_ENTRY_RET(uvm_mmap(filp, vma));
+   UVM_ENTRY_RET(uvm_mmap(filp, vma)); //UVM_ENTRY_RET为非void函数的包装器。
 }
 
 static NV_STATUS uvm_api_initialize(UVM_INITIALIZE_PARAMS *params, struct file *filp)

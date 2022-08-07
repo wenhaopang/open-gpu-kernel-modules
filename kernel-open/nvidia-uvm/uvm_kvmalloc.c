@@ -27,6 +27,22 @@
 #include "uvm_kvmalloc.h"
 #include "uvm_rb_tree.h"
 
+
+// allow an easy way to convert all debug printfs related to events
+// back and forth between 'info' and 'errors'
+#if defined(NV_DBG_EVENTS)
+#define NV_DBG_EVENTINFO NV_DBG_ERRORS
+#else
+#define NV_DBG_EVENTINFO NV_DBG_INFO
+#endif
+
+#if defined(HDA_MAX_CODECS)
+#define NV_HDA_MAX_CODECS HDA_MAX_CODECS
+#else
+#define NV_HDA_MAX_CODECS 8
+#endif
+
+
 // To implement realloc for vmalloc-based allocations we need to track the size
 // of the original allocation. We can do that by allocating a header along with
 // the allocation itself. Since vmalloc is only used for relatively large
@@ -279,6 +295,8 @@ void *__uvm_kvmalloc(size_t size, const char *file, int line, const char *functi
 {
     void *p = alloc_internal(size, false);
 
+	nv_printf(NV_DBG_INFO, "running __uvm_kvmalloc successfully 202208\n");
+	printk(KERN_ERR  "202208_06\n");
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
 
@@ -289,6 +307,9 @@ void *__uvm_kvmalloc_zero(size_t size, const char *file, int line, const char *f
 {
     void *p = alloc_internal(size, true);
 
+	nv_printf(NV_DBG_INFO, "running __uvm_kvmalloc_zero successfully 202208\n");
+	printk(KERN_ERR  "202208_06\n");
+	
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
 
@@ -300,6 +321,9 @@ void uvm_kvfree(void *p)
     if (!p)
         return;
 
+	nv_printf(NV_DBG_INFO, "running uvm_kvfree successfully 202208\n");
+	printk(KERN_ERR  "202208_06\n");
+	
     if (uvm_leak_checker)
         alloc_tracking_remove(p);
 
@@ -314,6 +338,9 @@ static void *realloc_from_kmalloc(void *p, size_t new_size)
 {
     void *new_p;
 
+	nv_printf(NV_DBG_INFO, "running realloc_from_kmalloc successfully 202208\n");
+	printk(KERN_ERR  "202208_06\n");
+	
     // Simple case: kmalloc -> kmalloc
     if (new_size <= UVM_KMALLOC_THRESHOLD)
         return krealloc(p, new_size, NV_UVM_GFP_FLAGS);
@@ -333,6 +360,9 @@ static void *realloc_from_vmalloc(void *p, size_t new_size)
     uvm_vmalloc_hdr_t *old_hdr = get_hdr(p);
     void *new_p;
 
+	nv_printf(NV_DBG_INFO, "running realloc_from_vmalloc successfully 202208\n");
+	printk(KERN_ERR  "202208_06\n");
+	
     if (new_size == 0) {
         vfree(old_hdr);
         return ZERO_SIZE_PTR; // What krealloc returns for this case
