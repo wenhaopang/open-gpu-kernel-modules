@@ -108,6 +108,9 @@ MODULE_PARM_DESC(uvm_leak_checker,
 
 NV_STATUS uvm_kvmalloc_init(void)
 {
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
     if (uvm_leak_checker >= UVM_KVMALLOC_LEAK_CHECK_ORIGIN) {
         spin_lock_init(&g_uvm_leak_checker.lock);
         uvm_rb_tree_init(&g_uvm_leak_checker.allocation_info);
@@ -125,6 +128,10 @@ void uvm_kvmalloc_exit(void)
 {
     if (!g_malloc_initialized)
         return;
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
 
     if (atomic_long_read(&g_uvm_leak_checker.bytes_allocated) > 0) {
         printk(KERN_ERR NVIDIA_UVM_PRETTY_PRINTING_PREFIX "!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
@@ -172,6 +179,10 @@ static void insert_info(uvm_kvmalloc_info_t *info)
     NV_STATUS status;
     unsigned long irq_flags;
 
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
     spin_lock_irqsave(&g_uvm_leak_checker.lock, irq_flags);
     status = uvm_rb_tree_insert(&g_uvm_leak_checker.allocation_info, &info->node);
     spin_unlock_irqrestore(&g_uvm_leak_checker.lock, irq_flags);
@@ -185,6 +196,10 @@ static uvm_kvmalloc_info_t *remove_info(void *p)
     uvm_rb_tree_node_t *node;
     uvm_kvmalloc_info_t *info = NULL;
     unsigned long irq_flags;
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
 
     spin_lock_irqsave(&g_uvm_leak_checker.lock, irq_flags);
     node = uvm_rb_tree_find(&g_uvm_leak_checker.allocation_info, (NvU64)p);
@@ -209,6 +224,9 @@ static void alloc_tracking_add(void *p, const char *file, int line, const char *
     // to ksize), and uvm_kvfree only knows about uvm_kvsize
     size_t size = uvm_kvsize(p);
     uvm_kvmalloc_info_t *info;
+	
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
 
     UVM_ASSERT(g_malloc_initialized);
 
@@ -239,6 +257,10 @@ static void alloc_tracking_remove(void *p)
     size_t size = uvm_kvsize(p);
     uvm_kvmalloc_info_t *info;
 
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
     UVM_ASSERT(g_malloc_initialized);
 
     if (ZERO_OR_NULL_PTR(p))
@@ -255,6 +277,11 @@ static void alloc_tracking_remove(void *p)
 
 static uvm_vmalloc_hdr_t *get_hdr(void *p)
 {
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
     uvm_vmalloc_hdr_t *hdr;
     UVM_ASSERT(is_vmalloc_addr(p));
     hdr = container_of(p, uvm_vmalloc_hdr_t, ptr);
@@ -265,6 +292,10 @@ static uvm_vmalloc_hdr_t *get_hdr(void *p)
 static void *alloc_internal(size_t size, bool zero_memory)
 {
     uvm_vmalloc_hdr_t *hdr;
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
 
     // Make sure that the allocation pointer is suitably-aligned for a natively-
     // sized allocation.
@@ -296,7 +327,14 @@ void *__uvm_kvmalloc(size_t size, const char *file, int line, const char *functi
     void *p = alloc_internal(size, false);
 
 	nv_printf(NV_DBG_INFO, "running __uvm_kvmalloc successfully 202208\n");
-	printk(KERN_EMERG  "202208_06\n");
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
+
+
+	
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
 
@@ -308,7 +346,13 @@ void *__uvm_kvmalloc_zero(size_t size, const char *file, int line, const char *f
     void *p = alloc_internal(size, true);
 
 	nv_printf(NV_DBG_INFO, "running __uvm_kvmalloc_zero successfully 202208\n");
-	printk(KERN_EMERG  "202208_06\n");
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
+
+
 	
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
@@ -322,7 +366,15 @@ void uvm_kvfree(void *p)
         return;
 
 	nv_printf(NV_DBG_INFO, "running uvm_kvfree successfully 202208\n");
-	printk(KERN_EMERG  "202208_06\n");
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
+
+
+
+
 	
     if (uvm_leak_checker)
         alloc_tracking_remove(p);
@@ -339,7 +391,14 @@ static void *realloc_from_kmalloc(void *p, size_t new_size)
     void *new_p;
 
 	nv_printf(NV_DBG_INFO, "running realloc_from_kmalloc successfully 202208\n");
-	printk(KERN_EMERG  "202208_06\n");
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
+
+
+
 	
     // Simple case: kmalloc -> kmalloc
     if (new_size <= UVM_KMALLOC_THRESHOLD)
@@ -361,7 +420,10 @@ static void *realloc_from_vmalloc(void *p, size_t new_size)
     void *new_p;
 
 	nv_printf(NV_DBG_INFO, "running realloc_from_vmalloc successfully 202208\n");
-	printk(KERN_EMERG  "202208_06\n");
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
 	
     if (new_size == 0) {
         vfree(old_hdr);
@@ -387,6 +449,10 @@ void *__uvm_kvrealloc(void *p, size_t new_size, const char *file, int line, cons
     void *new_p;
     uvm_kvmalloc_info_t *info = NULL;
     size_t old_size;
+
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
 
     if (ZERO_OR_NULL_PTR(p))
         return __uvm_kvmalloc(new_size, file, line, function);
@@ -434,6 +500,10 @@ void *__uvm_kvrealloc(void *p, size_t new_size, const char *file, int line, cons
 
 size_t uvm_kvsize(void *p)
 {
+	printk(KERN_ALERT  "202208_09\n");
+	printk(KERN_DEBUG   "202208_09\n");
+
+
     UVM_ASSERT(g_malloc_initialized);
     UVM_ASSERT(p);
     if (is_vmalloc_addr(p))
