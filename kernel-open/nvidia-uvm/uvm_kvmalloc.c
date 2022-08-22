@@ -62,22 +62,26 @@ typedef enum
 // This is used just to make sure that the APIs aren't used outside of
 // uvm_kvmalloc_init/uvm_kvmalloc_exit. The memory allocation would still work
 // fine, but the leak checker would get confused.
+// 确保API不在uvm_kvmalloc_init/uvm_kvmalloc_exit之外使用，内存分配仍可以正常工作。
 static bool g_malloc_initialized = false;
 
 static struct
 {
-    // Current outstanding bytes allocated
+    // Current outstanding bytes allocated当前分配的未完成字节
     atomic_long_t bytes_allocated;
 
     // Number of allocations made which failed their info allocations. Used just
     // for sanity checks.
+    // 信息分配失败的分配数，仅用于完整性检查。
     atomic_long_t untracked_allocations;
 
     // Use a raw spinlock rather than a uvm_spinlock_t because the kvmalloc
     // layer is initialized and torn down before the thread context layer.
+    // 因为kvmalloc在线程上下文之前被初始化和拆除。
     spinlock_t lock;
 
     // Table of all outstanding allocations
+    // 所有未分配完成的表
     uvm_rb_tree_t allocation_info;
 
     struct kmem_cache *info_cache;
