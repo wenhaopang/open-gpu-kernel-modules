@@ -32,6 +32,10 @@
 // the allocation itself. Since vmalloc is only used for relatively large
 // allocations, this overhead is very small.
 //
+//要为基于vmalloc的分配实现realloc，需要追踪原始分配的大小。
+//可以通过分配标头以及分配本身来做到这一点。
+//由于vmalloc仅用于相对较大的分配，因此这种开销非常小。
+
 // We don't need this for kmalloc since we can use ksize().
 typedef struct
 {
@@ -256,6 +260,7 @@ static void *alloc_internal(size_t size, bool zero_memory)
 
     // Make sure that the allocation pointer is suitably-aligned for a natively-
     // sized allocation.
+    // 确保分配指针与本机大小的分配适当对齐。
     BUILD_BUG_ON(offsetof(uvm_vmalloc_hdr_t, ptr) != sizeof(void *));
 
     // Make sure that (sizeof(hdr) + size) is what it should be
