@@ -1,1239 +1,1269 @@
-[109777.841087] alloc_internal被调用次数 15222 
-[109777.841093] __uvm_kvmalloc_zero被调用次数 12533 
-[109777.841099] alloc_internal被调用次数 15223 
-[109777.841101] __uvm_kvmalloc_zero被调用次数 12534 
-[109777.841103] alloc_internal被调用次数 15224 
-[109777.841104] __uvm_kvmalloc_zero被调用次数 12535 
-[109777.916994] alloc_internal被调用次数 15225 
-[109777.917001] __uvm_kvmalloc_zero被调用次数 12536 
-[109777.921080] uvm_kvfree被调用次数 14779 
-[109777.921104] alloc_internal被调用次数 15226 
-[109777.921107] __uvm_kvmalloc_zero被调用次数 12537 
-[109777.924849] uvm_kvfree被调用次数 14780 
-[109777.940201] alloc_internal被调用次数 15227 
-[109777.940209] __uvm_kvmalloc_zero被调用次数 12538 
-[109777.940491] alloc_internal被调用次数 15228 
-[109777.940494] __uvm_kvmalloc_zero被调用次数 12539 
-[109777.940993] alloc_internal被调用次数 15229 
-[109777.940997] __uvm_kvmalloc被调用次数 2689 
-[109777.941003] alloc_internal被调用次数 15230 
-[109777.941006] __uvm_kvmalloc_zero被调用次数 12540 
-[109777.941008] alloc_internal被调用次数 15231 
-[109777.941011] __uvm_kvmalloc_zero被调用次数 12541 
-[109777.941057] alloc_internal被调用次数 15232 
-[109777.941059] __uvm_kvmalloc被调用次数 2690 
-[109777.941062] alloc_internal被调用次数 15233 
-[109777.941065] __uvm_kvmalloc_zero被调用次数 12542 
-[109777.941069] alloc_internal被调用次数 15234 
-[109777.941074] __uvm_kvmalloc_zero被调用次数 12543 
-[109777.941079] alloc_internal被调用次数 15235 
-[109777.941084] __uvm_kvmalloc_zero被调用次数 12544 
-[109777.941088] alloc_internal被调用次数 15236 
-[109777.941093] __uvm_kvmalloc_zero被调用次数 12545 
-[109777.941153] uvm_kvfree被调用次数 14781 
-[109777.941157] uvm_kvfree被调用次数 14782 
-[109777.942268] alloc_internal被调用次数 15237 
-[109777.942271] __uvm_kvmalloc被调用次数 2691 
-[109777.942276] alloc_internal被调用次数 15238 
-[109777.942278] __uvm_kvmalloc_zero被调用次数 12546 
-[109777.942281] alloc_internal被调用次数 15239 
-[109777.942283] __uvm_kvmalloc_zero被调用次数 12547 
-[109777.942336] alloc_internal被调用次数 15240 
-[109777.942339] __uvm_kvmalloc被调用次数 2692 
-[109777.942342] alloc_internal被调用次数 15241 
-[109777.942344] __uvm_kvmalloc_zero被调用次数 12548 
-[109777.942349] alloc_internal被调用次数 15242 
-[109777.942352] __uvm_kvmalloc_zero被调用次数 12549 
-[109777.942443] uvm_kvfree被调用次数 14783 
-[109777.942449] uvm_kvfree被调用次数 14784 
-[109777.942681] alloc_internal被调用次数 15243 
-[109777.942684] __uvm_kvmalloc被调用次数 2693 
-[109777.942688] alloc_internal被调用次数 15244 
-[109777.942690] __uvm_kvmalloc_zero被调用次数 12550 
-[109777.942693] alloc_internal被调用次数 15245 
-[109777.942696] __uvm_kvmalloc_zero被调用次数 12551 
-[109777.942732] alloc_internal被调用次数 15246 
-[109777.942735] __uvm_kvmalloc被调用次数 2694 
-[109777.942738] alloc_internal被调用次数 15247 
-[109777.942741] __uvm_kvmalloc_zero被调用次数 12552 
-[109777.942745] alloc_internal被调用次数 15248 
-[109777.942749] __uvm_kvmalloc_zero被调用次数 12553 
-[109777.942754] alloc_internal被调用次数 15249 
-[109777.942758] __uvm_kvmalloc_zero被调用次数 12554 
-[109777.942795] uvm_kvfree被调用次数 14785 
-[109777.942798] uvm_kvfree被调用次数 14786 
-[109777.942879] alloc_internal被调用次数 15250 
-[109777.942882] __uvm_kvmalloc被调用次数 2695 
-[109777.942886] alloc_internal被调用次数 15251 
-[109777.942889] __uvm_kvmalloc_zero被调用次数 12555 
-[109777.942891] alloc_internal被调用次数 15252 
-[109777.942894] __uvm_kvmalloc_zero被调用次数 12556 
-[109777.942928] alloc_internal被调用次数 15253 
-[109777.942930] __uvm_kvmalloc被调用次数 2696 
-[109777.942933] alloc_internal被调用次数 15254 
-[109777.942935] __uvm_kvmalloc_zero被调用次数 12557 
-[109777.942961] uvm_kvfree被调用次数 14787 
-[109777.942965] uvm_kvfree被调用次数 14788 
-[109777.943146] alloc_internal被调用次数 15255 
-[109777.943149] __uvm_kvmalloc被调用次数 2697 
-[109777.943153] alloc_internal被调用次数 15256 
-[109777.943156] __uvm_kvmalloc_zero被调用次数 12558 
-[109777.943158] alloc_internal被调用次数 15257 
-[109777.943161] __uvm_kvmalloc_zero被调用次数 12559 
-[109777.943195] alloc_internal被调用次数 15258 
-[109777.943197] __uvm_kvmalloc被调用次数 2698 
-[109777.943200] alloc_internal被调用次数 15259 
-[109777.943202] __uvm_kvmalloc_zero被调用次数 12560 
-[109777.943253] alloc_internal被调用次数 15260 
-[109777.943258] __uvm_kvmalloc_zero被调用次数 12561 
-[109777.943263] alloc_internal被调用次数 15261 
-[109777.943269] __uvm_kvmalloc_zero被调用次数 12562 
-[109777.943308] uvm_kvfree被调用次数 14789 
-[109777.943321] uvm_kvfree被调用次数 14790 
-[109777.944482] alloc_internal被调用次数 15262 
-[109777.944486] __uvm_kvmalloc被调用次数 2699 
-[109777.944490] alloc_internal被调用次数 15263 
-[109777.944493] __uvm_kvmalloc_zero被调用次数 12563 
-[109777.944498] alloc_internal被调用次数 15264 
-[109777.944500] __uvm_kvmalloc_zero被调用次数 12564 
-[109777.944541] alloc_internal被调用次数 15265 
-[109777.944544] __uvm_kvmalloc被调用次数 2700 
-[109777.944546] alloc_internal被调用次数 15266 
-[109777.944549] __uvm_kvmalloc_zero被调用次数 12565 
-[109777.944578] uvm_kvfree被调用次数 14791 
-[109777.944583] uvm_kvfree被调用次数 14792 
-[109777.963764] alloc_internal被调用次数 15267 
-[109777.963769] __uvm_kvmalloc被调用次数 2701 
-[109777.963772] alloc_internal被调用次数 15268 
-[109777.963774] __uvm_kvmalloc_zero被调用次数 12566 
-[109777.963775] alloc_internal被调用次数 15269 
-[109777.963776] __uvm_kvmalloc_zero被调用次数 12567 
-[109777.963871] alloc_internal被调用次数 15270 
-[109777.963958] __uvm_kvmalloc被调用次数 2702 
-[109777.963960] alloc_internal被调用次数 15271 
-[109777.963961] __uvm_kvmalloc_zero被调用次数 12568 
-[109777.963963] alloc_internal被调用次数 15272 
-[109777.963964] __uvm_kvmalloc_zero被调用次数 12569 
-[109777.963975] alloc_internal被调用次数 15273 
-[109777.963976] __uvm_kvmalloc_zero被调用次数 12570 
-[109777.963981] alloc_internal被调用次数 15274 
-[109777.963982] __uvm_kvmalloc_zero被调用次数 12571 
-[109777.963985] alloc_internal被调用次数 15275 
-[109777.963986] __uvm_kvmalloc_zero被调用次数 12572 
-[109777.963990] alloc_internal被调用次数 15276 
-[109777.963991] __uvm_kvmalloc_zero被调用次数 12573 
-[109777.963995] alloc_internal被调用次数 15277 
-[109777.963996] __uvm_kvmalloc_zero被调用次数 12574 
-[109777.963999] alloc_internal被调用次数 15278 
-[109777.964000] __uvm_kvmalloc_zero被调用次数 12575 
-[109777.964004] alloc_internal被调用次数 15279 
-[109777.964005] __uvm_kvmalloc_zero被调用次数 12576 
-[109777.964009] alloc_internal被调用次数 15280 
-[109777.964010] __uvm_kvmalloc_zero被调用次数 12577 
-[109777.964013] alloc_internal被调用次数 15281 
-[109777.964014] __uvm_kvmalloc_zero被调用次数 12578 
-[109777.964018] alloc_internal被调用次数 15282 
-[109777.964019] __uvm_kvmalloc_zero被调用次数 12579 
-[109777.964025] alloc_internal被调用次数 15283 
-[109777.964026] __uvm_kvmalloc_zero被调用次数 12580 
-[109777.964029] alloc_internal被调用次数 15284 
-[109777.964030] __uvm_kvmalloc_zero被调用次数 12581 
-[109777.964034] alloc_internal被调用次数 15285 
-[109777.964034] __uvm_kvmalloc_zero被调用次数 12582 
-[109777.964038] alloc_internal被调用次数 15286 
-[109777.964039] __uvm_kvmalloc_zero被调用次数 12583 
-[109777.964042] alloc_internal被调用次数 15287 
-[109777.964043] __uvm_kvmalloc_zero被调用次数 12584 
-[109777.964366] uvm_kvfree被调用次数 14793 
-[109777.964387] uvm_kvfree被调用次数 14794 
-[109777.967690] alloc_internal被调用次数 15288 
-[109777.967692] __uvm_kvmalloc被调用次数 2703 
-[109777.967696] alloc_internal被调用次数 15289 
-[109777.967697] __uvm_kvmalloc_zero被调用次数 12585 
-[109777.967698] alloc_internal被调用次数 15290 
-[109777.967699] __uvm_kvmalloc_zero被调用次数 12586 
-[109777.967721] alloc_internal被调用次数 15291 
-[109777.967721] __uvm_kvmalloc被调用次数 2704 
-[109777.967723] alloc_internal被调用次数 15292 
-[109777.967724] __uvm_kvmalloc_zero被调用次数 12587 
-[109777.967726] alloc_internal被调用次数 15293 
-[109777.967729] __uvm_kvmalloc_zero被调用次数 12588 
-[109777.967767] uvm_kvfree被调用次数 14795 
-[109777.967772] uvm_kvfree被调用次数 14796 
-[109777.968418] alloc_internal被调用次数 15294 
-[109777.968419] __uvm_kvmalloc被调用次数 2705 
-[109777.968421] alloc_internal被调用次数 15295 
-[109777.968422] __uvm_kvmalloc_zero被调用次数 12589 
-[109777.968422] alloc_internal被调用次数 15296 
-[109777.968423] __uvm_kvmalloc_zero被调用次数 12590 
-[109777.968444] alloc_internal被调用次数 15297 
-[109777.968445] __uvm_kvmalloc被调用次数 2706 
-[109777.968446] alloc_internal被调用次数 15298 
-[109777.968447] __uvm_kvmalloc_zero被调用次数 12591 
-[109777.968448] alloc_internal被调用次数 15299 
-[109777.968449] __uvm_kvmalloc_zero被调用次数 12592 
-[109777.968485] uvm_kvfree被调用次数 14797 
-[109777.968491] uvm_kvfree被调用次数 14798 
-[109777.971195] alloc_internal被调用次数 15300 
-[109777.971199] __uvm_kvmalloc_zero被调用次数 12593 
-[109777.971201] alloc_internal被调用次数 15301 
-[109777.971226] __uvm_kvmalloc_zero被调用次数 12594 
-[109777.972282] alloc_internal被调用次数 15302 
-[109777.972284] __uvm_kvmalloc_zero被调用次数 12595 
-[109777.972289] uvm_kvfree被调用次数 14799 
-[109777.972291] alloc_internal被调用次数 15303 
-[109777.972292] __uvm_kvmalloc_zero被调用次数 12596 
-[109777.972307] alloc_internal被调用次数 15304 
-[109777.972308] __uvm_kvmalloc被调用次数 2707 
-[109777.972309] alloc_internal被调用次数 15305 
-[109777.972310] __uvm_kvmalloc_zero被调用次数 12597 
-[109777.972336] uvm_kvfree被调用次数 14800 
-[109777.972337] alloc_internal被调用次数 15306 
-[109777.972338] __uvm_kvmalloc被调用次数 2708 
-[109777.972339] alloc_internal被调用次数 15307 
-[109777.972340] __uvm_kvmalloc_zero被调用次数 12598 
-[109777.972342] alloc_internal被调用次数 15308 
-[109777.972343] __uvm_kvmalloc_zero被调用次数 12599 
-[109777.972366] alloc_internal被调用次数 15309 
-[109777.972367] __uvm_kvmalloc被调用次数 2709 
-[109777.972368] uvm_kvfree被调用次数 14801 
-[109777.972369] alloc_internal被调用次数 15310 
-[109777.972370] __uvm_kvmalloc被调用次数 2710 
-[109777.972372] alloc_internal被调用次数 15311 
-[109777.972372] __uvm_kvmalloc_zero被调用次数 12600 
-[109777.972385] uvm_kvfree被调用次数 14802 
-[109777.972387] alloc_internal被调用次数 15312 
-[109777.972388] __uvm_kvmalloc被调用次数 2711 
-[109777.972389] alloc_internal被调用次数 15313 
-[109777.972390] __uvm_kvmalloc_zero被调用次数 12601 
-[109777.972402] uvm_kvfree被调用次数 14803 
-[109777.972403] alloc_internal被调用次数 15314 
-[109777.972404] __uvm_kvmalloc被调用次数 2712 
-[109777.972406] alloc_internal被调用次数 15315 
-[109777.972407] __uvm_kvmalloc_zero被调用次数 12602 
-[109777.972408] alloc_internal被调用次数 15316 
-[109777.972409] __uvm_kvmalloc_zero被调用次数 12603 
-[109777.972428] uvm_kvfree被调用次数 14804 
-[109777.972430] alloc_internal被调用次数 15317 
-[109777.972431] __uvm_kvmalloc被调用次数 2713 
-[109777.972432] alloc_internal被调用次数 15318 
-[109777.972433] __uvm_kvmalloc_zero被调用次数 12604 
-[109777.972446] uvm_kvfree被调用次数 14805 
-[109777.972447] alloc_internal被调用次数 15319 
-[109777.972448] __uvm_kvmalloc被调用次数 2714 
-[109777.972449] alloc_internal被调用次数 15320 
-[109777.972450] __uvm_kvmalloc_zero被调用次数 12605 
-[109777.972452] alloc_internal被调用次数 15321 
-[109777.972453] __uvm_kvmalloc_zero被调用次数 12606 
-[109777.972488] uvm_kvfree被调用次数 14806 
-[109777.972489] alloc_internal被调用次数 15322 
-[109777.972490] __uvm_kvmalloc被调用次数 2715 
-[109777.972491] alloc_internal被调用次数 15323 
-[109777.972492] __uvm_kvmalloc_zero被调用次数 12607 
-[109777.972509] uvm_kvfree被调用次数 14807 
-[109777.972510] alloc_internal被调用次数 15324 
-[109777.972511] __uvm_kvmalloc被调用次数 2716 
-[109777.972512] alloc_internal被调用次数 15325 
-[109777.972513] __uvm_kvmalloc_zero被调用次数 12608 
-[109777.972530] uvm_kvfree被调用次数 14808 
-[109777.972531] alloc_internal被调用次数 15326 
-[109777.972532] __uvm_kvmalloc被调用次数 2717 
-[109777.972533] alloc_internal被调用次数 15327 
-[109777.972534] __uvm_kvmalloc_zero被调用次数 12609 
-[109777.972547] uvm_kvfree被调用次数 14809 
-[109777.972550] uvm_kvfree被调用次数 14810 
-[109777.972551] alloc_internal被调用次数 15328 
-[109777.972552] __uvm_kvmalloc_zero被调用次数 12610 
-[109777.972553] alloc_internal被调用次数 15329 
-[109777.972554] __uvm_kvmalloc_zero被调用次数 12611 
-[109777.972556] uvm_kvfree被调用次数 14811 
-[109777.972557] uvm_kvfree被调用次数 14812 
-[109777.972558] alloc_internal被调用次数 15330 
-[109777.972560] __uvm_kvmalloc_zero被调用次数 12612 
-[109777.973139] uvm_kvfree被调用次数 14813 
-[109777.973217] alloc_internal被调用次数 15331 
-[109777.973232] __uvm_kvmalloc_zero被调用次数 12613 
-[109777.973233] alloc_internal被调用次数 15332 
-[109777.973234] __uvm_kvmalloc_zero被调用次数 12614 
-[109777.974179] alloc_internal被调用次数 15333 
-[109777.974180] __uvm_kvmalloc_zero被调用次数 12615 
-[109777.974185] uvm_kvfree被调用次数 14814 
-[109777.974187] alloc_internal被调用次数 15334 
-[109777.974188] __uvm_kvmalloc_zero被调用次数 12616 
-[109777.974190] alloc_internal被调用次数 15335 
-[109777.974191] __uvm_kvmalloc_zero被调用次数 12617 
-[109777.974192] alloc_internal被调用次数 15336 
-[109777.974193] __uvm_kvmalloc_zero被调用次数 12618 
-[109777.974194] uvm_kvfree被调用次数 14815 
-[109777.974195] uvm_kvfree被调用次数 14816 
-[109777.974196] alloc_internal被调用次数 15337 
-[109777.974197] __uvm_kvmalloc_zero被调用次数 12619 
-[109777.974676] uvm_kvfree被调用次数 14817 
-[109777.984566] alloc_internal被调用次数 15338 
-[109777.984569] __uvm_kvmalloc_zero被调用次数 12620 
-[109777.984570] alloc_internal被调用次数 15339 
-[109777.984572] __uvm_kvmalloc_zero被调用次数 12621 
-[109777.985646] alloc_internal被调用次数 15340 
-[109777.985647] __uvm_kvmalloc_zero被调用次数 12622 
-[109777.985649] uvm_kvfree被调用次数 14818 
-[109777.985651] alloc_internal被调用次数 15341 
-[109777.985652] __uvm_kvmalloc_zero被调用次数 12623 
-[109777.985666] uvm_kvfree被调用次数 14819 
-[109777.985669] alloc_internal被调用次数 15342 
-[109777.985670] __uvm_kvmalloc_zero被调用次数 12624 
-[109777.985671] alloc_internal被调用次数 15343 
-[109777.985672] __uvm_kvmalloc_zero被调用次数 12625 
-[109777.986650] alloc_internal被调用次数 15344 
-[109777.986651] __uvm_kvmalloc_zero被调用次数 12626 
-[109777.986652] uvm_kvfree被调用次数 14820 
-[109777.986654] alloc_internal被调用次数 15345 
-[109777.986655] __uvm_kvmalloc_zero被调用次数 12627 
-[109777.986666] uvm_kvfree被调用次数 14821 
-[109777.986669] alloc_internal被调用次数 15346 
-[109777.986671] __uvm_kvmalloc_zero被调用次数 12628 
-[109777.986672] alloc_internal被调用次数 15347 
-[109777.986673] __uvm_kvmalloc_zero被调用次数 12629 
-[109777.987680] alloc_internal被调用次数 15348 
-[109777.987682] __uvm_kvmalloc_zero被调用次数 12630 
-[109777.987683] uvm_kvfree被调用次数 14822 
-[109777.987685] alloc_internal被调用次数 15349 
-[109777.987686] __uvm_kvmalloc_zero被调用次数 12631 
-[109777.987700] uvm_kvfree被调用次数 14823 
-[109777.987702] alloc_internal被调用次数 15350 
-[109777.987704] __uvm_kvmalloc_zero被调用次数 12632 
-[109777.987705] alloc_internal被调用次数 15351 
-[109777.987706] __uvm_kvmalloc_zero被调用次数 12633 
-[109777.988722] alloc_internal被调用次数 15352 
-[109777.988723] __uvm_kvmalloc_zero被调用次数 12634 
-[109777.988724] uvm_kvfree被调用次数 14824 
-[109777.988726] alloc_internal被调用次数 15353 
-[109777.988727] __uvm_kvmalloc_zero被调用次数 12635 
-[109777.988739] uvm_kvfree被调用次数 14825 
-[109777.992631] alloc_internal被调用次数 15354 
-[109777.992634] __uvm_kvmalloc_zero被调用次数 12636 
-[109777.992635] alloc_internal被调用次数 15355 
-[109777.992636] __uvm_kvmalloc_zero被调用次数 12637 
-[109777.993774] alloc_internal被调用次数 15356 
-[109777.993775] __uvm_kvmalloc_zero被调用次数 12638 
-[109777.993777] uvm_kvfree被调用次数 14826 
-[109777.993779] alloc_internal被调用次数 15357 
-[109777.993780] __uvm_kvmalloc_zero被调用次数 12639 
-[109777.993795] uvm_kvfree被调用次数 14827 
-[109778.003389] alloc_internal被调用次数 15358 
-[109778.003391] __uvm_kvmalloc_zero被调用次数 12640 
-[109778.003392] alloc_internal被调用次数 15359 
-[109778.003394] __uvm_kvmalloc_zero被调用次数 12641 
-[109778.004556] alloc_internal被调用次数 15360 
-[109778.004557] __uvm_kvmalloc_zero被调用次数 12642 
-[109778.004558] uvm_kvfree被调用次数 14828 
-[109778.004561] alloc_internal被调用次数 15361 
-[109778.004562] __uvm_kvmalloc_zero被调用次数 12643 
-[109778.004578] uvm_kvfree被调用次数 14829 
-[109778.004581] alloc_internal被调用次数 15362 
-[109778.004582] __uvm_kvmalloc_zero被调用次数 12644 
-[109778.004583] alloc_internal被调用次数 15363 
-[109778.004584] __uvm_kvmalloc_zero被调用次数 12645 
-[109778.005653] alloc_internal被调用次数 15364 
-[109778.005654] __uvm_kvmalloc_zero被调用次数 12646 
-[109778.005655] uvm_kvfree被调用次数 14830 
-[109778.005657] alloc_internal被调用次数 15365 
-[109778.005658] __uvm_kvmalloc_zero被调用次数 12647 
-[109778.005671] uvm_kvfree被调用次数 14831 
-[109778.005673] alloc_internal被调用次数 15366 
-[109778.005674] __uvm_kvmalloc_zero被调用次数 12648 
-[109778.005675] alloc_internal被调用次数 15367 
-[109778.005677] __uvm_kvmalloc_zero被调用次数 12649 
-[109778.006747] alloc_internal被调用次数 15368 
-[109778.006748] __uvm_kvmalloc_zero被调用次数 12650 
-[109778.006749] uvm_kvfree被调用次数 14832 
-[109778.006751] alloc_internal被调用次数 15369 
-[109778.006752] __uvm_kvmalloc_zero被调用次数 12651 
-[109778.006764] uvm_kvfree被调用次数 14833 
-[109778.006766] alloc_internal被调用次数 15370 
-[109778.006767] __uvm_kvmalloc_zero被调用次数 12652 
-[109778.006768] alloc_internal被调用次数 15371 
-[109778.006770] __uvm_kvmalloc_zero被调用次数 12653 
-[109778.007871] alloc_internal被调用次数 15372 
-[109778.007873] __uvm_kvmalloc_zero被调用次数 12654 
-[109778.007874] uvm_kvfree被调用次数 14834 
-[109778.007876] alloc_internal被调用次数 15373 
-[109778.007877] __uvm_kvmalloc_zero被调用次数 12655 
-[109778.007890] uvm_kvfree被调用次数 14835 
-[109778.036988] alloc_internal被调用次数 15374 
-[109778.036993] __uvm_kvmalloc被调用次数 2718 
-[109778.036998] alloc_internal被调用次数 15375 
-[109778.037001] __uvm_kvmalloc_zero被调用次数 12656 
-[109778.037002] alloc_internal被调用次数 15376 
-[109778.037004] __uvm_kvmalloc_zero被调用次数 12657 
-[109778.037147] alloc_internal被调用次数 15377 
-[109778.037223] __uvm_kvmalloc被调用次数 2719 
-[109778.037224] alloc_internal被调用次数 15378 
-[109778.037226] __uvm_kvmalloc_zero被调用次数 12658 
-[109778.037231] alloc_internal被调用次数 15379 
-[109778.037232] __uvm_kvmalloc_zero被调用次数 12659 
-[109778.037252] alloc_internal被调用次数 15380 
-[109778.037253] __uvm_kvmalloc_zero被调用次数 12660 
-[109778.037259] alloc_internal被调用次数 15381 
-[109778.037261] __uvm_kvmalloc_zero被调用次数 12661 
-[109778.037266] alloc_internal被调用次数 15382 
-[109778.037267] __uvm_kvmalloc_zero被调用次数 12662 
-[109778.037273] alloc_internal被调用次数 15383 
-[109778.037274] __uvm_kvmalloc_zero被调用次数 12663 
-[109778.037279] alloc_internal被调用次数 15384 
-[109778.037281] __uvm_kvmalloc_zero被调用次数 12664 
-[109778.037286] alloc_internal被调用次数 15385 
-[109778.037288] __uvm_kvmalloc_zero被调用次数 12665 
-[109778.037303] alloc_internal被调用次数 15386 
-[109778.037305] __uvm_kvmalloc_zero被调用次数 12666 
-[109778.037310] alloc_internal被调用次数 15387 
-[109778.037312] __uvm_kvmalloc_zero被调用次数 12667 
-[109778.037317] alloc_internal被调用次数 15388 
-[109778.037318] __uvm_kvmalloc_zero被调用次数 12668 
-[109778.037323] alloc_internal被调用次数 15389 
-[109778.037325] __uvm_kvmalloc_zero被调用次数 12669 
-[109778.037330] alloc_internal被调用次数 15390 
-[109778.037331] __uvm_kvmalloc_zero被调用次数 12670 
-[109778.037336] alloc_internal被调用次数 15391 
-[109778.037338] __uvm_kvmalloc_zero被调用次数 12671 
-[109778.037343] alloc_internal被调用次数 15392 
-[109778.037344] __uvm_kvmalloc_zero被调用次数 12672 
-[109778.037350] alloc_internal被调用次数 15393 
-[109778.037351] __uvm_kvmalloc_zero被调用次数 12673 
-[109778.037356] alloc_internal被调用次数 15394 
-[109778.037358] __uvm_kvmalloc_zero被调用次数 12674 
-[109778.037852] uvm_kvfree被调用次数 14836 
-[109778.037858] uvm_kvfree被调用次数 14837 
-[109778.039981] alloc_internal被调用次数 15395 
-[109778.039984] __uvm_kvmalloc_zero被调用次数 12675 
-[109778.039986] alloc_internal被调用次数 15396 
-[109778.039987] __uvm_kvmalloc_zero被调用次数 12676 
-[109778.041285] alloc_internal被调用次数 15397 
-[109778.041286] __uvm_kvmalloc_zero被调用次数 12677 
-[109778.041287] uvm_kvfree被调用次数 14838 
-[109778.041293] alloc_internal被调用次数 15398 
-[109778.041294] __uvm_kvmalloc_zero被调用次数 12678 
-[109778.041323] uvm_kvfree被调用次数 14839 
-[109778.041326] alloc_internal被调用次数 15399 
-[109778.041328] __uvm_kvmalloc_zero被调用次数 12679 
-[109778.041329] alloc_internal被调用次数 15400 
-[109778.041330] __uvm_kvmalloc_zero被调用次数 12680 
-[109778.042453] alloc_internal被调用次数 15401 
-[109778.042454] __uvm_kvmalloc_zero被调用次数 12681 
-[109778.042455] uvm_kvfree被调用次数 14840 
-[109778.042457] alloc_internal被调用次数 15402 
-[109778.042458] __uvm_kvmalloc_zero被调用次数 12682 
-[109778.042471] uvm_kvfree被调用次数 14841 
-[109778.042475] alloc_internal被调用次数 15403 
-[109778.042476] __uvm_kvmalloc_zero被调用次数 12683 
-[109778.042477] alloc_internal被调用次数 15404 
-[109778.042478] __uvm_kvmalloc_zero被调用次数 12684 
-[109778.043615] alloc_internal被调用次数 15405 
-[109778.043616] __uvm_kvmalloc_zero被调用次数 12685 
-[109778.043617] uvm_kvfree被调用次数 14842 
-[109778.043619] alloc_internal被调用次数 15406 
-[109778.043620] __uvm_kvmalloc_zero被调用次数 12686 
-[109778.043634] uvm_kvfree被调用次数 14843 
-[109778.043637] alloc_internal被调用次数 15407 
-[109778.043639] __uvm_kvmalloc_zero被调用次数 12687 
-[109778.043640] alloc_internal被调用次数 15408 
-[109778.043641] __uvm_kvmalloc_zero被调用次数 12688 
-[109778.044804] alloc_internal被调用次数 15409 
-[109778.044805] __uvm_kvmalloc_zero被调用次数 12689 
-[109778.044806] uvm_kvfree被调用次数 14844 
-[109778.044808] alloc_internal被调用次数 15410 
-[109778.044809] __uvm_kvmalloc_zero被调用次数 12690 
-[109778.044822] uvm_kvfree被调用次数 14845 
-[109778.045778] alloc_internal被调用次数 15411 
-[109778.045779] __uvm_kvmalloc被调用次数 2720 
-[109778.045781] alloc_internal被调用次数 15412 
-[109778.045782] __uvm_kvmalloc_zero被调用次数 12691 
-[109778.045783] alloc_internal被调用次数 15413 
-[109778.045784] __uvm_kvmalloc_zero被调用次数 12692 
-[109778.045806] alloc_internal被调用次数 15414 
-[109778.045807] __uvm_kvmalloc被调用次数 2721 
-[109778.045808] alloc_internal被调用次数 15415 
-[109778.045809] __uvm_kvmalloc_zero被调用次数 12693 
-[109778.045827] uvm_kvfree被调用次数 14846 
-[109778.045832] uvm_kvfree被调用次数 14847 
-[109778.045859] alloc_internal被调用次数 15416 
-[109778.045860] __uvm_kvmalloc被调用次数 2722 
-[109778.045862] alloc_internal被调用次数 15417 
-[109778.045865] __uvm_kvmalloc_zero被调用次数 12694 
-[109778.045867] alloc_internal被调用次数 15418 
-[109778.045870] __uvm_kvmalloc_zero被调用次数 12695 
-[109778.046470] alloc_internal被调用次数 15419 
-[109778.046472] __uvm_kvmalloc_zero被调用次数 12696 
-[109778.046501] alloc_internal被调用次数 15420 
-[109778.046502] __uvm_kvmalloc被调用次数 2723 
-[109778.046504] alloc_internal被调用次数 15421 
-[109778.046505] __uvm_kvmalloc被调用次数 2724 
-[109778.046506] alloc_internal被调用次数 15422 
-[109778.046507] __uvm_kvmalloc_zero被调用次数 12697 
-[109778.046509] alloc_internal被调用次数 15423 
-[109778.046510] __uvm_kvmalloc_zero被调用次数 12698 
-[109778.046570] alloc_internal被调用次数 15424 
-[109778.046573] __uvm_kvmalloc_zero被调用次数 12699 
-[109778.046574] alloc_internal被调用次数 15425 
-[109778.046575] __uvm_kvmalloc被调用次数 2725 
-[109778.046576] alloc_internal被调用次数 15426 
-[109778.046577] __uvm_kvmalloc_zero被调用次数 12700 
-[109778.046578] alloc_internal被调用次数 15427 
-[109778.046580] __uvm_kvmalloc_zero被调用次数 12701 
-[109778.046635] alloc_internal被调用次数 15428 
-[109778.046637] __uvm_kvmalloc_zero被调用次数 12702 
-[109778.046666] alloc_internal被调用次数 15429 
-[109778.046667] __uvm_kvmalloc被调用次数 2726 
-[109778.046668] alloc_internal被调用次数 15430 
-[109778.046669] __uvm_kvmalloc_zero被调用次数 12703 
-[109778.046672] alloc_internal被调用次数 15431 
-[109778.046673] __uvm_kvmalloc_zero被调用次数 12704 
-[109778.046748] uvm_kvfree被调用次数 14848 
-[109778.046759] alloc_internal被调用次数 15432 
-[109778.046760] __uvm_kvmalloc_zero被调用次数 12705 
-[109778.046762] uvm_kvfree被调用次数 14849 
-[109778.047547] alloc_internal被调用次数 15433 
-[109778.047549] __uvm_kvmalloc被调用次数 2727 
-[109778.047551] alloc_internal被调用次数 15434 
-[109778.047552] __uvm_kvmalloc_zero被调用次数 12706 
-[109778.047553] alloc_internal被调用次数 15435 
-[109778.047554] __uvm_kvmalloc_zero被调用次数 12707 
-[109778.047580] alloc_internal被调用次数 15436 
-[109778.047581] __uvm_kvmalloc被调用次数 2728 
-[109778.047582] alloc_internal被调用次数 15437 
-[109778.047583] __uvm_kvmalloc_zero被调用次数 12708 
-[109778.047585] alloc_internal被调用次数 15438 
-[109778.047586] __uvm_kvmalloc_zero被调用次数 12709 
-[109778.047630] uvm_kvfree被调用次数 14850 
-[109778.047635] uvm_kvfree被调用次数 14851 
-[109778.048791] alloc_internal被调用次数 15439 
-[109778.048792] __uvm_kvmalloc被调用次数 2729 
-[109778.048794] alloc_internal被调用次数 15440 
-[109778.048795] __uvm_kvmalloc_zero被调用次数 12710 
-[109778.048796] alloc_internal被调用次数 15441 
-[109778.048797] __uvm_kvmalloc_zero被调用次数 12711 
-[109778.048821] alloc_internal被调用次数 15442 
-[109778.048822] __uvm_kvmalloc被调用次数 2730 
-[109778.048823] alloc_internal被调用次数 15443 
-[109778.048824] __uvm_kvmalloc_zero被调用次数 12712 
-[109778.048826] alloc_internal被调用次数 15444 
-[109778.048827] __uvm_kvmalloc_zero被调用次数 12713 
-[109778.048870] uvm_kvfree被调用次数 14852 
-[109778.048874] uvm_kvfree被调用次数 14853 
-[109778.049899] alloc_internal被调用次数 15445 
-[109778.049900] __uvm_kvmalloc被调用次数 2731 
-[109778.049905] alloc_internal被调用次数 15446 
-[109778.049906] __uvm_kvmalloc_zero被调用次数 12714 
-[109778.049907] alloc_internal被调用次数 15447 
-[109778.049908] __uvm_kvmalloc_zero被调用次数 12715 
-[109778.049930] alloc_internal被调用次数 15448 
-[109778.049931] __uvm_kvmalloc被调用次数 2732 
-[109778.049932] alloc_internal被调用次数 15449 
-[109778.049933] __uvm_kvmalloc_zero被调用次数 12716 
-[109778.049938] alloc_internal被调用次数 15450 
-[109778.049939] __uvm_kvmalloc_zero被调用次数 12717 
-[109778.049979] uvm_kvfree被调用次数 14854 
-[109778.049985] uvm_kvfree被调用次数 14855 
-[109778.050125] alloc_internal被调用次数 15451 
-[109778.050126] __uvm_kvmalloc被调用次数 2733 
-[109778.050129] alloc_internal被调用次数 15452 
-[109778.050130] __uvm_kvmalloc_zero被调用次数 12718 
-[109778.050131] alloc_internal被调用次数 15453 
-[109778.050134] __uvm_kvmalloc_zero被调用次数 12719 
-[109778.050154] alloc_internal被调用次数 15454 
-[109778.050155] __uvm_kvmalloc被调用次数 2734 
-[109778.050156] alloc_internal被调用次数 15455 
-[109778.050158] __uvm_kvmalloc_zero被调用次数 12720 
-[109778.050160] alloc_internal被调用次数 15456 
-[109778.050161] __uvm_kvmalloc_zero被调用次数 12721 
-[109778.050183] uvm_kvfree被调用次数 14856 
-[109778.050187] uvm_kvfree被调用次数 14857 
-[109778.050862] alloc_internal被调用次数 15457 
-[109778.050864] __uvm_kvmalloc被调用次数 2735 
-[109778.050866] alloc_internal被调用次数 15458 
-[109778.050867] __uvm_kvmalloc_zero被调用次数 12722 
-[109778.050871] alloc_internal被调用次数 15459 
-[109778.050872] __uvm_kvmalloc_zero被调用次数 12723 
-[109778.050896] alloc_internal被调用次数 15460 
-[109778.050897] __uvm_kvmalloc被调用次数 2736 
-[109778.050898] alloc_internal被调用次数 15461 
-[109778.050899] __uvm_kvmalloc_zero被调用次数 12724 
-[109778.050901] alloc_internal被调用次数 15462 
-[109778.050902] __uvm_kvmalloc_zero被调用次数 12725 
-[109778.050946] uvm_kvfree被调用次数 14858 
-[109778.050951] uvm_kvfree被调用次数 14859 
-[109778.052205] alloc_internal被调用次数 15463 
-[109778.052207] __uvm_kvmalloc被调用次数 2737 
-[109778.052209] alloc_internal被调用次数 15464 
-[109778.052210] __uvm_kvmalloc_zero被调用次数 12726 
-[109778.052211] alloc_internal被调用次数 15465 
-[109778.052212] __uvm_kvmalloc_zero被调用次数 12727 
-[109778.052237] alloc_internal被调用次数 15466 
-[109778.052238] __uvm_kvmalloc被调用次数 2738 
-[109778.052239] alloc_internal被调用次数 15467 
-[109778.052240] __uvm_kvmalloc_zero被调用次数 12728 
-[109778.052242] alloc_internal被调用次数 15468 
-[109778.052243] __uvm_kvmalloc_zero被调用次数 12729 
-[109778.052290] uvm_kvfree被调用次数 14860 
-[109778.052295] uvm_kvfree被调用次数 14861 
-[109778.052348] alloc_internal被调用次数 15469 
-[109778.052351] __uvm_kvmalloc被调用次数 2739 
-[109778.052352] alloc_internal被调用次数 15470 
-[109778.052354] __uvm_kvmalloc_zero被调用次数 12730 
-[109778.052355] alloc_internal被调用次数 15471 
-[109778.052356] __uvm_kvmalloc_zero被调用次数 12731 
-[109778.052406] uvm_kvfree被调用次数 14862 
-[109778.052407] uvm_kvfree被调用次数 14863 
-[109778.052409] uvm_kvfree被调用次数 14864 
-[109778.052418] alloc_internal被调用次数 15472 
-[109778.052419] __uvm_kvmalloc被调用次数 2740 
-[109778.052421] alloc_internal被调用次数 15473 
-[109778.052422] __uvm_kvmalloc_zero被调用次数 12732 
-[109778.052423] alloc_internal被调用次数 15474 
-[109778.052424] __uvm_kvmalloc_zero被调用次数 12733 
-[109778.052439] alloc_internal被调用次数 15475 
-[109778.052441] __uvm_kvmalloc被调用次数 2741 
-[109778.052442] alloc_internal被调用次数 15476 
-[109778.052443] __uvm_kvmalloc_zero被调用次数 12734 
-[109778.052444] alloc_internal被调用次数 15477 
-[109778.052445] __uvm_kvmalloc_zero被调用次数 12735 
-[109778.052466] uvm_kvfree被调用次数 14865 
-[109778.052470] uvm_kvfree被调用次数 14866 
-[109778.052515] alloc_internal被调用次数 15478 
-[109778.052516] __uvm_kvmalloc被调用次数 2742 
-[109778.052517] alloc_internal被调用次数 15479 
-[109778.052518] __uvm_kvmalloc_zero被调用次数 12736 
-[109778.052520] alloc_internal被调用次数 15480 
-[109778.052521] __uvm_kvmalloc_zero被调用次数 12737 
-[109778.052537] alloc_internal被调用次数 15481 
-[109778.052538] __uvm_kvmalloc被调用次数 2743 
-[109778.052540] alloc_internal被调用次数 15482 
-[109778.052541] __uvm_kvmalloc_zero被调用次数 12738 
-[109778.052554] uvm_kvfree被调用次数 14867 
-[109778.052558] uvm_kvfree被调用次数 14868 
-[109778.052573] alloc_internal被调用次数 15483 
-[109778.052574] __uvm_kvmalloc_zero被调用次数 12739 
-[109778.052576] alloc_internal被调用次数 15484 
-[109778.052577] __uvm_kvmalloc_zero被调用次数 12740 
-[109778.053596] alloc_internal被调用次数 15485 
-[109778.053598] __uvm_kvmalloc被调用次数 2744 
-[109778.053600] alloc_internal被调用次数 15486 
-[109778.053602] __uvm_kvmalloc_zero被调用次数 12741 
-[109778.053603] alloc_internal被调用次数 15487 
-[109778.053604] __uvm_kvmalloc_zero被调用次数 12742 
-[109778.053625] alloc_internal被调用次数 15488 
-[109778.053626] __uvm_kvmalloc被调用次数 2745 
-[109778.053627] alloc_internal被调用次数 15489 
-[109778.053628] __uvm_kvmalloc_zero被调用次数 12743 
-[109778.053630] alloc_internal被调用次数 15490 
-[109778.053631] __uvm_kvmalloc_zero被调用次数 12744 
-[109778.053672] uvm_kvfree被调用次数 14869 
-[109778.053678] uvm_kvfree被调用次数 14870 
-[109778.053868] alloc_internal被调用次数 15491 
-[109778.053869] __uvm_kvmalloc被调用次数 2746 
-[109778.053871] alloc_internal被调用次数 15492 
-[109778.053872] __uvm_kvmalloc_zero被调用次数 12745 
-[109778.053873] alloc_internal被调用次数 15493 
-[109778.053874] __uvm_kvmalloc_zero被调用次数 12746 
-[109778.053892] alloc_internal被调用次数 15494 
-[109778.053893] __uvm_kvmalloc被调用次数 2747 
-[109778.053894] alloc_internal被调用次数 15495 
-[109778.053895] __uvm_kvmalloc_zero被调用次数 12747 
-[109778.053909] uvm_kvfree被调用次数 14871 
-[109778.053913] uvm_kvfree被调用次数 14872 
-[109778.054958] alloc_internal被调用次数 15496 
-[109778.054960] __uvm_kvmalloc被调用次数 2748 
-[109778.054961] alloc_internal被调用次数 15497 
-[109778.054963] __uvm_kvmalloc_zero被调用次数 12748 
-[109778.054964] alloc_internal被调用次数 15498 
-[109778.054965] __uvm_kvmalloc_zero被调用次数 12749 
-[109778.054988] alloc_internal被调用次数 15499 
-[109778.054989] __uvm_kvmalloc被调用次数 2749 
-[109778.054990] alloc_internal被调用次数 15500 
-[109778.054991] __uvm_kvmalloc_zero被调用次数 12750 
-[109778.054993] alloc_internal被调用次数 15501 
-[109778.054994] __uvm_kvmalloc_zero被调用次数 12751 
-[109778.055036] uvm_kvfree被调用次数 14873 
-[109778.055042] uvm_kvfree被调用次数 14874 
-[109778.057186] alloc_internal被调用次数 15502 
-[109778.057188] __uvm_kvmalloc被调用次数 2750 
-[109778.057190] alloc_internal被调用次数 15503 
-[109778.057191] __uvm_kvmalloc_zero被调用次数 12752 
-[109778.057192] alloc_internal被调用次数 15504 
-[109778.057193] __uvm_kvmalloc_zero被调用次数 12753 
-[109778.057219] alloc_internal被调用次数 15505 
-[109778.057220] __uvm_kvmalloc被调用次数 2751 
-[109778.057221] alloc_internal被调用次数 15506 
-[109778.057222] __uvm_kvmalloc_zero被调用次数 12754 
-[109778.057224] alloc_internal被调用次数 15507 
-[109778.057226] __uvm_kvmalloc_zero被调用次数 12755 
-[109778.057269] uvm_kvfree被调用次数 14875 
-[109778.057275] uvm_kvfree被调用次数 14876 
-[109778.065435] alloc_internal被调用次数 15508 
-[109778.065438] __uvm_kvmalloc被调用次数 2752 
-[109778.065441] alloc_internal被调用次数 15509 
-[109778.065442] __uvm_kvmalloc_zero被调用次数 12756 
-[109778.065443] alloc_internal被调用次数 15510 
-[109778.065445] __uvm_kvmalloc_zero被调用次数 12757 
-[109778.065477] alloc_internal被调用次数 15511 
-[109778.065478] __uvm_kvmalloc被调用次数 2753 
-[109778.065479] alloc_internal被调用次数 15512 
-[109778.065481] __uvm_kvmalloc_zero被调用次数 12758 
-[109778.065484] alloc_internal被调用次数 15513 
-[109778.065485] __uvm_kvmalloc_zero被调用次数 12759 
-[109778.065533] uvm_kvfree被调用次数 14877 
-[109778.065539] uvm_kvfree被调用次数 14878 
-[109778.065956] alloc_internal被调用次数 15514 
-[109778.065957] __uvm_kvmalloc被调用次数 2754 
-[109778.065959] alloc_internal被调用次数 15515 
-[109778.065960] __uvm_kvmalloc_zero被调用次数 12760 
-[109778.065961] alloc_internal被调用次数 15516 
-[109778.065962] __uvm_kvmalloc_zero被调用次数 12761 
-[109778.065986] alloc_internal被调用次数 15517 
-[109778.065987] __uvm_kvmalloc被调用次数 2755 
-[109778.065988] alloc_internal被调用次数 15518 
-[109778.065989] __uvm_kvmalloc_zero被调用次数 12762 
-[109778.065991] alloc_internal被调用次数 15519 
-[109778.065992] __uvm_kvmalloc_zero被调用次数 12763 
-[109778.066025] uvm_kvfree被调用次数 14879 
-[109778.066029] uvm_kvfree被调用次数 14880 
-[109778.067140] alloc_internal被调用次数 15520 
-[109778.067142] __uvm_kvmalloc被调用次数 2756 
-[109778.067144] alloc_internal被调用次数 15521 
-[109778.067145] __uvm_kvmalloc_zero被调用次数 12764 
-[109778.067146] alloc_internal被调用次数 15522 
-[109778.067147] __uvm_kvmalloc_zero被调用次数 12765 
-[109778.067171] alloc_internal被调用次数 15523 
-[109778.067172] __uvm_kvmalloc被调用次数 2757 
-[109778.067174] alloc_internal被调用次数 15524 
-[109778.067175] __uvm_kvmalloc_zero被调用次数 12766 
-[109778.067192] uvm_kvfree被调用次数 14881 
-[109778.067196] uvm_kvfree被调用次数 14882 
-[109778.090577] alloc_internal被调用次数 15525 
-[109778.090580] __uvm_kvmalloc被调用次数 2758 
-[109778.090583] alloc_internal被调用次数 15526 
-[109778.090584] __uvm_kvmalloc_zero被调用次数 12767 
-[109778.090585] alloc_internal被调用次数 15527 
-[109778.090587] __uvm_kvmalloc_zero被调用次数 12768 
-[109778.090656] uvm_kvfree被调用次数 14883 
-[109778.090657] uvm_kvfree被调用次数 14884 
-[109778.090659] uvm_kvfree被调用次数 14885 
-[109778.090670] alloc_internal被调用次数 15528 
-[109778.090671] __uvm_kvmalloc被调用次数 2759 
-[109778.090673] alloc_internal被调用次数 15529 
-[109778.090674] __uvm_kvmalloc_zero被调用次数 12769 
-[109778.090675] alloc_internal被调用次数 15530 
-[109778.090676] __uvm_kvmalloc_zero被调用次数 12770 
-[109778.090707] uvm_kvfree被调用次数 14886 
-[109778.090708] uvm_kvfree被调用次数 14887 
-[109778.090709] uvm_kvfree被调用次数 14888 
-[109778.090716] alloc_internal被调用次数 15531 
-[109778.090717] __uvm_kvmalloc被调用次数 2760 
-[109778.090719] alloc_internal被调用次数 15532 
-[109778.090720] __uvm_kvmalloc_zero被调用次数 12771 
-[109778.090721] alloc_internal被调用次数 15533 
-[109778.090722] __uvm_kvmalloc_zero被调用次数 12772 
-[109778.090751] uvm_kvfree被调用次数 14889 
-[109778.090752] uvm_kvfree被调用次数 14890 
-[109778.090754] uvm_kvfree被调用次数 14891 
-[109778.090760] alloc_internal被调用次数 15534 
-[109778.090761] __uvm_kvmalloc被调用次数 2761 
-[109778.090763] alloc_internal被调用次数 15535 
-[109778.090764] __uvm_kvmalloc_zero被调用次数 12773 
-[109778.090765] alloc_internal被调用次数 15536 
-[109778.090766] __uvm_kvmalloc_zero被调用次数 12774 
-[109778.090781] alloc_internal被调用次数 15537 
-[109778.090782] __uvm_kvmalloc被调用次数 2762 
-[109778.090783] alloc_internal被调用次数 15538 
-[109778.090784] __uvm_kvmalloc_zero被调用次数 12775 
-[109778.090807] uvm_kvfree被调用次数 14892 
-[109778.090812] uvm_kvfree被调用次数 14893 
-[109778.091830] alloc_internal被调用次数 15539 
-[109778.091833] __uvm_kvmalloc被调用次数 2763 
-[109778.091835] alloc_internal被调用次数 15540 
-[109778.091836] __uvm_kvmalloc_zero被调用次数 12776 
-[109778.091837] alloc_internal被调用次数 15541 
-[109778.091838] __uvm_kvmalloc_zero被调用次数 12777 
-[109778.091860] alloc_internal被调用次数 15542 
-[109778.091862] __uvm_kvmalloc被调用次数 2764 
-[109778.091863] alloc_internal被调用次数 15543 
-[109778.091864] __uvm_kvmalloc_zero被调用次数 12778 
-[109778.091866] alloc_internal被调用次数 15544 
-[109778.091868] __uvm_kvmalloc_zero被调用次数 12779 
-[109778.091901] uvm_kvfree被调用次数 14894 
-[109778.091904] uvm_kvfree被调用次数 14895 
-[109778.127029] alloc_internal被调用次数 15545 
-[109778.127037] __uvm_kvmalloc被调用次数 2765 
-[109778.127043] alloc_internal被调用次数 15546 
-[109778.127046] __uvm_kvmalloc_zero被调用次数 12780 
-[109778.127049] alloc_internal被调用次数 15547 
-[109778.127052] __uvm_kvmalloc_zero被调用次数 12781 
-[109778.127121] alloc_internal被调用次数 15548 
-[109778.127273] __uvm_kvmalloc被调用次数 2766 
-[109778.127277] alloc_internal被调用次数 15549 
-[109778.127280] __uvm_kvmalloc_zero被调用次数 12782 
-[109778.127286] alloc_internal被调用次数 15550 
-[109778.127290] __uvm_kvmalloc_zero被调用次数 12783 
-[109778.127308] alloc_internal被调用次数 15551 
-[109778.127312] __uvm_kvmalloc_zero被调用次数 12784 
-[109778.127322] alloc_internal被调用次数 15552 
-[109778.127327] __uvm_kvmalloc_zero被调用次数 12785 
-[109778.127336] alloc_internal被调用次数 15553 
-[109778.127340] __uvm_kvmalloc_zero被调用次数 12786 
-[109778.127350] alloc_internal被调用次数 15554 
-[109778.127356] __uvm_kvmalloc_zero被调用次数 12787 
-[109778.127365] alloc_internal被调用次数 15555 
-[109778.127369] __uvm_kvmalloc_zero被调用次数 12788 
-[109778.127378] alloc_internal被调用次数 15556 
-[109778.127383] __uvm_kvmalloc_zero被调用次数 12789 
-[109778.127392] alloc_internal被调用次数 15557 
-[109778.127396] __uvm_kvmalloc_zero被调用次数 12790 
-[109778.127405] alloc_internal被调用次数 15558 
-[109778.127410] __uvm_kvmalloc_zero被调用次数 12791 
-[109778.127425] alloc_internal被调用次数 15559 
-[109778.127430] __uvm_kvmalloc_zero被调用次数 12792 
-[109778.127439] alloc_internal被调用次数 15560 
-[109778.127443] __uvm_kvmalloc_zero被调用次数 12793 
-[109778.127452] alloc_internal被调用次数 15561 
-[109778.127457] __uvm_kvmalloc_zero被调用次数 12794 
-[109778.127466] alloc_internal被调用次数 15562 
-[109778.127471] __uvm_kvmalloc_zero被调用次数 12795 
-[109778.127480] alloc_internal被调用次数 15563 
-[109778.127487] __uvm_kvmalloc_zero被调用次数 12796 
-[109778.127498] alloc_internal被调用次数 15564 
-[109778.127502] __uvm_kvmalloc_zero被调用次数 12797 
-[109778.127511] alloc_internal被调用次数 15565 
-[109778.127515] __uvm_kvmalloc_zero被调用次数 12798 
-[109778.127524] alloc_internal被调用次数 15566 
-[109778.127531] __uvm_kvmalloc_zero被调用次数 12799 
-[109778.127540] alloc_internal被调用次数 15567 
-[109778.127546] __uvm_kvmalloc_zero被调用次数 12800 
-[109778.127555] alloc_internal被调用次数 15568 
-[109778.127560] __uvm_kvmalloc_zero被调用次数 12801 
-[109778.127569] alloc_internal被调用次数 15569 
-[109778.127573] __uvm_kvmalloc_zero被调用次数 12802 
-[109778.127582] alloc_internal被调用次数 15570 
-[109778.127587] __uvm_kvmalloc_zero被调用次数 12803 
-[109778.127596] alloc_internal被调用次数 15571 
-[109778.127604] __uvm_kvmalloc_zero被调用次数 12804 
-[109778.127613] alloc_internal被调用次数 15572 
-[109778.127617] __uvm_kvmalloc_zero被调用次数 12805 
-[109778.127626] alloc_internal被调用次数 15573 
-[109778.127631] __uvm_kvmalloc_zero被调用次数 12806 
-[109778.127642] alloc_internal被调用次数 15574 
-[109778.127647] __uvm_kvmalloc_zero被调用次数 12807 
-[109778.127659] alloc_internal被调用次数 15575 
-[109778.127668] __uvm_kvmalloc_zero被调用次数 12808 
-[109778.127677] alloc_internal被调用次数 15576 
-[109778.127681] __uvm_kvmalloc_zero被调用次数 12809 
-[109778.127690] alloc_internal被调用次数 15577 
-[109778.127694] __uvm_kvmalloc_zero被调用次数 12810 
-[109778.127703] alloc_internal被调用次数 15578 
-[109778.127708] __uvm_kvmalloc_zero被调用次数 12811 
-[109778.127716] alloc_internal被调用次数 15579 
-[109778.127722] __uvm_kvmalloc_zero被调用次数 12812 
-[109778.127731] alloc_internal被调用次数 15580 
-[109778.127738] __uvm_kvmalloc_zero被调用次数 12813 
-[109778.127747] alloc_internal被调用次数 15581 
-[109778.127751] __uvm_kvmalloc_zero被调用次数 12814 
-[109778.127759] alloc_internal被调用次数 15582 
-[109778.127764] __uvm_kvmalloc_zero被调用次数 12815 
-[109778.127773] alloc_internal被调用次数 15583 
-[109778.127778] __uvm_kvmalloc_zero被调用次数 12816 
-[109778.127787] alloc_internal被调用次数 15584 
-[109778.127791] __uvm_kvmalloc_zero被调用次数 12817 
-[109778.127800] alloc_internal被调用次数 15585 
-[109778.127804] __uvm_kvmalloc_zero被调用次数 12818 
-[109778.127816] alloc_internal被调用次数 15586 
-[109778.127820] __uvm_kvmalloc_zero被调用次数 12819 
-[109778.127828] alloc_internal被调用次数 15587 
-[109778.127834] __uvm_kvmalloc_zero被调用次数 12820 
-[109778.127844] alloc_internal被调用次数 15588 
-[109778.127848] __uvm_kvmalloc_zero被调用次数 12821 
-[109778.127857] alloc_internal被调用次数 15589 
-[109778.127861] __uvm_kvmalloc_zero被调用次数 12822 
-[109778.129046] uvm_kvfree被调用次数 14896 
-[109778.129061] uvm_kvfree被调用次数 14897 
-[109822.493027] uvm_kvfree被调用次数 14898 
-[109822.493034] uvm_kvfree被调用次数 14899 
-[109822.493037] uvm_kvfree被调用次数 14900 
-[109822.493040] uvm_kvfree被调用次数 14901 
-[109822.493043] uvm_kvfree被调用次数 14902 
-[109822.493046] uvm_kvfree被调用次数 14903 
-[109822.493048] uvm_kvfree被调用次数 14904 
-[109822.493051] uvm_kvfree被调用次数 14905 
-[109822.493054] uvm_kvfree被调用次数 14906 
-[109822.493058] uvm_kvfree被调用次数 14907 
-[109822.493061] uvm_kvfree被调用次数 14908 
-[109822.493063] uvm_kvfree被调用次数 14909 
-[109822.493066] uvm_kvfree被调用次数 14910 
-[109822.493069] uvm_kvfree被调用次数 14911 
-[109822.493072] uvm_kvfree被调用次数 14912 
-[109822.493074] uvm_kvfree被调用次数 14913 
-[109822.493077] uvm_kvfree被调用次数 14914 
-[109822.493079] uvm_kvfree被调用次数 14915 
-[109822.493083] uvm_kvfree被调用次数 14916 
-[109822.493085] uvm_kvfree被调用次数 14917 
-[109822.493088] uvm_kvfree被调用次数 14918 
-[109822.493091] uvm_kvfree被调用次数 14919 
-[109822.493093] uvm_kvfree被调用次数 14920 
-[109822.493098] uvm_kvfree被调用次数 14921 
-[109822.493101] uvm_kvfree被调用次数 14922 
-[109822.493104] uvm_kvfree被调用次数 14923 
-[109822.493107] uvm_kvfree被调用次数 14924 
-[109822.493109] uvm_kvfree被调用次数 14925 
-[109822.493111] uvm_kvfree被调用次数 14926 
-[109822.493114] uvm_kvfree被调用次数 14927 
-[109822.493118] uvm_kvfree被调用次数 14928 
-[109822.493120] uvm_kvfree被调用次数 14929 
-[109822.493123] uvm_kvfree被调用次数 14930 
-[109822.493126] uvm_kvfree被调用次数 14931 
-[109822.493128] uvm_kvfree被调用次数 14932 
-[109822.493130] uvm_kvfree被调用次数 14933 
-[109822.493133] uvm_kvfree被调用次数 14934 
-[109822.493136] uvm_kvfree被调用次数 14935 
-[109822.493138] uvm_kvfree被调用次数 14936 
-[109822.493142] uvm_kvfree被调用次数 14937 
-[109822.493143] uvm_kvfree被调用次数 14938 
-[109822.493223] uvm_kvfree被调用次数 14939 
-[109822.493224] uvm_kvfree被调用次数 14940 
-[109823.281471] alloc_internal被调用次数 15590 
-[109823.281475] __uvm_kvmalloc被调用次数 2767 
-[109823.281478] alloc_internal被调用次数 15591 
-[109823.281480] __uvm_kvmalloc_zero被调用次数 12823 
-[109823.281481] alloc_internal被调用次数 15592 
-[109823.281482] __uvm_kvmalloc_zero被调用次数 12824 
-[109823.281521] alloc_internal被调用次数 15593 
-[109823.281734] __uvm_kvmalloc被调用次数 2768 
-[109823.281735] alloc_internal被调用次数 15594 
-[109823.281737] __uvm_kvmalloc_zero被调用次数 12825 
-[109823.281740] alloc_internal被调用次数 15595 
-[109823.281743] __uvm_kvmalloc_zero被调用次数 12826 
-[109823.281755] alloc_internal被调用次数 15596 
-[109823.281757] __uvm_kvmalloc_zero被调用次数 12827 
-[109823.281761] alloc_internal被调用次数 15597 
-[109823.281763] __uvm_kvmalloc_zero被调用次数 12828 
-[109823.281767] alloc_internal被调用次数 15598 
-[109823.281770] __uvm_kvmalloc_zero被调用次数 12829 
-[109823.281773] alloc_internal被调用次数 15599 
-[109823.281777] __uvm_kvmalloc_zero被调用次数 12830 
-[109823.281781] alloc_internal被调用次数 15600 
-[109823.281784] __uvm_kvmalloc_zero被调用次数 12831 
-[109823.281788] alloc_internal被调用次数 15601 
-[109823.281791] __uvm_kvmalloc_zero被调用次数 12832 
-[109823.281795] alloc_internal被调用次数 15602 
-[109823.281798] __uvm_kvmalloc_zero被调用次数 12833 
-[109823.281802] alloc_internal被调用次数 15603 
-[109823.281806] __uvm_kvmalloc_zero被调用次数 12834 
-[109823.281815] alloc_internal被调用次数 15604 
-[109823.281820] __uvm_kvmalloc_zero被调用次数 12835 
-[109823.281823] alloc_internal被调用次数 15605 
-[109823.281827] __uvm_kvmalloc_zero被调用次数 12836 
-[109823.281830] alloc_internal被调用次数 15606 
-[109823.281834] __uvm_kvmalloc_zero被调用次数 12837 
-[109823.281837] alloc_internal被调用次数 15607 
-[109823.281840] __uvm_kvmalloc_zero被调用次数 12838 
-[109823.281843] alloc_internal被调用次数 15608 
-[109823.281845] __uvm_kvmalloc_zero被调用次数 12839 
-[109823.281849] alloc_internal被调用次数 15609 
-[109823.281851] __uvm_kvmalloc_zero被调用次数 12840 
-[109823.281854] alloc_internal被调用次数 15610 
-[109823.281857] __uvm_kvmalloc_zero被调用次数 12841 
-[109823.281860] alloc_internal被调用次数 15611 
-[109823.281862] __uvm_kvmalloc_zero被调用次数 12842 
-[109823.281866] alloc_internal被调用次数 15612 
-[109823.281868] __uvm_kvmalloc_zero被调用次数 12843 
-[109823.281871] alloc_internal被调用次数 15613 
-[109823.281874] __uvm_kvmalloc_zero被调用次数 12844 
-[109823.281877] alloc_internal被调用次数 15614 
-[109823.281879] __uvm_kvmalloc_zero被调用次数 12845 
-[109823.281883] alloc_internal被调用次数 15615 
-[109823.281885] __uvm_kvmalloc_zero被调用次数 12846 
-[109823.281888] alloc_internal被调用次数 15616 
-[109823.281891] __uvm_kvmalloc_zero被调用次数 12847 
-[109823.281894] alloc_internal被调用次数 15617 
-[109823.281896] __uvm_kvmalloc_zero被调用次数 12848 
-[109823.281900] alloc_internal被调用次数 15618 
-[109823.281902] __uvm_kvmalloc_zero被调用次数 12849 
-[109823.281905] alloc_internal被调用次数 15619 
-[109823.281908] __uvm_kvmalloc_zero被调用次数 12850 
-[109823.281912] alloc_internal被调用次数 15620 
-[109823.281915] __uvm_kvmalloc_zero被调用次数 12851 
-[109823.281918] alloc_internal被调用次数 15621 
-[109823.281920] __uvm_kvmalloc_zero被调用次数 12852 
-[109823.281923] alloc_internal被调用次数 15622 
-[109823.281925] __uvm_kvmalloc_zero被调用次数 12853 
-[109823.281929] alloc_internal被调用次数 15623 
-[109823.281931] __uvm_kvmalloc_zero被调用次数 12854 
-[109823.281935] alloc_internal被调用次数 15624 
-[109823.281937] __uvm_kvmalloc_zero被调用次数 12855 
-[109823.281941] alloc_internal被调用次数 15625 
-[109823.281943] __uvm_kvmalloc_zero被调用次数 12856 
-[109823.281947] alloc_internal被调用次数 15626 
-[109823.281949] __uvm_kvmalloc_zero被调用次数 12857 
-[109823.281952] alloc_internal被调用次数 15627 
-[109823.281956] __uvm_kvmalloc_zero被调用次数 12858 
-[109823.281959] alloc_internal被调用次数 15628 
-[109823.281962] __uvm_kvmalloc_zero被调用次数 12859 
-[109823.281965] alloc_internal被调用次数 15629 
-[109823.281967] __uvm_kvmalloc_zero被调用次数 12860 
-[109823.281971] alloc_internal被调用次数 15630 
-[109823.281973] __uvm_kvmalloc_zero被调用次数 12861 
-[109823.281976] alloc_internal被调用次数 15631 
-[109823.281979] __uvm_kvmalloc_zero被调用次数 12862 
-[109823.281983] alloc_internal被调用次数 15632 
-[109823.281985] __uvm_kvmalloc_zero被调用次数 12863 
-[109823.281988] alloc_internal被调用次数 15633 
-[109823.281991] __uvm_kvmalloc_zero被调用次数 12864 
-[109823.281994] alloc_internal被调用次数 15634 
-[109823.281996] __uvm_kvmalloc_zero被调用次数 12865 
-[109823.282438] uvm_kvfree被调用次数 14941 
-[109823.282453] uvm_kvfree被调用次数 14942 
-[109823.282525] uvm_kvfree被调用次数 14943 
-[109823.282528] uvm_kvfree被调用次数 14944 
-[109823.282530] uvm_kvfree被调用次数 14945 
-[109823.282533] uvm_kvfree被调用次数 14946 
-[109823.282535] uvm_kvfree被调用次数 14947 
-[109823.282538] uvm_kvfree被调用次数 14948 
-[109823.282540] uvm_kvfree被调用次数 14949 
-[109823.282543] uvm_kvfree被调用次数 14950 
-[109823.282545] uvm_kvfree被调用次数 14951 
-[109823.282548] uvm_kvfree被调用次数 14952 
-[109823.282550] uvm_kvfree被调用次数 14953 
-[109823.282553] uvm_kvfree被调用次数 14954 
-[109823.282555] uvm_kvfree被调用次数 14955 
-[109823.282559] uvm_kvfree被调用次数 14956 
-[109823.282562] uvm_kvfree被调用次数 14957 
-[109823.282564] uvm_kvfree被调用次数 14958 
-[109823.282567] uvm_kvfree被调用次数 14959 
-[109823.282569] uvm_kvfree被调用次数 14960 
-[109823.282572] uvm_kvfree被调用次数 14961 
-[109823.282574] uvm_kvfree被调用次数 14962 
-[109823.282577] uvm_kvfree被调用次数 14963 
-[109823.282579] uvm_kvfree被调用次数 14964 
-[109823.282582] uvm_kvfree被调用次数 14965 
-[109823.282585] uvm_kvfree被调用次数 14966 
-[109823.282588] uvm_kvfree被调用次数 14967 
-[109823.282590] uvm_kvfree被调用次数 14968 
-[109823.282593] uvm_kvfree被调用次数 14969 
-[109823.282595] uvm_kvfree被调用次数 14970 
-[109823.282597] uvm_kvfree被调用次数 14971 
-[109823.282600] uvm_kvfree被调用次数 14972 
-[109823.282602] uvm_kvfree被调用次数 14973 
-[109823.282605] uvm_kvfree被调用次数 14974 
-[109823.282607] uvm_kvfree被调用次数 14975 
-[109823.282610] uvm_kvfree被调用次数 14976 
-[109823.282612] uvm_kvfree被调用次数 14977 
-[109823.282615] uvm_kvfree被调用次数 14978 
-[109823.282617] uvm_kvfree被调用次数 14979 
-[109823.282619] uvm_kvfree被调用次数 14980 
-[109823.282621] uvm_kvfree被调用次数 14981 
-[109823.282624] uvm_kvfree被调用次数 14982 
-[109823.282626] uvm_kvfree被调用次数 14983 
-[109823.282664] uvm_kvfree被调用次数 14984 
-[109823.282665] uvm_kvfree被调用次数 14985 
-[109823.318121] uvm_kvfree被调用次数 14986 
-[109823.318667] uvm_kvfree被调用次数 14987 
-[109823.319720] uvm_kvfree被调用次数 14988 
-[109823.320774] uvm_kvfree被调用次数 14989 
-[109823.321830] uvm_kvfree被调用次数 14990 
-[109823.322880] uvm_kvfree被调用次数 14991 
-[109823.323934] uvm_kvfree被调用次数 14992 
-[109823.324988] uvm_kvfree被调用次数 14993 
-[109823.326044] uvm_kvfree被调用次数 14994 
-[109823.327095] uvm_kvfree被调用次数 14995 
-[109823.328149] uvm_kvfree被调用次数 14996 
-[109823.329202] uvm_kvfree被调用次数 14997 
-[109823.330258] uvm_kvfree被调用次数 14998 
-[109823.331309] uvm_kvfree被调用次数 14999 
-[109823.331311] uvm_kvfree被调用次数 15000 
-[109823.332285] uvm_kvfree被调用次数 15001 
-[109823.332797] uvm_kvfree被调用次数 15002 
-[109823.332799] uvm_kvfree被调用次数 15003 
-[109823.333223] uvm_kvfree被调用次数 15004 
-[109823.333224] uvm_kvfree被调用次数 15005 
-[109823.333647] uvm_kvfree被调用次数 15006 
-[109823.333648] uvm_kvfree被调用次数 15007 
-[109823.334064] uvm_kvfree被调用次数 15008 
-[109823.334065] uvm_kvfree被调用次数 15009 
-[109823.334476] uvm_kvfree被调用次数 15010 
-[109823.334477] uvm_kvfree被调用次数 15011 
-[109823.334886] uvm_kvfree被调用次数 15012 
-[109823.334887] uvm_kvfree被调用次数 15013 
-[109823.335302] uvm_kvfree被调用次数 15014 
-[109823.335303] uvm_kvfree被调用次数 15015 
-[109823.335712] uvm_kvfree被调用次数 15016 
-[109823.335713] uvm_kvfree被调用次数 15017 
-[109823.336122] uvm_kvfree被调用次数 15018 
-[109823.336124] uvm_kvfree被调用次数 15019 
-[109823.336538] uvm_kvfree被调用次数 15020 
-[109823.336539] uvm_kvfree被调用次数 15021 
-[109823.336948] uvm_kvfree被调用次数 15022 
-[109823.336949] uvm_kvfree被调用次数 15023 
-[109823.337358] uvm_kvfree被调用次数 15024 
-[109823.337360] uvm_kvfree被调用次数 15025 
-[109823.337769] uvm_kvfree被调用次数 15026 
-[109823.337770] uvm_kvfree被调用次数 15027 
-[109823.338170] uvm_kvfree被调用次数 15028 
-[109823.338171] uvm_kvfree被调用次数 15029 
-[109823.338587] uvm_kvfree被调用次数 15030 
-[109823.342396] uvm_kvfree被调用次数 15031 
-[109823.343452] uvm_kvfree被调用次数 15032 
-[109823.344503] uvm_kvfree被调用次数 15033 
-[109823.345557] uvm_kvfree被调用次数 15034 
-[109823.346613] uvm_kvfree被调用次数 15035 
-[109823.346616] uvm_kvfree被调用次数 15036 
-[109823.346619] uvm_kvfree被调用次数 15037 
-[109823.346621] uvm_kvfree被调用次数 15038 
-[109823.346624] uvm_kvfree被调用次数 15039 
-[109823.346627] uvm_kvfree被调用次数 15040 
-[109823.346629] uvm_kvfree被调用次数 15041 
-[109823.346631] uvm_kvfree被调用次数 15042 
-[109823.346634] uvm_kvfree被调用次数 15043 
-[109823.346637] uvm_kvfree被调用次数 15044 
-[109823.346639] uvm_kvfree被调用次数 15045 
-[109823.346642] uvm_kvfree被调用次数 15046 
-[109823.346645] uvm_kvfree被调用次数 15047 
-[109823.346647] uvm_kvfree被调用次数 15048 
-[109823.346650] uvm_kvfree被调用次数 15049 
-[109823.346652] uvm_kvfree被调用次数 15050 
-[109823.347688] uvm_kvfree被调用次数 15051 
-[109823.348744] uvm_kvfree被调用次数 15052 
-[109823.349797] uvm_kvfree被调用次数 15053 
-[109823.350852] uvm_kvfree被调用次数 15054 
-[109823.351905] uvm_kvfree被调用次数 15055 
-[109823.352962] uvm_kvfree被调用次数 15056 
-[109823.352964] uvm_kvfree被调用次数 15057 
-[109823.352967] uvm_kvfree被调用次数 15058 
-[109823.352970] uvm_kvfree被调用次数 15059 
-[109823.352972] uvm_kvfree被调用次数 15060 
-[109823.352977] uvm_kvfree被调用次数 15061 
-[109823.352980] uvm_kvfree被调用次数 15062 
-[109823.352982] uvm_kvfree被调用次数 15063 
-[109823.352985] uvm_kvfree被调用次数 15064 
-[109823.352987] uvm_kvfree被调用次数 15065 
-[109823.352990] uvm_kvfree被调用次数 15066 
-[109823.352993] uvm_kvfree被调用次数 15067 
-[109823.352995] uvm_kvfree被调用次数 15068 
-[109823.352998] uvm_kvfree被调用次数 15069 
-[109823.353001] uvm_kvfree被调用次数 15070 
-[109823.353003] uvm_kvfree被调用次数 15071 
-[109823.354037] uvm_kvfree被调用次数 15072 
-[109823.355093] uvm_kvfree被调用次数 15073 
-[109823.356145] uvm_kvfree被调用次数 15074 
-[109823.356146] uvm_kvfree被调用次数 15075 
-[109823.356148] uvm_kvfree被调用次数 15076 
-[109823.357201] uvm_kvfree被调用次数 15077 
-[109823.358254] uvm_kvfree被调用次数 15078 
-[109823.358255] uvm_kvfree被调用次数 15079 
-[109823.358271] uvm_kvfree被调用次数 15080 
-[109823.358278] uvm_kvfree被调用次数 15081 
-[109823.358278] uvm_kvfree被调用次数 15082 
-[109823.358280] uvm_kvfree被调用次数 15083 
-[109823.358295] uvm_kvfree被调用次数 15084 
-[109823.358309] uvm_kvfree被调用次数 15085 
-[109823.358367] uvm_kvfree被调用次数 15086 
-[109823.358368] uvm_kvfree被调用次数 15087 
-[109823.359310] uvm_kvfree被调用次数 15088 
-[109823.360363] uvm_kvfree被调用次数 15089 
-[109823.361419] uvm_kvfree被调用次数 15090 
-[109823.362470] uvm_kvfree被调用次数 15091 
-[109823.363526] uvm_kvfree被调用次数 15092 
-[109823.364579] uvm_kvfree被调用次数 15093 
-[109823.365634] uvm_kvfree被调用次数 15094 
-[109823.366686] uvm_kvfree被调用次数 15095 
-[109823.367742] uvm_kvfree被调用次数 15096 
-[109823.368794] uvm_kvfree被调用次数 15097 
-[109823.369851] uvm_kvfree被调用次数 15098 
-[109823.369852] uvm_kvfree被调用次数 15099 
-[109823.369854] uvm_kvfree被调用次数 15100 
-[109823.370902] uvm_kvfree被调用次数 15101 
-[109823.371956] uvm_kvfree被调用次数 15102 
-[109823.373012] uvm_kvfree被调用次数 15103 
-[109823.373014] uvm_kvfree被调用次数 15104 
-[109823.374063] uvm_kvfree被调用次数 15105 
-[109823.375119] uvm_kvfree被调用次数 15106 
-[109823.376170] uvm_kvfree被调用次数 15107 
-[109823.377225] uvm_kvfree被调用次数 15108 
-[109823.378278] uvm_kvfree被调用次数 15109 
-[109823.379332] uvm_kvfree被调用次数 15110 
-[109823.380386] uvm_kvfree被调用次数 15111 
-[109823.381442] uvm_kvfree被调用次数 15112 
-[109823.382493] uvm_kvfree被调用次数 15113 
-[109823.383550] uvm_kvfree被调用次数 15114 
-[109823.384602] uvm_kvfree被调用次数 15115 
-[109823.385658] uvm_kvfree被调用次数 15116 
-[109823.386710] uvm_kvfree被调用次数 15117 
-[109823.387764] uvm_kvfree被调用次数 15118 
-[109823.388819] uvm_kvfree被调用次数 15119 
-[109823.389871] uvm_kvfree被调用次数 15120 
-[109823.390925] uvm_kvfree被调用次数 15121 
-[109823.391981] uvm_kvfree被调用次数 15122 
-[109823.393033] uvm_kvfree被调用次数 15123 
-[109823.394089] uvm_kvfree被调用次数 15124 
-[109823.395141] uvm_kvfree被调用次数 15125 
-[109823.396199] uvm_kvfree被调用次数 15126 
-[109823.396200] uvm_kvfree被调用次数 15127 
-[109823.396202] uvm_kvfree被调用次数 15128 
-[109823.396203] uvm_kvfree被调用次数 15129 
-[109823.397253] uvm_kvfree被调用次数 15130 
-[109823.397261] uvm_kvfree被调用次数 15131 
-[109823.397271] uvm_kvfree被调用次数 15132 
-[109823.397507] uvm_kvfree被调用次数 15133 
-[109823.397509] uvm_kvfree被调用次数 15134 
-[109823.397526] uvm_kvfree被调用次数 15135 
-[109823.397527] uvm_kvfree被调用次数 15136 
-[109823.397545] uvm_kvfree被调用次数 15137 
-[109823.397546] uvm_kvfree被调用次数 15138 
-[109823.397560] uvm_kvfree被调用次数 15139 
-[109823.397561] uvm_kvfree被调用次数 15140 
-[109823.397575] uvm_kvfree被调用次数 15141 
-[109823.397576] uvm_kvfree被调用次数 15142 
-[109823.397590] uvm_kvfree被调用次数 15143 
-[109823.397591] uvm_kvfree被调用次数 15144 
-[109823.397607] uvm_kvfree被调用次数 15145 
-[109823.397608] uvm_kvfree被调用次数 15146 
-[109823.397623] uvm_kvfree被调用次数 15147 
-[109823.397624] uvm_kvfree被调用次数 15148 
-[109823.397641] uvm_kvfree被调用次数 15149 
-[109823.397641] uvm_kvfree被调用次数 15150 
-[109823.397656] uvm_kvfree被调用次数 15151 
-[109823.397657] uvm_kvfree被调用次数 15152 
-[109823.397674] uvm_kvfree被调用次数 15153 
-[109823.397675] uvm_kvfree被调用次数 15154 
-[109823.397688] uvm_kvfree被调用次数 15155 
-[109823.397689] uvm_kvfree被调用次数 15156 
-[109823.397701] uvm_kvfree被调用次数 15157 
-[109823.397702] uvm_kvfree被调用次数 15158 
-[109823.397717] uvm_kvfree被调用次数 15159 
-[109823.397718] uvm_kvfree被调用次数 15160 
-[109823.397732] uvm_kvfree被调用次数 15161 
-[109823.397733] uvm_kvfree被调用次数 15162 
-[109823.397750] uvm_kvfree被调用次数 15163 
-[109823.397751] uvm_kvfree被调用次数 15164 
-[109823.397767] uvm_kvfree被调用次数 15165 
-[109823.397768] uvm_kvfree被调用次数 15166 
-[109823.397784] uvm_kvfree被调用次数 15167 
-[109823.397784] uvm_kvfree被调用次数 15168 
-[109823.397799] uvm_kvfree被调用次数 15169 
-[109823.397800] uvm_kvfree被调用次数 15170 
-[109823.397815] uvm_kvfree被调用次数 15171 
-[109823.397816] uvm_kvfree被调用次数 15172 
-[109823.397830] uvm_kvfree被调用次数 15173 
-[109823.397831] uvm_kvfree被调用次数 15174 
-[109823.397843] uvm_kvfree被调用次数 15175 
-[109823.397844] uvm_kvfree被调用次数 15176 
-[109823.397855] uvm_kvfree被调用次数 15177 
-[109823.397856] uvm_kvfree被调用次数 15178 
-[109823.397872] uvm_kvfree被调用次数 15179 
-[109823.397873] uvm_kvfree被调用次数 15180 
-[109823.397889] uvm_kvfree被调用次数 15181 
-[109823.397890] uvm_kvfree被调用次数 15182 
-[109823.397904] uvm_kvfree被调用次数 15183 
-[109823.397905] uvm_kvfree被调用次数 15184 
-[109823.397916] uvm_kvfree被调用次数 15185 
-[109823.397916] uvm_kvfree被调用次数 15186 
-[109823.397931] uvm_kvfree被调用次数 15187 
-[109823.397937] uvm_kvfree被调用次数 15188 
-[109823.397938] uvm_kvfree被调用次数 15189 
-[109823.398122] uvm_kvfree被调用次数 15190 
-[109823.398139] uvm_kvfree被调用次数 15191 
+[  508.377164] PKCS#7 signature not signed with a trusted key
+[  508.382291] alloc_internal被调用次数 0 
+[  508.382294] __uvm_kvmalloc被调用次数 0 
+[  508.382664] alloc_internal被调用次数 1 
+[  508.382666] __uvm_kvmalloc被调用次数 1 
+[  508.382679] alloc_internal被调用次数 2 
+[  508.382680] __uvm_kvmalloc被调用次数 2 
+[  508.382681] alloc_internal被调用次数 3 
+[  508.382682] __uvm_kvmalloc被调用次数 3 
+[  508.382683] alloc_internal被调用次数 4 
+[  508.382686] __uvm_kvmalloc被调用次数 4 
+[  508.382890] nvidia-uvm: Loaded the UVM driver, major device number 508.
+[  508.386224] alloc_internal被调用次数 5 
+[  508.386233] __uvm_kvmalloc_zero被调用次数 0 
+[  508.386250] alloc_internal被调用次数 6 
+[  508.386255] __uvm_kvmalloc_zero被调用次数 1 
+[  508.386258] alloc_internal被调用次数 7 
+[  508.386261] __uvm_kvmalloc_zero被调用次数 2 
+[  508.497103] alloc_internal被调用次数 8 
+[  508.497107] __uvm_kvmalloc_zero被调用次数 3 
+[  508.500919] alloc_internal被调用次数 9 
+[  508.500984] __uvm_kvmalloc_zero被调用次数 4 
+[  508.500986] alloc_internal被调用次数 10 
+[  508.500988] __uvm_kvmalloc_zero被调用次数 5 
+[  508.506588] alloc_internal被调用次数 11 
+[  508.506768] __uvm_kvmalloc_zero被调用次数 6 
+[  508.506770] alloc_internal被调用次数 12 
+[  508.506797] __uvm_kvmalloc_zero被调用次数 7 
+[  508.506798] alloc_internal被调用次数 13 
+[  508.506800] __uvm_kvmalloc_zero被调用次数 8 
+[  508.506819] alloc_internal被调用次数 14 
+[  508.506891] __uvm_kvmalloc_zero被调用次数 9 
+[  508.506892] alloc_internal被调用次数 15 
+[  508.507092] __uvm_kvmalloc_zero被调用次数 10 
+[  508.507094] alloc_internal被调用次数 16 
+[  508.507095] __uvm_kvmalloc_zero被调用次数 11 
+[  508.507238] alloc_internal被调用次数 17 
+[  508.507239] __uvm_kvmalloc_zero被调用次数 12 
+[  508.508765] alloc_internal被调用次数 18 
+[  508.508869] __uvm_kvmalloc_zero被调用次数 13 
+[  508.508870] alloc_internal被调用次数 19 
+[  508.508892] __uvm_kvmalloc_zero被调用次数 14 
+[  508.508893] alloc_internal被调用次数 20 
+[  508.508908] __uvm_kvmalloc_zero被调用次数 15 
+[  508.508909] alloc_internal被调用次数 21 
+[  508.508912] __uvm_kvmalloc_zero被调用次数 16 
+[  508.508913] alloc_internal被调用次数 22 
+[  508.508915] __uvm_kvmalloc_zero被调用次数 17 
+[  508.520176] alloc_internal被调用次数 23 
+[  508.520445] __uvm_kvmalloc_zero被调用次数 18 
+[  508.520537] alloc_internal被调用次数 24 
+[  508.520539] __uvm_kvmalloc_zero被调用次数 19 
+[  508.520540] alloc_internal被调用次数 25 
+[  508.520541] __uvm_kvmalloc_zero被调用次数 20 
+[  508.520542] alloc_internal被调用次数 26 
+[  508.520543] __uvm_kvmalloc_zero被调用次数 21 
+[  508.520544] alloc_internal被调用次数 27 
+[  508.520546] __uvm_kvmalloc_zero被调用次数 22 
+[  508.531544] alloc_internal被调用次数 28 
+[  508.531546] __uvm_kvmalloc_zero被调用次数 23 
+[  508.531547] alloc_internal被调用次数 29 
+[  508.531548] __uvm_kvmalloc_zero被调用次数 24 
+[  508.531549] alloc_internal被调用次数 30 
+[  508.531551] __uvm_kvmalloc_zero被调用次数 25 
+[  508.531551] alloc_internal被调用次数 31 
+[  508.531553] __uvm_kvmalloc_zero被调用次数 26 
+[  508.544339] alloc_internal被调用次数 32 
+[  508.544444] __uvm_kvmalloc_zero被调用次数 27 
+[  508.544448] alloc_internal被调用次数 33 
+[  508.544531] __uvm_kvmalloc_zero被调用次数 28 
+[  508.557363] alloc_internal被调用次数 34 
+[  508.557392] __uvm_kvmalloc_zero被调用次数 29 
+[  508.557393] alloc_internal被调用次数 35 
+[  508.557493] __uvm_kvmalloc_zero被调用次数 30 
+[  508.558056] alloc_internal被调用次数 36 
+[  508.558057] __uvm_kvmalloc_zero被调用次数 31 
+[  508.569770] alloc_internal被调用次数 37 
+[  508.569792] __uvm_kvmalloc_zero被调用次数 32 
+[  508.569793] alloc_internal被调用次数 38 
+[  508.569850] __uvm_kvmalloc_zero被调用次数 33 
+[  508.581784] alloc_internal被调用次数 39 
+[  508.581810] __uvm_kvmalloc_zero被调用次数 34 
+[  508.581811] alloc_internal被调用次数 40 
+[  508.581866] __uvm_kvmalloc_zero被调用次数 35 
+[  508.582474] alloc_internal被调用次数 41 
+[  508.582475] __uvm_kvmalloc_zero被调用次数 36 
+[  508.594014] alloc_internal被调用次数 42 
+[  508.594036] __uvm_kvmalloc_zero被调用次数 37 
+[  508.594036] alloc_internal被调用次数 43 
+[  508.594088] __uvm_kvmalloc_zero被调用次数 38 
+[  508.606800] alloc_internal被调用次数 44 
+[  508.606821] __uvm_kvmalloc_zero被调用次数 39 
+[  508.606821] alloc_internal被调用次数 45 
+[  508.606872] __uvm_kvmalloc_zero被调用次数 40 
+[  508.607475] alloc_internal被调用次数 46 
+[  508.607476] __uvm_kvmalloc_zero被调用次数 41 
+[  508.617761] uvm_kvfree被调用次数 0 
+[  508.633190] alloc_internal被调用次数 47 
+[  508.633192] __uvm_kvmalloc_zero被调用次数 42 
+[  508.636993] alloc_internal被调用次数 48 
+[  508.637024] __uvm_kvmalloc_zero被调用次数 43 
+[  508.637025] alloc_internal被调用次数 49 
+[  508.637027] __uvm_kvmalloc_zero被调用次数 44 
+[  508.642205] alloc_internal被调用次数 50 
+[  508.642319] __uvm_kvmalloc_zero被调用次数 45 
+[  508.642320] alloc_internal被调用次数 51 
+[  508.642349] __uvm_kvmalloc_zero被调用次数 46 
+[  508.642350] alloc_internal被调用次数 52 
+[  508.642352] __uvm_kvmalloc_zero被调用次数 47 
+[  508.642366] alloc_internal被调用次数 53 
+[  508.642434] __uvm_kvmalloc_zero被调用次数 48 
+[  508.642435] alloc_internal被调用次数 54 
+[  508.642611] __uvm_kvmalloc_zero被调用次数 49 
+[  508.642613] alloc_internal被调用次数 55 
+[  508.642614] __uvm_kvmalloc_zero被调用次数 50 
+[  508.642853] alloc_internal被调用次数 56 
+[  508.642854] __uvm_kvmalloc_zero被调用次数 51 
+[  508.644340] alloc_internal被调用次数 57 
+[  508.644418] __uvm_kvmalloc_zero被调用次数 52 
+[  508.644418] alloc_internal被调用次数 58 
+[  508.644434] __uvm_kvmalloc_zero被调用次数 53 
+[  508.644435] alloc_internal被调用次数 59 
+[  508.644446] __uvm_kvmalloc_zero被调用次数 54 
+[  508.644447] alloc_internal被调用次数 60 
+[  508.644449] __uvm_kvmalloc_zero被调用次数 55 
+[  508.644450] alloc_internal被调用次数 61 
+[  508.644451] __uvm_kvmalloc_zero被调用次数 56 
+[  508.654671] alloc_internal被调用次数 62 
+[  508.654921] __uvm_kvmalloc_zero被调用次数 57 
+[  508.654996] alloc_internal被调用次数 63 
+[  508.654997] __uvm_kvmalloc_zero被调用次数 58 
+[  508.655122] alloc_internal被调用次数 64 
+[  508.655123] __uvm_kvmalloc_zero被调用次数 59 
+[  508.655125] alloc_internal被调用次数 65 
+[  508.655125] __uvm_kvmalloc_zero被调用次数 60 
+[  508.655126] alloc_internal被调用次数 66 
+[  508.655128] __uvm_kvmalloc_zero被调用次数 61 
+[  508.664885] alloc_internal被调用次数 67 
+[  508.664886] __uvm_kvmalloc_zero被调用次数 62 
+[  508.664887] alloc_internal被调用次数 68 
+[  508.664889] __uvm_kvmalloc_zero被调用次数 63 
+[  508.664890] alloc_internal被调用次数 69 
+[  508.664891] __uvm_kvmalloc_zero被调用次数 64 
+[  508.664892] alloc_internal被调用次数 70 
+[  508.664893] __uvm_kvmalloc_zero被调用次数 65 
+[  508.677318] alloc_internal被调用次数 71 
+[  508.677408] __uvm_kvmalloc_zero被调用次数 66 
+[  508.677412] alloc_internal被调用次数 72 
+[  508.677522] __uvm_kvmalloc_zero被调用次数 67 
+[  508.689716] alloc_internal被调用次数 73 
+[  508.689746] __uvm_kvmalloc_zero被调用次数 68 
+[  508.689747] alloc_internal被调用次数 74 
+[  508.689807] __uvm_kvmalloc_zero被调用次数 69 
+[  508.690404] alloc_internal被调用次数 75 
+[  508.690406] __uvm_kvmalloc_zero被调用次数 70 
+[  508.701552] alloc_internal被调用次数 76 
+[  508.701573] __uvm_kvmalloc_zero被调用次数 71 
+[  508.701574] alloc_internal被调用次数 77 
+[  508.701628] __uvm_kvmalloc_zero被调用次数 72 
+[  508.713387] alloc_internal被调用次数 78 
+[  508.713407] __uvm_kvmalloc_zero被调用次数 73 
+[  508.713408] alloc_internal被调用次数 79 
+[  508.713460] __uvm_kvmalloc_zero被调用次数 74 
+[  508.714037] alloc_internal被调用次数 80 
+[  508.714039] __uvm_kvmalloc_zero被调用次数 75 
+[  508.725179] alloc_internal被调用次数 81 
+[  508.725199] __uvm_kvmalloc_zero被调用次数 76 
+[  508.725200] alloc_internal被调用次数 82 
+[  508.725254] __uvm_kvmalloc_zero被调用次数 77 
+[  508.737345] alloc_internal被调用次数 83 
+[  508.737370] __uvm_kvmalloc_zero被调用次数 78 
+[  508.737371] alloc_internal被调用次数 84 
+[  508.737420] __uvm_kvmalloc_zero被调用次数 79 
+[  508.737985] alloc_internal被调用次数 85 
+[  508.737986] __uvm_kvmalloc_zero被调用次数 80 
+[  508.749224] uvm_kvfree被调用次数 1 
+[  508.795531] alloc_internal被调用次数 86 
+[  508.795534] __uvm_kvmalloc_zero被调用次数 81 
+[  508.795814] alloc_internal被调用次数 87 
+[  508.795816] __uvm_kvmalloc_zero被调用次数 82 
+[  508.796145] alloc_internal被调用次数 88 
+[  508.796148] __uvm_kvmalloc被调用次数 5 
+[  508.796150] alloc_internal被调用次数 89 
+[  508.796152] __uvm_kvmalloc_zero被调用次数 83 
+[  508.796154] alloc_internal被调用次数 90 
+[  508.796155] __uvm_kvmalloc_zero被调用次数 84 
+[  508.796183] alloc_internal被调用次数 91 
+[  508.796185] __uvm_kvmalloc被调用次数 6 
+[  508.796186] alloc_internal被调用次数 92 
+[  508.796187] __uvm_kvmalloc_zero被调用次数 85 
+[  508.796190] alloc_internal被调用次数 93 
+[  508.796192] __uvm_kvmalloc_zero被调用次数 86 
+[  508.796195] alloc_internal被调用次数 94 
+[  508.796198] __uvm_kvmalloc_zero被调用次数 87 
+[  508.796200] alloc_internal被调用次数 95 
+[  508.796203] __uvm_kvmalloc_zero被调用次数 88 
+[  508.796234] uvm_kvfree被调用次数 2 
+[  508.796238] uvm_kvfree被调用次数 3 
+[  508.797039] alloc_internal被调用次数 96 
+[  508.797041] __uvm_kvmalloc被调用次数 7 
+[  508.797043] alloc_internal被调用次数 97 
+[  508.797044] __uvm_kvmalloc_zero被调用次数 89 
+[  508.797046] alloc_internal被调用次数 98 
+[  508.797047] __uvm_kvmalloc_zero被调用次数 90 
+[  508.797075] alloc_internal被调用次数 99 
+[  508.797076] __uvm_kvmalloc被调用次数 8 
+[  508.797078] alloc_internal被调用次数 100 
+[  508.797079] __uvm_kvmalloc_zero被调用次数 91 
+[  508.797082] alloc_internal被调用次数 101 
+[  508.797083] __uvm_kvmalloc_zero被调用次数 92 
+[  508.797134] uvm_kvfree被调用次数 4 
+[  508.797140] uvm_kvfree被调用次数 5 
+[  508.797261] alloc_internal被调用次数 102 
+[  508.797262] __uvm_kvmalloc被调用次数 9 
+[  508.797264] alloc_internal被调用次数 103 
+[  508.797265] __uvm_kvmalloc_zero被调用次数 93 
+[  508.797267] alloc_internal被调用次数 104 
+[  508.797268] __uvm_kvmalloc_zero被调用次数 94 
+[  508.797288] alloc_internal被调用次数 105 
+[  508.797290] __uvm_kvmalloc被调用次数 10 
+[  508.797291] alloc_internal被调用次数 106 
+[  508.797292] __uvm_kvmalloc_zero被调用次数 95 
+[  508.797294] alloc_internal被调用次数 107 
+[  508.797296] __uvm_kvmalloc_zero被调用次数 96 
+[  508.797299] alloc_internal被调用次数 108 
+[  508.797302] __uvm_kvmalloc_zero被调用次数 97 
+[  508.797327] uvm_kvfree被调用次数 6 
+[  508.797329] uvm_kvfree被调用次数 7 
+[  508.797371] alloc_internal被调用次数 109 
+[  508.797372] __uvm_kvmalloc被调用次数 11 
+[  508.797374] alloc_internal被调用次数 110 
+[  508.797375] __uvm_kvmalloc_zero被调用次数 98 
+[  508.797377] alloc_internal被调用次数 111 
+[  508.797378] __uvm_kvmalloc_zero被调用次数 99 
+[  508.797397] alloc_internal被调用次数 112 
+[  508.797404] __uvm_kvmalloc被调用次数 12 
+[  508.797405] alloc_internal被调用次数 113 
+[  508.797406] __uvm_kvmalloc_zero被调用次数 100 
+[  508.797422] uvm_kvfree被调用次数 8 
+[  508.797426] uvm_kvfree被调用次数 9 
+[  508.797529] alloc_internal被调用次数 114 
+[  508.797530] __uvm_kvmalloc被调用次数 13 
+[  508.797532] alloc_internal被调用次数 115 
+[  508.797533] __uvm_kvmalloc_zero被调用次数 101 
+[  508.797535] alloc_internal被调用次数 116 
+[  508.797536] __uvm_kvmalloc_zero被调用次数 102 
+[  508.797556] alloc_internal被调用次数 117 
+[  508.797557] __uvm_kvmalloc被调用次数 14 
+[  508.797558] alloc_internal被调用次数 118 
+[  508.797559] __uvm_kvmalloc_zero被调用次数 103 
+[  508.797562] alloc_internal被调用次数 119 
+[  508.797566] __uvm_kvmalloc_zero被调用次数 104 
+[  508.797568] alloc_internal被调用次数 120 
+[  508.797571] __uvm_kvmalloc_zero被调用次数 105 
+[  508.797594] uvm_kvfree被调用次数 10 
+[  508.797598] uvm_kvfree被调用次数 11 
+[  508.799201] alloc_internal被调用次数 121 
+[  508.799203] __uvm_kvmalloc被调用次数 15 
+[  508.799207] alloc_internal被调用次数 122 
+[  508.799208] __uvm_kvmalloc_zero被调用次数 106 
+[  508.799209] alloc_internal被调用次数 123 
+[  508.799211] __uvm_kvmalloc_zero被调用次数 107 
+[  508.799237] alloc_internal被调用次数 124 
+[  508.799238] __uvm_kvmalloc被调用次数 16 
+[  508.799239] alloc_internal被调用次数 125 
+[  508.799241] __uvm_kvmalloc_zero被调用次数 108 
+[  508.799259] uvm_kvfree被调用次数 12 
+[  508.799264] uvm_kvfree被调用次数 13 
+[  508.825021] alloc_internal被调用次数 126 
+[  508.825024] __uvm_kvmalloc被调用次数 17 
+[  508.825027] alloc_internal被调用次数 127 
+[  508.825029] __uvm_kvmalloc_zero被调用次数 109 
+[  508.825029] alloc_internal被调用次数 128 
+[  508.825031] __uvm_kvmalloc_zero被调用次数 110 
+[  508.825173] alloc_internal被调用次数 129 
+[  508.825300] __uvm_kvmalloc被调用次数 18 
+[  508.825301] alloc_internal被调用次数 130 
+[  508.825303] __uvm_kvmalloc_zero被调用次数 111 
+[  508.825305] alloc_internal被调用次数 131 
+[  508.825306] __uvm_kvmalloc_zero被调用次数 112 
+[  508.825318] alloc_internal被调用次数 132 
+[  508.825319] __uvm_kvmalloc_zero被调用次数 113 
+[  508.825323] alloc_internal被调用次数 133 
+[  508.825324] __uvm_kvmalloc_zero被调用次数 114 
+[  508.825328] alloc_internal被调用次数 134 
+[  508.825329] __uvm_kvmalloc_zero被调用次数 115 
+[  508.825332] alloc_internal被调用次数 135 
+[  508.825333] __uvm_kvmalloc_zero被调用次数 116 
+[  508.825337] alloc_internal被调用次数 136 
+[  508.825338] __uvm_kvmalloc_zero被调用次数 117 
+[  508.825342] alloc_internal被调用次数 137 
+[  508.825343] __uvm_kvmalloc_zero被调用次数 118 
+[  508.825350] alloc_internal被调用次数 138 
+[  508.825351] __uvm_kvmalloc_zero被调用次数 119 
+[  508.825354] alloc_internal被调用次数 139 
+[  508.825355] __uvm_kvmalloc_zero被调用次数 120 
+[  508.825359] alloc_internal被调用次数 140 
+[  508.825360] __uvm_kvmalloc_zero被调用次数 121 
+[  508.825363] alloc_internal被调用次数 141 
+[  508.825364] __uvm_kvmalloc_zero被调用次数 122 
+[  508.825367] alloc_internal被调用次数 142 
+[  508.825368] __uvm_kvmalloc_zero被调用次数 123 
+[  508.825372] alloc_internal被调用次数 143 
+[  508.825373] __uvm_kvmalloc_zero被调用次数 124 
+[  508.825376] alloc_internal被调用次数 144 
+[  508.825377] __uvm_kvmalloc_zero被调用次数 125 
+[  508.825380] alloc_internal被调用次数 145 
+[  508.825382] __uvm_kvmalloc_zero被调用次数 126 
+[  508.825386] alloc_internal被调用次数 146 
+[  508.825387] __uvm_kvmalloc_zero被调用次数 127 
+[  508.825390] alloc_internal被调用次数 147 
+[  508.825391] __uvm_kvmalloc_zero被调用次数 128 
+[  508.825395] alloc_internal被调用次数 148 
+[  508.825396] __uvm_kvmalloc_zero被调用次数 129 
+[  508.825399] alloc_internal被调用次数 149 
+[  508.825400] __uvm_kvmalloc_zero被调用次数 130 
+[  508.825404] alloc_internal被调用次数 150 
+[  508.825404] __uvm_kvmalloc_zero被调用次数 131 
+[  508.825408] alloc_internal被调用次数 151 
+[  508.825409] __uvm_kvmalloc_zero被调用次数 132 
+[  508.825413] alloc_internal被调用次数 152 
+[  508.825414] __uvm_kvmalloc_zero被调用次数 133 
+[  508.825417] alloc_internal被调用次数 153 
+[  508.825418] __uvm_kvmalloc_zero被调用次数 134 
+[  508.825425] alloc_internal被调用次数 154 
+[  508.825426] __uvm_kvmalloc_zero被调用次数 135 
+[  508.825430] alloc_internal被调用次数 155 
+[  508.825431] __uvm_kvmalloc_zero被调用次数 136 
+[  508.825434] alloc_internal被调用次数 156 
+[  508.825435] __uvm_kvmalloc_zero被调用次数 137 
+[  508.825438] alloc_internal被调用次数 157 
+[  508.825439] __uvm_kvmalloc_zero被调用次数 138 
+[  508.825443] alloc_internal被调用次数 158 
+[  508.825444] __uvm_kvmalloc_zero被调用次数 139 
+[  508.825995] uvm_kvfree被调用次数 14 
+[  508.826003] uvm_kvfree被调用次数 15 
+[  508.830097] alloc_internal被调用次数 159 
+[  508.830107] __uvm_kvmalloc被调用次数 19 
+[  508.830112] alloc_internal被调用次数 160 
+[  508.830113] __uvm_kvmalloc_zero被调用次数 140 
+[  508.830115] alloc_internal被调用次数 161 
+[  508.830117] __uvm_kvmalloc_zero被调用次数 141 
+[  508.830161] alloc_internal被调用次数 162 
+[  508.830163] __uvm_kvmalloc被调用次数 20 
+[  508.830164] alloc_internal被调用次数 163 
+[  508.830166] __uvm_kvmalloc_zero被调用次数 142 
+[  508.830170] alloc_internal被调用次数 164 
+[  508.830172] __uvm_kvmalloc_zero被调用次数 143 
+[  508.830241] uvm_kvfree被调用次数 16 
+[  508.830248] uvm_kvfree被调用次数 17 
+[  508.831072] alloc_internal被调用次数 165 
+[  508.831074] __uvm_kvmalloc被调用次数 21 
+[  508.831076] alloc_internal被调用次数 166 
+[  508.831078] __uvm_kvmalloc_zero被调用次数 144 
+[  508.831079] alloc_internal被调用次数 167 
+[  508.831080] __uvm_kvmalloc_zero被调用次数 145 
+[  508.831110] alloc_internal被调用次数 168 
+[  508.831111] __uvm_kvmalloc被调用次数 22 
+[  508.831112] alloc_internal被调用次数 169 
+[  508.831114] __uvm_kvmalloc_zero被调用次数 146 
+[  508.831116] alloc_internal被调用次数 170 
+[  508.831119] __uvm_kvmalloc_zero被调用次数 147 
+[  508.831172] uvm_kvfree被调用次数 18 
+[  508.831177] uvm_kvfree被调用次数 19 
+[  508.849022] alloc_internal被调用次数 171 
+[  508.849024] __uvm_kvmalloc_zero被调用次数 148 
+[  508.849025] alloc_internal被调用次数 172 
+[  508.849026] __uvm_kvmalloc_zero被调用次数 149 
+[  508.849960] alloc_internal被调用次数 173 
+[  508.849962] __uvm_kvmalloc_zero被调用次数 150 
+[  508.849967] uvm_kvfree被调用次数 20 
+[  508.849969] alloc_internal被调用次数 174 
+[  508.849970] __uvm_kvmalloc_zero被调用次数 151 
+[  508.849978] alloc_internal被调用次数 175 
+[  508.849979] __uvm_kvmalloc被调用次数 23 
+[  508.849980] alloc_internal被调用次数 176 
+[  508.849981] __uvm_kvmalloc_zero被调用次数 152 
+[  508.849995] uvm_kvfree被调用次数 21 
+[  508.849996] alloc_internal被调用次数 177 
+[  508.849997] __uvm_kvmalloc被调用次数 24 
+[  508.849998] alloc_internal被调用次数 178 
+[  508.849999] __uvm_kvmalloc_zero被调用次数 153 
+[  508.850000] alloc_internal被调用次数 179 
+[  508.850001] __uvm_kvmalloc_zero被调用次数 154 
+[  508.850021] alloc_internal被调用次数 180 
+[  508.850022] __uvm_kvmalloc被调用次数 25 
+[  508.850023] uvm_kvfree被调用次数 22 
+[  508.850024] alloc_internal被调用次数 181 
+[  508.850025] __uvm_kvmalloc被调用次数 26 
+[  508.850026] alloc_internal被调用次数 182 
+[  508.850027] __uvm_kvmalloc_zero被调用次数 155 
+[  508.850038] uvm_kvfree被调用次数 23 
+[  508.850039] alloc_internal被调用次数 183 
+[  508.850040] __uvm_kvmalloc被调用次数 27 
+[  508.850041] alloc_internal被调用次数 184 
+[  508.850042] __uvm_kvmalloc_zero被调用次数 156 
+[  508.850052] uvm_kvfree被调用次数 24 
+[  508.850053] alloc_internal被调用次数 185 
+[  508.850054] __uvm_kvmalloc被调用次数 28 
+[  508.850055] alloc_internal被调用次数 186 
+[  508.850056] __uvm_kvmalloc_zero被调用次数 157 
+[  508.850057] alloc_internal被调用次数 187 
+[  508.850058] __uvm_kvmalloc_zero被调用次数 158 
+[  508.850073] uvm_kvfree被调用次数 25 
+[  508.850074] alloc_internal被调用次数 188 
+[  508.850075] __uvm_kvmalloc被调用次数 29 
+[  508.850076] alloc_internal被调用次数 189 
+[  508.850077] __uvm_kvmalloc_zero被调用次数 159 
+[  508.850088] uvm_kvfree被调用次数 26 
+[  508.850089] alloc_internal被调用次数 190 
+[  508.850090] __uvm_kvmalloc被调用次数 30 
+[  508.850090] alloc_internal被调用次数 191 
+[  508.850091] __uvm_kvmalloc_zero被调用次数 160 
+[  508.850093] alloc_internal被调用次数 192 
+[  508.850094] __uvm_kvmalloc_zero被调用次数 161 
+[  508.850123] uvm_kvfree被调用次数 27 
+[  508.850124] alloc_internal被调用次数 193 
+[  508.850125] __uvm_kvmalloc被调用次数 31 
+[  508.850126] alloc_internal被调用次数 194 
+[  508.850127] __uvm_kvmalloc_zero被调用次数 162 
+[  508.850142] uvm_kvfree被调用次数 28 
+[  508.850143] alloc_internal被调用次数 195 
+[  508.850144] __uvm_kvmalloc被调用次数 32 
+[  508.850144] alloc_internal被调用次数 196 
+[  508.850145] __uvm_kvmalloc_zero被调用次数 163 
+[  508.850160] uvm_kvfree被调用次数 29 
+[  508.850161] alloc_internal被调用次数 197 
+[  508.850161] __uvm_kvmalloc被调用次数 33 
+[  508.850162] alloc_internal被调用次数 198 
+[  508.850163] __uvm_kvmalloc_zero被调用次数 164 
+[  508.850174] uvm_kvfree被调用次数 30 
+[  508.850177] uvm_kvfree被调用次数 31 
+[  508.850178] alloc_internal被调用次数 199 
+[  508.850179] __uvm_kvmalloc_zero被调用次数 165 
+[  508.850180] alloc_internal被调用次数 200 
+[  508.850181] __uvm_kvmalloc_zero被调用次数 166 
+[  508.850182] alloc_internal被调用次数 201 
+[  508.850183] __uvm_kvmalloc_zero被调用次数 167 
+[  508.853987] uvm_kvfree被调用次数 32 
+[  508.854038] alloc_internal被调用次数 202 
+[  508.854051] __uvm_kvmalloc_zero被调用次数 168 
+[  508.854064] alloc_internal被调用次数 203 
+[  508.854071] __uvm_kvmalloc_zero被调用次数 169 
+[  508.855024] alloc_internal被调用次数 204 
+[  508.855025] __uvm_kvmalloc_zero被调用次数 170 
+[  508.855029] uvm_kvfree被调用次数 33 
+[  508.855030] alloc_internal被调用次数 205 
+[  508.855031] __uvm_kvmalloc_zero被调用次数 171 
+[  508.855033] alloc_internal被调用次数 206 
+[  508.855034] __uvm_kvmalloc_zero被调用次数 172 
+[  508.855035] alloc_internal被调用次数 207 
+[  508.855035] __uvm_kvmalloc_zero被调用次数 173 
+[  508.855036] uvm_kvfree被调用次数 34 
+[  508.855037] uvm_kvfree被调用次数 35 
+[  508.855038] alloc_internal被调用次数 208 
+[  508.855039] __uvm_kvmalloc_zero被调用次数 174 
+[  508.855636] uvm_kvfree被调用次数 36 
+[  508.855662] alloc_internal被调用次数 209 
+[  508.855675] __uvm_kvmalloc_zero被调用次数 175 
+[  508.855682] alloc_internal被调用次数 210 
+[  508.855689] __uvm_kvmalloc_zero被调用次数 176 
+[  508.856599] alloc_internal被调用次数 211 
+[  508.856600] __uvm_kvmalloc_zero被调用次数 177 
+[  508.856604] uvm_kvfree被调用次数 37 
+[  508.856606] alloc_internal被调用次数 212 
+[  508.856606] __uvm_kvmalloc_zero被调用次数 178 
+[  508.856608] alloc_internal被调用次数 213 
+[  508.856609] __uvm_kvmalloc_zero被调用次数 179 
+[  508.856610] alloc_internal被调用次数 214 
+[  508.856611] __uvm_kvmalloc_zero被调用次数 180 
+[  508.856611] uvm_kvfree被调用次数 38 
+[  508.856612] uvm_kvfree被调用次数 39 
+[  508.856613] alloc_internal被调用次数 215 
+[  508.856614] __uvm_kvmalloc_zero被调用次数 181 
+[  508.857168] uvm_kvfree被调用次数 40 
+[  508.857197] alloc_internal被调用次数 216 
+[  508.857211] __uvm_kvmalloc_zero被调用次数 182 
+[  508.857224] alloc_internal被调用次数 217 
+[  508.857230] __uvm_kvmalloc_zero被调用次数 183 
+[  508.858142] alloc_internal被调用次数 218 
+[  508.858146] __uvm_kvmalloc_zero被调用次数 184 
+[  508.858150] uvm_kvfree被调用次数 41 
+[  508.858151] alloc_internal被调用次数 219 
+[  508.858152] __uvm_kvmalloc_zero被调用次数 185 
+[  508.858153] alloc_internal被调用次数 220 
+[  508.858154] __uvm_kvmalloc_zero被调用次数 186 
+[  508.858155] alloc_internal被调用次数 221 
+[  508.858156] __uvm_kvmalloc_zero被调用次数 187 
+[  508.858157] uvm_kvfree被调用次数 42 
+[  508.858158] uvm_kvfree被调用次数 43 
+[  508.858158] alloc_internal被调用次数 222 
+[  508.858159] __uvm_kvmalloc_zero被调用次数 188 
+[  508.858715] uvm_kvfree被调用次数 44 
+[  508.858741] alloc_internal被调用次数 223 
+[  508.858754] __uvm_kvmalloc_zero被调用次数 189 
+[  508.858767] alloc_internal被调用次数 224 
+[  508.858774] __uvm_kvmalloc_zero被调用次数 190 
+[  508.859693] alloc_internal被调用次数 225 
+[  508.859694] __uvm_kvmalloc_zero被调用次数 191 
+[  508.859698] uvm_kvfree被调用次数 45 
+[  508.859699] alloc_internal被调用次数 226 
+[  508.859700] __uvm_kvmalloc_zero被调用次数 192 
+[  508.859701] alloc_internal被调用次数 227 
+[  508.859702] __uvm_kvmalloc_zero被调用次数 193 
+[  508.859703] alloc_internal被调用次数 228 
+[  508.859704] __uvm_kvmalloc_zero被调用次数 194 
+[  508.859705] uvm_kvfree被调用次数 46 
+[  508.859705] uvm_kvfree被调用次数 47 
+[  508.859706] alloc_internal被调用次数 229 
+[  508.859707] __uvm_kvmalloc_zero被调用次数 195 
+[  508.860257] uvm_kvfree被调用次数 48 
+[  508.860284] alloc_internal被调用次数 230 
+[  508.860297] __uvm_kvmalloc_zero被调用次数 196 
+[  508.860304] alloc_internal被调用次数 231 
+[  508.860318] __uvm_kvmalloc_zero被调用次数 197 
+[  508.861271] alloc_internal被调用次数 232 
+[  508.861272] __uvm_kvmalloc_zero被调用次数 198 
+[  508.861276] uvm_kvfree被调用次数 49 
+[  508.861277] alloc_internal被调用次数 233 
+[  508.861278] __uvm_kvmalloc_zero被调用次数 199 
+[  508.861280] alloc_internal被调用次数 234 
+[  508.861281] __uvm_kvmalloc_zero被调用次数 200 
+[  508.861282] alloc_internal被调用次数 235 
+[  508.861283] __uvm_kvmalloc_zero被调用次数 201 
+[  508.861283] uvm_kvfree被调用次数 50 
+[  508.861284] uvm_kvfree被调用次数 51 
+[  508.861285] alloc_internal被调用次数 236 
+[  508.861287] __uvm_kvmalloc_zero被调用次数 202 
+[  508.861840] uvm_kvfree被调用次数 52 
+[  508.861867] alloc_internal被调用次数 237 
+[  508.861880] __uvm_kvmalloc_zero被调用次数 203 
+[  508.861887] alloc_internal被调用次数 238 
+[  508.861894] __uvm_kvmalloc_zero被调用次数 204 
+[  508.862853] alloc_internal被调用次数 239 
+[  508.862854] __uvm_kvmalloc_zero被调用次数 205 
+[  508.862858] uvm_kvfree被调用次数 53 
+[  508.862859] alloc_internal被调用次数 240 
+[  508.862860] __uvm_kvmalloc_zero被调用次数 206 
+[  508.862861] alloc_internal被调用次数 241 
+[  508.862862] __uvm_kvmalloc_zero被调用次数 207 
+[  508.862863] alloc_internal被调用次数 242 
+[  508.862864] __uvm_kvmalloc_zero被调用次数 208 
+[  508.862865] uvm_kvfree被调用次数 54 
+[  508.862865] uvm_kvfree被调用次数 55 
+[  508.862866] alloc_internal被调用次数 243 
+[  508.862867] __uvm_kvmalloc_zero被调用次数 209 
+[  508.863430] uvm_kvfree被调用次数 56 
+[  508.863456] alloc_internal被调用次数 244 
+[  508.863469] __uvm_kvmalloc_zero被调用次数 210 
+[  508.863482] alloc_internal被调用次数 245 
+[  508.863496] __uvm_kvmalloc_zero被调用次数 211 
+[  508.864456] alloc_internal被调用次数 246 
+[  508.864461] __uvm_kvmalloc_zero被调用次数 212 
+[  508.864465] uvm_kvfree被调用次数 57 
+[  508.864466] alloc_internal被调用次数 247 
+[  508.864467] __uvm_kvmalloc_zero被调用次数 213 
+[  508.864468] alloc_internal被调用次数 248 
+[  508.864469] __uvm_kvmalloc_zero被调用次数 214 
+[  508.864470] alloc_internal被调用次数 249 
+[  508.864471] __uvm_kvmalloc_zero被调用次数 215 
+[  508.864472] uvm_kvfree被调用次数 58 
+[  508.864473] uvm_kvfree被调用次数 59 
+[  508.864474] alloc_internal被调用次数 250 
+[  508.864475] __uvm_kvmalloc_zero被调用次数 216 
+[  508.865033] uvm_kvfree被调用次数 60 
+[  508.874814] alloc_internal被调用次数 251 
+[  508.874817] __uvm_kvmalloc_zero被调用次数 217 
+[  508.874818] alloc_internal被调用次数 252 
+[  508.874819] __uvm_kvmalloc_zero被调用次数 218 
+[  508.875848] alloc_internal被调用次数 253 
+[  508.875849] __uvm_kvmalloc_zero被调用次数 219 
+[  508.875851] uvm_kvfree被调用次数 61 
+[  508.875853] alloc_internal被调用次数 254 
+[  508.875854] __uvm_kvmalloc_zero被调用次数 220 
+[  508.875866] uvm_kvfree被调用次数 62 
+[  508.875868] alloc_internal被调用次数 255 
+[  508.875869] __uvm_kvmalloc_zero被调用次数 221 
+[  508.875870] alloc_internal被调用次数 256 
+[  508.875871] __uvm_kvmalloc_zero被调用次数 222 
+[  508.876788] alloc_internal被调用次数 257 
+[  508.876790] __uvm_kvmalloc_zero被调用次数 223 
+[  508.876791] uvm_kvfree被调用次数 63 
+[  508.876792] alloc_internal被调用次数 258 
+[  508.876793] __uvm_kvmalloc_zero被调用次数 224 
+[  508.876804] uvm_kvfree被调用次数 64 
+[  508.876806] alloc_internal被调用次数 259 
+[  508.876807] __uvm_kvmalloc_zero被调用次数 225 
+[  508.876808] alloc_internal被调用次数 260 
+[  508.876809] __uvm_kvmalloc_zero被调用次数 226 
+[  508.877731] alloc_internal被调用次数 261 
+[  508.877732] __uvm_kvmalloc_zero被调用次数 227 
+[  508.877733] uvm_kvfree被调用次数 65 
+[  508.877734] alloc_internal被调用次数 262 
+[  508.877735] __uvm_kvmalloc_zero被调用次数 228 
+[  508.877745] uvm_kvfree被调用次数 66 
+[  508.877747] alloc_internal被调用次数 263 
+[  508.877748] __uvm_kvmalloc_zero被调用次数 229 
+[  508.877749] alloc_internal被调用次数 264 
+[  508.877750] __uvm_kvmalloc_zero被调用次数 230 
+[  508.878693] alloc_internal被调用次数 265 
+[  508.878694] __uvm_kvmalloc_zero被调用次数 231 
+[  508.878695] uvm_kvfree被调用次数 67 
+[  508.878696] alloc_internal被调用次数 266 
+[  508.878697] __uvm_kvmalloc_zero被调用次数 232 
+[  508.878707] uvm_kvfree被调用次数 68 
+[  508.888275] alloc_internal被调用次数 267 
+[  508.888277] __uvm_kvmalloc_zero被调用次数 233 
+[  508.888278] alloc_internal被调用次数 268 
+[  508.888280] __uvm_kvmalloc_zero被调用次数 234 
+[  508.889353] alloc_internal被调用次数 269 
+[  508.889354] __uvm_kvmalloc_zero被调用次数 235 
+[  508.889355] uvm_kvfree被调用次数 69 
+[  508.889357] alloc_internal被调用次数 270 
+[  508.889358] __uvm_kvmalloc_zero被调用次数 236 
+[  508.889371] uvm_kvfree被调用次数 70 
+[  508.889373] alloc_internal被调用次数 271 
+[  508.889374] __uvm_kvmalloc_zero被调用次数 237 
+[  508.889375] alloc_internal被调用次数 272 
+[  508.889376] __uvm_kvmalloc_zero被调用次数 238 
+[  508.890352] alloc_internal被调用次数 273 
+[  508.890353] __uvm_kvmalloc_zero被调用次数 239 
+[  508.890353] uvm_kvfree被调用次数 71 
+[  508.890355] alloc_internal被调用次数 274 
+[  508.890356] __uvm_kvmalloc_zero被调用次数 240 
+[  508.890367] uvm_kvfree被调用次数 72 
+[  508.890369] alloc_internal被调用次数 275 
+[  508.890370] __uvm_kvmalloc_zero被调用次数 241 
+[  508.890371] alloc_internal被调用次数 276 
+[  508.890372] __uvm_kvmalloc_zero被调用次数 242 
+[  508.891363] alloc_internal被调用次数 277 
+[  508.891363] __uvm_kvmalloc_zero被调用次数 243 
+[  508.891364] uvm_kvfree被调用次数 73 
+[  508.891366] alloc_internal被调用次数 278 
+[  508.891367] __uvm_kvmalloc_zero被调用次数 244 
+[  508.891377] uvm_kvfree被调用次数 74 
+[  508.891379] alloc_internal被调用次数 279 
+[  508.891380] __uvm_kvmalloc_zero被调用次数 245 
+[  508.891381] alloc_internal被调用次数 280 
+[  508.891382] __uvm_kvmalloc_zero被调用次数 246 
+[  508.892380] alloc_internal被调用次数 281 
+[  508.892381] __uvm_kvmalloc_zero被调用次数 247 
+[  508.892382] uvm_kvfree被调用次数 75 
+[  508.892384] alloc_internal被调用次数 282 
+[  508.892384] __uvm_kvmalloc_zero被调用次数 248 
+[  508.892396] uvm_kvfree被调用次数 76 
+[  508.901938] alloc_internal被调用次数 283 
+[  508.901940] __uvm_kvmalloc_zero被调用次数 249 
+[  508.901941] alloc_internal被调用次数 284 
+[  508.901942] __uvm_kvmalloc_zero被调用次数 250 
+[  508.903099] alloc_internal被调用次数 285 
+[  508.903100] __uvm_kvmalloc_zero被调用次数 251 
+[  508.903101] uvm_kvfree被调用次数 77 
+[  508.903103] alloc_internal被调用次数 286 
+[  508.903104] __uvm_kvmalloc_zero被调用次数 252 
+[  508.903117] uvm_kvfree被调用次数 78 
+[  508.903120] alloc_internal被调用次数 287 
+[  508.903121] __uvm_kvmalloc_zero被调用次数 253 
+[  508.903121] alloc_internal被调用次数 288 
+[  508.903122] __uvm_kvmalloc_zero被调用次数 254 
+[  508.904191] alloc_internal被调用次数 289 
+[  508.904192] __uvm_kvmalloc_zero被调用次数 255 
+[  508.904193] uvm_kvfree被调用次数 79 
+[  508.904195] alloc_internal被调用次数 290 
+[  508.904195] __uvm_kvmalloc_zero被调用次数 256 
+[  508.904207] uvm_kvfree被调用次数 80 
+[  508.904209] alloc_internal被调用次数 291 
+[  508.904210] __uvm_kvmalloc_zero被调用次数 257 
+[  508.904211] alloc_internal被调用次数 292 
+[  508.904212] __uvm_kvmalloc_zero被调用次数 258 
+[  508.905287] alloc_internal被调用次数 293 
+[  508.905288] __uvm_kvmalloc_zero被调用次数 259 
+[  508.905289] uvm_kvfree被调用次数 81 
+[  508.905290] alloc_internal被调用次数 294 
+[  508.905291] __uvm_kvmalloc_zero被调用次数 260 
+[  508.905303] uvm_kvfree被调用次数 82 
+[  508.905305] alloc_internal被调用次数 295 
+[  508.905306] __uvm_kvmalloc_zero被调用次数 261 
+[  508.905307] alloc_internal被调用次数 296 
+[  508.905308] __uvm_kvmalloc_zero被调用次数 262 
+[  508.906382] alloc_internal被调用次数 297 
+[  508.906383] __uvm_kvmalloc_zero被调用次数 263 
+[  508.906383] uvm_kvfree被调用次数 83 
+[  508.906385] alloc_internal被调用次数 298 
+[  508.906386] __uvm_kvmalloc_zero被调用次数 264 
+[  508.906397] uvm_kvfree被调用次数 84 
+[  508.909726] alloc_internal被调用次数 299 
+[  508.909727] __uvm_kvmalloc被调用次数 34 
+[  508.909729] alloc_internal被调用次数 300 
+[  508.909730] __uvm_kvmalloc_zero被调用次数 265 
+[  508.909731] alloc_internal被调用次数 301 
+[  508.909732] __uvm_kvmalloc_zero被调用次数 266 
+[  508.909751] alloc_internal被调用次数 302 
+[  508.909752] __uvm_kvmalloc被调用次数 35 
+[  508.909753] alloc_internal被调用次数 303 
+[  508.909754] __uvm_kvmalloc_zero被调用次数 267 
+[  508.909769] uvm_kvfree被调用次数 85 
+[  508.909774] uvm_kvfree被调用次数 86 
+[  508.909796] alloc_internal被调用次数 304 
+[  508.909797] __uvm_kvmalloc被调用次数 36 
+[  508.909799] alloc_internal被调用次数 305 
+[  508.909801] __uvm_kvmalloc_zero被调用次数 268 
+[  508.909803] alloc_internal被调用次数 306 
+[  508.909804] __uvm_kvmalloc_zero被调用次数 269 
+[  508.910416] alloc_internal被调用次数 307 
+[  508.910417] __uvm_kvmalloc_zero被调用次数 270 
+[  508.910442] alloc_internal被调用次数 308 
+[  508.910443] __uvm_kvmalloc被调用次数 37 
+[  508.910444] alloc_internal被调用次数 309 
+[  508.910445] __uvm_kvmalloc被调用次数 38 
+[  508.910446] alloc_internal被调用次数 310 
+[  508.910447] __uvm_kvmalloc_zero被调用次数 271 
+[  508.910449] alloc_internal被调用次数 311 
+[  508.910451] __uvm_kvmalloc_zero被调用次数 272 
+[  508.910453] alloc_internal被调用次数 312 
+[  508.910455] __uvm_kvmalloc_zero被调用次数 273 
+[  508.910457] alloc_internal被调用次数 313 
+[  508.910459] __uvm_kvmalloc_zero被调用次数 274 
+[  508.910461] alloc_internal被调用次数 314 
+[  508.910462] __uvm_kvmalloc_zero被调用次数 275 
+[  508.910518] alloc_internal被调用次数 315 
+[  508.910521] __uvm_kvmalloc_zero被调用次数 276 
+[  508.910522] alloc_internal被调用次数 316 
+[  508.910523] __uvm_kvmalloc被调用次数 39 
+[  508.910524] alloc_internal被调用次数 317 
+[  508.910525] __uvm_kvmalloc_zero被调用次数 277 
+[  508.910526] alloc_internal被调用次数 318 
+[  508.910527] __uvm_kvmalloc_zero被调用次数 278 
+[  508.910577] alloc_internal被调用次数 319 
+[  508.910579] __uvm_kvmalloc_zero被调用次数 279 
+[  508.910603] alloc_internal被调用次数 320 
+[  508.910604] __uvm_kvmalloc被调用次数 40 
+[  508.910605] alloc_internal被调用次数 321 
+[  508.910606] __uvm_kvmalloc_zero被调用次数 280 
+[  508.910607] alloc_internal被调用次数 322 
+[  508.910611] __uvm_kvmalloc_zero被调用次数 281 
+[  508.910613] alloc_internal被调用次数 323 
+[  508.910615] __uvm_kvmalloc_zero被调用次数 282 
+[  508.910617] alloc_internal被调用次数 324 
+[  508.910619] __uvm_kvmalloc_zero被调用次数 283 
+[  508.910620] alloc_internal被调用次数 325 
+[  508.910621] __uvm_kvmalloc_zero被调用次数 284 
+[  508.910694] uvm_kvfree被调用次数 87 
+[  508.910706] alloc_internal被调用次数 326 
+[  508.910707] __uvm_kvmalloc_zero被调用次数 285 
+[  508.910708] uvm_kvfree被调用次数 88 
+[  508.911401] alloc_internal被调用次数 327 
+[  508.911402] __uvm_kvmalloc被调用次数 41 
+[  508.911403] alloc_internal被调用次数 328 
+[  508.911404] __uvm_kvmalloc_zero被调用次数 286 
+[  508.911405] alloc_internal被调用次数 329 
+[  508.911406] __uvm_kvmalloc_zero被调用次数 287 
+[  508.911427] alloc_internal被调用次数 330 
+[  508.911428] __uvm_kvmalloc被调用次数 42 
+[  508.911429] alloc_internal被调用次数 331 
+[  508.911430] __uvm_kvmalloc_zero被调用次数 288 
+[  508.911431] alloc_internal被调用次数 332 
+[  508.911432] __uvm_kvmalloc_zero被调用次数 289 
+[  508.911473] uvm_kvfree被调用次数 89 
+[  508.911479] uvm_kvfree被调用次数 90 
+[  508.913323] alloc_internal被调用次数 333 
+[  508.913325] __uvm_kvmalloc被调用次数 43 
+[  508.913326] alloc_internal被调用次数 334 
+[  508.913327] __uvm_kvmalloc_zero被调用次数 290 
+[  508.913328] alloc_internal被调用次数 335 
+[  508.913329] __uvm_kvmalloc_zero被调用次数 291 
+[  508.913349] alloc_internal被调用次数 336 
+[  508.913350] __uvm_kvmalloc被调用次数 44 
+[  508.913351] alloc_internal被调用次数 337 
+[  508.913352] __uvm_kvmalloc_zero被调用次数 292 
+[  508.913354] alloc_internal被调用次数 338 
+[  508.913354] __uvm_kvmalloc_zero被调用次数 293 
+[  508.913392] uvm_kvfree被调用次数 91 
+[  508.913398] uvm_kvfree被调用次数 92 
+[  508.914331] alloc_internal被调用次数 339 
+[  508.914332] __uvm_kvmalloc被调用次数 45 
+[  508.914334] alloc_internal被调用次数 340 
+[  508.914334] __uvm_kvmalloc_zero被调用次数 294 
+[  508.914335] alloc_internal被调用次数 341 
+[  508.914336] __uvm_kvmalloc_zero被调用次数 295 
+[  508.914356] alloc_internal被调用次数 342 
+[  508.914357] __uvm_kvmalloc被调用次数 46 
+[  508.914358] alloc_internal被调用次数 343 
+[  508.914359] __uvm_kvmalloc_zero被调用次数 296 
+[  508.914360] alloc_internal被调用次数 344 
+[  508.914361] __uvm_kvmalloc_zero被调用次数 297 
+[  508.914397] uvm_kvfree被调用次数 93 
+[  508.914402] uvm_kvfree被调用次数 94 
+[  508.914498] alloc_internal被调用次数 345 
+[  508.914499] __uvm_kvmalloc被调用次数 47 
+[  508.914501] alloc_internal被调用次数 346 
+[  508.914501] __uvm_kvmalloc_zero被调用次数 298 
+[  508.914502] alloc_internal被调用次数 347 
+[  508.914503] __uvm_kvmalloc_zero被调用次数 299 
+[  508.914519] alloc_internal被调用次数 348 
+[  508.914520] __uvm_kvmalloc被调用次数 48 
+[  508.914521] alloc_internal被调用次数 349 
+[  508.914521] __uvm_kvmalloc_zero被调用次数 300 
+[  508.914523] alloc_internal被调用次数 350 
+[  508.914524] __uvm_kvmalloc_zero被调用次数 301 
+[  508.914543] uvm_kvfree被调用次数 95 
+[  508.914546] uvm_kvfree被调用次数 96 
+[  508.915168] alloc_internal被调用次数 351 
+[  508.915169] __uvm_kvmalloc被调用次数 49 
+[  508.915170] alloc_internal被调用次数 352 
+[  508.915171] __uvm_kvmalloc_zero被调用次数 302 
+[  508.915172] alloc_internal被调用次数 353 
+[  508.915173] __uvm_kvmalloc_zero被调用次数 303 
+[  508.915193] alloc_internal被调用次数 354 
+[  508.915194] __uvm_kvmalloc被调用次数 50 
+[  508.915195] alloc_internal被调用次数 355 
+[  508.915196] __uvm_kvmalloc_zero被调用次数 304 
+[  508.915197] alloc_internal被调用次数 356 
+[  508.915198] __uvm_kvmalloc_zero被调用次数 305 
+[  508.915235] uvm_kvfree被调用次数 97 
+[  508.915240] uvm_kvfree被调用次数 98 
+[  508.916461] alloc_internal被调用次数 357 
+[  508.916464] __uvm_kvmalloc被调用次数 51 
+[  508.916466] alloc_internal被调用次数 358 
+[  508.916467] __uvm_kvmalloc_zero被调用次数 306 
+[  508.916468] alloc_internal被调用次数 359 
+[  508.916469] __uvm_kvmalloc_zero被调用次数 307 
+[  508.916491] alloc_internal被调用次数 360 
+[  508.916492] __uvm_kvmalloc被调用次数 52 
+[  508.916493] alloc_internal被调用次数 361 
+[  508.916494] __uvm_kvmalloc_zero被调用次数 308 
+[  508.916496] alloc_internal被调用次数 362 
+[  508.916497] __uvm_kvmalloc_zero被调用次数 309 
+[  508.916535] uvm_kvfree被调用次数 99 
+[  508.916541] uvm_kvfree被调用次数 100 
+[  508.916587] alloc_internal被调用次数 363 
+[  508.916588] __uvm_kvmalloc被调用次数 53 
+[  508.916590] alloc_internal被调用次数 364 
+[  508.916591] __uvm_kvmalloc_zero被调用次数 310 
+[  508.916591] alloc_internal被调用次数 365 
+[  508.916592] __uvm_kvmalloc_zero被调用次数 311 
+[  508.916608] alloc_internal被调用次数 366 
+[  508.916609] __uvm_kvmalloc被调用次数 54 
+[  508.916610] alloc_internal被调用次数 367 
+[  508.916611] __uvm_kvmalloc_zero被调用次数 312 
+[  508.916623] uvm_kvfree被调用次数 101 
+[  508.916627] uvm_kvfree被调用次数 102 
+[  508.916642] alloc_internal被调用次数 368 
+[  508.916643] __uvm_kvmalloc_zero被调用次数 313 
+[  508.916644] alloc_internal被调用次数 369 
+[  508.916645] __uvm_kvmalloc_zero被调用次数 314 
+[  508.917571] alloc_internal被调用次数 370 
+[  508.917573] __uvm_kvmalloc被调用次数 55 
+[  508.917574] alloc_internal被调用次数 371 
+[  508.917575] __uvm_kvmalloc_zero被调用次数 315 
+[  508.917576] alloc_internal被调用次数 372 
+[  508.917577] __uvm_kvmalloc_zero被调用次数 316 
+[  508.917595] alloc_internal被调用次数 373 
+[  508.917596] __uvm_kvmalloc被调用次数 56 
+[  508.917597] alloc_internal被调用次数 374 
+[  508.917598] __uvm_kvmalloc_zero被调用次数 317 
+[  508.917599] alloc_internal被调用次数 375 
+[  508.917600] __uvm_kvmalloc_zero被调用次数 318 
+[  508.917636] uvm_kvfree被调用次数 103 
+[  508.917641] uvm_kvfree被调用次数 104 
+[  508.918217] alloc_internal被调用次数 376 
+[  508.918218] __uvm_kvmalloc被调用次数 57 
+[  508.918220] alloc_internal被调用次数 377 
+[  508.918221] __uvm_kvmalloc_zero被调用次数 319 
+[  508.918222] alloc_internal被调用次数 378 
+[  508.918222] __uvm_kvmalloc_zero被调用次数 320 
+[  508.918240] alloc_internal被调用次数 379 
+[  508.918241] __uvm_kvmalloc被调用次数 58 
+[  508.918242] alloc_internal被调用次数 380 
+[  508.918243] __uvm_kvmalloc_zero被调用次数 321 
+[  508.918256] uvm_kvfree被调用次数 105 
+[  508.918260] uvm_kvfree被调用次数 106 
+[  508.919215] alloc_internal被调用次数 381 
+[  508.919216] __uvm_kvmalloc被调用次数 59 
+[  508.919218] alloc_internal被调用次数 382 
+[  508.919219] __uvm_kvmalloc_zero被调用次数 322 
+[  508.919219] alloc_internal被调用次数 383 
+[  508.919220] __uvm_kvmalloc_zero被调用次数 323 
+[  508.919240] alloc_internal被调用次数 384 
+[  508.919241] __uvm_kvmalloc被调用次数 60 
+[  508.919242] alloc_internal被调用次数 385 
+[  508.919242] __uvm_kvmalloc_zero被调用次数 324 
+[  508.919244] alloc_internal被调用次数 386 
+[  508.919245] __uvm_kvmalloc_zero被调用次数 325 
+[  508.919282] uvm_kvfree被调用次数 107 
+[  508.919287] uvm_kvfree被调用次数 108 
+[  508.934677] alloc_internal被调用次数 387 
+[  508.934680] __uvm_kvmalloc被调用次数 61 
+[  508.934682] alloc_internal被调用次数 388 
+[  508.934683] __uvm_kvmalloc_zero被调用次数 326 
+[  508.934684] alloc_internal被调用次数 389 
+[  508.934685] __uvm_kvmalloc_zero被调用次数 327 
+[  508.934711] alloc_internal被调用次数 390 
+[  508.934712] __uvm_kvmalloc被调用次数 62 
+[  508.934713] alloc_internal被调用次数 391 
+[  508.934714] __uvm_kvmalloc_zero被调用次数 328 
+[  508.934716] alloc_internal被调用次数 392 
+[  508.934717] __uvm_kvmalloc_zero被调用次数 329 
+[  508.934759] uvm_kvfree被调用次数 109 
+[  508.934765] uvm_kvfree被调用次数 110 
+[  509.053932] alloc_internal被调用次数 393 
+[  509.053936] __uvm_kvmalloc被调用次数 63 
+[  509.053940] alloc_internal被调用次数 394 
+[  509.053942] __uvm_kvmalloc_zero被调用次数 330 
+[  509.053943] alloc_internal被调用次数 395 
+[  509.053945] __uvm_kvmalloc_zero被调用次数 331 
+[  509.053986] alloc_internal被调用次数 396 
+[  509.053987] __uvm_kvmalloc被调用次数 64 
+[  509.053989] alloc_internal被调用次数 397 
+[  509.053990] __uvm_kvmalloc_zero被调用次数 332 
+[  509.053994] alloc_internal被调用次数 398 
+[  509.053995] __uvm_kvmalloc_zero被调用次数 333 
+[  509.054057] uvm_kvfree被调用次数 111 
+[  509.054063] uvm_kvfree被调用次数 112 
+[  509.054592] alloc_internal被调用次数 399 
+[  509.054593] __uvm_kvmalloc被调用次数 65 
+[  509.054596] alloc_internal被调用次数 400 
+[  509.054597] __uvm_kvmalloc_zero被调用次数 334 
+[  509.054598] alloc_internal被调用次数 401 
+[  509.054599] __uvm_kvmalloc_zero被调用次数 335 
+[  509.054626] alloc_internal被调用次数 402 
+[  509.054627] __uvm_kvmalloc被调用次数 66 
+[  509.054628] alloc_internal被调用次数 403 
+[  509.054629] __uvm_kvmalloc_zero被调用次数 336 
+[  509.054631] alloc_internal被调用次数 404 
+[  509.054633] __uvm_kvmalloc_zero被调用次数 337 
+[  509.054669] uvm_kvfree被调用次数 113 
+[  509.054674] uvm_kvfree被调用次数 114 
+[  509.056101] alloc_internal被调用次数 405 
+[  509.056104] __uvm_kvmalloc被调用次数 67 
+[  509.056106] alloc_internal被调用次数 406 
+[  509.056107] __uvm_kvmalloc_zero被调用次数 338 
+[  509.056108] alloc_internal被调用次数 407 
+[  509.056109] __uvm_kvmalloc_zero被调用次数 339 
+[  509.056137] alloc_internal被调用次数 408 
+[  509.056138] __uvm_kvmalloc被调用次数 68 
+[  509.056139] alloc_internal被调用次数 409 
+[  509.056140] __uvm_kvmalloc_zero被调用次数 340 
+[  509.056163] uvm_kvfree被调用次数 115 
+[  509.056179] uvm_kvfree被调用次数 116 
+[  509.080131] alloc_internal被调用次数 410 
+[  509.080134] __uvm_kvmalloc被调用次数 69 
+[  509.080136] alloc_internal被调用次数 411 
+[  509.080137] __uvm_kvmalloc_zero被调用次数 341 
+[  509.080138] alloc_internal被调用次数 412 
+[  509.080139] __uvm_kvmalloc_zero被调用次数 342 
+[  509.080163] alloc_internal被调用次数 413 
+[  509.080164] __uvm_kvmalloc被调用次数 70 
+[  509.080165] alloc_internal被调用次数 414 
+[  509.080167] __uvm_kvmalloc_zero被调用次数 343 
+[  509.080186] uvm_kvfree被调用次数 117 
+[  509.080190] uvm_kvfree被调用次数 118 
+[  509.115659] alloc_internal被调用次数 415 
+[  509.115662] __uvm_kvmalloc被调用次数 71 
+[  509.115666] alloc_internal被调用次数 416 
+[  509.115668] __uvm_kvmalloc_zero被调用次数 344 
+[  509.115669] alloc_internal被调用次数 417 
+[  509.115670] __uvm_kvmalloc_zero被调用次数 345 
+[  509.115698] alloc_internal被调用次数 418 
+[  509.115700] __uvm_kvmalloc被调用次数 72 
+[  509.115701] alloc_internal被调用次数 419 
+[  509.115702] __uvm_kvmalloc_zero被调用次数 346 
+[  509.115704] alloc_internal被调用次数 420 
+[  509.115708] __uvm_kvmalloc_zero被调用次数 347 
+[  509.115742] uvm_kvfree被调用次数 119 
+[  509.115746] uvm_kvfree被调用次数 120 
+[  535.173221] NVRM: GPU at PCI:0000:5e:00: GPU-ca87ba4c-d3a6-bcff-51db-5133552dc856
+[  535.173225] NVRM: GPU Board Serial Number: 0320119060915
+[  535.173230] NVRM: Xid (PCI:0000:5e:00): 31, pid=5332, name=test3-2, Ch 00000007, intr 00000000. MMU Fault: ENGINE GRAPHICS GPCCLIENT_T1_0 faulted @ 0x0_00000000. Fault is of type FAULT_PDE ACCESS_TYPE_VIRT_READ
+[  535.903849] uvm_kvfree被调用次数 121 
+[  535.903854] uvm_kvfree被调用次数 122 
+[  535.903855] uvm_kvfree被调用次数 123 
+[  535.903856] uvm_kvfree被调用次数 124 
+[  535.903857] uvm_kvfree被调用次数 125 
+[  535.903858] uvm_kvfree被调用次数 126 
+[  535.903859] uvm_kvfree被调用次数 127 
+[  535.903860] uvm_kvfree被调用次数 128 
+[  535.903861] uvm_kvfree被调用次数 129 
+[  535.903876] uvm_kvfree被调用次数 130 
+[  535.903883] uvm_kvfree被调用次数 131 
+[  535.903900] uvm_kvfree被调用次数 132 
+[  535.903911] uvm_kvfree被调用次数 133 
+[  535.903912] uvm_kvfree被调用次数 134 
+[  535.903918] uvm_kvfree被调用次数 135 
+[  535.903924] uvm_kvfree被调用次数 136 
+[  535.903931] uvm_kvfree被调用次数 137 
+[  535.903933] uvm_kvfree被调用次数 138 
+[  535.903939] uvm_kvfree被调用次数 139 
+[  535.903944] uvm_kvfree被调用次数 140 
+[  535.903951] uvm_kvfree被调用次数 141 
+[  535.903954] uvm_kvfree被调用次数 142 
+[  535.903954] uvm_kvfree被调用次数 143 
+[  535.904894] uvm_kvfree被调用次数 144 
+[  535.905471] uvm_kvfree被调用次数 145 
+[  535.905472] uvm_kvfree被调用次数 146 
+[  535.905929] uvm_kvfree被调用次数 147 
+[  535.905930] uvm_kvfree被调用次数 148 
+[  535.906389] uvm_kvfree被调用次数 149 
+[  535.906390] uvm_kvfree被调用次数 150 
+[  535.906846] uvm_kvfree被调用次数 151 
+[  535.906847] uvm_kvfree被调用次数 152 
+[  535.907322] uvm_kvfree被调用次数 153 
+[  535.907323] uvm_kvfree被调用次数 154 
+[  535.907776] uvm_kvfree被调用次数 155 
+[  535.907777] uvm_kvfree被调用次数 156 
+[  535.908238] uvm_kvfree被调用次数 157 
+[  535.908239] uvm_kvfree被调用次数 158 
+[  535.908693] uvm_kvfree被调用次数 159 
+[  535.908694] uvm_kvfree被调用次数 160 
+[  535.909156] uvm_kvfree被调用次数 161 
+[  535.909157] uvm_kvfree被调用次数 162 
+[  535.909605] uvm_kvfree被调用次数 163 
+[  535.909606] uvm_kvfree被调用次数 164 
+[  535.910059] uvm_kvfree被调用次数 165 
+[  535.910060] uvm_kvfree被调用次数 166 
+[  535.910513] uvm_kvfree被调用次数 167 
+[  535.910514] uvm_kvfree被调用次数 168 
+[  535.910942] uvm_kvfree被调用次数 169 
+[  535.910946] uvm_kvfree被调用次数 170 
+[  535.911379] uvm_kvfree被调用次数 171 
+[  535.911380] uvm_kvfree被调用次数 172 
+[  535.911806] uvm_kvfree被调用次数 173 
+[  535.911807] uvm_kvfree被调用次数 174 
+[  535.912237] uvm_kvfree被调用次数 175 
+[  535.912238] uvm_kvfree被调用次数 176 
+[  535.912662] uvm_kvfree被调用次数 177 
+[  535.912663] uvm_kvfree被调用次数 178 
+[  535.913079] uvm_kvfree被调用次数 179 
+[  535.913080] uvm_kvfree被调用次数 180 
+[  535.913504] uvm_kvfree被调用次数 181 
+[  535.913505] uvm_kvfree被调用次数 182 
+[  535.913919] uvm_kvfree被调用次数 183 
+[  535.916530] uvm_kvfree被调用次数 184 
+[  535.916542] uvm_kvfree被调用次数 185 
+[  535.916544] uvm_kvfree被调用次数 186 
+[  535.916550] uvm_kvfree被调用次数 187 
+[  535.916565] uvm_kvfree被调用次数 188 
+[  535.916568] alloc_internal被调用次数 421 
+[  535.916569] __uvm_kvmalloc被调用次数 73 
+[  535.916569] uvm_kvfree被调用次数 189 
+[  535.916571] uvm_kvfree被调用次数 190 
+[  535.916573] uvm_kvfree被调用次数 191 
+[  535.916575] uvm_kvfree被调用次数 192 
+[  535.916577] uvm_kvfree被调用次数 193 
+[  535.916579] uvm_kvfree被调用次数 194 
+[  535.916581] uvm_kvfree被调用次数 195 
+[  535.916583] uvm_kvfree被调用次数 196 
+[  535.916585] uvm_kvfree被调用次数 197 
+[  535.916587] uvm_kvfree被调用次数 198 
+[  535.916589] uvm_kvfree被调用次数 199 
+[  535.916591] uvm_kvfree被调用次数 200 
+[  535.916593] uvm_kvfree被调用次数 201 
+[  535.916596] uvm_kvfree被调用次数 202 
+[  535.916598] uvm_kvfree被调用次数 203 
+[  535.916600] uvm_kvfree被调用次数 204 
+[  535.916603] uvm_kvfree被调用次数 205 
+[  535.916605] uvm_kvfree被调用次数 206 
+[  535.916606] uvm_kvfree被调用次数 207 
+[  535.916608] uvm_kvfree被调用次数 208 
+[  535.916613] uvm_kvfree被调用次数 209 
+[  535.916615] uvm_kvfree被调用次数 210 
+[  535.916617] uvm_kvfree被调用次数 211 
+[  535.916618] uvm_kvfree被调用次数 212 
+[  535.916620] uvm_kvfree被调用次数 213 
+[  535.916622] uvm_kvfree被调用次数 214 
+[  535.916624] uvm_kvfree被调用次数 215 
+[  535.916627] uvm_kvfree被调用次数 216 
+[  535.916634] uvm_kvfree被调用次数 217 
+[  535.916636] uvm_kvfree被调用次数 218 
+[  535.916643] uvm_kvfree被调用次数 219 
+[  535.916646] uvm_kvfree被调用次数 220 
+[  535.916660] uvm_kvfree被调用次数 221 
+[  535.916663] uvm_kvfree被调用次数 222 
+[  535.916663] uvm_kvfree被调用次数 223 
+[  535.916664] uvm_kvfree被调用次数 224 
+[  535.916672] uvm_kvfree被调用次数 225 
+[  535.916673] uvm_kvfree被调用次数 226 
+[  535.916674] uvm_kvfree被调用次数 227 
+[  535.916675] uvm_kvfree被调用次数 228 
+[  535.916676] uvm_kvfree被调用次数 229 
+[  535.916677] uvm_kvfree被调用次数 230 
+[  535.916693] uvm_kvfree被调用次数 231 
+[  535.916694] alloc_internal被调用次数 422 
+[  535.916694] __uvm_kvmalloc被调用次数 74 
+[  535.916695] uvm_kvfree被调用次数 232 
+[  535.916696] uvm_kvfree被调用次数 233 
+[  535.916697] uvm_kvfree被调用次数 234 
+[  535.916702] uvm_kvfree被调用次数 235 
+[  535.916702] uvm_kvfree被调用次数 236 
+[  535.916704] uvm_kvfree被调用次数 237 
+[  535.916716] uvm_kvfree被调用次数 238 
+[  535.916727] uvm_kvfree被调用次数 239 
+[  535.916767] uvm_kvfree被调用次数 240 
+[  535.916768] uvm_kvfree被调用次数 241 
+[  535.916775] uvm_kvfree被调用次数 242 
+[  535.916778] uvm_kvfree被调用次数 243 
+[  535.916786] uvm_kvfree被调用次数 244 
+[  535.916787] uvm_kvfree被调用次数 245 
+[  535.916795] uvm_kvfree被调用次数 246 
+[  535.916798] uvm_kvfree被调用次数 247 
+[  535.916805] uvm_kvfree被调用次数 248 
+[  535.916808] uvm_kvfree被调用次数 249 
+[  535.916816] uvm_kvfree被调用次数 250 
+[  535.916816] uvm_kvfree被调用次数 251 
+[  535.916818] uvm_kvfree被调用次数 252 
+[  535.916819] uvm_kvfree被调用次数 253 
+[  535.916824] uvm_kvfree被调用次数 254 
+[  535.916832] uvm_kvfree被调用次数 255 
+[  535.916833] uvm_kvfree被调用次数 256 
+[  535.916834] uvm_kvfree被调用次数 257 
+[  535.916841] uvm_kvfree被调用次数 258 
+[  535.916844] uvm_kvfree被调用次数 259 
+[  535.916850] uvm_kvfree被调用次数 260 
+[  535.916855] uvm_kvfree被调用次数 261 
+[  535.916861] uvm_kvfree被调用次数 262 
+[  535.916867] uvm_kvfree被调用次数 263 
+[  535.916874] uvm_kvfree被调用次数 264 
+[  535.916877] uvm_kvfree被调用次数 265 
+[  535.916884] uvm_kvfree被调用次数 266 
+[  535.916886] uvm_kvfree被调用次数 267 
+[  535.916893] uvm_kvfree被调用次数 268 
+[  535.916896] uvm_kvfree被调用次数 269 
+[  535.916901] uvm_kvfree被调用次数 270 
+[  535.916907] uvm_kvfree被调用次数 271 
+[  535.916910] uvm_kvfree被调用次数 272 
+[  535.916915] uvm_kvfree被调用次数 273 
+[  535.916922] uvm_kvfree被调用次数 274 
+[  535.916925] uvm_kvfree被调用次数 275 
+[  535.916932] uvm_kvfree被调用次数 276 
+[  535.916935] uvm_kvfree被调用次数 277 
+[  535.916944] uvm_kvfree被调用次数 278 
+[  535.916944] uvm_kvfree被调用次数 279 
+[  535.916946] uvm_kvfree被调用次数 280 
+[  535.916947] uvm_kvfree被调用次数 281 
+[  535.916947] uvm_kvfree被调用次数 282 
+[  535.916953] uvm_kvfree被调用次数 283 
+[  535.916957] uvm_kvfree被调用次数 284 
+[  535.917360] uvm_kvfree被调用次数 285 
+[  535.917361] uvm_kvfree被调用次数 286 
+[  535.917378] uvm_kvfree被调用次数 287 
+[  535.917379] uvm_kvfree被调用次数 288 
+[  535.917397] uvm_kvfree被调用次数 289 
+[  535.917398] uvm_kvfree被调用次数 290 
+[  535.917412] uvm_kvfree被调用次数 291 
+[  535.917413] uvm_kvfree被调用次数 292 
+[  535.917428] uvm_kvfree被调用次数 293 
+[  535.917429] uvm_kvfree被调用次数 294 
+[  535.917442] uvm_kvfree被调用次数 295 
+[  535.917442] uvm_kvfree被调用次数 296 
+[  535.917456] uvm_kvfree被调用次数 297 
+[  535.917457] uvm_kvfree被调用次数 298 
+[  535.917472] uvm_kvfree被调用次数 299 
+[  535.917473] uvm_kvfree被调用次数 300 
+[  535.917486] uvm_kvfree被调用次数 301 
+[  535.917487] uvm_kvfree被调用次数 302 
+[  535.917497] uvm_kvfree被调用次数 303 
+[  535.917498] uvm_kvfree被调用次数 304 
+[  535.917507] uvm_kvfree被调用次数 305 
+[  535.917508] uvm_kvfree被调用次数 306 
+[  535.917524] uvm_kvfree被调用次数 307 
+[  535.917525] uvm_kvfree被调用次数 308 
+[  535.917541] uvm_kvfree被调用次数 309 
+[  535.917541] uvm_kvfree被调用次数 310 
+[  535.917556] uvm_kvfree被调用次数 311 
+[  535.917557] uvm_kvfree被调用次数 312 
+[  535.917572] uvm_kvfree被调用次数 313 
+[  535.917573] uvm_kvfree被调用次数 314 
+[  535.917586] uvm_kvfree被调用次数 315 
+[  535.917587] uvm_kvfree被调用次数 316 
+[  535.917603] uvm_kvfree被调用次数 317 
+[  535.917604] uvm_kvfree被调用次数 318 
+[  535.917617] uvm_kvfree被调用次数 319 
+[  535.917618] uvm_kvfree被调用次数 320 
+[  535.917630] uvm_kvfree被调用次数 321 
+[  535.917631] uvm_kvfree被调用次数 322 
+[  535.917640] uvm_kvfree被调用次数 323 
+[  535.917641] uvm_kvfree被调用次数 324 
+[  535.917650] uvm_kvfree被调用次数 325 
+[  535.917651] uvm_kvfree被调用次数 326 
+[  535.917664] uvm_kvfree被调用次数 327 
+[  535.917665] uvm_kvfree被调用次数 328 
+[  535.917678] uvm_kvfree被调用次数 329 
+[  535.917679] uvm_kvfree被调用次数 330 
+[  535.917692] uvm_kvfree被调用次数 331 
+[  535.917692] uvm_kvfree被调用次数 332 
+[  535.917702] uvm_kvfree被调用次数 333 
+[  535.917703] uvm_kvfree被调用次数 334 
+[  535.917715] uvm_kvfree被调用次数 335 
+[  535.917716] uvm_kvfree被调用次数 336 
+[  535.917718] uvm_kvfree被调用次数 337 
+[  535.917886] uvm_kvfree被调用次数 338 
+[  535.920909] uvm_kvfree被调用次数 339 
+[  535.920918] uvm_kvfree被调用次数 340 
+[  535.923640] uvm_kvfree被调用次数 341 
+[  535.923658] uvm_kvfree被调用次数 342 
+[  535.926506] uvm_kvfree被调用次数 343 
+[  535.926513] uvm_kvfree被调用次数 344 
+[  535.926528] uvm_kvfree被调用次数 345 
+[  535.929272] uvm_kvfree被调用次数 346 
+[  535.929290] uvm_kvfree被调用次数 347 
+[  535.931939] uvm_kvfree被调用次数 348 
+[  535.931944] uvm_kvfree被调用次数 349 
+[  535.931961] uvm_kvfree被调用次数 350 
+[  535.934688] uvm_kvfree被调用次数 351 
+[  535.934710] uvm_kvfree被调用次数 352 
+[  535.937367] uvm_kvfree被调用次数 353 
+[  535.937370] uvm_kvfree被调用次数 354 
+[  535.939269] uvm_kvfree被调用次数 355 
+[  535.939271] uvm_kvfree被调用次数 356 
+[  535.939272] uvm_kvfree被调用次数 357 
+[  535.941610] uvm_kvfree被调用次数 358 
+[  535.941622] uvm_kvfree被调用次数 359 
+[  535.941832] uvm_kvfree被调用次数 360 
+[  535.941833] uvm_kvfree被调用次数 361 
+[  535.941834] uvm_kvfree被调用次数 362 
+[  535.941837] uvm_kvfree被调用次数 363 
+[  535.942197] uvm_kvfree被调用次数 364 
+[  535.942199] uvm_kvfree被调用次数 365 
+[  535.942215] uvm_kvfree被调用次数 366 
+[  535.942246] uvm_kvfree被调用次数 367 
+[  535.942279] uvm_kvfree被调用次数 368 
+[  535.942285] uvm_kvfree被调用次数 369 
+[  535.942789] uvm_kvfree被调用次数 370 
+[  535.942806] uvm_kvfree被调用次数 371 
+[  535.942810] uvm_kvfree被调用次数 372 
+[  535.942813] uvm_kvfree被调用次数 373 
+[  535.942814] uvm_kvfree被调用次数 374 
+[  535.942815] uvm_kvfree被调用次数 375 
+[  535.942816] uvm_kvfree被调用次数 376 
+[  535.943447] uvm_kvfree被调用次数 377 
+[  535.943969] uvm_kvfree被调用次数 378 
+[  535.943984] uvm_kvfree被调用次数 379 
+[  535.951063] uvm_kvfree被调用次数 380 
+[  535.951083] uvm_kvfree被调用次数 381 
+[  535.958176] uvm_kvfree被调用次数 382 
+[  535.958183] uvm_kvfree被调用次数 383 
+[  535.958206] uvm_kvfree被调用次数 384 
+[  535.964546] uvm_kvfree被调用次数 385 
+[  535.964562] uvm_kvfree被调用次数 386 
+[  535.970649] uvm_kvfree被调用次数 387 
+[  535.970671] uvm_kvfree被调用次数 388 
+[  535.970734] uvm_kvfree被调用次数 389 
+[  535.977316] uvm_kvfree被调用次数 390 
+[  535.977399] uvm_kvfree被调用次数 391 
+[  535.983471] uvm_kvfree被调用次数 392 
+[  535.983479] uvm_kvfree被调用次数 393 
+[  535.984558] uvm_kvfree被调用次数 394 
+[  535.984559] uvm_kvfree被调用次数 395 
+[  535.984560] uvm_kvfree被调用次数 396 
+[  535.988863] uvm_kvfree被调用次数 397 
+[  535.988876] uvm_kvfree被调用次数 398 
+[  535.988956] uvm_kvfree被调用次数 399 
+[  535.988957] uvm_kvfree被调用次数 400 
+[  535.988957] uvm_kvfree被调用次数 401 
+[  535.988960] uvm_kvfree被调用次数 402 
+[  535.990284] uvm_kvfree被调用次数 403 
+[  535.990286] uvm_kvfree被调用次数 404 
+[  535.990294] uvm_kvfree被调用次数 405 
+[  535.990311] uvm_kvfree被调用次数 406 
+[  535.990322] uvm_kvfree被调用次数 407 
+[  535.990325] uvm_kvfree被调用次数 408 
+[  535.991654] uvm_kvfree被调用次数 409 
+[  535.991664] uvm_kvfree被调用次数 410 
+[  535.991667] uvm_kvfree被调用次数 411 
+[  535.991669] uvm_kvfree被调用次数 412 
+[  535.991670] uvm_kvfree被调用次数 413 
+[  535.991671] uvm_kvfree被调用次数 414 
+[  535.991672] uvm_kvfree被调用次数 415 
+[  535.993354] uvm_kvfree被调用次数 416 
+[  535.993359] uvm_kvfree被调用次数 417 
