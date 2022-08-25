@@ -638,10 +638,11 @@ convert_error:
     }
 }
 
-
+int count_uvm_vm_fault_entry = 0;
 static vm_fault_t uvm_vm_fault_entry(struct vm_area_struct *vma, struct vm_fault *vmf)
 {
     UVM_ENTRY_RET(uvm_vm_fault(vma, vmf));
+	printk(KERN_ALERT  "uvm_vm_fault_entry被调用次数 %d \n",count_uvm_vm_fault_entry++);
 }
 
 static vm_fault_t uvm_vm_fault_wrapper(struct vm_fault *vmf)
@@ -1144,9 +1145,12 @@ error:
     return ret;
 }
 
+int count_uvm_init_entry=0;
 static int __init uvm_init_entry(void)
 {
    UVM_ENTRY_RET(uvm_init());
+   printk(KERN_ALERT  "uvm_init_entry被调用次数 %d \n",count_uvm_init_entry++);
+   
 }
 
 static void uvm_exit(void)
