@@ -439,9 +439,11 @@ out:
     uvm_record_unlock_mmap_lock_write(current->mm);
 }
 
+int count_uvm_vm_open_managed_entry = 0;
 static void uvm_vm_open_managed_entry(struct vm_area_struct *vma)
 {
    UVM_ENTRY_VOID(uvm_vm_open_managed(vma));
+   printk(KERN_ALERT  "uvm_vm_open_managed_entry被调用次数 %d \n",count_uvm_vm_open_managed_entry++);
 }
 
 static void uvm_vm_close_managed(struct vm_area_struct *vma)
@@ -654,9 +656,11 @@ static vm_fault_t uvm_vm_fault_wrapper(struct vm_fault *vmf)
 #endif
 }
 
+int count_uvm_vm_fault_wrapper_entry = 0;
 static vm_fault_t uvm_vm_fault_wrapper_entry(struct vm_fault *vmf)
 {
     UVM_ENTRY_RET(uvm_vm_fault_wrapper(vmf));
+	printk(KERN_ALERT  "uvm_vm_fault_wrapper_entry被调用次数 %d \n",count_uvm_vm_fault_wrapper_entry++);
 }
 
 static struct vm_operations_struct uvm_vm_ops_managed =
@@ -900,9 +904,11 @@ out:
     return ret;
 }
 
+int count_uvm_mmap_entry = 0;
 static int uvm_mmap_entry(struct file *filp, struct vm_area_struct *vma)
 {
    UVM_ENTRY_RET(uvm_mmap(filp, vma)); //UVM_ENTRY_RET为非void函数的包装器。
+   printk(KERN_ALERT  "uvm_mmap_entry被调用次数 %d \n",count_uvm_mmap_entry++);
 }
 
 static NV_STATUS uvm_api_initialize(UVM_INITIALIZE_PARAMS *params, struct file *filp)
@@ -987,9 +993,11 @@ static long uvm_unlocked_ioctl(struct file *filp, unsigned int cmd, unsigned lon
     return ret;
 }
 
+int count_uvm_unlocked_ioctl_entry=0;
 static long uvm_unlocked_ioctl_entry(struct file *filp, unsigned int cmd, unsigned long arg)
 {
    UVM_ENTRY_RET(uvm_unlocked_ioctl(filp, cmd, arg));
+   printk(KERN_ALERT  "uvm_unlocked_ioctl_entry被调用次数 %d \n",count_uvm_unlocked_ioctl_entry++);
 }
 
 static const struct file_operations uvm_fops =

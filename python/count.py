@@ -4,7 +4,7 @@ Created on Wed Aug 24 15:16:09 2022
 
 @author: Andy
 """
-f = open("1.txt" , encoding = "utf-8")
+f = open("2.txt" , encoding = "utf-8")
 
 lines = f.readlines()
 
