@@ -261,7 +261,8 @@ static void *alloc_internal(size_t size, bool zero_memory)
     uvm_vmalloc_hdr_t *hdr;
 	
 	printk(KERN_ALERT  "alloc_internal被调用次数 %d \n",count_alloc_internal++);
-
+	printk(KERN_ALERT  "第 %d 次调用alloc_internal__ ，size:%zu--zero_memory:%d\n", count_alloc_internal,size,zero_memory);
+	
     // Make sure that the allocation pointer is suitably-aligned for a natively-
     // sized allocation.
     // 确保分配指针与本机大小的分配适当对齐。
@@ -295,6 +296,14 @@ void *__uvm_kvmalloc(size_t size, const char *file, int line, const char *functi
     void *p = alloc_internal(size, false);
 
 	printk(KERN_ALERT  "__uvm_kvmalloc被调用次数 %d \n",count___uvm_kvmalloc++);
+	if(count___uvm_kvmalloc >=0){
+		/*printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--size 输出 %zu \n", count___uvm_kvmalloc,size);
+		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--file 输出 %s \n", count___uvm_kvmalloc,file);
+		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--line 输出 %d \n", count___uvm_kvmalloc,line);
+		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--function 输出 %s \n", count___uvm_kvmalloc,function);
+		*/
+		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc__ ，size:%zu--file:%s--line:%d--function%s\n", count___uvm_kvmalloc,size,file,line,function);
+	}
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
 
@@ -307,6 +316,7 @@ void *__uvm_kvmalloc_zero(size_t size, const char *file, int line, const char *f
 {
     void *p = alloc_internal(size, true);
 	printk(KERN_ALERT  "__uvm_kvmalloc_zero被调用次数 %d \n",count___uvm_kvmalloc_zero++);
+	printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc_zero__ ，size:%zu--file:%s--line:%d--function%s\n", count___uvm_kvmalloc_zero,size,file,line,function);
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
 
@@ -321,7 +331,7 @@ void uvm_kvfree(void *p)
         return;
 
 	printk(KERN_ALERT  "uvm_kvfree被调用次数 %d \n",count_uvm_kvfree++);
-
+	
     if (uvm_leak_checker)
         alloc_tracking_remove(p);
 
