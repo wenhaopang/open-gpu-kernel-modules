@@ -103,9 +103,13 @@ NV_STATUS uvm_tracker_reserve(uvm_tracker_t *tracker, NvU32 min_free_entries)
 {
     if (tracker->size + min_free_entries > tracker->max_size) {
         // Special case the first resize to jump from 1 all the way to 8.
+        // 特殊情况是第一次调整大小从1一直到8
         // This is based on a guess that if a tracker needs more than 1
         // entry it likely needs much more.
+        // 这是基于猜测，如果跟踪器需要超过一个条目，他可能需要更多。
         // TODO: Bug 1764961: Verify that guess.
+        // 验证猜测
+        
         NvU32 new_max_size = max((NvU32)8, (NvU32)roundup_pow_of_two(tracker->size + min_free_entries));
         uvm_tracker_entry_t *new_entries;
 
