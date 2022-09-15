@@ -6,6 +6,7 @@ Created on Thu Sep  1 17:15:50 2022
 """
 
 f = open("2.txt" , encoding = "utf-8")
+f_w =  open("write.txt" , 'w')
 
 lines = f.readlines()
 
@@ -32,6 +33,7 @@ for line in lines:#每次读文件中的一行
         else:
             dict1[line[line.find("--function")+10:]] = 0
 
+        f_w.write(line)
         continue
     
     
@@ -66,5 +68,5 @@ for k,s in dict1.items():
     
 print("一共有{}个函数调用__uvm_kvmalloc".format(count))
     
-
+f_w.close()
 f.close()

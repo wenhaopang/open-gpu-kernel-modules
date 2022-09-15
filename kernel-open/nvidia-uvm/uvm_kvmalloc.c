@@ -37,12 +37,15 @@
 //由于vmalloc仅用于相对较大的分配，因此这种开销非常小。
 
 // We don't need this for kmalloc since we can use ksize().
+// 该结构体包含申请虚拟内存的大小和起始指针？
 typedef struct
 {
     size_t alloc_size;
     uint8_t ptr[0];
 } uvm_vmalloc_hdr_t;
-
+//该结构体包含申请的物理内存和虚拟内存的信息
+// file、function、line表示调用申请内存的文件、其中的函数和在文件中的位置
+// node是定义红黑树结构的节点
 typedef struct
 {
     const char *file;
@@ -51,6 +54,8 @@ typedef struct
     uvm_rb_tree_node_t node;
 } uvm_kvmalloc_info_t;
 
+// 定义一个枚举型的变量
+// NONE=0,后面BYTES为1，以此类推。
 typedef enum
 {
     UVM_KVMALLOC_LEAK_CHECK_NONE = 0,
@@ -302,7 +307,7 @@ void *__uvm_kvmalloc(size_t size, const char *file, int line, const char *functi
 		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--line 输出 %d \n", count___uvm_kvmalloc,line);
 		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--function 输出 %s \n", count___uvm_kvmalloc,function);
 		*/
-		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc__ ，size:%zu--file:%s--line:%d--function%s\n", count___uvm_kvmalloc,size,file,line,function);
+		//printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc__ ，size:%zu--file:%s--line:%d--function:%s\n", count___uvm_kvmalloc,size,file,line,function);
 	}
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);

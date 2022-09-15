@@ -772,8 +772,12 @@ static struct vm_operations_struct uvm_vm_ops_semaphore_pool =
 #endif
 };
 
+int count_uvm_mmap = 0;
+
 static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
 {
+	
+	printk(KERN_ALERT  "uvm_mmap被调用次数 %d \n",count_uvm_mmap++);
     uvm_va_space_t *va_space = uvm_va_space_get(filp);
     uvm_va_range_t *va_range;
     NV_STATUS status = uvm_global_get_status();
@@ -909,6 +913,7 @@ static int uvm_mmap_entry(struct file *filp, struct vm_area_struct *vma)
 {
    UVM_ENTRY_RET(uvm_mmap(filp, vma)); //UVM_ENTRY_RET为非void函数的包装器。
    printk(KERN_ALERT  "uvm_mmap_entry被调用次数 %d \n",count_uvm_mmap_entry++);
+   
 }
 
 static NV_STATUS uvm_api_initialize(UVM_INITIALIZE_PARAMS *params, struct file *filp)

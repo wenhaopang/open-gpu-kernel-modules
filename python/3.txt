@@ -1,0 +1,2072 @@
+[1027758.553575] uvm_kvfree被调用次数 422 
+[1027758.553587] uvm_kvfree被调用次数 423 
+[1027758.553590] uvm_kvfree被调用次数 424 
+[1027758.553593] uvm_kvfree被调用次数 425 
+[1027758.554311] uvm_kvfree被调用次数 426 
+[1027758.554668] nvidia-uvm: Unloaded the UVM driver.
+[1027769.444630] PKCS#7 signature not signed with a trusted key
+[1027769.448431] alloc_internal被调用次数 0 
+[1027769.448434] 第 1 次调用alloc_internal__ ，size:56--zero_memory:0
+[1027769.448435] __uvm_kvmalloc被调用次数 0 
+[1027769.448770] alloc_internal被调用次数 1 
+[1027769.448772] 第 2 次调用alloc_internal__ ，size:4656--zero_memory:0
+[1027769.448773] __uvm_kvmalloc被调用次数 1 
+[1027769.448775] alloc_internal被调用次数 2 
+[1027769.448776] 第 3 次调用alloc_internal__ ，size:4656--zero_memory:0
+[1027769.448777] __uvm_kvmalloc被调用次数 2 
+[1027769.448778] alloc_internal被调用次数 3 
+[1027769.448779] 第 4 次调用alloc_internal__ ，size:4656--zero_memory:0
+[1027769.448780] __uvm_kvmalloc被调用次数 3 
+[1027769.448781] alloc_internal被调用次数 4 
+[1027769.448782] 第 5 次调用alloc_internal__ ，size:4656--zero_memory:0
+[1027769.448783] __uvm_kvmalloc被调用次数 4 
+[1027769.449057] nvidia-uvm: Loaded the UVM driver, major device number 508.
+[1027795.466626] alloc_internal被调用次数 5 
+[1027795.466630] 第 6 次调用alloc_internal__ ，size:6376--zero_memory:1
+[1027795.466634] __uvm_kvmalloc_zero被调用次数 0 
+[1027795.466636] 第 1 次调用__uvm_kvmalloc_zero__ ，size:6376--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_va_space.c--line:166--functionuvm_va_space_create
+[1027795.466646] alloc_internal被调用次数 6 
+[1027795.466647] 第 7 次调用alloc_internal__ ，size:1664--zero_memory:1
+[1027795.466649] __uvm_kvmalloc_zero被调用次数 1 
+[1027795.466651] 第 2 次调用__uvm_kvmalloc_zero__ ，size:1664--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_perf_thrashing.c--line:596--functionva_space_thrashing_info_create
+[1027795.466653] alloc_internal被调用次数 7 
+[1027795.466654] 第 8 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.466655] __uvm_kvmalloc_zero被调用次数 2 
+[1027795.466657] 第 3 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:171--functionva_space_access_counters_info_create
+[1027795.514523] alloc_internal被调用次数 8 
+[1027795.514525] 第 9 次调用alloc_internal__ ，size:148--zero_memory:1
+[1027795.514526] __uvm_kvmalloc_zero被调用次数 3 
+[1027795.514528] 第 4 次调用__uvm_kvmalloc_zero__ ，size:148--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:1888--functiongpu_retain_by_uuid_locked
+[1027795.518391] alloc_internal被调用次数 9 
+[1027795.518392] 第 10 次调用alloc_internal__ ，size:19376--zero_memory:1
+[1027795.518558] __uvm_kvmalloc_zero被调用次数 4 
+[1027795.518559] 第 5 次调用__uvm_kvmalloc_zero__ ，size:19376--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:887--functionalloc_parent_gpu
+[1027795.518561] alloc_internal被调用次数 10 
+[1027795.518562] 第 11 次调用alloc_internal__ ，size:2376--zero_memory:1
+[1027795.518563] __uvm_kvmalloc_zero被调用次数 5 
+[1027795.518564] 第 6 次调用__uvm_kvmalloc_zero__ ，size:2376--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:916--functionalloc_gpu
+[1027795.524226] alloc_internal被调用次数 11 
+[1027795.524228] 第 12 次调用alloc_internal__ ，size:473088--zero_memory:1
+[1027795.524401] __uvm_kvmalloc_zero被调用次数 6 
+[1027795.524403] 第 7 次调用__uvm_kvmalloc_zero__ ，size:473088--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_replayable_faults.c--line:148--functionfault_buffer_init_replayable_faults
+[1027795.524405] alloc_internal被调用次数 12 
+[1027795.524406] 第 13 次调用alloc_internal__ ，size:43008--zero_memory:1
+[1027795.524463] __uvm_kvmalloc_zero被调用次数 7 
+[1027795.524465] 第 8 次调用__uvm_kvmalloc_zero__ ，size:43008--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_replayable_faults.c--line:156--functionfault_buffer_init_replayable_faults
+[1027795.524466] alloc_internal被调用次数 13 
+[1027795.524467] 第 14 次调用alloc_internal__ ，size:4368--zero_memory:1
+[1027795.524469] __uvm_kvmalloc_zero被调用次数 8 
+[1027795.524471] 第 9 次调用__uvm_kvmalloc_zero__ ，size:4368--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_replayable_faults.c--line:163--functionfault_buffer_init_replayable_faults
+[1027795.524488] alloc_internal被调用次数 14 
+[1027795.524489] 第 15 次调用alloc_internal__ ，size:265248--zero_memory:1
+[1027795.524573] __uvm_kvmalloc_zero被调用次数 9 
+[1027795.524574] 第 10 次调用__uvm_kvmalloc_zero__ ，size:265248--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_non_replayable_faults.c--line:133--functionuvm_gpu_fault_buffer_init_non_replayable_faults
+[1027795.524575] alloc_internal被调用次数 15 
+[1027795.524576] 第 16 次调用alloc_internal__ ，size:729432--zero_memory:1
+[1027795.524803] __uvm_kvmalloc_zero被调用次数 10 
+[1027795.524805] 第 11 次调用__uvm_kvmalloc_zero__ ，size:729432--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_non_replayable_faults.c--line:138--functionuvm_gpu_fault_buffer_init_non_replayable_faults
+[1027795.524806] alloc_internal被调用次数 16 
+[1027795.524807] 第 17 次调用alloc_internal__ ，size:256--zero_memory:1
+[1027795.524808] __uvm_kvmalloc_zero被调用次数 11 
+[1027795.524810] 第 12 次调用__uvm_kvmalloc_zero__ ，size:256--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_isr.c--line:303--functionuvm_gpu_init_isr
+[1027795.525258] alloc_internal被调用次数 17 
+[1027795.525266] 第 18 次调用alloc_internal__ ，size:256--zero_memory:1
+[1027795.525270] __uvm_kvmalloc_zero被调用次数 12 
+[1027795.525275] 第 13 次调用__uvm_kvmalloc_zero__ ，size:256--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_isr.c--line:325--functionuvm_gpu_init_isr
+[1027795.527189] alloc_internal被调用次数 18 
+[1027795.527194] 第 19 次调用alloc_internal__ ，size:327680--zero_memory:1
+[1027795.527331] __uvm_kvmalloc_zero被调用次数 13 
+[1027795.527336] 第 14 次调用__uvm_kvmalloc_zero__ ，size:327680--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:449--functionuvm_gpu_init_access_counters
+[1027795.527338] alloc_internal被调用次数 19 
+[1027795.527341] 第 20 次调用alloc_internal__ ，size:32768--zero_memory:1
+[1027795.527399] __uvm_kvmalloc_zero被调用次数 14 
+[1027795.527403] 第 15 次调用__uvm_kvmalloc_zero__ ，size:32768--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:456--functionuvm_gpu_init_access_counters
+[1027795.527406] alloc_internal被调用次数 20 
+[1027795.527409] 第 21 次调用alloc_internal__ ，size:32768--zero_memory:1
+[1027795.527425] __uvm_kvmalloc_zero被调用次数 15 
+[1027795.527429] 第 16 次调用__uvm_kvmalloc_zero__ ，size:32768--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:463--functionuvm_gpu_init_access_counters
+[1027795.527432] alloc_internal被调用次数 21 
+[1027795.527435] 第 22 次调用alloc_internal__ ，size:8192--zero_memory:1
+[1027795.527440] __uvm_kvmalloc_zero被调用次数 16 
+[1027795.527444] 第 17 次调用__uvm_kvmalloc_zero__ ，size:8192--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:470--functionuvm_gpu_init_access_counters
+[1027795.527447] alloc_internal被调用次数 22 
+[1027795.527450] 第 23 次调用alloc_internal__ ，size:256--zero_memory:1
+[1027795.527453] __uvm_kvmalloc_zero被调用次数 17 
+[1027795.527457] 第 18 次调用__uvm_kvmalloc_zero__ ，size:256--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_isr.c--line:360--functionuvm_gpu_init_isr
+[1027795.539203] alloc_internal被调用次数 23 
+[1027795.539206] 第 24 次调用alloc_internal__ ，size:1066032--zero_memory:1
+[1027795.539513] __uvm_kvmalloc_zero被调用次数 18 
+[1027795.539515] 第 19 次调用__uvm_kvmalloc_zero__ ，size:1066032--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_pmm_gpu.c--line:3380--functionuvm_pmm_gpu_init
+[1027795.539617] alloc_internal被调用次数 24 
+[1027795.539618] 第 25 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.539620] __uvm_kvmalloc_zero被调用次数 19 
+[1027795.539622] 第 20 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_semaphore.c--line:270--functionuvm_gpu_semaphore_pool_create
+[1027795.539624] alloc_internal被调用次数 25 
+[1027795.539625] 第 26 次调用alloc_internal__ ，size:368--zero_memory:1
+[1027795.539627] __uvm_kvmalloc_zero被调用次数 20 
+[1027795.539628] 第 21 次调用__uvm_kvmalloc_zero__ ，size:368--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:1396--functionuvm_channel_manager_create
+[1027795.539630] alloc_internal被调用次数 26 
+[1027795.539631] 第 27 次调用alloc_internal__ ，size:584--zero_memory:1
+[1027795.539633] __uvm_kvmalloc_zero被调用次数 21 
+[1027795.539635] 第 22 次调用__uvm_kvmalloc_zero__ ，size:584--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_pushbuffer.c--line:84--functionuvm_pushbuffer_create
+[1027795.539636] alloc_internal被调用次数 27 
+[1027795.539637] 第 28 次调用alloc_internal__ ，size:2128--zero_memory:1
+[1027795.539639] __uvm_kvmalloc_zero被调用次数 22 
+[1027795.539641] 第 23 次调用__uvm_kvmalloc_zero__ ，size:2128--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_rm_mem.c--line:193--functionuvm_rm_mem_alloc
+[1027795.551126] alloc_internal被调用次数 28 
+[1027795.551128] 第 29 次调用alloc_internal__ ，size:96--zero_memory:1
+[1027795.551129] __uvm_kvmalloc_zero被调用次数 23 
+[1027795.551131] 第 24 次调用__uvm_kvmalloc_zero__ ，size:96--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:1347--functionchannel_manager_create_pools
+[1027795.551132] alloc_internal被调用次数 29 
+[1027795.551133] 第 30 次调用alloc_internal__ ，size:608--zero_memory:1
+[1027795.551134] __uvm_kvmalloc_zero被调用次数 24 
+[1027795.551135] 第 25 次调用__uvm_kvmalloc_zero__ ，size:608--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:922--functionchannel_pool_add
+[1027795.551136] alloc_internal被调用次数 30 
+[1027795.551137] 第 31 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.551138] __uvm_kvmalloc_zero被调用次数 25 
+[1027795.551139] 第 26 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_semaphore.c--line:129--functionpool_alloc_page
+[1027795.551140] alloc_internal被调用次数 31 
+[1027795.551141] 第 32 次调用alloc_internal__ ，size:2128--zero_memory:1
+[1027795.551143] __uvm_kvmalloc_zero被调用次数 26 
+[1027795.551144] 第 27 次调用__uvm_kvmalloc_zero__ ，size:2128--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_rm_mem.c--line:193--functionuvm_rm_mem_alloc
+[1027795.563909] alloc_internal被调用次数 32 
+[1027795.563917] 第 33 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.563998] __uvm_kvmalloc_zero被调用次数 27 
+[1027795.564003] 第 28 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.564007] alloc_internal被调用次数 33 
+[1027795.564010] 第 34 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.564092] __uvm_kvmalloc_zero被调用次数 28 
+[1027795.564096] 第 29 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.576844] alloc_internal被调用次数 34 
+[1027795.576846] 第 35 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.576876] __uvm_kvmalloc_zero被调用次数 29 
+[1027795.576878] 第 30 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.576880] alloc_internal被调用次数 35 
+[1027795.576881] 第 36 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.576939] __uvm_kvmalloc_zero被调用次数 30 
+[1027795.576941] 第 31 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.577537] alloc_internal被调用次数 36 
+[1027795.577538] 第 37 次调用alloc_internal__ ，size:608--zero_memory:1
+[1027795.577540] __uvm_kvmalloc_zero被调用次数 31 
+[1027795.577542] 第 32 次调用__uvm_kvmalloc_zero__ ，size:608--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:922--functionchannel_pool_add
+[1027795.589277] alloc_internal被调用次数 37 
+[1027795.589279] 第 38 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.589301] __uvm_kvmalloc_zero被调用次数 32 
+[1027795.589302] 第 33 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.589303] alloc_internal被调用次数 38 
+[1027795.589304] 第 39 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.589366] __uvm_kvmalloc_zero被调用次数 33 
+[1027795.589367] 第 34 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.601743] alloc_internal被调用次数 39 
+[1027795.601744] 第 40 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.601765] __uvm_kvmalloc_zero被调用次数 34 
+[1027795.601766] 第 35 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.601766] alloc_internal被调用次数 40 
+[1027795.601767] 第 41 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.601816] __uvm_kvmalloc_zero被调用次数 35 
+[1027795.601817] 第 36 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.602431] alloc_internal被调用次数 41 
+[1027795.602431] 第 42 次调用alloc_internal__ ，size:608--zero_memory:1
+[1027795.602433] __uvm_kvmalloc_zero被调用次数 36 
+[1027795.602434] 第 37 次调用__uvm_kvmalloc_zero__ ，size:608--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:922--functionchannel_pool_add
+[1027795.614154] alloc_internal被调用次数 42 
+[1027795.614156] 第 43 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.614177] __uvm_kvmalloc_zero被调用次数 37 
+[1027795.614178] 第 38 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.614179] alloc_internal被调用次数 43 
+[1027795.614180] 第 44 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.614228] __uvm_kvmalloc_zero被调用次数 38 
+[1027795.614229] 第 39 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.626574] alloc_internal被调用次数 44 
+[1027795.626576] 第 45 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.626599] __uvm_kvmalloc_zero被调用次数 39 
+[1027795.626601] 第 40 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.626602] alloc_internal被调用次数 45 
+[1027795.626603] 第 46 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.626653] __uvm_kvmalloc_zero被调用次数 40 
+[1027795.626654] 第 41 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.627246] alloc_internal被调用次数 46 
+[1027795.627247] 第 47 次调用alloc_internal__ ，size:88--zero_memory:1
+[1027795.627248] __uvm_kvmalloc_zero被调用次数 41 
+[1027795.627249] 第 42 次调用__uvm_kvmalloc_zero__ ，size:88--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.638041] uvm_kvfree被调用次数 0 
+[1027795.638247] alloc_internal被调用次数 47 
+[1027795.638255] 第 48 次调用alloc_internal__ ，size:148--zero_memory:1
+[1027795.638263] __uvm_kvmalloc_zero被调用次数 42 
+[1027795.638272] 第 43 次调用__uvm_kvmalloc_zero__ ，size:148--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:1888--functiongpu_retain_by_uuid_locked
+[1027795.642061] alloc_internal被调用次数 48 
+[1027795.642062] 第 49 次调用alloc_internal__ ，size:19376--zero_memory:1
+[1027795.642085] __uvm_kvmalloc_zero被调用次数 43 
+[1027795.642086] 第 44 次调用__uvm_kvmalloc_zero__ ，size:19376--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:887--functionalloc_parent_gpu
+[1027795.642087] alloc_internal被调用次数 49 
+[1027795.642088] 第 50 次调用alloc_internal__ ，size:2376--zero_memory:1
+[1027795.642090] __uvm_kvmalloc_zero被调用次数 44 
+[1027795.642091] 第 45 次调用__uvm_kvmalloc_zero__ ，size:2376--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:916--functionalloc_gpu
+[1027795.647402] alloc_internal被调用次数 50 
+[1027795.647403] 第 51 次调用alloc_internal__ ，size:473088--zero_memory:1
+[1027795.647511] __uvm_kvmalloc_zero被调用次数 45 
+[1027795.647512] 第 46 次调用__uvm_kvmalloc_zero__ ，size:473088--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_replayable_faults.c--line:148--functionfault_buffer_init_replayable_faults
+[1027795.647513] alloc_internal被调用次数 51 
+[1027795.647514] 第 52 次调用alloc_internal__ ，size:43008--zero_memory:1
+[1027795.647537] __uvm_kvmalloc_zero被调用次数 46 
+[1027795.647538] 第 47 次调用__uvm_kvmalloc_zero__ ，size:43008--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_replayable_faults.c--line:156--functionfault_buffer_init_replayable_faults
+[1027795.647539] alloc_internal被调用次数 52 
+[1027795.647540] 第 53 次调用alloc_internal__ ，size:4368--zero_memory:1
+[1027795.647541] __uvm_kvmalloc_zero被调用次数 47 
+[1027795.647543] 第 48 次调用__uvm_kvmalloc_zero__ ，size:4368--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_replayable_faults.c--line:163--functionfault_buffer_init_replayable_faults
+[1027795.647556] alloc_internal被调用次数 53 
+[1027795.647556] 第 54 次调用alloc_internal__ ，size:265248--zero_memory:1
+[1027795.647623] __uvm_kvmalloc_zero被调用次数 48 
+[1027795.647625] 第 49 次调用__uvm_kvmalloc_zero__ ，size:265248--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_non_replayable_faults.c--line:133--functionuvm_gpu_fault_buffer_init_non_replayable_faults
+[1027795.647625] alloc_internal被调用次数 54 
+[1027795.647626] 第 55 次调用alloc_internal__ ，size:729432--zero_memory:1
+[1027795.647795] __uvm_kvmalloc_zero被调用次数 49 
+[1027795.647796] 第 50 次调用__uvm_kvmalloc_zero__ ，size:729432--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_non_replayable_faults.c--line:138--functionuvm_gpu_fault_buffer_init_non_replayable_faults
+[1027795.647797] alloc_internal被调用次数 55 
+[1027795.647798] 第 56 次调用alloc_internal__ ，size:256--zero_memory:1
+[1027795.647799] __uvm_kvmalloc_zero被调用次数 50 
+[1027795.647800] 第 51 次调用__uvm_kvmalloc_zero__ ，size:256--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_isr.c--line:303--functionuvm_gpu_init_isr
+[1027795.648082] alloc_internal被调用次数 56 
+[1027795.648082] 第 57 次调用alloc_internal__ ，size:256--zero_memory:1
+[1027795.648083] __uvm_kvmalloc_zero被调用次数 51 
+[1027795.648085] 第 52 次调用__uvm_kvmalloc_zero__ ，size:256--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_isr.c--line:325--functionuvm_gpu_init_isr
+[1027795.649810] alloc_internal被调用次数 57 
+[1027795.649811] 第 58 次调用alloc_internal__ ，size:327680--zero_memory:1
+[1027795.649890] __uvm_kvmalloc_zero被调用次数 52 
+[1027795.649891] 第 53 次调用__uvm_kvmalloc_zero__ ，size:327680--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:449--functionuvm_gpu_init_access_counters
+[1027795.649892] alloc_internal被调用次数 58 
+[1027795.649893] 第 59 次调用alloc_internal__ ，size:32768--zero_memory:1
+[1027795.649912] __uvm_kvmalloc_zero被调用次数 53 
+[1027795.649913] 第 54 次调用__uvm_kvmalloc_zero__ ，size:32768--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:456--functionuvm_gpu_init_access_counters
+[1027795.649919] alloc_internal被调用次数 59 
+[1027795.649920] 第 60 次调用alloc_internal__ ，size:32768--zero_memory:1
+[1027795.649932] __uvm_kvmalloc_zero被调用次数 54 
+[1027795.649933] 第 55 次调用__uvm_kvmalloc_zero__ ，size:32768--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:463--functionuvm_gpu_init_access_counters
+[1027795.649934] alloc_internal被调用次数 60 
+[1027795.649934] 第 61 次调用alloc_internal__ ，size:8192--zero_memory:1
+[1027795.649937] __uvm_kvmalloc_zero被调用次数 55 
+[1027795.649938] 第 56 次调用__uvm_kvmalloc_zero__ ，size:8192--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_access_counters.c--line:470--functionuvm_gpu_init_access_counters
+[1027795.649938] alloc_internal被调用次数 61 
+[1027795.649939] 第 62 次调用alloc_internal__ ，size:256--zero_memory:1
+[1027795.649940] __uvm_kvmalloc_zero被调用次数 56 
+[1027795.649941] 第 57 次调用__uvm_kvmalloc_zero__ ，size:256--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_isr.c--line:360--functionuvm_gpu_init_isr
+[1027795.660942] alloc_internal被调用次数 62 
+[1027795.660944] 第 63 次调用alloc_internal__ ，size:1066032--zero_memory:1
+[1027795.661196] __uvm_kvmalloc_zero被调用次数 57 
+[1027795.661198] 第 58 次调用__uvm_kvmalloc_zero__ ，size:1066032--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_pmm_gpu.c--line:3380--functionuvm_pmm_gpu_init
+[1027795.661272] alloc_internal被调用次数 63 
+[1027795.661273] 第 64 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.661273] __uvm_kvmalloc_zero被调用次数 58 
+[1027795.661275] 第 59 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_semaphore.c--line:270--functionuvm_gpu_semaphore_pool_create
+[1027795.661383] alloc_internal被调用次数 64 
+[1027795.661384] 第 65 次调用alloc_internal__ ，size:368--zero_memory:1
+[1027795.661385] __uvm_kvmalloc_zero被调用次数 59 
+[1027795.661386] 第 60 次调用__uvm_kvmalloc_zero__ ，size:368--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:1396--functionuvm_channel_manager_create
+[1027795.661387] alloc_internal被调用次数 65 
+[1027795.661388] 第 66 次调用alloc_internal__ ，size:584--zero_memory:1
+[1027795.661389] __uvm_kvmalloc_zero被调用次数 60 
+[1027795.661390] 第 61 次调用__uvm_kvmalloc_zero__ ，size:584--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_pushbuffer.c--line:84--functionuvm_pushbuffer_create
+[1027795.661391] alloc_internal被调用次数 66 
+[1027795.661392] 第 67 次调用alloc_internal__ ，size:2128--zero_memory:1
+[1027795.661394] __uvm_kvmalloc_zero被调用次数 61 
+[1027795.661395] 第 62 次调用__uvm_kvmalloc_zero__ ，size:2128--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_rm_mem.c--line:193--functionuvm_rm_mem_alloc
+[1027795.671384] alloc_internal被调用次数 67 
+[1027795.671386] 第 68 次调用alloc_internal__ ，size:96--zero_memory:1
+[1027795.671387] __uvm_kvmalloc_zero被调用次数 62 
+[1027795.671388] 第 63 次调用__uvm_kvmalloc_zero__ ，size:96--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:1347--functionchannel_manager_create_pools
+[1027795.671389] alloc_internal被调用次数 68 
+[1027795.671390] 第 69 次调用alloc_internal__ ，size:608--zero_memory:1
+[1027795.671391] __uvm_kvmalloc_zero被调用次数 63 
+[1027795.671392] 第 64 次调用__uvm_kvmalloc_zero__ ，size:608--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:922--functionchannel_pool_add
+[1027795.671393] alloc_internal被调用次数 69 
+[1027795.671394] 第 70 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.671395] __uvm_kvmalloc_zero被调用次数 64 
+[1027795.671396] 第 65 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu_semaphore.c--line:129--functionpool_alloc_page
+[1027795.671397] alloc_internal被调用次数 70 
+[1027795.671397] 第 71 次调用alloc_internal__ ，size:2128--zero_memory:1
+[1027795.671399] __uvm_kvmalloc_zero被调用次数 65 
+[1027795.671400] 第 66 次调用__uvm_kvmalloc_zero__ ，size:2128--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_rm_mem.c--line:193--functionuvm_rm_mem_alloc
+[1027795.683874] alloc_internal被调用次数 71 
+[1027795.683875] 第 72 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.683915] __uvm_kvmalloc_zero被调用次数 66 
+[1027795.683917] 第 67 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.683917] alloc_internal被调用次数 72 
+[1027795.683918] 第 73 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.683964] __uvm_kvmalloc_zero被调用次数 67 
+[1027795.683965] 第 68 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.695489] alloc_internal被调用次数 73 
+[1027795.695490] 第 74 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.695513] __uvm_kvmalloc_zero被调用次数 68 
+[1027795.695515] 第 69 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.695515] alloc_internal被调用次数 74 
+[1027795.695516] 第 75 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.695560] __uvm_kvmalloc_zero被调用次数 69 
+[1027795.695562] 第 70 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.696124] alloc_internal被调用次数 75 
+[1027795.696125] 第 76 次调用alloc_internal__ ，size:608--zero_memory:1
+[1027795.696126] __uvm_kvmalloc_zero被调用次数 70 
+[1027795.696127] 第 71 次调用__uvm_kvmalloc_zero__ ，size:608--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:922--functionchannel_pool_add
+[1027795.706863] alloc_internal被调用次数 76 
+[1027795.706864] 第 77 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.706887] __uvm_kvmalloc_zero被调用次数 71 
+[1027795.706888] 第 72 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.706889] alloc_internal被调用次数 77 
+[1027795.706890] 第 78 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.706934] __uvm_kvmalloc_zero被调用次数 72 
+[1027795.706935] 第 73 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.718276] alloc_internal被调用次数 78 
+[1027795.718277] 第 79 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.718299] __uvm_kvmalloc_zero被调用次数 73 
+[1027795.718300] 第 74 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.718301] alloc_internal被调用次数 79 
+[1027795.718302] 第 80 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.718348] __uvm_kvmalloc_zero被调用次数 74 
+[1027795.718349] 第 75 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.718919] alloc_internal被调用次数 80 
+[1027795.718919] 第 81 次调用alloc_internal__ ，size:608--zero_memory:1
+[1027795.718921] __uvm_kvmalloc_zero被调用次数 75 
+[1027795.718922] 第 76 次调用__uvm_kvmalloc_zero__ ，size:608--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:922--functionchannel_pool_add
+[1027795.729698] alloc_internal被调用次数 81 
+[1027795.729700] 第 82 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.729722] __uvm_kvmalloc_zero被调用次数 76 
+[1027795.729723] 第 77 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.729724] alloc_internal被调用次数 82 
+[1027795.729725] 第 83 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.729770] __uvm_kvmalloc_zero被调用次数 77 
+[1027795.729771] 第 78 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.741217] alloc_internal被调用次数 83 
+[1027795.741219] 第 84 次调用alloc_internal__ ，size:40960--zero_memory:1
+[1027795.741242] __uvm_kvmalloc_zero被调用次数 78 
+[1027795.741243] 第 79 次调用__uvm_kvmalloc_zero__ ，size:40960--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:803--functionchannel_create
+[1027795.741244] alloc_internal被调用次数 84 
+[1027795.741245] 第 85 次调用alloc_internal__ ，size:188416--zero_memory:1
+[1027795.741290] __uvm_kvmalloc_zero被调用次数 79 
+[1027795.741291] 第 80 次调用__uvm_kvmalloc_zero__ ，size:188416--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_channel.c--line:809--functionchannel_create
+[1027795.741877] alloc_internal被调用次数 85 
+[1027795.741878] 第 86 次调用alloc_internal__ ，size:88--zero_memory:1
+[1027795.741879] __uvm_kvmalloc_zero被调用次数 80 
+[1027795.741880] 第 81 次调用__uvm_kvmalloc_zero__ ，size:88--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.753626] uvm_kvfree被调用次数 1 
+[1027795.769040] alloc_internal被调用次数 86 
+[1027795.769042] 第 87 次调用alloc_internal__ ，size:288--zero_memory:1
+[1027795.769043] __uvm_kvmalloc_zero被调用次数 81 
+[1027795.769045] 第 82 次调用__uvm_kvmalloc_zero__ ，size:288--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_va_space.c--line:1322--functioncreate_gpu_va_space
+[1027795.769300] alloc_internal被调用次数 87 
+[1027795.769301] 第 88 次调用alloc_internal__ ，size:88--zero_memory:1
+[1027795.769302] __uvm_kvmalloc_zero被调用次数 82 
+[1027795.769303] 第 83 次调用__uvm_kvmalloc_zero__ ，size:88--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.769568] alloc_internal被调用次数 88 
+[1027795.769570] 第 89 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.769570] __uvm_kvmalloc被调用次数 5 
+[1027795.769572] alloc_internal被调用次数 89 
+[1027795.769573] 第 90 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.769574] __uvm_kvmalloc_zero被调用次数 83 
+[1027795.769575] 第 84 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.769576] alloc_internal被调用次数 90 
+[1027795.769577] 第 91 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.769578] __uvm_kvmalloc_zero被调用次数 84 
+[1027795.769579] 第 85 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.769596] alloc_internal被调用次数 91 
+[1027795.769597] 第 92 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.769597] __uvm_kvmalloc被调用次数 6 
+[1027795.769598] alloc_internal被调用次数 92 
+[1027795.769599] 第 93 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.769600] __uvm_kvmalloc_zero被调用次数 85 
+[1027795.769601] 第 86 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.769602] alloc_internal被调用次数 93 
+[1027795.769603] 第 94 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.769605] __uvm_kvmalloc_zero被调用次数 86 
+[1027795.769606] 第 87 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.769607] alloc_internal被调用次数 94 
+[1027795.769608] 第 95 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.769609] __uvm_kvmalloc_zero被调用次数 87 
+[1027795.769611] 第 88 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.769612] alloc_internal被调用次数 95 
+[1027795.769613] 第 96 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.769614] __uvm_kvmalloc_zero被调用次数 88 
+[1027795.769616] 第 89 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.769636] uvm_kvfree被调用次数 2 
+[1027795.769640] uvm_kvfree被调用次数 3 
+[1027795.770249] alloc_internal被调用次数 96 
+[1027795.770250] 第 97 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.770251] __uvm_kvmalloc被调用次数 7 
+[1027795.770252] alloc_internal被调用次数 97 
+[1027795.770253] 第 98 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.770253] __uvm_kvmalloc_zero被调用次数 89 
+[1027795.770255] 第 90 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.770255] alloc_internal被调用次数 98 
+[1027795.770256] 第 99 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.770257] __uvm_kvmalloc_zero被调用次数 90 
+[1027795.770258] 第 91 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.770275] alloc_internal被调用次数 99 
+[1027795.770276] 第 100 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.770277] __uvm_kvmalloc被调用次数 8 
+[1027795.770278] alloc_internal被调用次数 100 
+[1027795.770279] 第 101 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.770279] __uvm_kvmalloc_zero被调用次数 91 
+[1027795.770280] 第 92 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.770282] alloc_internal被调用次数 101 
+[1027795.770283] 第 102 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.770284] __uvm_kvmalloc_zero被调用次数 92 
+[1027795.770285] 第 93 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.770318] uvm_kvfree被调用次数 4 
+[1027795.770324] uvm_kvfree被调用次数 5 
+[1027795.770408] alloc_internal被调用次数 102 
+[1027795.770409] 第 103 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.770410] __uvm_kvmalloc被调用次数 9 
+[1027795.770411] alloc_internal被调用次数 103 
+[1027795.770412] 第 104 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.770413] __uvm_kvmalloc_zero被调用次数 93 
+[1027795.770414] 第 94 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.770414] alloc_internal被调用次数 104 
+[1027795.770415] 第 105 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.770416] __uvm_kvmalloc_zero被调用次数 94 
+[1027795.770417] 第 95 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.770430] alloc_internal被调用次数 105 
+[1027795.770431] 第 106 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.770432] __uvm_kvmalloc被调用次数 10 
+[1027795.770432] alloc_internal被调用次数 106 
+[1027795.770433] 第 107 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.770434] __uvm_kvmalloc_zero被调用次数 95 
+[1027795.770435] 第 96 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.770436] alloc_internal被调用次数 107 
+[1027795.770437] 第 108 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.770439] __uvm_kvmalloc_zero被调用次数 96 
+[1027795.770440] 第 97 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.770442] alloc_internal被调用次数 108 
+[1027795.770442] 第 109 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.770446] __uvm_kvmalloc_zero被调用次数 97 
+[1027795.770447] 第 98 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.770463] uvm_kvfree被调用次数 6 
+[1027795.770467] uvm_kvfree被调用次数 7 
+[1027795.770492] alloc_internal被调用次数 109 
+[1027795.770493] 第 110 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.770493] __uvm_kvmalloc被调用次数 11 
+[1027795.770495] alloc_internal被调用次数 110 
+[1027795.770495] 第 111 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.770496] __uvm_kvmalloc_zero被调用次数 98 
+[1027795.770497] 第 99 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.770498] alloc_internal被调用次数 111 
+[1027795.770498] 第 112 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.770499] __uvm_kvmalloc_zero被调用次数 99 
+[1027795.770501] 第 100 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.770514] alloc_internal被调用次数 112 
+[1027795.770515] 第 113 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.770516] __uvm_kvmalloc被调用次数 12 
+[1027795.770516] alloc_internal被调用次数 113 
+[1027795.770517] 第 114 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.770518] __uvm_kvmalloc_zero被调用次数 100 
+[1027795.770519] 第 101 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.770529] uvm_kvfree被调用次数 8 
+[1027795.770533] uvm_kvfree被调用次数 9 
+[1027795.770595] alloc_internal被调用次数 114 
+[1027795.770596] 第 115 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.770597] __uvm_kvmalloc被调用次数 13 
+[1027795.770598] alloc_internal被调用次数 115 
+[1027795.770599] 第 116 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.770600] __uvm_kvmalloc_zero被调用次数 101 
+[1027795.770601] 第 102 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.770602] alloc_internal被调用次数 116 
+[1027795.770602] 第 117 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.770603] __uvm_kvmalloc_zero被调用次数 102 
+[1027795.770604] 第 103 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.770617] alloc_internal被调用次数 117 
+[1027795.770617] 第 118 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.770618] __uvm_kvmalloc被调用次数 14 
+[1027795.770619] alloc_internal被调用次数 118 
+[1027795.770620] 第 119 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.770620] __uvm_kvmalloc_zero被调用次数 103 
+[1027795.770622] 第 104 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.770623] alloc_internal被调用次数 119 
+[1027795.770624] 第 120 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.770627] __uvm_kvmalloc_zero被调用次数 104 
+[1027795.770628] 第 105 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.770629] alloc_internal被调用次数 120 
+[1027795.770630] 第 121 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.770634] __uvm_kvmalloc_zero被调用次数 105 
+[1027795.770635] 第 106 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.770650] uvm_kvfree被调用次数 10 
+[1027795.770654] uvm_kvfree被调用次数 11 
+[1027795.772046] alloc_internal被调用次数 121 
+[1027795.772047] 第 122 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.772048] __uvm_kvmalloc被调用次数 15 
+[1027795.772050] alloc_internal被调用次数 122 
+[1027795.772050] 第 123 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.772051] __uvm_kvmalloc_zero被调用次数 106 
+[1027795.772052] 第 107 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.772053] alloc_internal被调用次数 123 
+[1027795.772054] 第 124 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.772055] __uvm_kvmalloc_zero被调用次数 107 
+[1027795.772056] 第 108 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.772074] alloc_internal被调用次数 124 
+[1027795.772075] 第 125 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.772076] __uvm_kvmalloc被调用次数 16 
+[1027795.772077] alloc_internal被调用次数 125 
+[1027795.772078] 第 126 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.772079] __uvm_kvmalloc_zero被调用次数 108 
+[1027795.772080] 第 109 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.772092] uvm_kvfree被调用次数 12 
+[1027795.772096] uvm_kvfree被调用次数 13 
+[1027795.795319] alloc_internal被调用次数 126 
+[1027795.795324] 第 127 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.795325] __uvm_kvmalloc被调用次数 17 
+[1027795.795327] alloc_internal被调用次数 127 
+[1027795.795328] 第 128 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.795329] __uvm_kvmalloc_zero被调用次数 109 
+[1027795.795331] 第 110 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.795332] alloc_internal被调用次数 128 
+[1027795.795333] 第 129 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.795334] __uvm_kvmalloc_zero被调用次数 110 
+[1027795.795335] 第 111 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.795451] alloc_internal被调用次数 129 
+[1027795.795452] 第 130 次调用alloc_internal__ ，size:98304--zero_memory:0
+[1027795.795537] __uvm_kvmalloc被调用次数 18 
+[1027795.795538] alloc_internal被调用次数 130 
+[1027795.795538] 第 131 次调用alloc_internal__ ，size:672--zero_memory:1
+[1027795.795539] __uvm_kvmalloc_zero被调用次数 111 
+[1027795.795541] 第 112 次调用__uvm_kvmalloc_zero__ ，size:672--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.795543] alloc_internal被调用次数 131 
+[1027795.795544] 第 132 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795545] __uvm_kvmalloc_zero被调用次数 112 
+[1027795.795546] 第 113 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795558] alloc_internal被调用次数 132 
+[1027795.795559] 第 133 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795560] __uvm_kvmalloc_zero被调用次数 113 
+[1027795.795561] 第 114 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795564] alloc_internal被调用次数 133 
+[1027795.795565] 第 134 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795566] __uvm_kvmalloc_zero被调用次数 114 
+[1027795.795566] 第 115 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795569] alloc_internal被调用次数 134 
+[1027795.795570] 第 135 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795571] __uvm_kvmalloc_zero被调用次数 115 
+[1027795.795572] 第 116 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795575] alloc_internal被调用次数 135 
+[1027795.795576] 第 136 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795576] __uvm_kvmalloc_zero被调用次数 116 
+[1027795.795577] 第 117 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795581] alloc_internal被调用次数 136 
+[1027795.795582] 第 137 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795582] __uvm_kvmalloc_zero被调用次数 117 
+[1027795.795583] 第 118 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795586] alloc_internal被调用次数 137 
+[1027795.795587] 第 138 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795588] __uvm_kvmalloc_zero被调用次数 118 
+[1027795.795589] 第 119 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795594] alloc_internal被调用次数 138 
+[1027795.795595] 第 139 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795596] __uvm_kvmalloc_zero被调用次数 119 
+[1027795.795597] 第 120 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795599] alloc_internal被调用次数 139 
+[1027795.795600] 第 140 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795601] __uvm_kvmalloc_zero被调用次数 120 
+[1027795.795602] 第 121 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795605] alloc_internal被调用次数 140 
+[1027795.795605] 第 141 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795606] __uvm_kvmalloc_zero被调用次数 121 
+[1027795.795607] 第 122 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795610] alloc_internal被调用次数 141 
+[1027795.795610] 第 142 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795611] __uvm_kvmalloc_zero被调用次数 122 
+[1027795.795612] 第 123 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795615] alloc_internal被调用次数 142 
+[1027795.795616] 第 143 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795616] __uvm_kvmalloc_zero被调用次数 123 
+[1027795.795617] 第 124 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795620] alloc_internal被调用次数 143 
+[1027795.795621] 第 144 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795622] __uvm_kvmalloc_zero被调用次数 124 
+[1027795.795623] 第 125 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795626] alloc_internal被调用次数 144 
+[1027795.795626] 第 145 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795627] __uvm_kvmalloc_zero被调用次数 125 
+[1027795.795628] 第 126 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795631] alloc_internal被调用次数 145 
+[1027795.795631] 第 146 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795632] __uvm_kvmalloc_zero被调用次数 126 
+[1027795.795633] 第 127 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795636] alloc_internal被调用次数 146 
+[1027795.795637] 第 147 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795638] __uvm_kvmalloc_zero被调用次数 127 
+[1027795.795639] 第 128 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795641] alloc_internal被调用次数 147 
+[1027795.795642] 第 148 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795643] __uvm_kvmalloc_zero被调用次数 128 
+[1027795.795644] 第 129 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795647] alloc_internal被调用次数 148 
+[1027795.795647] 第 149 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795648] __uvm_kvmalloc_zero被调用次数 129 
+[1027795.795649] 第 130 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795652] alloc_internal被调用次数 149 
+[1027795.795652] 第 150 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795653] __uvm_kvmalloc_zero被调用次数 130 
+[1027795.795654] 第 131 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795657] alloc_internal被调用次数 150 
+[1027795.795658] 第 151 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795658] __uvm_kvmalloc_zero被调用次数 131 
+[1027795.795659] 第 132 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795662] alloc_internal被调用次数 151 
+[1027795.795663] 第 152 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795664] __uvm_kvmalloc_zero被调用次数 132 
+[1027795.795665] 第 133 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795667] alloc_internal被调用次数 152 
+[1027795.795668] 第 153 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795669] __uvm_kvmalloc_zero被调用次数 133 
+[1027795.795670] 第 134 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795673] alloc_internal被调用次数 153 
+[1027795.795673] 第 154 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795674] __uvm_kvmalloc_zero被调用次数 134 
+[1027795.795675] 第 135 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795679] alloc_internal被调用次数 154 
+[1027795.795680] 第 155 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795680] __uvm_kvmalloc_zero被调用次数 135 
+[1027795.795681] 第 136 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795684] alloc_internal被调用次数 155 
+[1027795.795685] 第 156 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795685] __uvm_kvmalloc_zero被调用次数 136 
+[1027795.795686] 第 137 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795689] alloc_internal被调用次数 156 
+[1027795.795690] 第 157 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795690] __uvm_kvmalloc_zero被调用次数 137 
+[1027795.795691] 第 138 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795694] alloc_internal被调用次数 157 
+[1027795.795695] 第 158 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795696] __uvm_kvmalloc_zero被调用次数 138 
+[1027795.795697] 第 139 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.795700] alloc_internal被调用次数 158 
+[1027795.795701] 第 159 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.795702] __uvm_kvmalloc_zero被调用次数 139 
+[1027795.795702] 第 140 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.796148] uvm_kvfree被调用次数 14 
+[1027795.796155] uvm_kvfree被调用次数 15 
+[1027795.799894] alloc_internal被调用次数 159 
+[1027795.799895] 第 160 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.799897] __uvm_kvmalloc被调用次数 19 
+[1027795.799898] alloc_internal被调用次数 160 
+[1027795.799899] 第 161 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.799900] __uvm_kvmalloc_zero被调用次数 140 
+[1027795.799901] 第 141 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.799902] alloc_internal被调用次数 161 
+[1027795.799903] 第 162 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.799904] __uvm_kvmalloc_zero被调用次数 141 
+[1027795.799905] 第 142 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.799925] alloc_internal被调用次数 162 
+[1027795.799926] 第 163 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.799927] __uvm_kvmalloc被调用次数 20 
+[1027795.799928] alloc_internal被调用次数 163 
+[1027795.799929] 第 164 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.799929] __uvm_kvmalloc_zero被调用次数 142 
+[1027795.799930] 第 143 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.799932] alloc_internal被调用次数 164 
+[1027795.799933] 第 165 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.799933] __uvm_kvmalloc_zero被调用次数 143 
+[1027795.799934] 第 144 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.799967] uvm_kvfree被调用次数 16 
+[1027795.799972] uvm_kvfree被调用次数 17 
+[1027795.800649] alloc_internal被调用次数 165 
+[1027795.800650] 第 166 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.800652] __uvm_kvmalloc被调用次数 21 
+[1027795.800654] alloc_internal被调用次数 166 
+[1027795.800655] 第 167 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.800656] __uvm_kvmalloc_zero被调用次数 144 
+[1027795.800657] 第 145 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.800658] alloc_internal被调用次数 167 
+[1027795.800659] 第 168 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.800660] __uvm_kvmalloc_zero被调用次数 145 
+[1027795.800661] 第 146 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.800683] alloc_internal被调用次数 168 
+[1027795.800684] 第 169 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.800685] __uvm_kvmalloc被调用次数 22 
+[1027795.800686] alloc_internal被调用次数 169 
+[1027795.800687] 第 170 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.800688] __uvm_kvmalloc_zero被调用次数 146 
+[1027795.800689] 第 147 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.800691] alloc_internal被调用次数 170 
+[1027795.800692] 第 171 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.800693] __uvm_kvmalloc_zero被调用次数 147 
+[1027795.800694] 第 148 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.800731] uvm_kvfree被调用次数 18 
+[1027795.800736] uvm_kvfree被调用次数 19 
+[1027795.818428] alloc_internal被调用次数 171 
+[1027795.818430] 第 172 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.818431] __uvm_kvmalloc_zero被调用次数 148 
+[1027795.818433] 第 149 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.818433] alloc_internal被调用次数 172 
+[1027795.818434] 第 173 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.818435] __uvm_kvmalloc_zero被调用次数 149 
+[1027795.818436] 第 150 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.819358] alloc_internal被调用次数 173 
+[1027795.819359] 第 174 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.819360] __uvm_kvmalloc_zero被调用次数 150 
+[1027795.819361] 第 151 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.819365] uvm_kvfree被调用次数 20 
+[1027795.819366] alloc_internal被调用次数 174 
+[1027795.819367] 第 175 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.819367] __uvm_kvmalloc_zero被调用次数 151 
+[1027795.819368] 第 152 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.819379] alloc_internal被调用次数 175 
+[1027795.819379] 第 176 次调用alloc_internal__ ，size:64--zero_memory:0
+[1027795.819380] __uvm_kvmalloc被调用次数 23 
+[1027795.819381] alloc_internal被调用次数 176 
+[1027795.819382] 第 177 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819382] __uvm_kvmalloc_zero被调用次数 152 
+[1027795.819383] 第 153 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819396] uvm_kvfree被调用次数 21 
+[1027795.819397] alloc_internal被调用次数 177 
+[1027795.819398] 第 178 次调用alloc_internal__ ，size:64--zero_memory:0
+[1027795.819399] __uvm_kvmalloc被调用次数 24 
+[1027795.819400] alloc_internal被调用次数 178 
+[1027795.819400] 第 179 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819401] __uvm_kvmalloc_zero被调用次数 153 
+[1027795.819403] 第 154 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819404] alloc_internal被调用次数 179 
+[1027795.819405] 第 180 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.819405] __uvm_kvmalloc_zero被调用次数 154 
+[1027795.819406] 第 155 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.819428] alloc_internal被调用次数 180 
+[1027795.819428] 第 181 次调用alloc_internal__ ，size:128--zero_memory:0
+[1027795.819429] __uvm_kvmalloc被调用次数 25 
+[1027795.819430] uvm_kvfree被调用次数 22 
+[1027795.819431] alloc_internal被调用次数 181 
+[1027795.819431] 第 182 次调用alloc_internal__ ，size:8--zero_memory:0
+[1027795.819433] __uvm_kvmalloc被调用次数 26 
+[1027795.819433] alloc_internal被调用次数 182 
+[1027795.819434] 第 183 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819435] __uvm_kvmalloc_zero被调用次数 155 
+[1027795.819436] 第 156 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819446] uvm_kvfree被调用次数 23 
+[1027795.819447] alloc_internal被调用次数 183 
+[1027795.819448] 第 184 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.819449] __uvm_kvmalloc被调用次数 27 
+[1027795.819449] alloc_internal被调用次数 184 
+[1027795.819450] 第 185 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819451] __uvm_kvmalloc_zero被调用次数 156 
+[1027795.819452] 第 157 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819461] uvm_kvfree被调用次数 24 
+[1027795.819462] alloc_internal被调用次数 185 
+[1027795.819463] 第 186 次调用alloc_internal__ ，size:40--zero_memory:0
+[1027795.819463] __uvm_kvmalloc被调用次数 28 
+[1027795.819464] alloc_internal被调用次数 186 
+[1027795.819465] 第 187 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819465] __uvm_kvmalloc_zero被调用次数 157 
+[1027795.819466] 第 158 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819467] alloc_internal被调用次数 187 
+[1027795.819468] 第 188 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.819469] __uvm_kvmalloc_zero被调用次数 158 
+[1027795.819470] 第 159 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.819484] uvm_kvfree被调用次数 25 
+[1027795.819485] alloc_internal被调用次数 188 
+[1027795.819486] 第 189 次调用alloc_internal__ ，size:128--zero_memory:0
+[1027795.819486] __uvm_kvmalloc被调用次数 29 
+[1027795.819487] alloc_internal被调用次数 189 
+[1027795.819488] 第 190 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819488] __uvm_kvmalloc_zero被调用次数 159 
+[1027795.819489] 第 160 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819499] uvm_kvfree被调用次数 26 
+[1027795.819500] alloc_internal被调用次数 190 
+[1027795.819501] 第 191 次调用alloc_internal__ ，size:2872--zero_memory:0
+[1027795.819501] __uvm_kvmalloc被调用次数 30 
+[1027795.819502] alloc_internal被调用次数 191 
+[1027795.819503] 第 192 次调用alloc_internal__ ，size:48--zero_memory:1
+[1027795.819504] __uvm_kvmalloc_zero被调用次数 160 
+[1027795.819504] 第 161 次调用__uvm_kvmalloc_zero__ ，size:48--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819506] alloc_internal被调用次数 192 
+[1027795.819507] 第 193 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.819508] __uvm_kvmalloc_zero被调用次数 161 
+[1027795.819508] 第 162 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.819533] uvm_kvfree被调用次数 27 
+[1027795.819534] alloc_internal被调用次数 193 
+[1027795.819535] 第 194 次调用alloc_internal__ ，size:1024--zero_memory:0
+[1027795.819536] __uvm_kvmalloc被调用次数 31 
+[1027795.819537] alloc_internal被调用次数 194 
+[1027795.819538] 第 195 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819538] __uvm_kvmalloc_zero被调用次数 162 
+[1027795.819540] 第 163 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819553] uvm_kvfree被调用次数 28 
+[1027795.819554] alloc_internal被调用次数 195 
+[1027795.819554] 第 196 次调用alloc_internal__ ，size:1024--zero_memory:0
+[1027795.819555] __uvm_kvmalloc被调用次数 32 
+[1027795.819556] alloc_internal被调用次数 196 
+[1027795.819557] 第 197 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819557] __uvm_kvmalloc_zero被调用次数 163 
+[1027795.819558] 第 164 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819571] uvm_kvfree被调用次数 29 
+[1027795.819571] alloc_internal被调用次数 197 
+[1027795.819572] 第 198 次调用alloc_internal__ ，size:24--zero_memory:0
+[1027795.819573] __uvm_kvmalloc被调用次数 33 
+[1027795.819574] alloc_internal被调用次数 198 
+[1027795.819574] 第 199 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.819575] __uvm_kvmalloc_zero被调用次数 164 
+[1027795.819576] 第 165 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.819585] uvm_kvfree被调用次数 30 
+[1027795.819589] uvm_kvfree被调用次数 31 
+[1027795.819590] alloc_internal被调用次数 199 
+[1027795.819590] 第 200 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.819591] __uvm_kvmalloc_zero被调用次数 165 
+[1027795.819592] 第 166 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.819593] alloc_internal被调用次数 200 
+[1027795.819594] 第 201 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.819594] __uvm_kvmalloc_zero被调用次数 166 
+[1027795.819595] 第 167 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.819596] alloc_internal被调用次数 201 
+[1027795.819597] 第 202 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.819598] __uvm_kvmalloc_zero被调用次数 167 
+[1027795.819599] 第 168 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.823454] uvm_kvfree被调用次数 32 
+[1027795.823479] alloc_internal被调用次数 202 
+[1027795.823486] 第 203 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.823498] __uvm_kvmalloc_zero被调用次数 168 
+[1027795.823504] 第 169 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.823519] alloc_internal被调用次数 203 
+[1027795.823526] 第 204 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.823538] __uvm_kvmalloc_zero被调用次数 169 
+[1027795.823544] 第 170 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.824478] alloc_internal被调用次数 204 
+[1027795.824479] 第 205 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.824481] __uvm_kvmalloc_zero被调用次数 170 
+[1027795.824482] 第 171 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.824486] uvm_kvfree被调用次数 33 
+[1027795.824488] alloc_internal被调用次数 205 
+[1027795.824489] 第 206 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.824489] __uvm_kvmalloc_zero被调用次数 171 
+[1027795.824491] 第 172 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.824493] alloc_internal被调用次数 206 
+[1027795.824494] 第 207 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.824495] __uvm_kvmalloc_zero被调用次数 172 
+[1027795.824496] 第 173 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.824497] alloc_internal被调用次数 207 
+[1027795.824498] 第 208 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.824502] __uvm_kvmalloc_zero被调用次数 173 
+[1027795.824503] 第 174 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.824504] uvm_kvfree被调用次数 34 
+[1027795.824505] uvm_kvfree被调用次数 35 
+[1027795.824506] alloc_internal被调用次数 208 
+[1027795.824507] 第 209 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.824508] __uvm_kvmalloc_zero被调用次数 174 
+[1027795.824509] 第 175 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.825089] uvm_kvfree被调用次数 36 
+[1027795.825123] alloc_internal被调用次数 209 
+[1027795.825136] 第 210 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.825143] __uvm_kvmalloc_zero被调用次数 175 
+[1027795.825157] 第 176 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.825170] alloc_internal被调用次数 210 
+[1027795.825177] 第 211 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.825178] __uvm_kvmalloc_zero被调用次数 176 
+[1027795.825179] 第 177 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.826071] alloc_internal被调用次数 211 
+[1027795.826071] 第 212 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.826072] __uvm_kvmalloc_zero被调用次数 177 
+[1027795.826073] 第 178 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.826077] uvm_kvfree被调用次数 37 
+[1027795.826078] alloc_internal被调用次数 212 
+[1027795.826078] 第 213 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.826079] __uvm_kvmalloc_zero被调用次数 178 
+[1027795.826080] 第 179 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.826081] alloc_internal被调用次数 213 
+[1027795.826082] 第 214 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.826083] __uvm_kvmalloc_zero被调用次数 179 
+[1027795.826084] 第 180 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.826084] alloc_internal被调用次数 214 
+[1027795.826085] 第 215 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.826086] __uvm_kvmalloc_zero被调用次数 180 
+[1027795.826087] 第 181 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.826088] uvm_kvfree被调用次数 38 
+[1027795.826088] uvm_kvfree被调用次数 39 
+[1027795.826089] alloc_internal被调用次数 215 
+[1027795.826090] 第 216 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.826090] __uvm_kvmalloc_zero被调用次数 181 
+[1027795.826091] 第 182 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.826630] uvm_kvfree被调用次数 40 
+[1027795.826655] alloc_internal被调用次数 216 
+[1027795.826661] 第 217 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.826668] __uvm_kvmalloc_zero被调用次数 182 
+[1027795.826674] 第 183 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.826686] alloc_internal被调用次数 217 
+[1027795.826693] 第 218 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.826699] __uvm_kvmalloc_zero被调用次数 183 
+[1027795.826712] 第 184 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.827600] alloc_internal被调用次数 218 
+[1027795.827601] 第 219 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.827602] __uvm_kvmalloc_zero被调用次数 184 
+[1027795.827603] 第 185 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.827606] uvm_kvfree被调用次数 41 
+[1027795.827607] alloc_internal被调用次数 219 
+[1027795.827608] 第 220 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.827612] __uvm_kvmalloc_zero被调用次数 185 
+[1027795.827612] 第 186 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.827614] alloc_internal被调用次数 220 
+[1027795.827614] 第 221 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.827615] __uvm_kvmalloc_zero被调用次数 186 
+[1027795.827616] 第 187 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.827617] alloc_internal被调用次数 221 
+[1027795.827618] 第 222 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.827618] __uvm_kvmalloc_zero被调用次数 187 
+[1027795.827619] 第 188 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.827620] uvm_kvfree被调用次数 42 
+[1027795.827621] uvm_kvfree被调用次数 43 
+[1027795.827622] alloc_internal被调用次数 222 
+[1027795.827623] 第 223 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.827624] __uvm_kvmalloc_zero被调用次数 188 
+[1027795.827625] 第 189 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.828161] uvm_kvfree被调用次数 44 
+[1027795.828219] alloc_internal被调用次数 223 
+[1027795.828242] 第 224 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.828256] __uvm_kvmalloc_zero被调用次数 189 
+[1027795.828258] 第 190 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.828267] alloc_internal被调用次数 224 
+[1027795.828276] 第 225 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.828282] __uvm_kvmalloc_zero被调用次数 190 
+[1027795.828288] 第 191 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.829181] alloc_internal被调用次数 225 
+[1027795.829183] 第 226 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.829184] __uvm_kvmalloc_zero被调用次数 191 
+[1027795.829185] 第 192 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.829189] uvm_kvfree被调用次数 45 
+[1027795.829190] alloc_internal被调用次数 226 
+[1027795.829192] 第 227 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.829193] __uvm_kvmalloc_zero被调用次数 192 
+[1027795.829194] 第 193 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.829195] alloc_internal被调用次数 227 
+[1027795.829196] 第 228 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.829197] __uvm_kvmalloc_zero被调用次数 193 
+[1027795.829198] 第 194 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.829199] alloc_internal被调用次数 228 
+[1027795.829200] 第 229 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.829201] __uvm_kvmalloc_zero被调用次数 194 
+[1027795.829202] 第 195 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.829203] uvm_kvfree被调用次数 46 
+[1027795.829204] uvm_kvfree被调用次数 47 
+[1027795.829205] alloc_internal被调用次数 229 
+[1027795.829206] 第 230 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.829207] __uvm_kvmalloc_zero被调用次数 195 
+[1027795.829208] 第 196 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.829755] uvm_kvfree被调用次数 48 
+[1027795.829775] alloc_internal被调用次数 230 
+[1027795.829787] 第 231 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.829794] __uvm_kvmalloc_zero被调用次数 196 
+[1027795.829800] 第 197 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.829813] alloc_internal被调用次数 231 
+[1027795.829819] 第 232 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.829826] __uvm_kvmalloc_zero被调用次数 197 
+[1027795.829832] 第 198 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.830736] alloc_internal被调用次数 232 
+[1027795.830737] 第 233 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.830738] __uvm_kvmalloc_zero被调用次数 198 
+[1027795.830739] 第 199 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.830742] uvm_kvfree被调用次数 49 
+[1027795.830743] alloc_internal被调用次数 233 
+[1027795.830744] 第 234 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.830745] __uvm_kvmalloc_zero被调用次数 199 
+[1027795.830746] 第 200 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.830747] alloc_internal被调用次数 234 
+[1027795.830748] 第 235 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.830748] __uvm_kvmalloc_zero被调用次数 200 
+[1027795.830749] 第 201 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.830750] alloc_internal被调用次数 235 
+[1027795.830751] 第 236 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.830752] __uvm_kvmalloc_zero被调用次数 201 
+[1027795.830753] 第 202 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.830754] uvm_kvfree被调用次数 50 
+[1027795.830755] uvm_kvfree被调用次数 51 
+[1027795.830755] alloc_internal被调用次数 236 
+[1027795.830756] 第 237 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.830757] __uvm_kvmalloc_zero被调用次数 202 
+[1027795.830758] 第 203 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.831297] uvm_kvfree被调用次数 52 
+[1027795.831321] alloc_internal被调用次数 237 
+[1027795.831328] 第 238 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.831334] __uvm_kvmalloc_zero被调用次数 203 
+[1027795.831341] 第 204 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.831353] alloc_internal被调用次数 238 
+[1027795.831359] 第 239 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.831365] __uvm_kvmalloc_zero被调用次数 204 
+[1027795.831372] 第 205 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.832299] alloc_internal被调用次数 239 
+[1027795.832307] 第 240 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.832314] __uvm_kvmalloc_zero被调用次数 205 
+[1027795.832321] 第 206 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.832330] uvm_kvfree被调用次数 53 
+[1027795.832341] alloc_internal被调用次数 240 
+[1027795.832347] 第 241 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.832354] __uvm_kvmalloc_zero被调用次数 206 
+[1027795.832359] 第 207 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.832365] alloc_internal被调用次数 241 
+[1027795.832373] 第 242 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.832379] __uvm_kvmalloc_zero被调用次数 207 
+[1027795.832385] 第 208 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.832393] alloc_internal被调用次数 242 
+[1027795.832403] 第 243 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.832410] __uvm_kvmalloc_zero被调用次数 208 
+[1027795.832417] 第 209 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.832423] uvm_kvfree被调用次数 54 
+[1027795.832432] uvm_kvfree被调用次数 55 
+[1027795.832438] alloc_internal被调用次数 243 
+[1027795.832446] 第 244 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.832453] __uvm_kvmalloc_zero被调用次数 209 
+[1027795.832457] 第 210 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.833005] uvm_kvfree被调用次数 56 
+[1027795.833039] alloc_internal被调用次数 244 
+[1027795.833052] 第 245 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.833065] __uvm_kvmalloc_zero被调用次数 210 
+[1027795.833078] 第 211 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.833091] alloc_internal被调用次数 245 
+[1027795.833099] 第 246 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.833100] __uvm_kvmalloc_zero被调用次数 211 
+[1027795.833101] 第 212 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.834026] alloc_internal被调用次数 246 
+[1027795.834027] 第 247 次调用alloc_internal__ ，size:720--zero_memory:1
+[1027795.834029] __uvm_kvmalloc_zero被调用次数 212 
+[1027795.834030] 第 213 次调用__uvm_kvmalloc_zero__ ，size:720--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.834034] uvm_kvfree被调用次数 57 
+[1027795.834035] alloc_internal被调用次数 247 
+[1027795.834036] 第 248 次调用alloc_internal__ ，size:80--zero_memory:1
+[1027795.834036] __uvm_kvmalloc_zero被调用次数 213 
+[1027795.834037] 第 214 次调用__uvm_kvmalloc_zero__ ，size:80--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:419--functioncreate_va_ranges
+[1027795.834039] alloc_internal被调用次数 248 
+[1027795.834039] 第 249 次调用alloc_internal__ ，size:64--zero_memory:1
+[1027795.834040] __uvm_kvmalloc_zero被调用次数 214 
+[1027795.834041] 第 215 次调用__uvm_kvmalloc_zero__ ，size:64--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2687--functiongpu_add_user_channel_subctx_info
+[1027795.834042] alloc_internal被调用次数 249 
+[1027795.834043] 第 250 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.834043] __uvm_kvmalloc_zero被调用次数 215 
+[1027795.834044] 第 216 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_gpu.c--line:2694--functiongpu_add_user_channel_subctx_info
+[1027795.834045] uvm_kvfree被调用次数 58 
+[1027795.834046] uvm_kvfree被调用次数 59 
+[1027795.834047] alloc_internal被调用次数 250 
+[1027795.834048] 第 251 次调用alloc_internal__ ，size:160--zero_memory:1
+[1027795.834048] __uvm_kvmalloc_zero被调用次数 216 
+[1027795.834049] 第 217 次调用__uvm_kvmalloc_zero__ ，size:160--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.834594] uvm_kvfree被调用次数 60 
+[1027795.844487] alloc_internal被调用次数 251 
+[1027795.844488] 第 252 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.844489] __uvm_kvmalloc_zero被调用次数 217 
+[1027795.844491] 第 218 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.844492] alloc_internal被调用次数 252 
+[1027795.844492] 第 253 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.844493] __uvm_kvmalloc_zero被调用次数 218 
+[1027795.844494] 第 219 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.845516] alloc_internal被调用次数 253 
+[1027795.845517] 第 254 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.845518] __uvm_kvmalloc_zero被调用次数 219 
+[1027795.845519] 第 220 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.845520] uvm_kvfree被调用次数 61 
+[1027795.845522] alloc_internal被调用次数 254 
+[1027795.845523] 第 255 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.845524] __uvm_kvmalloc_zero被调用次数 220 
+[1027795.845525] 第 221 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.845538] uvm_kvfree被调用次数 62 
+[1027795.845540] alloc_internal被调用次数 255 
+[1027795.845541] 第 256 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.845542] __uvm_kvmalloc_zero被调用次数 221 
+[1027795.845543] 第 222 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.845544] alloc_internal被调用次数 256 
+[1027795.845545] 第 257 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.845546] __uvm_kvmalloc_zero被调用次数 222 
+[1027795.845547] 第 223 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.846483] alloc_internal被调用次数 257 
+[1027795.846484] 第 258 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.846485] __uvm_kvmalloc_zero被调用次数 223 
+[1027795.846486] 第 224 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.846487] uvm_kvfree被调用次数 63 
+[1027795.846488] alloc_internal被调用次数 258 
+[1027795.846489] 第 259 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.846489] __uvm_kvmalloc_zero被调用次数 224 
+[1027795.846490] 第 225 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.846500] uvm_kvfree被调用次数 64 
+[1027795.846501] alloc_internal被调用次数 259 
+[1027795.846502] 第 260 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.846503] __uvm_kvmalloc_zero被调用次数 225 
+[1027795.846504] 第 226 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.846505] alloc_internal被调用次数 260 
+[1027795.846505] 第 261 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.846506] __uvm_kvmalloc_zero被调用次数 226 
+[1027795.846507] 第 227 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.847447] alloc_internal被调用次数 261 
+[1027795.847448] 第 262 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.847448] __uvm_kvmalloc_zero被调用次数 227 
+[1027795.847449] 第 228 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.847450] uvm_kvfree被调用次数 65 
+[1027795.847451] alloc_internal被调用次数 262 
+[1027795.847452] 第 263 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.847452] __uvm_kvmalloc_zero被调用次数 228 
+[1027795.847454] 第 229 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.847463] uvm_kvfree被调用次数 66 
+[1027795.847464] alloc_internal被调用次数 263 
+[1027795.847465] 第 264 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.847466] __uvm_kvmalloc_zero被调用次数 229 
+[1027795.847467] 第 230 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.847468] alloc_internal被调用次数 264 
+[1027795.847468] 第 265 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.847469] __uvm_kvmalloc_zero被调用次数 230 
+[1027795.847470] 第 231 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.848447] alloc_internal被调用次数 265 
+[1027795.848448] 第 266 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.848449] __uvm_kvmalloc_zero被调用次数 231 
+[1027795.848451] 第 232 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.848452] uvm_kvfree被调用次数 67 
+[1027795.848453] alloc_internal被调用次数 266 
+[1027795.848454] 第 267 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.848455] __uvm_kvmalloc_zero被调用次数 232 
+[1027795.848456] 第 233 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.848466] uvm_kvfree被调用次数 68 
+[1027795.858195] alloc_internal被调用次数 267 
+[1027795.858196] 第 268 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.858197] __uvm_kvmalloc_zero被调用次数 233 
+[1027795.858199] 第 234 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.858200] alloc_internal被调用次数 268 
+[1027795.858201] 第 269 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.858202] __uvm_kvmalloc_zero被调用次数 234 
+[1027795.858203] 第 235 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.859268] alloc_internal被调用次数 269 
+[1027795.859269] 第 270 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.859270] __uvm_kvmalloc_zero被调用次数 235 
+[1027795.859271] 第 236 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.859272] uvm_kvfree被调用次数 69 
+[1027795.859274] alloc_internal被调用次数 270 
+[1027795.859275] 第 271 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.859276] __uvm_kvmalloc_zero被调用次数 236 
+[1027795.859277] 第 237 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.859289] uvm_kvfree被调用次数 70 
+[1027795.859291] alloc_internal被调用次数 271 
+[1027795.859292] 第 272 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.859293] __uvm_kvmalloc_zero被调用次数 237 
+[1027795.859294] 第 238 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.859295] alloc_internal被调用次数 272 
+[1027795.859295] 第 273 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.859296] __uvm_kvmalloc_zero被调用次数 238 
+[1027795.859297] 第 239 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.860308] alloc_internal被调用次数 273 
+[1027795.860313] 第 274 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.860314] __uvm_kvmalloc_zero被调用次数 239 
+[1027795.860316] 第 240 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.860317] uvm_kvfree被调用次数 71 
+[1027795.860318] alloc_internal被调用次数 274 
+[1027795.860319] 第 275 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.860320] __uvm_kvmalloc_zero被调用次数 240 
+[1027795.860322] 第 241 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.860334] uvm_kvfree被调用次数 72 
+[1027795.860336] alloc_internal被调用次数 275 
+[1027795.860337] 第 276 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.860338] __uvm_kvmalloc_zero被调用次数 241 
+[1027795.860339] 第 242 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.860340] alloc_internal被调用次数 276 
+[1027795.860341] 第 277 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.860343] __uvm_kvmalloc_zero被调用次数 242 
+[1027795.860344] 第 243 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.861371] alloc_internal被调用次数 277 
+[1027795.861373] 第 278 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.861373] __uvm_kvmalloc_zero被调用次数 243 
+[1027795.861375] 第 244 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.861376] uvm_kvfree被调用次数 73 
+[1027795.861377] alloc_internal被调用次数 278 
+[1027795.861378] 第 279 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.861379] __uvm_kvmalloc_zero被调用次数 244 
+[1027795.861380] 第 245 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.861391] uvm_kvfree被调用次数 74 
+[1027795.861393] alloc_internal被调用次数 279 
+[1027795.861394] 第 280 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.861395] __uvm_kvmalloc_zero被调用次数 245 
+[1027795.861396] 第 246 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.861397] alloc_internal被调用次数 280 
+[1027795.861398] 第 281 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.861399] __uvm_kvmalloc_zero被调用次数 246 
+[1027795.861400] 第 247 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.862424] alloc_internal被调用次数 281 
+[1027795.862425] 第 282 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.862426] __uvm_kvmalloc_zero被调用次数 247 
+[1027795.862427] 第 248 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.862427] uvm_kvfree被调用次数 75 
+[1027795.862429] alloc_internal被调用次数 282 
+[1027795.862429] 第 283 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.862430] __uvm_kvmalloc_zero被调用次数 248 
+[1027795.862431] 第 249 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.862441] uvm_kvfree被调用次数 76 
+[1027795.872149] alloc_internal被调用次数 283 
+[1027795.872150] 第 284 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.872151] __uvm_kvmalloc_zero被调用次数 249 
+[1027795.872153] 第 250 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.872154] alloc_internal被调用次数 284 
+[1027795.872155] 第 285 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.872156] __uvm_kvmalloc_zero被调用次数 250 
+[1027795.872157] 第 251 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.873319] alloc_internal被调用次数 285 
+[1027795.873321] 第 286 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.873322] __uvm_kvmalloc_zero被调用次数 251 
+[1027795.873323] 第 252 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.873324] uvm_kvfree被调用次数 77 
+[1027795.873327] alloc_internal被调用次数 286 
+[1027795.873328] 第 287 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.873329] __uvm_kvmalloc_zero被调用次数 252 
+[1027795.873330] 第 253 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.873344] uvm_kvfree被调用次数 78 
+[1027795.873347] alloc_internal被调用次数 287 
+[1027795.873348] 第 288 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.873349] __uvm_kvmalloc_zero被调用次数 253 
+[1027795.873350] 第 254 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.873351] alloc_internal被调用次数 288 
+[1027795.873352] 第 289 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.873353] __uvm_kvmalloc_zero被调用次数 254 
+[1027795.873354] 第 255 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.874409] alloc_internal被调用次数 289 
+[1027795.874410] 第 290 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.874411] __uvm_kvmalloc_zero被调用次数 255 
+[1027795.874412] 第 256 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.874413] uvm_kvfree被调用次数 79 
+[1027795.874414] alloc_internal被调用次数 290 
+[1027795.874415] 第 291 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.874416] __uvm_kvmalloc_zero被调用次数 256 
+[1027795.874417] 第 257 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.874427] uvm_kvfree被调用次数 80 
+[1027795.874429] alloc_internal被调用次数 291 
+[1027795.874429] 第 292 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.874430] __uvm_kvmalloc_zero被调用次数 257 
+[1027795.874431] 第 258 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.874432] alloc_internal被调用次数 292 
+[1027795.874433] 第 293 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.874433] __uvm_kvmalloc_zero被调用次数 258 
+[1027795.874434] 第 259 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.875508] alloc_internal被调用次数 293 
+[1027795.875509] 第 294 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.875510] __uvm_kvmalloc_zero被调用次数 259 
+[1027795.875511] 第 260 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.875512] uvm_kvfree被调用次数 81 
+[1027795.875513] alloc_internal被调用次数 294 
+[1027795.875514] 第 295 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.875515] __uvm_kvmalloc_zero被调用次数 260 
+[1027795.875516] 第 261 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.875526] uvm_kvfree被调用次数 82 
+[1027795.875528] alloc_internal被调用次数 295 
+[1027795.875528] 第 296 次调用alloc_internal__ ，size:360--zero_memory:1
+[1027795.875529] __uvm_kvmalloc_zero被调用次数 261 
+[1027795.875530] 第 262 次调用__uvm_kvmalloc_zero__ ，size:360--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:113--functionuvm_user_channel_create
+[1027795.875531] alloc_internal被调用次数 296 
+[1027795.875532] 第 297 次调用alloc_internal__ ，size:1024--zero_memory:1
+[1027795.875532] __uvm_kvmalloc_zero被调用次数 262 
+[1027795.875533] 第 263 次调用__uvm_kvmalloc_zero__ ，size:1024--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:134--functionuvm_user_channel_create
+[1027795.876639] alloc_internal被调用次数 297 
+[1027795.876640] 第 298 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.876645] __uvm_kvmalloc_zero被调用次数 263 
+[1027795.876646] 第 264 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:64--functionget_rm_channel_resources
+[1027795.876647] uvm_kvfree被调用次数 83 
+[1027795.876648] alloc_internal被调用次数 298 
+[1027795.876649] 第 299 次调用alloc_internal__ ，size:0--zero_memory:1
+[1027795.876650] __uvm_kvmalloc_zero被调用次数 264 
+[1027795.876651] 第 265 次调用__uvm_kvmalloc_zero__ ，size:0--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_user_channel.c--line:444--functionbind_channel_resources
+[1027795.876663] uvm_kvfree被调用次数 84 
+[1027795.880245] alloc_internal被调用次数 299 
+[1027795.880247] 第 300 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.880248] __uvm_kvmalloc被调用次数 34 
+[1027795.880250] alloc_internal被调用次数 300 
+[1027795.880251] 第 301 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.880252] __uvm_kvmalloc_zero被调用次数 265 
+[1027795.880253] 第 266 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.880254] alloc_internal被调用次数 301 
+[1027795.880255] 第 302 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.880256] __uvm_kvmalloc_zero被调用次数 266 
+[1027795.880257] 第 267 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.880280] alloc_internal被调用次数 302 
+[1027795.880286] 第 303 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.880293] __uvm_kvmalloc被调用次数 35 
+[1027795.880300] alloc_internal被调用次数 303 
+[1027795.880307] 第 304 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.880313] __uvm_kvmalloc_zero被调用次数 267 
+[1027795.880314] 第 268 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.880330] uvm_kvfree被调用次数 85 
+[1027795.880335] uvm_kvfree被调用次数 86 
+[1027795.880359] alloc_internal被调用次数 304 
+[1027795.880360] 第 305 次调用alloc_internal__ ，size:1184--zero_memory:0
+[1027795.880361] __uvm_kvmalloc被调用次数 36 
+[1027795.880363] alloc_internal被调用次数 305 
+[1027795.880364] 第 306 次调用alloc_internal__ ，size:4272--zero_memory:1
+[1027795.880367] __uvm_kvmalloc_zero被调用次数 268 
+[1027795.880369] 第 269 次调用__uvm_kvmalloc_zero__ ，size:4272--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mem.c--line:631--functionuvm_mem_alloc
+[1027795.880370] alloc_internal被调用次数 306 
+[1027795.880371] 第 307 次调用alloc_internal__ ，size:4096--zero_memory:1
+[1027795.880372] __uvm_kvmalloc_zero被调用次数 269 
+[1027795.880374] 第 270 次调用__uvm_kvmalloc_zero__ ，size:4096--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mem.c--line:517--functionmem_alloc_sysmem_chunks
+[1027795.881004] alloc_internal被调用次数 307 
+[1027795.881005] 第 308 次调用alloc_internal__ ，size:4096--zero_memory:1
+[1027795.881006] __uvm_kvmalloc_zero被调用次数 270 
+[1027795.881007] 第 271 次调用__uvm_kvmalloc_zero__ ，size:4096--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mem.c--line:430--functionmem_alloc_dma_addrs
+[1027795.881032] alloc_internal被调用次数 308 
+[1027795.881033] 第 309 次调用alloc_internal__ ，size:56--zero_memory:0
+[1027795.881034] __uvm_kvmalloc被调用次数 37 
+[1027795.881035] alloc_internal被调用次数 309 
+[1027795.881036] 第 310 次调用alloc_internal__ ，size:48--zero_memory:0
+[1027795.881037] __uvm_kvmalloc被调用次数 38 
+[1027795.881038] alloc_internal被调用次数 310 
+[1027795.881039] 第 311 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.881040] __uvm_kvmalloc_zero被调用次数 271 
+[1027795.881041] 第 272 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.881043] alloc_internal被调用次数 311 
+[1027795.881044] 第 312 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.881046] __uvm_kvmalloc_zero被调用次数 272 
+[1027795.881047] 第 273 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881049] alloc_internal被调用次数 312 
+[1027795.881050] 第 313 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.881053] __uvm_kvmalloc_zero被调用次数 273 
+[1027795.881054] 第 274 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881055] alloc_internal被调用次数 313 
+[1027795.881056] 第 314 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.881059] __uvm_kvmalloc_zero被调用次数 274 
+[1027795.881060] 第 275 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881061] alloc_internal被调用次数 314 
+[1027795.881062] 第 315 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.881063] __uvm_kvmalloc_zero被调用次数 275 
+[1027795.881064] 第 276 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881120] alloc_internal被调用次数 315 
+[1027795.881121] 第 316 次调用alloc_internal__ ，size:2104--zero_memory:1
+[1027795.881122] __uvm_kvmalloc_zero被调用次数 276 
+[1027795.881124] 第 277 次调用__uvm_kvmalloc_zero__ ，size:2104--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mem.c--line:676--functionmem_init_user_mapping
+[1027795.881125] alloc_internal被调用次数 316 
+[1027795.881126] 第 317 次调用alloc_internal__ ，size:48--zero_memory:0
+[1027795.881127] __uvm_kvmalloc被调用次数 39 
+[1027795.881127] alloc_internal被调用次数 317 
+[1027795.881128] 第 318 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.881129] __uvm_kvmalloc_zero被调用次数 277 
+[1027795.881131] 第 278 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.881133] alloc_internal被调用次数 318 
+[1027795.881134] 第 319 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.881135] __uvm_kvmalloc_zero被调用次数 278 
+[1027795.881136] 第 279 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881186] alloc_internal被调用次数 319 
+[1027795.881187] 第 320 次调用alloc_internal__ ，size:4096--zero_memory:1
+[1027795.881189] __uvm_kvmalloc_zero被调用次数 279 
+[1027795.881190] 第 280 次调用__uvm_kvmalloc_zero__ ，size:4096--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mem.c--line:430--functionmem_alloc_dma_addrs
+[1027795.881215] alloc_internal被调用次数 320 
+[1027795.881216] 第 321 次调用alloc_internal__ ，size:48--zero_memory:0
+[1027795.881217] __uvm_kvmalloc被调用次数 40 
+[1027795.881218] alloc_internal被调用次数 321 
+[1027795.881219] 第 322 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.881220] __uvm_kvmalloc_zero被调用次数 280 
+[1027795.881221] 第 281 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.881223] alloc_internal被调用次数 322 
+[1027795.881224] 第 323 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.881227] __uvm_kvmalloc_zero被调用次数 281 
+[1027795.881228] 第 282 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881230] alloc_internal被调用次数 323 
+[1027795.881231] 第 324 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.881234] __uvm_kvmalloc_zero被调用次数 282 
+[1027795.881235] 第 283 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881236] alloc_internal被调用次数 324 
+[1027795.881237] 第 325 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.881240] __uvm_kvmalloc_zero被调用次数 283 
+[1027795.881241] 第 284 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881242] alloc_internal被调用次数 325 
+[1027795.881243] 第 326 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.881244] __uvm_kvmalloc_zero被调用次数 284 
+[1027795.881245] 第 285 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.881321] uvm_kvfree被调用次数 87 
+[1027795.881330] uvm_mmap被调用次数 0 
+[1027795.881336] alloc_internal被调用次数 326 
+[1027795.881336] 第 327 次调用alloc_internal__ ，size:8--zero_memory:1
+[1027795.881337] __uvm_kvmalloc_zero被调用次数 285 
+[1027795.881339] 第 286 次调用__uvm_kvmalloc_zero__ ，size:8--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_va_range.c--line:171--functionuvm_va_range_alloc_managed
+[1027795.881340] uvm_kvfree被调用次数 88 
+[1027795.881992] alloc_internal被调用次数 327 
+[1027795.881993] 第 328 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.881994] __uvm_kvmalloc被调用次数 41 
+[1027795.881995] alloc_internal被调用次数 328 
+[1027795.881996] 第 329 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.881997] __uvm_kvmalloc_zero被调用次数 286 
+[1027795.881998] 第 287 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.881999] alloc_internal被调用次数 329 
+[1027795.881999] 第 330 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.882000] __uvm_kvmalloc_zero被调用次数 287 
+[1027795.882002] 第 288 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.882022] alloc_internal被调用次数 330 
+[1027795.882023] 第 331 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.882024] __uvm_kvmalloc被调用次数 42 
+[1027795.882025] alloc_internal被调用次数 331 
+[1027795.882025] 第 332 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.882026] __uvm_kvmalloc_zero被调用次数 288 
+[1027795.882027] 第 289 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.882028] alloc_internal被调用次数 332 
+[1027795.882029] 第 333 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.882030] __uvm_kvmalloc_zero被调用次数 289 
+[1027795.882031] 第 290 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.882064] uvm_kvfree被调用次数 89 
+[1027795.882070] uvm_kvfree被调用次数 90 
+[1027795.883091] alloc_internal被调用次数 333 
+[1027795.883092] 第 334 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.883093] __uvm_kvmalloc被调用次数 43 
+[1027795.883095] alloc_internal被调用次数 334 
+[1027795.883096] 第 335 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.883097] __uvm_kvmalloc_zero被调用次数 290 
+[1027795.883098] 第 291 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.883099] alloc_internal被调用次数 335 
+[1027795.883100] 第 336 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.883101] __uvm_kvmalloc_zero被调用次数 291 
+[1027795.883103] 第 292 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.883123] alloc_internal被调用次数 336 
+[1027795.883124] 第 337 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.883125] __uvm_kvmalloc被调用次数 44 
+[1027795.883126] alloc_internal被调用次数 337 
+[1027795.883127] 第 338 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.883128] __uvm_kvmalloc_zero被调用次数 292 
+[1027795.883129] 第 293 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.883132] alloc_internal被调用次数 338 
+[1027795.883133] 第 339 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.883134] __uvm_kvmalloc_zero被调用次数 293 
+[1027795.883135] 第 294 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.883171] uvm_kvfree被调用次数 91 
+[1027795.883177] uvm_kvfree被调用次数 92 
+[1027795.884070] alloc_internal被调用次数 339 
+[1027795.884071] 第 340 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.884072] __uvm_kvmalloc被调用次数 45 
+[1027795.884073] alloc_internal被调用次数 340 
+[1027795.884074] 第 341 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.884075] __uvm_kvmalloc_zero被调用次数 294 
+[1027795.884076] 第 295 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.884076] alloc_internal被调用次数 341 
+[1027795.884077] 第 342 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.884078] __uvm_kvmalloc_zero被调用次数 295 
+[1027795.884079] 第 296 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.884096] alloc_internal被调用次数 342 
+[1027795.884097] 第 343 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.884098] __uvm_kvmalloc被调用次数 46 
+[1027795.884099] alloc_internal被调用次数 343 
+[1027795.884100] 第 344 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.884100] __uvm_kvmalloc_zero被调用次数 296 
+[1027795.884101] 第 297 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.884103] alloc_internal被调用次数 344 
+[1027795.884103] 第 345 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.884104] __uvm_kvmalloc_zero被调用次数 297 
+[1027795.884105] 第 298 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.884136] uvm_kvfree被调用次数 93 
+[1027795.884141] uvm_kvfree被调用次数 94 
+[1027795.884277] alloc_internal被调用次数 345 
+[1027795.884283] 第 346 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.884290] __uvm_kvmalloc被调用次数 47 
+[1027795.884301] alloc_internal被调用次数 346 
+[1027795.884309] 第 347 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.884315] __uvm_kvmalloc_zero被调用次数 298 
+[1027795.884322] 第 299 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.884328] alloc_internal被调用次数 347 
+[1027795.884334] 第 348 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.884340] __uvm_kvmalloc_zero被调用次数 299 
+[1027795.884346] 第 300 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.884366] alloc_internal被调用次数 348 
+[1027795.884374] 第 349 次调用alloc_internal__ ，size:128--zero_memory:0
+[1027795.884380] __uvm_kvmalloc被调用次数 48 
+[1027795.884386] alloc_internal被调用次数 349 
+[1027795.884392] 第 350 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.884400] __uvm_kvmalloc_zero被调用次数 300 
+[1027795.884406] 第 301 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.884412] alloc_internal被调用次数 350 
+[1027795.884419] 第 351 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.884427] __uvm_kvmalloc_zero被调用次数 301 
+[1027795.884439] 第 302 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.884463] uvm_kvfree被调用次数 95 
+[1027795.884466] uvm_kvfree被调用次数 96 
+[1027795.885085] alloc_internal被调用次数 351 
+[1027795.885090] 第 352 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.885091] __uvm_kvmalloc被调用次数 49 
+[1027795.885092] alloc_internal被调用次数 352 
+[1027795.885093] 第 353 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.885094] __uvm_kvmalloc_zero被调用次数 302 
+[1027795.885096] 第 303 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.885097] alloc_internal被调用次数 353 
+[1027795.885098] 第 354 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.885098] __uvm_kvmalloc_zero被调用次数 303 
+[1027795.885100] 第 304 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.885120] alloc_internal被调用次数 354 
+[1027795.885121] 第 355 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.885122] __uvm_kvmalloc被调用次数 50 
+[1027795.885123] alloc_internal被调用次数 355 
+[1027795.885124] 第 356 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.885125] __uvm_kvmalloc_zero被调用次数 304 
+[1027795.885126] 第 305 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.885128] alloc_internal被调用次数 356 
+[1027795.885129] 第 357 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.885130] __uvm_kvmalloc_zero被调用次数 305 
+[1027795.885131] 第 306 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.885166] uvm_kvfree被调用次数 97 
+[1027795.885171] uvm_kvfree被调用次数 98 
+[1027795.886260] alloc_internal被调用次数 357 
+[1027795.886262] 第 358 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.886262] __uvm_kvmalloc被调用次数 51 
+[1027795.886264] alloc_internal被调用次数 358 
+[1027795.886265] 第 359 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.886266] __uvm_kvmalloc_zero被调用次数 306 
+[1027795.886267] 第 307 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.886268] alloc_internal被调用次数 359 
+[1027795.886269] 第 360 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.886269] __uvm_kvmalloc_zero被调用次数 307 
+[1027795.886270] 第 308 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.886287] alloc_internal被调用次数 360 
+[1027795.886288] 第 361 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.886289] __uvm_kvmalloc被调用次数 52 
+[1027795.886290] alloc_internal被调用次数 361 
+[1027795.886291] 第 362 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.886291] __uvm_kvmalloc_zero被调用次数 308 
+[1027795.886292] 第 309 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.886294] alloc_internal被调用次数 362 
+[1027795.886295] 第 363 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.886296] __uvm_kvmalloc_zero被调用次数 309 
+[1027795.886297] 第 310 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.886329] uvm_kvfree被调用次数 99 
+[1027795.886334] uvm_kvfree被调用次数 100 
+[1027795.886369] alloc_internal被调用次数 363 
+[1027795.886370] 第 364 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.886371] __uvm_kvmalloc被调用次数 53 
+[1027795.886372] alloc_internal被调用次数 364 
+[1027795.886373] 第 365 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.886374] __uvm_kvmalloc_zero被调用次数 310 
+[1027795.886375] 第 311 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.886377] alloc_internal被调用次数 365 
+[1027795.886378] 第 366 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.886379] __uvm_kvmalloc_zero被调用次数 311 
+[1027795.886380] 第 312 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.886395] alloc_internal被调用次数 366 
+[1027795.886396] 第 367 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.886396] __uvm_kvmalloc被调用次数 54 
+[1027795.886397] alloc_internal被调用次数 367 
+[1027795.886398] 第 368 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.886399] __uvm_kvmalloc_zero被调用次数 312 
+[1027795.886400] 第 313 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.886411] uvm_kvfree被调用次数 101 
+[1027795.886414] uvm_kvfree被调用次数 102 
+[1027795.886429] alloc_internal被调用次数 368 
+[1027795.886430] 第 369 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.886431] __uvm_kvmalloc_zero被调用次数 313 
+[1027795.886432] 第 314 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.886433] alloc_internal被调用次数 369 
+[1027795.886434] 第 370 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.886435] __uvm_kvmalloc_zero被调用次数 314 
+[1027795.886436] 第 315 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.887249] alloc_internal被调用次数 370 
+[1027795.887250] 第 371 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.887250] __uvm_kvmalloc被调用次数 55 
+[1027795.887252] alloc_internal被调用次数 371 
+[1027795.887252] 第 372 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.887253] __uvm_kvmalloc_zero被调用次数 315 
+[1027795.887254] 第 316 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.887255] alloc_internal被调用次数 372 
+[1027795.887256] 第 373 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.887257] __uvm_kvmalloc_zero被调用次数 316 
+[1027795.887258] 第 317 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.887275] alloc_internal被调用次数 373 
+[1027795.887276] 第 374 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.887277] __uvm_kvmalloc被调用次数 56 
+[1027795.887277] alloc_internal被调用次数 374 
+[1027795.887278] 第 375 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.887279] __uvm_kvmalloc_zero被调用次数 317 
+[1027795.887280] 第 318 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.887281] alloc_internal被调用次数 375 
+[1027795.887282] 第 376 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.887283] __uvm_kvmalloc_zero被调用次数 318 
+[1027795.887284] 第 319 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.887313] uvm_kvfree被调用次数 103 
+[1027795.887319] uvm_kvfree被调用次数 104 
+[1027795.887444] alloc_internal被调用次数 376 
+[1027795.887445] 第 377 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.887445] __uvm_kvmalloc被调用次数 57 
+[1027795.887447] alloc_internal被调用次数 377 
+[1027795.887447] 第 378 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.887448] __uvm_kvmalloc_zero被调用次数 319 
+[1027795.887450] 第 320 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.887451] alloc_internal被调用次数 378 
+[1027795.887452] 第 379 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.887452] __uvm_kvmalloc_zero被调用次数 320 
+[1027795.887453] 第 321 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.887467] alloc_internal被调用次数 379 
+[1027795.887468] 第 380 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.887469] __uvm_kvmalloc被调用次数 58 
+[1027795.887469] alloc_internal被调用次数 380 
+[1027795.887470] 第 381 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.887471] __uvm_kvmalloc_zero被调用次数 321 
+[1027795.887472] 第 322 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.887482] uvm_kvfree被调用次数 105 
+[1027795.887486] uvm_kvfree被调用次数 106 
+[1027795.888344] alloc_internal被调用次数 381 
+[1027795.888356] 第 382 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.888362] __uvm_kvmalloc被调用次数 59 
+[1027795.888369] alloc_internal被调用次数 382 
+[1027795.888374] 第 383 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.888380] __uvm_kvmalloc_zero被调用次数 322 
+[1027795.888386] 第 323 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.888393] alloc_internal被调用次数 383 
+[1027795.888399] 第 384 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.888407] __uvm_kvmalloc_zero被调用次数 323 
+[1027795.888417] 第 324 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.888436] alloc_internal被调用次数 384 
+[1027795.888437] 第 385 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.888438] __uvm_kvmalloc被调用次数 60 
+[1027795.888439] alloc_internal被调用次数 385 
+[1027795.888440] 第 386 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.888440] __uvm_kvmalloc_zero被调用次数 324 
+[1027795.888441] 第 325 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.888443] alloc_internal被调用次数 386 
+[1027795.888444] 第 387 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.888445] __uvm_kvmalloc_zero被调用次数 325 
+[1027795.888446] 第 326 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.888497] uvm_kvfree被调用次数 107 
+[1027795.888503] uvm_kvfree被调用次数 108 
+[1027795.890553] alloc_internal被调用次数 387 
+[1027795.890554] 第 388 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.890555] __uvm_kvmalloc被调用次数 61 
+[1027795.890556] alloc_internal被调用次数 388 
+[1027795.890557] 第 389 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.890558] __uvm_kvmalloc_zero被调用次数 326 
+[1027795.890560] 第 327 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.890560] alloc_internal被调用次数 389 
+[1027795.890561] 第 390 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.890562] __uvm_kvmalloc_zero被调用次数 327 
+[1027795.890563] 第 328 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.890581] alloc_internal被调用次数 390 
+[1027795.890584] 第 391 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.890585] __uvm_kvmalloc被调用次数 62 
+[1027795.890586] alloc_internal被调用次数 391 
+[1027795.890587] 第 392 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.890587] __uvm_kvmalloc_zero被调用次数 328 
+[1027795.890589] 第 329 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.890591] alloc_internal被调用次数 392 
+[1027795.890591] 第 393 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.890592] __uvm_kvmalloc_zero被调用次数 329 
+[1027795.890593] 第 330 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.890626] uvm_kvfree被调用次数 109 
+[1027795.890630] uvm_kvfree被调用次数 110 
+[1027795.896991] alloc_internal被调用次数 393 
+[1027795.896993] 第 394 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.896994] __uvm_kvmalloc被调用次数 63 
+[1027795.896996] alloc_internal被调用次数 394 
+[1027795.896997] 第 395 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.896998] __uvm_kvmalloc_zero被调用次数 330 
+[1027795.897000] 第 331 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.897001] alloc_internal被调用次数 395 
+[1027795.897001] 第 396 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.897002] __uvm_kvmalloc_zero被调用次数 331 
+[1027795.897004] 第 332 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.897026] alloc_internal被调用次数 396 
+[1027795.897027] 第 397 次调用alloc_internal__ ，size:4096--zero_memory:0
+[1027795.897031] __uvm_kvmalloc被调用次数 64 
+[1027795.897032] alloc_internal被调用次数 397 
+[1027795.897032] 第 398 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.897033] __uvm_kvmalloc_zero被调用次数 332 
+[1027795.897035] 第 333 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.897037] alloc_internal被调用次数 398 
+[1027795.897038] 第 399 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.897039] __uvm_kvmalloc_zero被调用次数 333 
+[1027795.897040] 第 334 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.897076] uvm_kvfree被调用次数 111 
+[1027795.897082] uvm_kvfree被调用次数 112 
+[1027795.897442] alloc_internal被调用次数 399 
+[1027795.897443] 第 400 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.897444] __uvm_kvmalloc被调用次数 65 
+[1027795.897446] alloc_internal被调用次数 400 
+[1027795.897447] 第 401 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.897447] __uvm_kvmalloc_zero被调用次数 334 
+[1027795.897449] 第 335 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.897449] alloc_internal被调用次数 401 
+[1027795.897450] 第 402 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.897451] __uvm_kvmalloc_zero被调用次数 335 
+[1027795.897453] 第 336 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.897471] alloc_internal被调用次数 402 
+[1027795.897472] 第 403 次调用alloc_internal__ ，size:1848--zero_memory:0
+[1027795.897473] __uvm_kvmalloc被调用次数 66 
+[1027795.897474] alloc_internal被调用次数 403 
+[1027795.897475] 第 404 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.897478] __uvm_kvmalloc_zero被调用次数 336 
+[1027795.897480] 第 337 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.897481] alloc_internal被调用次数 404 
+[1027795.897482] 第 405 次调用alloc_internal__ ，size:56--zero_memory:1
+[1027795.897483] __uvm_kvmalloc_zero被调用次数 337 
+[1027795.897484] 第 338 次调用__uvm_kvmalloc_zero__ ，size:56--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.897511] uvm_kvfree被调用次数 113 
+[1027795.897518] uvm_kvfree被调用次数 114 
+[1027795.898446] alloc_internal被调用次数 405 
+[1027795.898448] 第 406 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.898448] __uvm_kvmalloc被调用次数 67 
+[1027795.898450] alloc_internal被调用次数 406 
+[1027795.898451] 第 407 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.898451] __uvm_kvmalloc_zero被调用次数 338 
+[1027795.898453] 第 339 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.898453] alloc_internal被调用次数 407 
+[1027795.898454] 第 408 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.898455] __uvm_kvmalloc_zero被调用次数 339 
+[1027795.898456] 第 340 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.898473] alloc_internal被调用次数 408 
+[1027795.898474] 第 409 次调用alloc_internal__ ，size:208--zero_memory:0
+[1027795.898474] __uvm_kvmalloc被调用次数 68 
+[1027795.898475] alloc_internal被调用次数 409 
+[1027795.898476] 第 410 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.898477] __uvm_kvmalloc_zero被调用次数 340 
+[1027795.898478] 第 341 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.898479] alloc_internal被调用次数 410 
+[1027795.898480] 第 411 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.898482] __uvm_kvmalloc_zero被调用次数 341 
+[1027795.898486] 第 342 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.898505] uvm_kvfree被调用次数 115 
+[1027795.898509] uvm_kvfree被调用次数 116 
+[1027795.917587] alloc_internal被调用次数 411 
+[1027795.917589] 第 412 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.917590] __uvm_kvmalloc被调用次数 69 
+[1027795.917592] alloc_internal被调用次数 412 
+[1027795.917593] 第 413 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.917594] __uvm_kvmalloc_zero被调用次数 342 
+[1027795.917596] 第 343 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.917597] alloc_internal被调用次数 413 
+[1027795.917597] 第 414 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.917598] __uvm_kvmalloc_zero被调用次数 343 
+[1027795.917600] 第 344 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.917619] alloc_internal被调用次数 414 
+[1027795.917620] 第 415 次调用alloc_internal__ ，size:16--zero_memory:0
+[1027795.917621] __uvm_kvmalloc被调用次数 70 
+[1027795.917622] alloc_internal被调用次数 415 
+[1027795.917623] 第 416 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.917624] __uvm_kvmalloc_zero被调用次数 344 
+[1027795.917625] 第 345 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.917641] uvm_kvfree被调用次数 117 
+[1027795.917645] uvm_kvfree被调用次数 118 
+[1027795.919836] alloc_internal被调用次数 416 
+[1027795.919838] 第 417 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.919839] __uvm_kvmalloc被调用次数 71 
+[1027795.919841] alloc_internal被调用次数 417 
+[1027795.919842] 第 418 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.919842] __uvm_kvmalloc_zero被调用次数 345 
+[1027795.919844] 第 346 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.919845] alloc_internal被调用次数 418 
+[1027795.919846] 第 419 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.919846] __uvm_kvmalloc_zero被调用次数 346 
+[1027795.919847] 第 347 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.919865] alloc_internal被调用次数 419 
+[1027795.919865] 第 420 次调用alloc_internal__ ，size:912--zero_memory:0
+[1027795.919866] __uvm_kvmalloc被调用次数 72 
+[1027795.919867] alloc_internal被调用次数 420 
+[1027795.919868] 第 421 次调用alloc_internal__ ，size:48--zero_memory:1
+[1027795.919868] __uvm_kvmalloc_zero被调用次数 347 
+[1027795.919869] 第 348 次调用__uvm_kvmalloc_zero__ ，size:48--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.919871] alloc_internal被调用次数 421 
+[1027795.919872] 第 422 次调用alloc_internal__ ，size:4152--zero_memory:1
+[1027795.919875] __uvm_kvmalloc_zero被调用次数 348 
+[1027795.919876] 第 349 次调用__uvm_kvmalloc_zero__ ，size:4152--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:295--functionallocate_directory
+[1027795.919901] uvm_kvfree被调用次数 119 
+[1027795.919904] uvm_kvfree被调用次数 120 
+[1027795.927824] alloc_internal被调用次数 422 
+[1027795.927826] 第 423 次调用alloc_internal__ ，size:1200--zero_memory:0
+[1027795.927827] __uvm_kvmalloc被调用次数 73 
+[1027795.927829] alloc_internal被调用次数 423 
+[1027795.927830] 第 424 次调用alloc_internal__ ，size:184--zero_memory:1
+[1027795.927831] __uvm_kvmalloc_zero被调用次数 349 
+[1027795.927832] 第 350 次调用__uvm_kvmalloc_zero__ ，size:184--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:873--functionuvm_map_external_allocation_on_gpu
+[1027795.927833] alloc_internal被调用次数 424 
+[1027795.927834] 第 425 次调用alloc_internal__ ，size:16--zero_memory:1
+[1027795.927835] __uvm_kvmalloc_zero被调用次数 350 
+[1027795.927836] 第 351 次调用__uvm_kvmalloc_zero__ ，size:16--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_map_external.c--line:885--functionuvm_map_external_allocation_on_gpu
+[1027795.927854] alloc_internal被调用次数 425 
+[1027795.927855] 第 426 次调用alloc_internal__ ，size:32--zero_memory:0
+[1027795.927856] __uvm_kvmalloc被调用次数 74 
+[1027795.927857] alloc_internal被调用次数 426 
+[1027795.927858] 第 427 次调用alloc_internal__ ，size:24--zero_memory:1
+[1027795.927858] __uvm_kvmalloc_zero被调用次数 351 
+[1027795.927860] 第 352 次调用__uvm_kvmalloc_zero__ ，size:24--file:/home/whp/whp/open-gpu-kernel-modules-515.49.06/kernel-open/nvidia-uvm/uvm_mmu.c--line:1411--functionuvm_page_table_range_vec_init
+[1027795.927874] uvm_kvfree被调用次数 121 
+[1027795.927878] uvm_kvfree被调用次数 122 
+[1027795.930341] uvm_kvfree被调用次数 123 
+[1027795.930386] uvm_kvfree被调用次数 124 
+[1027795.930387] uvm_kvfree被调用次数 125 
+[1027795.941883] uvm_kvfree被调用次数 126 
+[1027795.941885] uvm_kvfree被调用次数 127 
+[1027795.941886] uvm_kvfree被调用次数 128 
+[1027795.941887] uvm_kvfree被调用次数 129 
+[1027795.941888] uvm_kvfree被调用次数 130 
+[1027795.941889] uvm_kvfree被调用次数 131 
+[1027795.941889] uvm_kvfree被调用次数 132 
+[1027795.941890] uvm_kvfree被调用次数 133 
+[1027795.941891] uvm_kvfree被调用次数 134 
+[1027795.941899] uvm_kvfree被调用次数 135 
+[1027795.941905] uvm_kvfree被调用次数 136 
+[1027795.941911] uvm_kvfree被调用次数 137 
+[1027795.941920] uvm_kvfree被调用次数 138 
+[1027795.941922] uvm_kvfree被调用次数 139 
+[1027795.941928] uvm_kvfree被调用次数 140 
+[1027795.941934] uvm_kvfree被调用次数 141 
+[1027795.941941] uvm_kvfree被调用次数 142 
+[1027795.941944] uvm_kvfree被调用次数 143 
+[1027795.941949] uvm_kvfree被调用次数 144 
+[1027795.941955] uvm_kvfree被调用次数 145 
+[1027795.941962] uvm_kvfree被调用次数 146 
+[1027795.941965] uvm_kvfree被调用次数 147 
+[1027795.941966] uvm_kvfree被调用次数 148 
+[1027795.942914] uvm_kvfree被调用次数 149 
+[1027795.943512] uvm_kvfree被调用次数 150 
+[1027795.943513] uvm_kvfree被调用次数 151 
+[1027795.943983] uvm_kvfree被调用次数 152 
+[1027795.943984] uvm_kvfree被调用次数 153 
+[1027795.944458] uvm_kvfree被调用次数 154 
+[1027795.944459] uvm_kvfree被调用次数 155 
+[1027795.944935] uvm_kvfree被调用次数 156 
+[1027795.944936] uvm_kvfree被调用次数 157 
+[1027795.945432] uvm_kvfree被调用次数 158 
+[1027795.945445] uvm_kvfree被调用次数 159 
+[1027795.946128] uvm_kvfree被调用次数 160 
+[1027795.946129] uvm_kvfree被调用次数 161 
+[1027795.946606] uvm_kvfree被调用次数 162 
+[1027795.946607] uvm_kvfree被调用次数 163 
+[1027795.947076] uvm_kvfree被调用次数 164 
+[1027795.947076] uvm_kvfree被调用次数 165 
+[1027795.947565] uvm_kvfree被调用次数 166 
+[1027795.947566] uvm_kvfree被调用次数 167 
+[1027795.948029] uvm_kvfree被调用次数 168 
+[1027795.948030] uvm_kvfree被调用次数 169 
+[1027795.948505] uvm_kvfree被调用次数 170 
+[1027795.948507] uvm_kvfree被调用次数 171 
+[1027795.948974] uvm_kvfree被调用次数 172 
+[1027795.948975] uvm_kvfree被调用次数 173 
+[1027795.949432] uvm_kvfree被调用次数 174 
+[1027795.949433] uvm_kvfree被调用次数 175 
+[1027795.949891] uvm_kvfree被调用次数 176 
+[1027795.949891] uvm_kvfree被调用次数 177 
+[1027795.950336] uvm_kvfree被调用次数 178 
+[1027795.950337] uvm_kvfree被调用次数 179 
+[1027795.950778] uvm_kvfree被调用次数 180 
+[1027795.950778] uvm_kvfree被调用次数 181 
+[1027795.951221] uvm_kvfree被调用次数 182 
+[1027795.951221] uvm_kvfree被调用次数 183 
+[1027795.951658] uvm_kvfree被调用次数 184 
+[1027795.951659] uvm_kvfree被调用次数 185 
+[1027795.952097] uvm_kvfree被调用次数 186 
+[1027795.952098] uvm_kvfree被调用次数 187 
+[1027795.952531] uvm_kvfree被调用次数 188 
+[1027795.954925] uvm_kvfree被调用次数 189 
+[1027795.954934] uvm_kvfree被调用次数 190 
+[1027795.954937] uvm_kvfree被调用次数 191 
+[1027795.954943] uvm_kvfree被调用次数 192 
+[1027795.954956] uvm_kvfree被调用次数 193 
+[1027795.954959] alloc_internal被调用次数 427 
+[1027795.954960] 第 428 次调用alloc_internal__ ，size:128--zero_memory:0
+[1027795.954961] __uvm_kvmalloc被调用次数 75 
+[1027795.954961] uvm_kvfree被调用次数 194 
+[1027795.954964] uvm_kvfree被调用次数 195 
+[1027795.954966] uvm_kvfree被调用次数 196 
+[1027795.954968] uvm_kvfree被调用次数 197 
+[1027795.954970] uvm_kvfree被调用次数 198 
+[1027795.954972] uvm_kvfree被调用次数 199 
+[1027795.954974] uvm_kvfree被调用次数 200 
+[1027795.954976] uvm_kvfree被调用次数 201 
+[1027795.954978] uvm_kvfree被调用次数 202 
+[1027795.954980] uvm_kvfree被调用次数 203 
+[1027795.954982] uvm_kvfree被调用次数 204 
+[1027795.954984] uvm_kvfree被调用次数 205 
+[1027795.954986] uvm_kvfree被调用次数 206 
+[1027795.954988] uvm_kvfree被调用次数 207 
+[1027795.954990] uvm_kvfree被调用次数 208 
+[1027795.954992] uvm_kvfree被调用次数 209 
+[1027795.954993] uvm_kvfree被调用次数 210 
+[1027795.954995] uvm_kvfree被调用次数 211 
+[1027795.954997] uvm_kvfree被调用次数 212 
+[1027795.954999] uvm_kvfree被调用次数 213 
+[1027795.955003] uvm_kvfree被调用次数 214 
+[1027795.955005] uvm_kvfree被调用次数 215 
+[1027795.955006] uvm_kvfree被调用次数 216 
+[1027795.955008] uvm_kvfree被调用次数 217 
+[1027795.955010] uvm_kvfree被调用次数 218 
+[1027795.955012] uvm_kvfree被调用次数 219 
+[1027795.955014] uvm_kvfree被调用次数 220 
+[1027795.955017] uvm_kvfree被调用次数 221 
+[1027795.955024] uvm_kvfree被调用次数 222 
+[1027795.955027] uvm_kvfree被调用次数 223 
+[1027795.955034] uvm_kvfree被调用次数 224 
+[1027795.955037] uvm_kvfree被调用次数 225 
+[1027795.955053] uvm_kvfree被调用次数 226 
+[1027795.955056] uvm_kvfree被调用次数 227 
+[1027795.955056] uvm_kvfree被调用次数 228 
+[1027795.955057] uvm_kvfree被调用次数 229 
+[1027795.955065] uvm_kvfree被调用次数 230 
+[1027795.955066] uvm_kvfree被调用次数 231 
+[1027795.955067] uvm_kvfree被调用次数 232 
+[1027795.955068] uvm_kvfree被调用次数 233 
+[1027795.955070] uvm_kvfree被调用次数 234 
+[1027795.955071] uvm_kvfree被调用次数 235 
+[1027795.955087] uvm_kvfree被调用次数 236 
+[1027795.955087] alloc_internal被调用次数 428 
+[1027795.955088] 第 429 次调用alloc_internal__ ，size:128--zero_memory:0
+[1027795.955089] __uvm_kvmalloc被调用次数 76 
+[1027795.955090] uvm_kvfree被调用次数 237 
+[1027795.955091] uvm_kvfree被调用次数 238 
+[1027795.955092] uvm_kvfree被调用次数 239 
+[1027795.955095] uvm_kvfree被调用次数 240 
+[1027795.955096] uvm_kvfree被调用次数 241 
+[1027795.955098] uvm_kvfree被调用次数 242 
+[1027795.955110] uvm_kvfree被调用次数 243 
+[1027795.955121] uvm_kvfree被调用次数 244 
+[1027795.955166] uvm_kvfree被调用次数 245 
+[1027795.955167] uvm_kvfree被调用次数 246 
+[1027795.955175] uvm_kvfree被调用次数 247 
+[1027795.955178] uvm_kvfree被调用次数 248 
+[1027795.955187] uvm_kvfree被调用次数 249 
+[1027795.955188] uvm_kvfree被调用次数 250 
+[1027795.955196] uvm_kvfree被调用次数 251 
+[1027795.955199] uvm_kvfree被调用次数 252 
+[1027795.955206] uvm_kvfree被调用次数 253 
+[1027795.955209] uvm_kvfree被调用次数 254 
+[1027795.955217] uvm_kvfree被调用次数 255 
+[1027795.955218] uvm_kvfree被调用次数 256 
+[1027795.955219] uvm_kvfree被调用次数 257 
+[1027795.955220] uvm_kvfree被调用次数 258 
+[1027795.955227] uvm_kvfree被调用次数 259 
+[1027795.955234] uvm_kvfree被调用次数 260 
+[1027795.955235] uvm_kvfree被调用次数 261 
+[1027795.955236] uvm_kvfree被调用次数 262 
+[1027795.955244] uvm_kvfree被调用次数 263 
+[1027795.955247] uvm_kvfree被调用次数 264 
+[1027795.955252] uvm_kvfree被调用次数 265 
+[1027795.955259] uvm_kvfree被调用次数 266 
+[1027795.955262] uvm_kvfree被调用次数 267 
+[1027795.955268] uvm_kvfree被调用次数 268 
+[1027795.955273] uvm_kvfree被调用次数 269 
+[1027795.955281] uvm_kvfree被调用次数 270 
+[1027795.955284] uvm_kvfree被调用次数 271 
+[1027795.955291] uvm_kvfree被调用次数 272 
+[1027795.955294] uvm_kvfree被调用次数 273 
+[1027795.955301] uvm_kvfree被调用次数 274 
+[1027795.955304] uvm_kvfree被调用次数 275 
+[1027795.955310] uvm_kvfree被调用次数 276 
+[1027795.955317] uvm_kvfree被调用次数 277 
+[1027795.955319] uvm_kvfree被调用次数 278 
+[1027795.955325] uvm_kvfree被调用次数 279 
+[1027795.955333] uvm_kvfree被调用次数 280 
+[1027795.955336] uvm_kvfree被调用次数 281 
+[1027795.955343] uvm_kvfree被调用次数 282 
+[1027795.955346] uvm_kvfree被调用次数 283 
+[1027795.955354] uvm_kvfree被调用次数 284 
+[1027795.955355] uvm_kvfree被调用次数 285 
+[1027795.955356] uvm_kvfree被调用次数 286 
+[1027795.955357] uvm_kvfree被调用次数 287 
+[1027795.955358] uvm_kvfree被调用次数 288 
+[1027795.955362] uvm_kvfree被调用次数 289 
+[1027795.955365] uvm_kvfree被调用次数 290 
+[1027795.955761] uvm_kvfree被调用次数 291 
+[1027795.955763] uvm_kvfree被调用次数 292 
+[1027795.955798] uvm_kvfree被调用次数 293 
+[1027795.955801] uvm_kvfree被调用次数 294 
+[1027795.955835] uvm_kvfree被调用次数 295 
+[1027795.955837] uvm_kvfree被调用次数 296 
+[1027795.955867] uvm_kvfree被调用次数 297 
+[1027795.955870] uvm_kvfree被调用次数 298 
+[1027795.955898] uvm_kvfree被调用次数 299 
+[1027795.955901] uvm_kvfree被调用次数 300 
+[1027795.955929] uvm_kvfree被调用次数 301 
+[1027795.955932] uvm_kvfree被调用次数 302 
+[1027795.955961] uvm_kvfree被调用次数 303 
+[1027795.955964] uvm_kvfree被调用次数 304 
+[1027795.955995] uvm_kvfree被调用次数 305 
+[1027795.955998] uvm_kvfree被调用次数 306 
+[1027795.956025] uvm_kvfree被调用次数 307 
+[1027795.956028] uvm_kvfree被调用次数 308 
+[1027795.956054] uvm_kvfree被调用次数 309 
+[1027795.956056] uvm_kvfree被调用次数 310 
+[1027795.956080] uvm_kvfree被调用次数 311 
+[1027795.956083] uvm_kvfree被调用次数 312 
+[1027795.956113] uvm_kvfree被调用次数 313 
+[1027795.956116] uvm_kvfree被调用次数 314 
+[1027795.956147] uvm_kvfree被调用次数 315 
+[1027795.956150] uvm_kvfree被调用次数 316 
+[1027795.956221] uvm_kvfree被调用次数 317 
+[1027795.956224] uvm_kvfree被调用次数 318 
+[1027795.956259] uvm_kvfree被调用次数 319 
+[1027795.956270] uvm_kvfree被调用次数 320 
+[1027795.956307] uvm_kvfree被调用次数 321 
+[1027795.956315] uvm_kvfree被调用次数 322 
+[1027795.956353] uvm_kvfree被调用次数 323 
+[1027795.956360] uvm_kvfree被调用次数 324 
+[1027795.956396] uvm_kvfree被调用次数 325 
+[1027795.956404] uvm_kvfree被调用次数 326 
+[1027795.956449] uvm_kvfree被调用次数 327 
+[1027795.956456] uvm_kvfree被调用次数 328 
+[1027795.956471] uvm_kvfree被调用次数 329 
+[1027795.956478] uvm_kvfree被调用次数 330 
+[1027795.956492] uvm_kvfree被调用次数 331 
+[1027795.956498] uvm_kvfree被调用次数 332 
+[1027795.956516] uvm_kvfree被调用次数 333 
+[1027795.956517] uvm_kvfree被调用次数 334 
+[1027795.956531] uvm_kvfree被调用次数 335 
+[1027795.956532] uvm_kvfree被调用次数 336 
+[1027795.956549] uvm_kvfree被调用次数 337 
+[1027795.956550] uvm_kvfree被调用次数 338 
+[1027795.956559] uvm_kvfree被调用次数 339 
+[1027795.956560] uvm_kvfree被调用次数 340 
+[1027795.956573] uvm_kvfree被调用次数 341 
+[1027795.956574] uvm_kvfree被调用次数 342 
+[1027795.956576] uvm_kvfree被调用次数 343 
+[1027795.956742] uvm_kvfree被调用次数 344 
+[1027795.957597] uvm_kvfree被调用次数 345 
+[1027795.957612] uvm_kvfree被调用次数 346 
+[1027795.960276] uvm_kvfree被调用次数 347 
+[1027795.960285] uvm_kvfree被调用次数 348 
+[1027795.962821] uvm_kvfree被调用次数 349 
+[1027795.962823] uvm_kvfree被调用次数 350 
+[1027795.962828] uvm_kvfree被调用次数 351 
+[1027795.965353] uvm_kvfree被调用次数 352 
+[1027795.965362] uvm_kvfree被调用次数 353 
+[1027795.967830] uvm_kvfree被调用次数 354 
+[1027795.967831] uvm_kvfree被调用次数 355 
+[1027795.967837] uvm_kvfree被调用次数 356 
+[1027795.970353] uvm_kvfree被调用次数 357 
+[1027795.970360] uvm_kvfree被调用次数 358 
+[1027795.972844] uvm_kvfree被调用次数 359 
+[1027795.972845] uvm_kvfree被调用次数 360 
+[1027795.974142] uvm_kvfree被调用次数 361 
+[1027795.974143] uvm_kvfree被调用次数 362 
+[1027795.974144] uvm_kvfree被调用次数 363 
+[1027795.976596] uvm_kvfree被调用次数 364 
+[1027795.976616] uvm_kvfree被调用次数 365 
+[1027795.976816] uvm_kvfree被调用次数 366 
+[1027795.976817] uvm_kvfree被调用次数 367 
+[1027795.976818] uvm_kvfree被调用次数 368 
+[1027795.976821] uvm_kvfree被调用次数 369 
+[1027795.977189] uvm_kvfree被调用次数 370 
+[1027795.977191] uvm_kvfree被调用次数 371 
+[1027795.977205] uvm_kvfree被调用次数 372 
+[1027795.977237] uvm_kvfree被调用次数 373 
+[1027795.977259] uvm_kvfree被调用次数 374 
+[1027795.977262] uvm_kvfree被调用次数 375 
+[1027795.977754] uvm_kvfree被调用次数 376 
+[1027795.977767] uvm_kvfree被调用次数 377 
+[1027795.977768] uvm_kvfree被调用次数 378 
+[1027795.977773] uvm_kvfree被调用次数 379 
+[1027795.977774] uvm_kvfree被调用次数 380 
+[1027795.977775] uvm_kvfree被调用次数 381 
+[1027795.977776] uvm_kvfree被调用次数 382 
+[1027795.978424] uvm_kvfree被调用次数 383 
+[1027795.978977] uvm_kvfree被调用次数 384 
+[1027795.978987] uvm_kvfree被调用次数 385 
+[1027795.986013] uvm_kvfree被调用次数 386 
+[1027795.986042] uvm_kvfree被调用次数 387 
+[1027795.992675] uvm_kvfree被调用次数 388 
+[1027795.992682] uvm_kvfree被调用次数 389 
+[1027795.992702] uvm_kvfree被调用次数 390 
+[1027795.998672] uvm_kvfree被调用次数 391 
+[1027795.998686] uvm_kvfree被调用次数 392 
+[1027796.004581] uvm_kvfree被调用次数 393 
+[1027796.004584] uvm_kvfree被调用次数 394 
+[1027796.004594] uvm_kvfree被调用次数 395 
+[1027796.010600] uvm_kvfree被调用次数 396 
+[1027796.010634] uvm_kvfree被调用次数 397 
+[1027796.016705] uvm_kvfree被调用次数 398 
+[1027796.016719] uvm_kvfree被调用次数 399 
+[1027796.017845] uvm_kvfree被调用次数 400 
+[1027796.017847] uvm_kvfree被调用次数 401 
+[1027796.017847] uvm_kvfree被调用次数 402 
+[1027796.022520] uvm_kvfree被调用次数 403 
+[1027796.022537] uvm_kvfree被调用次数 404 
+[1027796.022616] uvm_kvfree被调用次数 405 
+[1027796.022617] uvm_kvfree被调用次数 406 
+[1027796.022617] uvm_kvfree被调用次数 407 
+[1027796.022620] uvm_kvfree被调用次数 408 
+[1027796.023528] uvm_kvfree被调用次数 409 
+[1027796.023530] uvm_kvfree被调用次数 410 
+[1027796.023542] uvm_kvfree被调用次数 411 
+[1027796.023562] uvm_kvfree被调用次数 412 
+[1027796.023575] uvm_kvfree被调用次数 413 
+[1027796.023578] uvm_kvfree被调用次数 414 
+[1027796.024736] uvm_kvfree被调用次数 415 
+[1027796.024750] uvm_kvfree被调用次数 416 
+[1027796.024753] uvm_kvfree被调用次数 417 
+[1027796.024757] uvm_kvfree被调用次数 418 
+[1027796.024758] uvm_kvfree被调用次数 419 
+[1027796.024759] uvm_kvfree被调用次数 420 
+[1027796.024760] uvm_kvfree被调用次数 421 
+[1027796.026375] uvm_kvfree被调用次数 422 
+[1027796.026378] uvm_kvfree被调用次数 423 
