@@ -160,18 +160,23 @@ typedef struct
 struct uvm_va_space_struct
 {
     // Mask of gpus registered with the va space
+    // 注册到va空间的GPU掩码
     uvm_processor_mask_t registered_gpus;
 
     // Array of pointers to the uvm_gpu_t objects that correspond to the
     // uvm_processor_id_t index.
-    //
+    // uvm_gpu_t对象的指针数组，指向对应于uvm_processor_id_t索引
+    
     // With SMC, GPUs can be partitioned so the number of uvm_gpu_t objects can
     // be larger than UVM_ID_MAX_GPUS. However, each VA space can only
     // subscribe to a single partition per GPU, so it is fine to have a regular
     // processor mask.
+    // SMC:应该是SM controller，可以对GPUs进行分区，因此uvm_gpu_t对象的数量可以大于UVM_ID_MAX_GPUS.
+    // 但是每个VA空间只能subscribe每个GPU中的单个分区，所以可以是使用常规处理器掩码。
+    
     uvm_gpu_t *registered_gpus_table[UVM_ID_MAX_GPUS];
 
-    // Mask of processors registered with the va space that support replayable faults
+    // Mask of processors registered with the va space that support replayable faults支持可重放故障
     uvm_processor_mask_t faultable_processors;
 
     // Semaphore protecting the state of the va space

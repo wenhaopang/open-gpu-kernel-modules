@@ -43,7 +43,7 @@ typedef struct
     size_t alloc_size;
     uint8_t ptr[0];
 } uvm_vmalloc_hdr_t;
-//该结构体包含申请的物理内存和虚拟内存的信息
+// 该结构体包含申请的物理内存和虚拟内存的信息
 // file、function、line表示调用申请内存的文件、其中的函数和在文件中的位置
 // node是定义红黑树结构的节点
 typedef struct
@@ -67,7 +67,8 @@ typedef enum
 // This is used just to make sure that the APIs aren't used outside of
 // uvm_kvmalloc_init/uvm_kvmalloc_exit. The memory allocation would still work
 // fine, but the leak checker would get confused.
-// 确保API不在uvm_kvmalloc_init/uvm_kvmalloc_exit之外使用，内存分配仍可以正常工作。
+// 确保API不在uvm_kvmalloc_init/uvm_kvmalloc_exit之外使用。
+// 内存分配仍可以正常工作,但泄露检查器可能检测不到吧。
 static bool g_malloc_initialized = false;
 
 static struct
@@ -94,15 +95,21 @@ static struct
 
 // Default to byte-count-only leak checking for non-release builds. This can
 // always be overridden by the module parameter.
+// 默认为字节计数，仅对未发布版本进行泄漏检查。
+// 这总是可以被模块参数覆盖。
 static int uvm_leak_checker = (UVM_IS_DEBUG() || UVM_IS_DEVELOP()) ?
                                 UVM_KVMALLOC_LEAK_CHECK_BYTES :
                                 UVM_KVMALLOC_LEAK_CHECK_NONE;
 
+// 编写内核模块通过module_param来传递参数
+// module_param(name,type,perm);参数分别是模块参数的名称、模块参数的数据类型、模块参数的访问权限。
+// S_IRUGO该模块可以被所有人读取，但是不能改变。
 module_param(uvm_leak_checker, int, S_IRUGO);
 MODULE_PARM_DESC(uvm_leak_checker,
                  "Enable uvm memory leak checking. "
                  "0 = disabled, 1 = count total bytes allocated and freed, 2 = per-allocation origin tracking.");
 
+//这个函数的作用是初始化kv的内存申请，目前的内存状况能不能正常申请内存
 NV_STATUS uvm_kvmalloc_init(void)
 {
     if (uvm_leak_checker >= UVM_KVMALLOC_LEAK_CHECK_ORIGIN) {
@@ -118,6 +125,7 @@ NV_STATUS uvm_kvmalloc_init(void)
     return NV_OK;
 }
 
+// 退出内存申请？
 void uvm_kvmalloc_exit(void)
 {
     if (!g_malloc_initialized)
@@ -125,7 +133,7 @@ void uvm_kvmalloc_exit(void)
 
     if (atomic_long_read(&g_uvm_leak_checker.bytes_allocated) > 0) {
         printk(KERN_ERR NVIDIA_UVM_PRETTY_PRINTING_PREFIX "!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-        printk(KERN_ERR NVIDIA_UVM_PRETTY_PRINTING_PREFIX "Memory leak of %lu bytes detected.%s\n",
+        printk(KERN_ERR   "Memory leak of %lu bytes detected.%s\n",
                       atomic_long_read(&g_uvm_leak_checker.bytes_allocated),
                       uvm_leak_checker < UVM_KVMALLOC_LEAK_CHECK_ORIGIN ?
                         " insmod with uvm_leak_checker=2 for detailed information." :
@@ -173,7 +181,7 @@ static void insert_info(uvm_kvmalloc_info_t *info)
     status = uvm_rb_tree_insert(&g_uvm_leak_checker.allocation_info, &info->node);
     spin_unlock_irqrestore(&g_uvm_leak_checker.lock, irq_flags);
 
-    // We shouldn't have duplicates
+    // We shouldn't have duplicates重复
     UVM_ASSERT(status == NV_OK);
 }
 
@@ -204,6 +212,8 @@ static void alloc_tracking_add(void *p, const char *file, int line, const char *
 {
     // Add uvm_kvsize(p) instead of size because uvm_kvsize might be larger (due
     // to ksize), and uvm_kvfree only knows about uvm_kvsize
+    // 添加uvm_kvsize(p)而不是大小，因为uvm_kvsize可能更大（由于ksize）
+    // 而uvm_kvsize只知道uvm_kvsize。
     size_t size = uvm_kvsize(p);
     uvm_kvmalloc_info_t *info;
 
@@ -264,9 +274,12 @@ int count_alloc_internal = 0;
 static void *alloc_internal(size_t size, bool zero_memory)
 {
     uvm_vmalloc_hdr_t *hdr;
-	
-	printk(KERN_ALERT  "alloc_internal被调用次数 %d \n",count_alloc_internal++);
-	printk(KERN_ALERT  "第 %d 次调用alloc_internal__ ，size:%zu--zero_memory:%d\n", count_alloc_internal,size,zero_memory);
+	count_alloc_internal++;
+	if(count_alloc_internal==10)
+		{
+			printk(KERN_ALERT  "alloc_internal被调用次数 %d \n",count_alloc_internal);
+		}
+	//printk(KERN_ALERT  "第 %d 次调用alloc_internal__ ，size:%zu--zero_memory:%d\n", count_alloc_internal,size,zero_memory);
 	
     // Make sure that the allocation pointer is suitably-aligned for a natively-
     // sized allocation.
@@ -299,8 +312,11 @@ int count___uvm_kvmalloc = 0;
 void *__uvm_kvmalloc(size_t size, const char *file, int line, const char *function)
 {
     void *p = alloc_internal(size, false);
-
-	printk(KERN_ALERT  "__uvm_kvmalloc被调用次数 %d \n",count___uvm_kvmalloc++);
+	count___uvm_kvmalloc++;
+	if(count___uvm_kvmalloc==10)
+		{
+			printk(KERN_ALERT  "__uvm_kvmalloc被调用次数 %d \n",count___uvm_kvmalloc);
+		}
 	if(count___uvm_kvmalloc >=0){
 		/*printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--size 输出 %zu \n", count___uvm_kvmalloc,size);
 		printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc ，__uvm_kvmalloc--file 输出 %s \n", count___uvm_kvmalloc,file);
@@ -320,8 +336,8 @@ int count___uvm_kvmalloc_zero = 0;
 void *__uvm_kvmalloc_zero(size_t size, const char *file, int line, const char *function)
 {
     void *p = alloc_internal(size, true);
-	printk(KERN_ALERT  "__uvm_kvmalloc_zero被调用次数 %d \n",count___uvm_kvmalloc_zero++);
-	printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc_zero__ ，size:%zu--file:%s--line:%d--function%s\n", count___uvm_kvmalloc_zero,size,file,line,function);
+	//printk(KERN_ALERT  "__uvm_kvmalloc_zero被调用次数 %d \n",count___uvm_kvmalloc_zero++);
+	//printk(KERN_ALERT  "第 %d 次调用__uvm_kvmalloc_zero__ ，size:%zu--file:%s--line:%d--function%s\n", count___uvm_kvmalloc_zero,size,file,line,function);
     if (uvm_leak_checker && p)
         alloc_tracking_add(p, file, line, function);
 
@@ -334,8 +350,12 @@ void uvm_kvfree(void *p)
 {
     if (!p)
         return;
-
-	printk(KERN_ALERT  "uvm_kvfree被调用次数 %d \n",count_uvm_kvfree++);
+	
+	count_uvm_kvfree++;
+	if(count_uvm_kvfree==10)
+		{
+			printk(KERN_ALERT  "uvm_kvfree被调用次数 %d \n",count_uvm_kvfree);
+		}	
 	
     if (uvm_leak_checker)
         alloc_tracking_remove(p);
@@ -353,7 +373,7 @@ static void *realloc_from_kmalloc(void *p, size_t new_size)
 {
     void *new_p;
 
-	printk(KERN_ALERT  "realloc_from_kmalloc被调用次数 %d \n",count_realloc_from_kmalloc++);
+	//printk(KERN_ALERT  "realloc_from_kmalloc被调用次数 %d \n",count_realloc_from_kmalloc++);
 	
     // Simple case: kmalloc -> kmalloc
     if (new_size <= UVM_KMALLOC_THRESHOLD)

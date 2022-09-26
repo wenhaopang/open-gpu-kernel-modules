@@ -802,8 +802,8 @@ static int uvm_mmap(struct file *filp, struct vm_area_struct *vma)
 
     // UVM mappings are required to set offset == VA. This simplifies things
     // since we don't have to worry about address aliasing (except for fork,
-    // handled separately) and it makes unmap_mapping_range simpler.
-    // UVM的映射需要设置偏移量为VA 
+    // handled separately（单独处理）) and it makes unmap_mapping_range simpler.
+    // UVM的映射需要设置偏移量为VA，这简化了事情，因为我们不用担心地址别名。
     if (vma->vm_start != (vma->vm_pgoff << PAGE_SHIFT)) {
         UVM_DBG_PRINT_RL("vm_start 0x%lx != vm_pgoff 0x%lx\n", vma->vm_start, vma->vm_pgoff << PAGE_SHIFT);
         return -EINVAL;
@@ -911,8 +911,11 @@ out:
 int count_uvm_mmap_entry = 0;
 static int uvm_mmap_entry(struct file *filp, struct vm_area_struct *vma)
 {
-   UVM_ENTRY_RET(uvm_mmap(filp, vma)); //UVM_ENTRY_RET为非void函数的包装器。
+   //printk(KERN_ALERT  "uvm_mmap被调用前(函数内)\n");
    printk(KERN_ALERT  "uvm_mmap_entry被调用次数 %d \n",count_uvm_mmap_entry++);
+
+   UVM_ENTRY_RET(uvm_mmap(filp, vma)); //UVM_ENTRY_RET为非void函数的包装器。
+   //printk(KERN_ALERT  "uvm_mmap_entry被调用次数 %d \n",count_uvm_mmap_entry++);
    
 }
 
