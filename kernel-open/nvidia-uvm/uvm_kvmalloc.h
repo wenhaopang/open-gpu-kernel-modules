@@ -33,7 +33,7 @@
 // vmalloc.
 //
 // Therefore the uvm_kvmalloc APIs use kmalloc when possible, but will fall back
-// to vmalloc when the allocation size exceeds this UVM_KMALLOC_THRESHOLD.
+// to vmalloc when the allocation size exceeds this UVM_KMALLOC_THRESHOLD.THRESHOLD（临界点）
 //
 // This value is somewhat arbitrary. kmalloc can support allocations much larger
 // than PAGE_SIZE, but the larger the size the higher the chances of allocation
@@ -47,6 +47,7 @@ NV_STATUS uvm_kvmalloc_init(void);
 void uvm_kvmalloc_exit(void);
 
 // Allocating a size of 0 with any of these APIs returns ZERO_SIZE_PTR
+// 使用这些API中的任何一个分配大小为0都会返回ZERO_SIZE_PTR
 void *__uvm_kvmalloc(size_t size, const char *file, int line, const char *function);
 void *__uvm_kvmalloc_zero(size_t size, const char *file, int line, const char *function);
 
@@ -55,7 +56,7 @@ void *__uvm_kvmalloc_zero(size_t size, const char *file, int line, const char *f
 
 void uvm_kvfree(void *p);
 
-// Follows standard realloc semantics:
+// Follows standard realloc semantics（语义）:
 // - uvm_kvrealloc(NULL, size) and uvm_kvrealloc(ZERO_SIZE_PTR, size) are each
 //   equivalent to uvm_kvmalloc(size)
 // - uvm_kvrealloc(p, 0) is the same as uvm_kvfree(p), and returns ZERO_SIZE_PTR
@@ -63,7 +64,7 @@ void *__uvm_kvrealloc(void *p, size_t new_size, const char *file, int line, cons
 
 #define uvm_kvrealloc(__p, __new_size) __uvm_kvrealloc(__p, __new_size, __FILE__, __LINE__, __FUNCTION__)
 
-// Returns the allocation size for a prior allocation from uvm_kvmalloc,
+// Returns the allocation size for a prior allocation（预先分配） from uvm_kvmalloc,
 // uvm_kvmalloc_zero, or uvm_kvrealloc. This may be more than the size requested
 // in those calls, in which case the extra memory is safe to use.
 //

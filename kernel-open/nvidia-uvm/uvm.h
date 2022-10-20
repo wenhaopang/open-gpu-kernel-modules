@@ -107,6 +107,9 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 // UvmSetDriverVersion. Repeated calls to UvmInitialize increment a refcount,
 // which is decremented by calls to UvmDeinitialize. UVM deinitilization occurs
 // when the refcount reaches zero.
+// 这必须在除了UvmSetDriverVersion之外的任何其他UVM函数之前调用。
+// 对UvmInitialize的重复调用会增加一个引用计数refcount，而对UvmDeinitialize的调用会减少该引用计数。
+// 当refcount达到零时会发生UVM去初始化。
 //
 // The UVM file descriptor passed in can either be UVM_AUTO_FD or a valid file
 // descriptor created during a prior call to UvmInitialize. If UVM_AUTO_FD is
@@ -116,6 +119,11 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 // all subsequent calls must use the same file descriptor used in the initial
 // call. The file descriptor that is currently in use can be retrieved using
 // UvmGetFileDescriptor.
+// 传入的UVM文件描述符可以是UVM_AUTO_FD或在先前调用UvmInitialize期间创建的有效文件描述符。
+// 如果传递了UVM_AUTO_FD并且引用计数为零，则创建一个新的文件描述符。
+// 后续调用必须同时指定UVM_AUTO_FD或使用当前文件描述符。
+// 如果对UvmInitialize的第一次调用未指定UVM_AUTO_FD，则所有后续调用必须使用初始调用中使用的相同文件描述符。
+// 可以使用UvmGetFileDescriptor检索当前正在使用的文件描述符。
 //
 // If flags does not contain UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE, the
 // UvmInitialize call which creates the file descriptor will associate the
@@ -123,15 +131,21 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 // support such an association. In that case UvmInitialize may be called using
 // the same file in other processes, but internally the file remains associated
 // with the original process.
+// 如果flags不包含UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE，
+// 当操作系统可以支持这种关联时，创建文件描述符的UvmInitialize调用将会调用进程与该文件描述符关联。
+// 在这种情况下，可以在其他进程中使用相同的文件调用UvmInitialize，但在内部该文件仍与原始进程关联。
 //
 // Arguments:
 //     fd: (INPUT)
 //         The UVM file descriptor to initialize UVM with. Passing in
 //         UVM_AUTO_FD creates a new file descriptor on the first call to
 //         UvmInitialize.
+//         用于初始化UVM的UVM文件描述符。
+//         传入UVM_AUTO_FD会在第一次调用UvmInitialize时创建一个新的文件描述符。
 //
 //     flags: (INPUT)
 //         Must be a combination of 0 or more of following flags:
+//         必须是0个或多个以下标志的组合。
 //
 //         - UVM_INIT_FLAGS_DISABLE_HMM
 //             Specifying this flag will only have an effect if the system
@@ -139,11 +153,18 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 //             GPUs do not have hardware support to do it transparently, and the
 //             UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE flag is not specified.
 //             In such cases pageable access from the GPU will be disabled.
+//             仅当系统允许GPU读取/写入系统(CPU)可分页内存，且 
+//             GPU没有硬件支持来透明的执行此操作，且
+//             未指定UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE标志时，
+//             指定此标志才会生效。
+//             在这种情况下，来自GPU的可分页访问将被禁用。
 //
 //             Pageable memory here refers to memory allocated by the Operating
 //             System for the process's globals, stack variables, heap
 //             allocations, etc. that has not been registered for CUDA access
 //             using cudaHostRegister.
+//             此处的可分页内存是指操作系统为进程的全局变量，堆栈变量，堆分配等分配的内存，
+//             尚未使用cudaHostRegister为CUDA访问注册。
 //
 //         - UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE
 //             Specifying this flag will prevent UVM from creating any
@@ -153,27 +174,37 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 //             resources used by the UVM file descriptor will be freed when the
 //             last reference to the file is dropped rather than when this
 //             process exits.
+//             指定此标志将阻止UVM在此进程和UVM文件描述符之间创建任何关联。
+//             任何类型的可分页内存访问都将被禁用（无论是否指定了UVM_INIT_FLAGS_DISABLE_HMM），
+//             并且UVM文件描述符使用的GPU资源将在文件的最后一个引用被删除而不是当该进程退出时被释放。
 //
 //             If this flag is not specified, calling UvmMemMap or
 //             UvmAllocSemaphorePool on the same file from a different process
 //             may return an error.
+//             如果未指定此标志，则从不同进程对同一文件调用
+//             UvmMemMap或者UvmAllocSemaphorePool可能会返回错误。
 //
 //         If UvmInitialize is called multiple times on the same file, even from
 //         different processes, the flags to each call must match.
+//         ...,每次调用的标志都必须匹配。
 //
 // Error codes:
 //     NV_ERR_NOT_SUPPORTED:
 //         The Linux kernel is not able to support UVM. This could be because
 //         the kernel is too old, or because it lacks a feature that UVM
 //         requires. The kernel log will have details.
+//         Linux内核不支持UVM. ...
 //
 //     NV_ERR_INVALID_ARGUMENT:
 //         The file descriptor passed in is neither UVM_AUTO_FD nor a valid file
 //         descriptor created during a prior call to UvmInitialize, or the flags
 //         do not match a prior call to UvmInitialize.
+//         传入的文件描述符既不是UVM_AUTO_FD，也不是在先前调用UvmInitialize期间创建的有效文件描述符，
+//         或者标志与先前对UvmInitialize的调用不匹配。
 //
 //     NV_ERR_NO_MEMORY:
 //         Internal memory allocation failed.
+//         内部内存分配失败。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -195,6 +226,10 @@ NV_STATUS UvmInitialize(UvmFileDescriptor fd,
 // process. Any channels that are still registered will be unregistered prior to
 // unmapping any managed allocations. Any resources that have been shared with
 // other processes and are still being used will continue to remain valid.
+// 释放由UvmInitialize隐式获取的引用。
+// 如果refcount达到零，则清除与调用进程关联的所有UVM资源。
+// 在取消映射任何托管分配之前，任何仍注册的通道都将被取消注册。
+// 任何已与其他进程共享且仍在使用的资源将继续保持有效。
 //
 // Error codes:
 //     NV_ERR_INVALID_STATE:
@@ -783,6 +818,7 @@ NV_STATUS UvmUnregisterChannel(const UvmChannelPlatformParams *platformParams);
 //
 // Reserves VA space on the CPU for future use. Multiple, non-contiguous VA
 // ranges can be reserved via this API.
+// 在CPU上保留VA空间以供将来使用，可以通过此API保留多个不连续的VA范围。
 //
 // The starting address for the VA reservation can be either explicitly
 // specified or left NULL to let the API implementation select one. When the
@@ -795,13 +831,21 @@ NV_STATUS UvmUnregisterChannel(const UvmChannelPlatformParams *platformParams);
 // than the requested length for the VA reservation. The starting address chosen
 // by the API implementation is guaranteed to be aligned to the requested
 // alignment.
+// VA预留的起始地址可以明确指定，也可以保留为NULL以让API实现选择一个。
+// 当指定起始地址时，它必须与最小的CPU页大小对齐。
+// 当不指定起始地址时，必须指定应保留VA范围的搜索空间的边界。
+// 搜索空间的指定下限 向上舍入到 请求对齐的最接近的非零倍数。
+// 考虑到向上取整的下限的搜索空间的总大小不能小于VA预留的请求长度。
+// API实现选择的起始地址保证与请求的对齐方式对齐。
 //
 // The requested alignment must be either a power of two that is at least the
 // smallest CPU page size or left zero to indicate default alignment which is
 // the smallest CPU page size.
+// 请求的对齐必须是 至少是最小CPU页面大小的2的幂，或者留为0以指示默认对齐是最小的CPU页面大小。
 //
 // The length of the VA reservation must be a multiple of the smallest CPU page
 // size.
+// VA保留的长度必须是最小CPU页面大小的倍数。
 //
 // Arguments:
 //     base: (INPUT/OUTPUT)
@@ -812,34 +856,49 @@ NV_STATUS UvmUnregisterChannel(const UvmChannelPlatformParams *platformParams);
 //         of the requested alignment. If *base is non-NULL when this API
 //         is invoked, then that address is chosen as the starting address of
 //         the VA reservation.
+//         包含调用成功返回时VA预留的起始地址。
+//         如果调用此API时*base为NULL，则保留在请求范围内的VA范围。
+//         请注意，下限将四舍五入到请求对齐的最接近的非零倍数。
+//         如果调用此API时*base为非NULL，则选择该地址作为VA预留的起始地址。
 //
 //     length: (INPUT)
 //         Length in bytes of the region. Must be a multiple of the smallest CPU
 //         page size.
+//         区域的字节长度。必须是最小CPU页面大小的倍数。
 //
 //     minVa: (INPUT)
 //         Lower limit for the search space within which the VA range must be
 //         reserved. Will be rounded up to the nearest non-zero multiple of the
 //         requested alignment. Ignored if *base is non-NULL when the API is
 //         invoked.
+//         必须保留的VA范围的搜索空间的下限。
+//         将四舍五入到请求对齐的最接近的非零倍数。
+//         如果调用API时*base为非NULL，则忽略。
 //
 //     maxVa: (INPUT)
 //         Upper limit for the search space within which the VA range must be
 //         reserved. Ignored if *base is non-NULL when the API is invoked.
+//         必须保留的VA范围的搜索空间的上限。
+//         如果调用API时*base为非NULL，则忽略。
 //
 //     alignment: (INPUT)
 //         Alignment required for the starting address of the reservation. Must
 //         either be zero to indicate default alignment which is smallest CPU
 //         page size or a power of two that is at least the smallest CPU page
 //         size. Ignored if *base is non-NULL when the API is invoked.
+//         预留的起始地址需要对齐。
+//         必须是零表示默认对齐，这是最小的CPU页面的大小，或者是最小CPU页面大小的2的幂。
+//         如果调用API时*base为非NULL，则忽略。
 //
 // Error codes:
 //     NV_ERR_NO_MEMORY:
 //         Either *base is NULL and no suitable VA reservation could be made or
 //         some other internal memory allocation failed.
+//         *base为NULL并且无法进行合适的VA保留，或者其他一些内部内存分配失败。
 //
 //     NV_ERR_UVM_ADDRESS_IN_USE:
 //         *base is non-NULL and reserving the VA range at that address failed.
+//         *base是非NULL并且在该地址保留VA范围失败。
 //
 //     NV_ERR_INVALID_ADDRESS:
 //         One of the following occurred:
@@ -847,11 +906,15 @@ NV_STATUS UvmUnregisterChannel(const UvmChannelPlatformParams *platformParams);
 //         - *base is non-NULL and is not aligned to the smallest CPU page size.
 //         - *base is NULL and one of the following occurred:
 //             - the rounded up minVa is not less than maxVa.
+//             - 向上取整的minVa不小于maxVa。
 //             - the region covered by the rounded up minVa and maxVa is not big
 //               enough to contain a VA reservation of the requested length.
+//             - 向上取整的minVa和maxVa所覆盖的区域不足以包含请求长度的VA预留。
 //         - alignment is non-zero and is either not a power of two or is less
 //           than the smallest CPU size.
+//         - 对齐是非零的，或者不是2的幂，或者小于最小的CPU大小。
 //         - length is zero or is not a multiple of the smallest CPU page size.
+//         - 长度为零或不是最小CPU页面大小的倍数。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -955,15 +1018,23 @@ NV_STATUS UvmDestroyRangeGroup(NvU64 rangeGroupId);
 // were associated with another range group, that association is changed to
 // this range group. The VA range must have been allocated via either UvmAlloc
 // or UvmMemMap.
+// 将虚拟地址VA范围内的页面与指定的范围组相关联。
+// VA范围的基地址和长度必须与CPU支持的最小页面大小对齐。
+// 如果该VA范围内的任何页面与另一个范围组相关联，则该关联将更改为该范围组。
+// VA范围必须已通过UvmAlloc或UvmMemMap分配。
 //
 // If the range group was made non-migratable by a previous call to
 // UvmPreventMigrationRangeGroups, then all pages in the VA range are migrated
 // to their preferred location if they are not already located there. If any
 // page does not have a preferred location or if the preferred location is a
 // fault-capable GPU, an error is returned.
+// 如果先前调用UvmPreventMigrationRangeGroups使范围组不可迁移，
+// 则VA范围中的所有页面都将迁移到他们的首选位置（如果它们尚未位于那里）。
+// 如果任何页面没有首选位置，或者首选位置是具有故障能力的GPU，则会返回错误。
 //
 // If rangeGroupId is UVM_RANGE_GROUP_ID_NONE, then all pages in the VA range
 // will have their range group association removed.
+// 如果rangeGroupId为UVM_RANGE_GROUP_ID_NONE，则VA范围内的所有页面都将删除其范围组关联。
 //
 // Arguments:
 //     base: (INPUT)
@@ -974,23 +1045,29 @@ NV_STATUS UvmDestroyRangeGroup(NvU64 rangeGroupId);
 //
 //     rangeGroupId: (INPUT)
 //         Id of the range group to associate the VA range with.
+//         与VA范围相关联的范围组的ID。
 //
 // Errors:
 //     NV_ERR_NO_MEMORY:
 //         Internal memory allocation failed.
+//         内部内存分配失败。
 //
 //     NV_ERR_INVALID_ADDRESS:
 //         base and length are not properly aligned or don't represent a valid
 //         address range.
+//         base或length未正确对齐，或不代表有效的地址范围。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         The range group is non-migratable and at least one page in the VA
 //         range either does not have a preferred location or its preferred
 //         location is a fault-capable GPU.
+//         范围组是不可迁移的，并且VA范围中的至少一个页面没有首选位置，
+//         或者其首选位置是具有故障能力的GPU。
 //
 //     NV_ERR_OBJECT_NOT_FOUND:
 //         rangeGroupId was not created by a previous call to
 //         UvmCreateRangeGroup.
+//         rangeGroupId不是由先前对UvmCreateRangeGroup的调用创建的。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -1108,8 +1185,11 @@ NV_STATUS UvmAllowMigrationRangeGroups(const NvU64 *rangeGroupIds,
 // Creates a new mapping in the virtual address space of the process, populates
 // it at the specified preferred location, maps it on the provided list of
 // processors if feasible and associates the range with the given range group.
+// 在进程的虚拟地址空间中创建一个新的映射，在指定的首选位置上填充，
+// 如果可行，将其映射到提供的处理器列表上，并将范围与给定的范围组相关联。
 //
 // This API is equivalent to the following code sequence:
+// 此API等价于以下代码序列
 //     UvmMemMap(base, length);
 //     UvmSetPreferredLocation(base, length, preferredLocationUuid);
 //     for (i = 0; i < accessedByCount; i++) {
@@ -1133,29 +1213,37 @@ NV_STATUS UvmAllowMigrationRangeGroups(const NvU64 *rangeGroupIds,
 //
 //     preferredLocationUuid: (INPUT)
 //         UUID of the preferred location for this VA range.
+//         此VA范围的首选位置的UUID
 //
 //     accessedByUuids: (INPUT)
 //         UUIDs of all processors that should have persistent mappings to this
 //         VA range.
+//         应具有到此VA范围的持久映射的所有处理器的UUID
 //
 //     accessedByCount: (INPUT)
 //         Number of elements in the accessedByUuids array.
+//         accessedByUuids数组中的元素数
 //
 //     rangeGroupId: (INPUT)
 //         ID of the range group to associate this VA range with.
+//         与此VA范围相关联的范围组的ID
 //
 // Errors:
 //     NV_ERR_UVM_ADDRESS_IN_USE:
 //         The requested address range overlaps with an existing allocation.
+//         请求的地址范围与现有分配重叠
 //
 //     NV_ERR_INVALID_ADDRESS:
 //         base and length are not properly aligned or the range was not
 //         previously reserved via UvmReserveVa.
+//         基址和长度未正确对其，或者该范围之前未通过UvmReserveVa保留
 //
 //     NV_ERR_INVALID_DEVICE:
 //         Either preferredLocationUuid or one of the UUIDs in the
 //         accessedByUuids array was not registered or the UUID represents a GPU
 //         that has no VA space registered for it.
+//         preferredLocationUuid或者accessedByUuids数组中的UUIDs之一未注册，
+//         或者UUID表示没有为其注册VA空间的GPU
 //
 //     NV_ERR_OBJECT_NOT_FOUND:
 //         rangeGroupId was not found.
@@ -1179,16 +1267,19 @@ NV_STATUS UvmAlloc(void                  *base,
 // UvmFree
 //
 // Frees a VA range previously allocated via one of the UVM allocator APIs,
+// 释放先前通过其中一个UVM分配器API分配的VA范围
 // namely either UvmAlloc, UvmMemMap, UvmCreateExternalRange,
 // UvmMapDynamicParallelismRegion or UvmAllocSemaphorePool.
 //
 // For VA ranges allocated via UvmAlloc, UvmMemMap or UvmAllocSemaphorePool, all
 // CPU and GPU page table mappings are cleared and all allocated pages are
 // freed.
+// 清除所有CPU和GPU页面映射并释放所有分配的页面
 //
 // For VA ranges allocated via UvmCreateExternalRange, all GPU page table
 // mappings are cleared. No CPU page table mappings for this range are affected,
 // and no physical pages for this range are freed.
+// 清除所有GPU页表映射。此范围内的任何CPU页表映射都不受到影响，并且此范围的物理页面不会被释放
 //
 // For VA ranges allocated via UvmMapDynamicParallelismRegion, all GPU page
 // table mappings are cleared. No CPU page table mappings for this range are
@@ -1198,11 +1289,13 @@ NV_STATUS UvmAlloc(void                  *base,
 // when allocating the range. If the VA range came from a region previously
 // reserved via UvmReserveVa, then this VA range is put back in the reserved
 // state.
+// 要释放的VA范围的基地址必须与分配范围时使用的基地址相匹配。
+// 如果VA范围来自先前通过UvmReserveVa保留的区域，则此VA范围将恢复为保留状态。
 //
 // Note that the reason this API does not take a length argument is because this
-// API is modeled after the C library free() API. Partial frees are not allowed
-// and the UVM usermode layer tracks the base and length of each allocated
-// range, so having a length argument would be redundant. This also eliminates
+// API is modeled after（modeled after仿照） the C library free() API. Partial（部分的） frees are not allowed
+// and the UVM usermode layer tracks（跟踪） the base and length of each allocated
+// range, so having a length argument would be redundant. This also eliminates（消除）
 // the need for the caller to track the length of each allocation.
 //
 // Arguments:
@@ -1212,7 +1305,7 @@ NV_STATUS UvmAlloc(void                  *base,
 //
 // Errors:
 //     NV_ERR_INVALID_ADDRESS:
-//         base does not match an address that was passed into a UVM allocator
+//         base does not match an address that was passed into（was passed into被传递到） a UVM allocator
 //         API.
 //
 //     NV_ERR_GENERIC:
@@ -1347,14 +1440,21 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // destination processor. If any page in the VA range is unpopulated, it is
 // populated at the destination processor. The migrated pages in the VA range
 // are also mapped on the destination processor.
+// 将给定虚拟地址范围的支持迁移到指定的目标处理器。
+// 如果VA范围内的任何页面未填充，则会在目标处理器处填充。
+// VA范围内的迁移页面也映射到目标处理器上。
 //
 // Both base and length must be aligned to the smallest page size supported by
 // the CPU. The VA range must lie within the largest possible virtual address
 // supported by the specified processor.
+// base和length都必须与CPU支持的最小页面大小对齐。
+// VA范围必须位于指定处理器支持的最大可能虚拟地址内。
 //
 // The virtual address range specified by (base, length) must have been
 // allocated via a call to either UvmAlloc or UvmMemMap, or be supported
 // system-allocated pageable memory.
+// (base,length)指定的VA范围必须已通过调用UvmAlloc，UvmMemMap分配，
+// 或者是受支持的系统分配的可分页内存。
 //
 // If the input virtual range corresponds to system-allocated pageable memory,
 // and there is at least one GPU in the system that supports transparent access
@@ -1368,6 +1468,14 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // preferredCpuMemoryNode first, and will fallback to the rest of CPU the nodes
 // if it doesn't succeed. If pages were already resident on any CPU memory node,
 // they will not be migrated.
+// 如果输入的虚拟范围对应于系统分配的可分页内存，
+// 并且系统中至少有一个GPU支持透明访问可分页内存，则下一段描述的行为不会发生。
+// 相反，驱动程序将首先根据调用进程和地址范围定义的内存策略填充任何未填充的页面。
+// 然后，页面将被迁移到请求的服务器。
+// 如果目标处理器是CPU，并且内存策略没有定义首选CPU内存节点或给定的preferredCpuMemoryNode在首选内存节点的掩码中，
+// 驱动程序将首先尝试将内存迁移到preferredCpuMemoryNode，
+// 如果不成功，将回退到节点的其余CPU。
+// 如果页面已经驻留在任何CPU内存节点上，它们将不会被迁移。
 //
 // If the input virtual range corresponds to system-allocated pageable memory,
 // and UvmIsPageableMemoryAccessSupported reports that pageable memory access
@@ -1381,6 +1489,14 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // Otherwise, those mappings are cleared.
 // Note that in this case, software managed pageable memory does not support
 // migration of MAP_SHARED, file-backed, or PROT_NONE mappings.
+// 如果输入的虚拟范围对应于系统分配的可分页内存，
+// 并且UvmIsPageableMemoryAccessSupported报告支持可分页内存访问，
+// 则驱动程序将在目标处理器处填充任何未填充的页面，并将数据从任何源位置迁移到目标。
+// 即使将首选位置设置为目标处理器以外的处理器，也会迁移VA范围内的页面。
+// 如果VA范围内的任何页面的访问者列表不为空，
+// 则所有适当的处理器到这些页面的映射被更新以引用新的位置，如果建立这样的映射是可能的。
+// 否则，这些映射将被清除。
+// 请注意，在这种情况下，软件管理的可分页内存不支持迁移MAP_SHARED, file-backed或PROT_NONE映射。
 //
 // If any pages in the given VA range are associated with a range group which
 // has been made non-migratable via UvmPreventMigrationRangeGroups, then those
@@ -1389,19 +1505,29 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // migratable range group and the destination processor is a non-fault-capable
 // GPU, then an error is returned if that GPU is in the accessed-by list of the
 // VA range but that GPU is not the preferred location.
+// 如果给定VA范围内的任何页面与已通过UvmPreventMigrationRangeGroups变得不可迁移的范围组相关联，
+// 则不会迁移这些页面，并且这些页面在目标处理器上的映射保持不变。
+// 如果VA范围与可迁移范围组相关联，并且目标处理器是无障碍能力的GPU，
+// 则如果该GPU在VA范围的访问者列表中，但该GPU不是首选位置，则返回错误。
 //
 // If read duplication is enabled on any pages in the VA range, then those pages
 // are read duplicated at the destination processor, leaving the source copy, if
 // present, intact with only its mapping changed to read-only if it wasn't
 // already mapped that way.
+// 如果在VA范围内的任何页面上启用了读取复制，则这些页面在目标处理器处被重复读取，
+// 而源副本（如果存在）则保持不变，只有其映射更改为只读（如果尚未映射）方法。 
 //
 // Pages in the VA range are migrated even if their preferred location is set to
 // a processor other than the destination processor.
+// 即使将首选位置设置为目标处理器以外的处理器，也会迁移VA范围内的页面。 
 //
 // If the accessed-by list of any of the pages in the VA range is not empty,
 // then mappings to those pages from all the appropriate processors are updated
 // to refer to the new location if establishing such a mapping is possible.
 // Otherwise, those mappings are cleared.
+// 如果VA范围内的任何页面的访问者列表不为空，
+// 则从所有适当的处理器到这些页面的映射都会更新以引用新位置（如果可以建立这样的映射）。
+// 否则，这些映射将被清除。
 //
 // If fewer than the number of requested pages were migrated,
 // NV_WARN_MORE_PROCESSING_REQUIRED is returned. An example scenario where this
@@ -1409,6 +1535,9 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // range group associated with some pages in this range. If fewer than the
 // number of requested pages were migrated due to insufficient memory to
 // allocate physical pages or page tables, then NV_ERR_NO_MEMORY is returned.
+// 如果迁移的页数少于请求的页数，则返回NV_WARN_MORE_PROCESSING_REQUIRED。
+// 可能发生这种情况的一个实例场景是，在与此范围内的某些页面关联的范围组上调用UvmPreventMigrationRangeGroups。
+// 如果由于分配物理页或页表的内存不足而迁移的页面数少于请求的页面数，则返回NV_ERR_NO_MEMORY。
 //
 // Arguments:
 //     base: (INPUT)
@@ -1419,11 +1548,14 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 //
 //     destinationUuid: (INPUT)
 //         UUID of the destination processor to migrate pages to.
+//         要将页面迁移到的目标处理器的UUID。
 //
 //     preferredCpuMemoryNode: (INPUT)
 //         Preferred CPU NUMA memory node used if the destination processor is
 //         the CPU. This argument is ignored if the given virtual address range
 //         corresponds to managed memory.
+//         如果目标处理器是CPU，则使用首选CPU NUMA内存节点。
+//         如果给定的虚拟地址范围对应于托管内存，则忽略此参数。
 //
 // Error codes:
 //     NV_ERR_INVALID_ADDRESS:
@@ -1432,26 +1564,35 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 //         range is pageable memory and the system does not support accessing
 //         pageable memory, or the range does not represent a supported
 //         Operating System allocation.
+//         base或length没有正确对齐，或者范围不代表通过UvmMemMap创建的可迁移分配，
+//         或者范围是可分页内存并且系统不支持访问可分页内存，
+//         或者范围不代表支持的操作系统分配。
 //
 //     NV_ERR_OUT_OF_RANGE:
 //         The VA range exceeds the largest virtual address supported by the
 //         destination processor.
+//         VA范围超过了目标处理器支持的最大虚拟地址。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         destinationUuid does not represent a valid processor such as a CPU or
 //         a GPU with a GPU VA space registered for it. Or destinationUuid is a
 //         non-fault-capable GPU, and that GPU is present in the accessed-by
 //         list of the VA range but that GPU is not the preferred location.
+//         destinationUuid不代表一个有效的处理器，例如一个为其注册了GPU VA空间的CPU或GPU。
+//         或者，destinationUuid是无故障能力的GPU，并且该GPU存在于VA范围的访问者列表中，但该GPU不是首选位置。
 //
 //     NV_ERR_NO_MEMORY:
 //         There was insufficient memory to allocate physical pages or page
 //         tables to complete the migration. Or internal memory allocation
 //         failed.
+//         没有足够的内存来分配物理页或页表来完成迁移。
+//         或者内部内存分配失败。
 //
 //     NV_ERR_NOT_SUPPORTED:
 //         The UVM file descriptor is associated with another process and the
 //         input virtual range corresponds to system-allocated pageable memory
 //         that cannot be migrated from this process.
+//         UVM文件描述符与另一个进程相关联，输入虚拟内存对应于系统分配的无法从该进程迁移的可分页内存。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -1460,6 +1601,7 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 //     NV_WARN_MORE_PROCESSING_REQUIRED:
 //         Fewer than the number of requested pages were migrated because some
 //         pages were associated with a non-migratable range group.
+//         迁移的页面数少于请求的页面数，因为某些页面与不可迁移的范围组相关联。
 //
 //------------------------------------------------------------------------------
 #if UVM_API_REV_IS_AT_MOST(5)
@@ -1666,41 +1808,55 @@ NV_STATUS UvmPopulatePageable(void     *base,
 //
 // Creates a new mapping in the virtual address space of the process that is
 // valid for access from any fault-capable CPU or GPU.
+// 在进程的虚拟地址空间中创建一个新映射，
+// 该映射对任何有故障能力的CPU和GPU的访问都是有效的。
 //
 // The virtual address range specified by (base, length) must have been
-// previously reserved via a call to UvmReserveVa. Both base and length must be
+// previously reserved保留 via a call to UvmReserveVa. Both base and length must be
 // aligned to the smallest page size supported by the CPU. Note that using a
 // larger alignment for base and length, such as the largest GPU page size, may
 // result in higher performance.
+// 虚拟地址范围由base和length来确定，必须通过call或者UvmReserveVa提前保留，
+// base和length必须与CPU所支持的最小的page大小对其。
+// 值得注意的是使用一个更大的技术和长度对其，比如使用GPU的page大小能产生更好的性能。 
 //
 // The pages in the VA range are zero initialized. They are typically populated
 // on demand, for example, through CPU or GPU faults.
+// VA范围内的页面初始化为零，他们通常按需填充，例如，通过CPU或GPU故障。
 //
 // The VA range can be unmapped and freed via a call to UvmFree.
+// VA范围可以通过call或UvmFree进行unmapp和free
 //
 // Arguments:
 //     base: (INPUT)
 //         Base address of the virtual address range.
+//         虚拟地址空间的基址
 //
 //     length: (INPUT)
 //         Length, in bytes, of the range.
+//         虚拟地址空间的范围，大小为bytes
 //
-// Errors:
+// Errors:错误返回值
 //     NV_ERR_UVM_ADDRESS_IN_USE:
 //         The requested address range overlaps with an existing allocation.
+//         请求的地址范围与现有分配重叠
 //
 //     NV_ERR_INVALID_ADDRESS:
 //         base and length are not properly aligned or the range was not
 //         previously reserved via UvmReserveVa.
+//         基址和长度未正确对其，或者该范围之前未通过UvmReserveVa保留
 //
 //     NV_ERR_NOT_SUPPORTED:
 //         The current process is not the one which called UvmInitialize, and
 //         UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE was not specified to
 //         UvmInitialize.
+//         当前进程不是调用UvmInitialize的进程，
+//         并且未将UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE指定给UvmInitialize
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
 //         because it is not very informative.
+//         意外的错误，我们将尽量避免返回此错误代码，因为它的信息量不是很大。
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmMemMap(void     *base,
@@ -2234,10 +2390,13 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 //
 // Sets the preferred location for the given virtual address range to be the
 // specified processor's memory.
+// 将给定虚拟地址范围的首选位置设置为指定处理器的内存
 //
 // Both base and length must be aligned to the smallest page size supported by
 // the CPU. The VA range must lie within the largest possible virtual address
 // supported by the specified processor.
+// base和length都必须与CPU支持的最小页面大小对齐。
+// VA的范围必须位于指定处理器支持的最大可能虚拟地址内。
 //
 // The virtual address range specified by (base, length) must have been
 // allocated via a call to either UvmAlloc or UvmMemMap, or be supported
@@ -2245,6 +2404,9 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 // at least one GPU in the system supports transparent access to pageable
 // memory, the behavior described below does not take effect and the preferred
 // location of the pages in the given range does not change.
+// (base,length)指定的VA范围必须已通过调用UvmAlloc和UvmMemMap分配，或者是受支持的系统分配的可分页内存。
+// 如果输入范围是可分页内存，并且系统中至少有一个GPU支持对可分页内存的透明访问，则下面描述的行为不会生效，
+// 并且给定范围内页面的首选位置不会改变。
 //
 // If any pages in the VA range are associated with a range group that was made
 // non-migratable via UvmPreventMigrationRangeGroups, then those pages are
@@ -2258,10 +2420,18 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 // with a non-migratable range group, an error is returned if another
 // non-fault-capable GPU is present in the accessed-by list of that page but P2P
 // support has not been enabled between both GPUs.
+// 如果VA范围中的任何页面与通过UvmPreventMigrationRangeGroups变得不可迁移的范围组相关联，
+// 则这些页面将立即迁移到指定的首选位置并根据UvmPreventMigrationRangeGroups中指定的策略进行映射。
+// 否则，此API既不会迁移页面，也不会填充未填充的页面。
+// 请注意，如果指定的首选位置是具有故障能力的GPU，并且VA范围中的至少一页与不可迁移范围组相关联，则返回错误。
+// 此外，如果指定的首选位置是无故障能力的GPU，并且VA范围中的至少一个页面与不可迁移范围组相关联，
+// 并且如果该页面的访问者列表中存在另外一个不支持故障的GPU，但两个GPU之间尚未启用P2支持，则会返回错误。
 //
 // When a page is in its preferred location, a fault from another processor will
 // not cause a migration if a mapping for that page from that processor can be
 // established without migrating the page.
+// 当页面位于其首选位置时，如果可以在不迁移页面的情况下从该处理器建立该页面的映射，
+// 则来自另一个处理器的故障不会导致迁移。
 //
 // When a page migrates away from its preferred location, the mapping on the
 // preferred location's processor is cleared so that the next access from that
@@ -2274,6 +2444,12 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 // mapping from that GPU to a page in the VA range is only created if a GPU VA
 // space has been registered for that GPU and the page is in its preferred
 // location.
+// 当页面从其首选位置迁移时，首选位置处理器上的映射被清除，
+// 以便从该处理器的下一次访问将导致错误并将页面迁移回其首选位置。
+// 换句话说，只有当页面位于其首选位置时，该页面才会映射到首选位置的处理器上。
+// 因此，当首选位置更改时，如果页面驻留在不同的处理器中，则从新的首选位置中删除到该给定范围内的页面的映射。
+// 请注意，如果首选位置的处理器是GPU，则仅当已为该GPU注册了GPU VA空间并且该页面位于其首选位置时，
+// 才会创建从该GPU到VA范围内的页面映射。
 //
 // If read duplication has been enabled for any pages in this VA range and
 // UvmPreventMigrationRangeGroups has not been called on the range group that
@@ -2283,10 +2459,17 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 // does not clear the state set by this API for those pages. It merely overrides
 // the policies associated with this state until read duplication is disabled
 // for those pages.
+// 如果已为此VA范围内的任何页面启用读取重复，
+// 并且尚未在与这些页面关联的范围组上调用UvmPreventMigrationRangeGroups，
+// 则与UvmPreventMigrationRangeGroups关联的迁移和映射策略讲覆盖上述策略。
+// 请注意，在此VA范围内的任何页面上启动读取复制不会清除此API为这些页面设置的状态。
+// 它只是覆盖与此状态关联的策略，直到为这些页面禁用读取复制。
 //
 // If the preferred location processor is present in the accessed-by list of any
 // of the pages in this VA range, then the migration and mapping policies
 // associated with associated with the accessed-by list.
+// 如果首选位置处理器出现在此VA范围内的任何页面的访问者列表中，
+// 则与访问者列表相关联迁移和映射策略。
 //
 // The state set by this API can be cleared either by calling
 // UvmUnsetPreferredLocation for the same VA range or by calling
@@ -2296,16 +2479,23 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 // not refcounted, i.e. calling this API on a VA range and processor after it
 // has already been called for that same VA range and processor results in a
 // no-op.
+// 此API设置的状态可以通过为相同的VA范围调用UvmUnsetPreferredLocation来清除，
+// 如果处理器是GPU，则可以通过在此处理器上调用UvmUnregisterGpu来清除。
+// 请注意，调用UvmUnregisterGpuVaSpace不会清除此API设置的状态。
+// 对于同一VA范围和同一处理器对该API的多次调用不会被重新计算，
+// 即，在已经为相同的VA范围和处理器调用此API之后，在VA范围和处理器上调用此API会导致无操作。
 //
 // Arguments:
 //     base: (INPUT)
 //         Base address of the virtual address range.
+//         虚拟地址范围的基地址。
 //
 //     length: (INPUT)
 //         Length, in bytes, of the range.
 //
 //     preferredLocationUuid: (INPUT)
 //         UUID of the preferred location.
+//         首选位置的UUID.
 //
 // Errors:
 //     NV_ERR_INVALID_ADDRESS:
@@ -2313,10 +2503,13 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 //         represent a valid UVM allocation, or the range is pageable memory and
 //         the system does not support accessing pageable memory, or the range
 //         does not represent a supported Operating System allocation.
+//         基数和长度未正确对齐，或范围不代表有效的UVM分配，
+//         或范围为可分页内存且系统不支持访问可分页内存，或者该范围不代表支持的操作系统分配。
 //
 //     NV_ERR_OUT_OF_RANGE:
 //         The VA range exceeds the largest virtual address supported by the
 //         specified processor.
+//         VA范围超出了指定处理器支持的最大虚拟地址。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         preferredLocationUuid is neither the UUID of the CPU nor the UUID of
@@ -2327,6 +2520,10 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 //         belongs to a non-migratable range group and another non-fault-capable
 //         GPU is in the accessed-by list of the same page but P2P support
 //         between both GPUs has not been enabled.
+//         preferredLocationUuid既不是CPU的UUID，也不是此进程注册的GPU的UUID。
+//         或者VA范围中的至少一个页面属于不可迁移范围组，并且指定的UUID表示具有故障能力的GPU。
+//         或者preferredLocationUuid是一个不支持故障的GPU的UUID，并且VA范围中的至少一个页面属于不可迁移组，
+//         并且另一个不支持故障的GPU在同一页面的访问者列表中，但两个GPU之间的P2P支持尚未启用。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -2391,10 +2588,14 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 // should be mapped on the specified processor whenever establishing such a
 // mapping is possible. The purpose of this API is to prevent faults from the
 // specified processor to the given VA range as much as possible.
+// 向UVM驱动程序指示给定虚拟地址范围内的页面应该映射到指定的处理器上，只要建立这样的映射是可能的。
+// 此API的目的是尽可能防止从指定处理器到给定VA范围的故障。
 //
 // Both base and length must be aligned to the smallest page size supported by
 // the CPU. The VA range must lie within the largest possible virtual address
 // supported by the specified processor.
+// base和length都必须与CPU支持的最小页面大小对齐。
+// VA范围必须位于指定处理器支持的最大可能虚拟地址内。
 //
 // The virtual address range specified by (base, length) must have been
 // allocated via a call to either UvmAlloc or UvmMemMap, or be supported
@@ -2402,6 +2603,9 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 // at least one GPU in the system supports transparent access to pageable
 // memory, the behavior described below does not take effect and the accessed-by
 // processor list of the VA range does not change.
+// (base,length)指定的虚拟地址范围必须已通过调用UvmAlloc和UvmMemMap分配，或者受支持的系统分配的可分页内存。
+// 如果输入范围是可分页内存，并且系统中至少有一个GPU支持可分页内存的透明访问，则下面描述的行为不会生效，
+// 并且VA范围的访问处理器列表不会改变。
 //
 // If a page in the VA range is not populated or its current location doesn't
 // permit a mapping to be established, then no mapping is created for that page.
@@ -2410,26 +2614,36 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 // possible. If a page in the VA range is associated with a non-migratable range
 // group and the specified processor is a non-fault-capable GPU, then an error
 // is returned if the mapping cannot be established.
+// 如果未填充VA范围内的页面或其当前位置不允许建立映射，则不会为该页面创建映射。
+// 如果VA范围内的页面迁移到新位置，则映射会更新为指向新位置（如果可以建立这样的映射）。
+// 如果VA范围内的页面与不可迁移范围组相关联，并且指定的处理器是无故障能力的GPU，且如果无法建立映射，则返回错误。
 //
 // If the specified processor is a GPU and no GPU VA space has been registered
 // for it or if the registered GPU VA space gets unregistered, then the policies
 // outlined above will take effect the next time a GPU VA space gets registered
 // for this GPU.
+// 如果指定的处理器是GPU，并且没有为其注册GPU VA空间，或者如果已注册的GPU VA空间未注册，
+// 则上策略将在下次为该GPU注册GPU VA空间时生效。
 //
 // If read duplication is enabled in any pages in this VA range, then the page
 // mapping policy associated with read duplication overrides the mapping policy
 // associated with this API.
+// 如果在此VA范围内的任何页面中启用了读取复制，则与读取重复关联的页面映射策略将覆盖与此API关联的映射策略。
 //
 // Similarly, if any page in this VA range has a preferred location, and the
 // UUID of the preferred location is the same as the UUID passed in to this API,
 // then the mapping policy associated with having a preferred location overrides
 // the mapping policy associated with this API.
+// 同样，如果此VA范围内的任何页面具有首选位置，并且首选位置的UUID与传入此API的UUID相同，
+// 则与具有首选位置关联的映射策略将覆盖与此API关联的映射策略。
 //
 // Note that enabling read duplication or setting a preferred location on any
 // pages in this VA range does not clear the state set by this API for those
 // pages. It merely overrides the policies associated with this state until read
 // duplication is disabled on those pages or their preferred location is
 // cleared.
+// 请注意，在此VA范围内的任何页面上启用读取复制或设置首选位置不会清除此API为这些页面设置的状态。
+// 它只是覆盖与此状态关联的策略，直到在这些页面上禁用读取重复或清除他们的首选位置。
 //
 // The state set by this API can be cleared either by calling UvmUnsetAccessedBy
 // for the same VA range and processor or by calling UvmUnregisterGpu on this
@@ -2437,11 +2651,18 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 // non-fault-capable GPU and the VA range has a preferred location set to a peer
 // GPU and peer access is disabled via UvmDisablePeerAccess. Note however that
 // calling UvmUnregisterGpuVaSpace will not clear the state set by this API.
+// 此API设置的状态可以通过为相同的VA范围和处理器调用UvmUnsetAccessedBy来清除，
+// 或者如果处理器是GPU，则在此处理器上调用UvmUnregisterGpu来清除。
+// 如果处理器是无故障能力的GPU并且VA范围的首选位置设置为peer GPU，
+// 并且通过UvmDisablePeerAccess禁用对等访问，他也会被清除。
+// 但是请注意，调用UvmUnregisterGpuVaSpace不会清除此API设置的状态。
 //
 // Multiple calls to this API for the same VA range and the same processor are
 // not refcounted. i.e. calling this API on a VA range and processor after it
 // has already been called for that same VA range and processor results in a
 // no-op.
+// 对于同一VA范围和同一处理器对该API的多次调用不会被重新计算，
+// 即，在已经为相同的VA范围和处理器调用此API之后，在VA范围和处理器上调用此API会导致无操作。
 //
 // Arguments:
 //     base: (INPUT)
@@ -2453,6 +2674,7 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 //     accessedByUuid: (INPUT)
 //         UUID of the processor that should have pages in the the VA range
 //         mapped when possible.
+//         尽可能映射VA范围内的页面的处理器的UUID
 //
 // Errors:
 //     NV_ERR_INVALID_ADDRESS:
@@ -2460,10 +2682,13 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 //         represent a valid UVM allocation, or the range is pageable memory and
 //         the system does not support accessing pageable memory, or the range
 //         does not represent a supported Operating System allocation.
+//         基数和长度未正确对齐，或范围不代表有效的UVM分配，
+//         或范围为可分页内存且系统不支持访问可分页内存，或者该范围不代表支持的操作系统分配
 //
 //     NV_ERR_OUT_OF_RANGE:
 //         The VA range exceeds the largest virtual address supported by the
 //         specified processor.
+//         VA范围超出了指定处理器支持的最大虚拟地址。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         accessedByUuid is neither the UUID of the CPU nor the UUID of a GPU
@@ -2472,10 +2697,14 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 //         non-migratable range group with a preferred location set to another
 //         non-fault-capable GPU that doesn't have P2P support enabled with this
 //         GPU.
+//         accessedByUuid既不是CPU的UUID也不是该进程注册的GPU的UUID。
+//         或者accessedByUuid是不支持故障的GPU的UUID，并且VA范围与不可迁移范围组相关联，
+//         改组的首选位置设置为另一个不支持此GPU的P2P支持的无故障GPU。
 //
 //     NV_ERR_NO_MEMORY:
 //         accessedByUuid is a non-fault-capable GPU and there was insufficient
 //         memory to create the mapping.
+//         accessedByUuid是一个不支持故障的GPU，没有足够的内存来创建映射。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
