@@ -1336,16 +1336,24 @@ NV_STATUS UvmCleanUpZombieResources(void);
 //
 // Allocates memory from which semaphores can be suballocated and used to order
 // work between UVM and CUDA as described in UvmMigrateAsync.
+// 如UvmMigrateAsync中所述，分配内存，
+// 信号量可以从这些内存中进行子分配并用于在UVM和CUDA之间排序工作。
 //
 // The virtual address range specified by (base, length) must have been
 // previously reserved via a call to UvmReserveVa. Both base and length must be
 // aligned to the smallest page size supported by the CPU.
+// (base, length)指定的虚拟地址范围必须事先通过UvmReserveVa保留。...
 //
 // The pages are populated in CPU memory and zero initialized. They are mapped
 // on the CPU and in all registered GPU VA spaces. They will also be mapped in
 // any GPU VA spaces registered after this call. The pages are non-migratable
 // and the GPU mappings are persistent, which makes them safe to access from
 // non-fault-capable HW engines.
+// 这些页面填充在CPU内存中并初始化为零。
+// 它们映射到CPU和所有已注册的GPU VA空间中。
+// 他们还将被映射到在此调用之后注册的任何GPU VA空间。
+// 这些页面是不可迁移的，并且GPU映射是持久的，
+// 这使得他们可以安全地从不具备故障能力地硬件引擎访问。
 //
 // By default, all mappings to this VA range have read, write and atomic access
 // and are uncached. This behavior can be overridden for GPUs by explicitly
@@ -1357,17 +1365,30 @@ NV_STATUS UvmCleanUpZombieResources(void);
 // If a new GPU is registered or a currently registered GPU is unregistered via
 // UvmUnregisterGpu and then re-registered, default mapping and caching
 // attributes will be applied for that GPU.
+// 默认情况下，到此VA范围的所有映射都具有读取，写入和原子访问权限，并且未缓存。
+// 通过此API显式指定映射和缓存属性，可以为此GPU覆盖此行为。
+// 最多一个GPU可以缓存分配，在这种情况下，其他处理器不应写入它。
+// 这些GPU必须已通过UvmRegisterGpu注册。
+// 这些GPU不需要在调用此API时注册GPU VA空间。
+// 不允许覆盖CPU的默认映射和缓存属性。
+// 如果一个新的GPU被注册，或者一个当前注册的GPU通过UvmUnregisterGpu被注销然后重新注册，
+// 默认的映射和缓存属性将被应用到那个GPU。
 //
 // The VA range must lie within the largest possible virtual address supported
 // by all GPUs that currently have a GPU VA space registered for them. Also, if
 // a GPU VA space is registered in the future for a GPU which is unable to map
 // this allocation, that GPU VA space registration will fail.
+// VA范围必须位于当前注册了GPU VA空间的所有GPU支持的最大可能虚拟地址内。
+// 此外，如果将来为无法映射此分配的GPU注册GPU VA空间，则该GPU VA空间注册将失败。
 //
 // The pages in this VA range cannot be associated with range groups, cannot be
 // the target for read duplication, cannot have a preferred location set, and
 // cannot have any accessed-by processors.
+// 此VA范围内的页面不能与范围组关联，不能成为读取复制的目标，
+// 不能有首选位置集，也不能有任何可供处理器访问的页面。
 //
 // The VA range can be unmapped and freed via a call to UvmFree.
+// 可以通过调用UvmFree来取消映射和释放VA范围。
 //
 
 
@@ -1387,21 +1408,26 @@ NV_STATUS UvmCleanUpZombieResources(void);
 //     perGpuAttribs: (INPUT)
 //         List of per GPU mapping and caching attributes. GPUs not in the list
 //         are mapped with default attributes.
+//         每个GPU映射和缓存属性的列表。
+//         不在列表中的GPU使用默认属性进行映射。
 //
 //     gpuAttribsCount: (INPUT)
 //         Number of entries in the perGpuAttribs array.
+//         perGpuAttribs数组中的条目数。
 //
 // Errors:
 //     NV_ERR_UVM_ADDRESS_IN_USE:
 //         The requested address range overlaps with an existing allocation.
+//         请求地址的范围与现有分配重叠。
 //
 //     NV_ERR_INVALID_ADDRESS:
 //         base and length are not properly aligned or the range was not
 //         previously reserved via UvmReserveVa.
+//         base、length未正确对齐或范围之前未通过UvmReserveVa保留。
 //
 //     NV_ERR_OUT_OF_RANGE:
 //         The VA range exceeds the largest virtual address supported by one or
-//         more registered GPUs.
+//         more registered（已注册） GPUs.
 //
 //     NV_ERR_INVALID_DEVICE:
 //         At least one of the UUIDs in the perGpuAttribs list was either not
@@ -1413,6 +1439,8 @@ NV_STATUS UvmCleanUpZombieResources(void);
 //     NV_ERR_INVALID_ARGUMENT:
 //         perGpuAttribs is NULL but gpuAttribsCount is non-zero or vice-versa,
 //         or caching is requested on more than one GPU.
+//         perGpuAttribs为NULL但gpuAttribsCount为零，或者反之亦然，
+//         或者在多个GPU上请求缓存。
 
 
 
@@ -1420,7 +1448,7 @@ NV_STATUS UvmCleanUpZombieResources(void);
 //
 //     NV_ERR_NOT_SUPPORTED:
 //         The current process is not the one which called UvmInitialize, and
-//         UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE was not specified to
+//         UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE was not specified（指定） to
 //         UvmInitialize.
 //
 //     NV_ERR_GENERIC:
@@ -1871,33 +1899,47 @@ NV_STATUS UvmMemMap(void     *base,
 // the user is free to map any number of physical allocations within the VA
 // range (see UvmMapExternalAllocation and UvmMapExternalSparse for more
 // details).
+// 在为外部分配保留的进程地址空间内创建一个VA范围。
+// VA范围在创建时未映射到任何物理分配。
+// 使用此API创建外部VA范围后，用户可以自由映射VA范围内的任意数量的物理分配。
 //
 // The virtual address range, itself, does not impose any restrictions on the
 // alignment of the physical allocations mapped within it. However, both base
 // and length must be aligned to 4K.
+// 虚拟地址范围本身不会对映射在其中的物理分配的对齐方式施加任何限制。
 //
 // The VA range must not overlap with an existing VA range, irrespective of
 // whether the existing range corresponds to a UVM allocation or an external
 // allocation.
+// VA范围不得与现有VA范围重叠，无论现有范围对应于UVM分配还是外部分配。
 //
 // It is allowed (but not required) for the VA range to come from a region
 // previously reserved via UvmReserveVa.
+// 允许（但不是必需）VA范围来自先前通过UvmReserveVa保留的区域。
 //
 // Any mappings created within this VA range are considered non-migratable.
 // Consequently, pages cannot be associated with range groups, cannot be
 // the target for read duplication, cannot have a preferred location set,
 // cannot have any accessed-by processors, and any GPU faults within this range
 // are fatal.
+// 在此范围内创建的任何映射都被视为不可迁移。
+// 因此，页面不能与范围组关联，不能成为读取复制的目标，不能有首选位置集，
+// 不能有任何处理器访问，并且此范围内的任何GPU故障都是致命的。
 //
 // Mappings within this range neither create nor modify any CPU mappings, even
 // if the mappings came from a region previously reserved via UvmReserveVa.
 // This implies that CPU accesses to any mappings within this range will cause
 // a fatal fault if it's not mapped.
+// 此范围内的映射既不创建也不修改任何CPU映射，即使映射来自先前通过UvmReserveVa保留的区域。
+// 这意味着CPU访问此范围内的任何映射如果未映射将导致致命错误。
 //
 // The VA range is not reclaimed until UvmFree is called on it even if it is
 // fully unmapped from all GPUs either explicitly via UvmUnmapExternal or
 // implicitly via APIs such as UvmUnregisterGpu, UvmUnregisterGpuVaSpace,
 // UvmDisablePeerAccess, etc.
+// VA范围在调用UvmFree之前不会被回收，即使它通过UvmUnmapExternal显式
+// 或通过API(UvmUnregisterGpu, UvmUnregisterGpuVaSpace,
+// UvmDisablePeerAccess)隐式的从所有GPU完全取消映射。
 //
 // Arguments:
 //     base: (INPUT)
@@ -1913,6 +1955,7 @@ NV_STATUS UvmMemMap(void     *base,
 //
 //     NV_ERR_UVM_ADDRESS_IN_USE:
 //         The requested address range overlaps with an existing allocation.
+//         请求的地址范围与现有分配重叠。
 //
 //     NV_ERR_NO_MEMORY:
 //         Internal memory allocation failed.
@@ -2198,27 +2241,41 @@ NV_STATUS UvmUnmapExternalAllocation(void                  *base,
 //
 // Creates a special mapping required for dynamic parallelism. The mapping
 // doesn't have any physical backing, it's just a PTE with a special kind.
+// 创建动态并行所需的特殊映射。
+// 映射没有任何物理支持，他只是一个特殊类型的PTE。
 //
 // The virtual address range specified by (base, length) must cover exactly one
 // GPU page, so length must be a page size supported by the GPU and base must be
 // aligned to that page size. The VA range must not overlap with an existing
 // mapping for the GPU. A GPU VA space must have been registered for the GPU and
 // the GPU must support dynamic parallelism.
+// (base, length)指定的虚拟地址范围必须恰好覆盖一个GPU页面，
+// 因此length必须是GPU支持的页面大小，并且base必须与该页面大小对齐。
+// VA范围不得与GPU的现有映射重叠。
+// 必须已为GPU注册了GPU VA空间，并且GPU必须支持动态并行。
 //
 // The mapping is created immediately and not modified until a call to UvmFree
 // Calling UvmFree frees the GPU page table mapping. The range cannot be
 // associated with range groups and any GPU faults within this range are fatal.
 // Also, the pages cannot be the target for read duplication, cannot have a
 // preferred location set, and cannot have any accessed-by processors.
+// 映射会立即创建并且不会修改，直到调用UvmFree。
+// UvmFree释放GPU页表映射。
+// 该范围不能与范围组相关联，并且此范围内的任何GPU故障都是致命的。
+// 此外，这些页面不能是读取复制的目标，不能有首选位置集，也不能有任何处理器访问。
 //
 // Note that calling UvmUnregisterGpuVaSpace will also unmap all mappings
 // created via this API on the GPU that the GPU VA space is associated with.
 // Notably the mappings won't be recreated when the GPU VA space is
 // re-registered, but the range should still be destroyed with UvmFree.
+// 请注意，调用UvmUnregisterGpuVaSpace将取消通过此API在与GPU VA空间关联的GPU上创建的所有映射。
+// 值得注意的是，重新注册GPU VA空间时不会重新创建映射，但仍应使用UvmFree破坏该范围。
 //
 // This call neither creates nor modifies any CPU mappings, even if the VA range
 // came from a region previously reserved via UvmReserveVa. This implies that
 // CPU accesses to this range will cause a fatal fault if it's not mapped.
+// 此调用既不创建也不修改任何CPU映射，即使VA范围来自先前通过UvmReserveVa保留的区域。
+// 这意味着如果没有映射，CPU访问此范围将导致致命错误。
 //
 // Arguments:
 //     base: (INPUT)
@@ -2227,25 +2284,31 @@ NV_STATUS UvmUnmapExternalAllocation(void                  *base,
 //     length: (INPUT)
 //         Length, in bytes, of the range. Must be equal to a page size
 //         supported by the GPU.
+//         必须等于GPU支持的页面大小。
 //
 //     gpuUuid: (INPUT)
 //         UUID of the GPU to map the dynamic parallelism region on.
+//         映射动态并行区域的GPU的UUID。
 //
 // Errors:
 //     NV_ERR_UVM_ADDRESS_IN_USE:
 //         The requested address range overlaps with an existing allocation.
+//         请求的地址范围与现有分配重叠。
 //
 //     NV_ERR_INVALID_ADDRESS:
 //         base is NULL or not aligned to length or length is not a page size
 //         supported by the GPU.
+//         base为NULL或未与length对齐，或者length不是GPU支持的页面大小。
 //
 //     NV_ERR_OUT_OF_RANGE:
 //         The VA range exceeds the largest virtual address supported by one or
 //         more of the specified GPUs.
+//         VA范围超过了一个或多个指定GPU支持的最大虚拟地址。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         The gpuUuid was either not registered, has no GPU VA space
 //         registered for it, or the GPU doesn't support dynamic parallelism.
+//         gpuUuid未注册（没有为其注册的GPU VA空间），或者GPU不支持动态并行。
 //
 //     NV_ERR_NO_MEMORY:
 //         Internal memory allocation failed.
