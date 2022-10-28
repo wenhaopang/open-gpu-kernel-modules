@@ -442,6 +442,10 @@ NV_STATUS UvmRegisterGpuSmc(const NvProcessorUuid *gpuUuid,
 // GPU, the UVM driver frees all resources allocated on the GPU when the GPU
 // was first registered. Any pages on the GPU allocated by the UVM driver will
 // be migrated to CPU memory before the GPU resources are freed.
+// 从UVM注销GPU。
+// 如果这是取消注册此GPU的最后一个进程，
+// UVM驱动程序将释放在GPU首次注册时分配在GPU上的所有资源。
+// 在GPU资源被释放之前，UVM驱动程序分配的GPU上的任何页面都将被迁移到CPU内存。
 //
 // Any GPU VA spaces or channels that were registered on this GPU using
 // UvmRegisterGpuVaSpace or UvmRegisterChannel respectively, will be
@@ -450,6 +454,9 @@ NV_STATUS UvmRegisterGpuSmc(const NvProcessorUuid *gpuUuid,
 // with a non-migratable range group and had this GPU as their preferred
 // location will have their range group association changed to
 // UVM_RANGE_GROUP_ID_NONE.
+// 使用UvmRegisterGpuVaSpace or UvmRegisterChannel在此GPU上注册的任何GPU VA空间或通道都将被取消注册。
+// 通过调用UvmSetPreferredLocation or UvmSetAccessedBy为此GPU设置的任何状态都将被清除。
+// 任何与不可迁移范围组相关联并且将此GPU作为首选位置的页面都将其范围组关联更改为UVM_RANGE_GROUP_ID_NONE。
 //
 
 
@@ -466,6 +473,7 @@ NV_STATUS UvmRegisterGpuSmc(const NvProcessorUuid *gpuUuid,
 // Error codes:
 //     NV_ERR_INVALID_DEVICE:
 //         The GPU referred to by pGpuUuid was not registered by this process.
+//         pGpuUuid引用的GPU没有被这个进程注册。
 //
 //     NV_ERR_GPU_UUID_NOT_FOUND:
 //         The GPU referred to by pGpuUuid was not found.
@@ -1088,7 +1096,12 @@ NV_STATUS UvmSetRangeGroup(void     *base,
 // preferred location is a fault-capable GPU, an error is returned. All the
 // specified range groups must be valid range groups allocated using
 // UvmCreateRangeGroup.
-//
+// 将与指定范围组关联的所有页面迁移到它们的首选位置，
+// 并防止它们在CPU或GPU出现故障时被迁移。
+// 任何未填充的页面都填充在首选位置。
+// 如果任何页面没有首选位置，或者首选位置是具有故障能力的GPU，则返回错误。
+// 所有指定的范围组必须是使用UvmCreateRangeGroup分配的有效范围组。
+// 
 // All pages associated with the specified range groups are mapped at the
 // preferred location and from all the GPUs present in the accessed-by list of
 // those pages, provided establishing a mapping is possible. If any page
@@ -1096,26 +1109,42 @@ NV_STATUS UvmSetRangeGroup(void     *base,
 // set to a non-fault-capable GPU, and another non-fault-capable GPU is in the
 // accessed-by list of the page but P2P support between both GPUs is not
 // enabled, an error is returned.
+// 与指定范围组关联的所有页面都映射到首选位置，
+// 并且来自这些页面的访问者列表中存在的所有GPU，前提是可以建立映射。
+// 如果与任何指定范围组相关联的任何页面的首选位置设置为不支持故障的GPU，
+// 并且另一个不支持的故障的GPU在页面的访问这里列表中，
+// 但两个GPU之间的P2P支持为 未启用，返回错误。
 //
 // GPUs are allowed to map any pages belonging to these range groups on faults.
 // If establishing such a mapping is not possible, the fault is fatal.
+// 允许GPU将属于这些范围组的任何页面映射到故障上。
+// 如果无法建立这样的映射，则故障是致命的。
 //
 // Existing CPU mappings to any pages belonging to these range groups are
 // revoked, even if the pages are in system memory and even if the CPU is in
 // the accessed-by list of those pages. The CPU is not allowed to map these
 // pages on faults even if they are located in system memory and so, CPU faults
 // to these pages are always fatal.
+// 对属于这些范围组的任何页面的现有CPU映射都将被撤销，
+// 即使这些页面在系统内存中并且即使CPU在这些页面的访问者列表中也是如此。
+// 即使这些页面位于系统内存中，CPU也不允许将这些页面映射到故障上，
+// 因此这些页面的CPU故障总是致命的。
 //
 // Multiple calls to UvmPreventMigrationRangeGroups are not refcounted. i.e.
 // calling UvmPreventMigrationRangeGroups on a range group on which
 // UvmPreventMigrationRangeGroups has already been called results in a no-op.
+// 对UvmPreventMigrationRangeGroups的多次调用不会被重新计算。
+// 即在已调用UvmPreventMigrationRangeGroups的范围组上
+// 调用UvmPreventMigrationRangeGroups会导致无操作。
 //
 // Arguments:
 //     rangeGroupIds: (INPUT)
 //         An array of range group IDs.
+//         范围组ID的数组。
 //
 //     numGroupIds: (INPUT)
 //         Number of items in the rangeGroupIds array.
+//         rangeGroupIds数组中的项目数。
 //
 // Errors:
 //     NV_ERR_NO_MEMORY:
@@ -1127,6 +1156,7 @@ NV_STATUS UvmSetRangeGroup(void     *base,
 //     NV_ERR_INVALID_ARGUMENT:
 //         A NULL pointer was passed in for rangeGroupIds or numGroupIds was
 //         zero.
+//         为rangeGroupIds传入了一个NULL指针。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         At least one page in one of the VA ranges associated with these range
@@ -1135,6 +1165,11 @@ NV_STATUS UvmSetRangeGroup(void     *base,
 //         non-fault-capable GPU, and another non-fault-capable GPU is present
 //         in the accessed-by list of a page but P2P support between both GPUs
 //         has not been enabled.
+//         与这些范围组相关联的VA范围之一中的至少一个页面没有首选位置，
+//         或者其首选位置是具有故障能力的GPU。
+//         或者首选位置已设置为不支持故障的GPU，
+//         并且页面的访问者列表中存在另一个不支持故障的GPU，
+//         但尚未启用两个GPU之间的P2P支持。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -2603,6 +2638,8 @@ NV_STATUS UvmSetPreferredLocation(void                  *base,
 // Unsets the preferred location associated with all pages in the specified
 // virtual address range, reverting the migration and mapping policies outlined
 // in UvmSetPreferredLocation.
+// 取消设置与指定VA范围内的所有页面关联的首选位置，
+// 恢复UvmSetPreferredLocation中概述的迁移和映射策略。
 //
 // Both base and length must be aligned to the smallest page size supported by
 // the CPU.
@@ -2613,14 +2650,21 @@ NV_STATUS UvmSetPreferredLocation(void                  *base,
 // at least one GPU in the system supports transparent access to pageable
 // memory, the behavior described below does not take effect and the preferred
 // location of the pages in the given range does not change.
+// VA范围..，或被支持的系统分配的可分页内存。
+// 如果输入范围是可分页内存，并且系统中至少有一个GPU支持对可分页内存的透明访问，
+// 则下述的行为不会生效，并且给定范围内页面的首选位置不会改变。
 //
 // If the VA range is associated with a non-migratable range group, then that
 // association is cleared. i.e. the pages in this VA range have their range
 // group association changed to UVM_RANGE_GROUP_ID_NONE.
+// 如果VA范围与不可迁移的范围组相关联，则清除该关联。
+// 此VA范围内的页面将其范围组关联更改为UVM_RANGE_GROUP_ID_NONE。
 //
 // It is ok to call this API only on a subset of the VA range on which
 // UvmSetPreferredLocation was called or for a VA range on which
 // UvmSetPreferredLocation was never called.
+// 可以仅在调用了UvmSetPreferredLocation的VA范围的子集
+// 或从未调用过UvmSetPreferredLocation的VA范围上调用此API。
 //
 // Arguments:
 //     base: (INPUT)
