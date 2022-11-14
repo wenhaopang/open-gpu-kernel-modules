@@ -5,6 +5,3 @@
 _out/
 .vscode
 nvidia.si4project
-
-/ test1.txt
-/.gitignore
