@@ -226,7 +226,7 @@ long uvm_test_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
         UVM_INFO_PRINT("ioctl %d not found. Did you mean to insmod with uvm_enable_builtin_tests=1?\n", cmd);
         return -EINVAL;
     }
-
+    //printk(KERN_ALERT  "cmd的值为 %d; uvm_enable_builtin_tests的值为 %d\n",cmd,uvm_enable_builtin_tests);
     switch (cmd)
     {
         UVM_ROUTE_CMD_STACK_INIT_CHECK(UVM_TEST_GET_GPU_REF_COUNT,            uvm_test_get_gpu_ref_count);
