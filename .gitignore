@@ -6,7 +6,5 @@ _out/
 .vscode
 nvidia.si4project
 
-python/
-/test_1.txt
-/test1.txt
+/ test1.txt
 /.gitignore
