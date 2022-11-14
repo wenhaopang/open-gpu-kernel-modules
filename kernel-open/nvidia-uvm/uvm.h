@@ -57,7 +57,8 @@
 #define UVM_API_LATEST_REVISION 7
 
 #if !defined(UVM_API_REVISION)
-#error "please define UVM_API_REVISION macro to a desired version number or UVM_API_LATEST_REVISION macro"
+#error                                                                         \
+    "please define UVM_API_REVISION macro to a desired version number or UVM_API_LATEST_REVISION macro"
 #endif
 
 #define UVM_API_REV_IS_AT_MOST(rev) (UVM_API_REVISION <= rev)
@@ -153,7 +154,7 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 //             GPUs do not have hardware support to do it transparently, and the
 //             UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE flag is not specified.
 //             In such cases pageable access from the GPU will be disabled.
-//             仅当系统允许GPU读取/写入系统(CPU)可分页内存，且 
+//             仅当系统允许GPU读取/写入系统(CPU)可分页内存，且
 //             GPU没有硬件支持来透明的执行此操作，且
 //             未指定UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE标志时，
 //             指定此标志才会生效。
@@ -214,8 +215,7 @@ NV_STATUS UvmSetDriverVersion(NvU32 major, NvU32 changelist);
 #if UVM_API_REV_IS_AT_MOST(4)
 NV_STATUS UvmInitialize(UvmFileDescriptor fd);
 #else
-NV_STATUS UvmInitialize(UvmFileDescriptor fd,
-                        NvU64             flags);
+NV_STATUS UvmInitialize(UvmFileDescriptor fd, NvU64 flags);
 #endif
 
 //------------------------------------------------------------------------------
@@ -246,18 +246,13 @@ NV_STATUS UvmDeinitialize(void);
 // UvmReopen
 //
 // Reinitializes the UVM driver after checking for minimal user-mode state.
-// Before calling this function, all GPUs must be unregistered with 
+// Before calling this function, all GPUs must be unregistered with
 // UvmUnregisterGpu() and all allocated VA ranges must be freed with UvmFree().
 // Note that it is not required to release VA ranges that were reserved with
 // UvmReserveVa().
 //
 
-
-
-
-
-
-// UvmReopen() closes the open file returned by UvmGetFileDescriptor() and 
+// UvmReopen() closes the open file returned by UvmGetFileDescriptor() and
 // replaces it with a new open file with the same name.
 //
 // Arguments:
@@ -353,8 +348,9 @@ NV_STATUS UvmIsPageableMemoryAccessSupported(NvBool *pageableMemAccess);
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmIsPageableMemoryAccessSupportedOnGpu(const NvProcessorUuid *gpuUuid,
-                                                  NvBool *pageableMemAccess);
+NV_STATUS
+UvmIsPageableMemoryAccessSupportedOnGpu(const NvProcessorUuid *gpuUuid,
+                                        NvBool *pageableMemAccess);
 
 //------------------------------------------------------------------------------
 // UvmRegisterGpu
@@ -363,6 +359,8 @@ NV_STATUS UvmIsPageableMemoryAccessSupportedOnGpu(const NvProcessorUuid *gpuUuid
 // the UVM driver initializes resources on the GPU and prepares it for CUDA
 // usage. Calling UvmRegisterGpu multiple times on the same GPU from the same
 // process results in an error.
+// 使用UVM注册GPU。如果这是注册此CPU的第一个进程，
+// UVM驱动程序会初始化GPU上的资源并为CUDA使用做好准备。
 //
 // Arguments:
 //     gpuUuid: (INPUT)
@@ -374,18 +372,23 @@ NV_STATUS UvmIsPageableMemoryAccessSupportedOnGpu(const NvProcessorUuid *gpuUuid
 //
 //     NV_ERR_INSUFFICIENT_RESOURCES
 //         Internal client or object allocation failed.
+//         内部客户端或对象分配失败。
 //
 //     NV_ERR_INVALID_DEVICE:
 //         The GPU referred to by pGpuUuid has already been registered by this
 //         process.
+//         pGpuUuid所指的GPU已被此进程注册。
 //
 //         The GPU referred to by pGpuUuid doesn't have a NVLINK2 link to the
 //         CPU but a GPU with such a link has already been registered by this
 //         process, or vice-versa.
+//         pGpuUuid所指的GPU没有到CPU的NVLINK2链接，但具有这种链接的GPU已被此进程注册。
 //
 //     NV_ERR_NOT_SUPPORTED:
 //         The GPU referred to by pGpuUuid is not supported by UVM or the GPU
 //         is configured to run in virtualization mode without SRIOV support.
+//         pGpuUuid所指的GPU不受UVM支持，
+//         或者GPU配置为在没有SRIOV支持的虚拟化模式下运行。
 //
 //     NV_ERR_GPU_UUID_NOT_FOUND:
 //         The GPU referred to by pGpuUuid was not found.
@@ -393,15 +396,18 @@ NV_STATUS UvmIsPageableMemoryAccessSupportedOnGpu(const NvProcessorUuid *gpuUuid
 //     NV_ERR_PAGE_TABLE_NOT_AVAIL:
 //         The system requires that the UVM file descriptor be associated with a
 //         single process, and that process has exited.
+//         系统要求UVM文件描述符与单个进程关联，并且该进程已退出。
 //
 //     NV_ERR_INVALID_ARGUMENT:
 //         OS state required to register the GPU is not present.
+//         注册GPU所需的操作系统状态不存在。
 //
 //     NV_ERR_OBJECT_NOT_FOUND:
 //         OS state required to register the GPU is not present.
 //
 //     NV_ERR_INVALID_STATE:
 //         OS state required to register the GPU is malformed.
+//         注册GPU所需的操作系统状态格式不正确。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
@@ -454,17 +460,12 @@ NV_STATUS UvmRegisterGpuSmc(const NvProcessorUuid *gpuUuid,
 // with a non-migratable range group and had this GPU as their preferred
 // location will have their range group association changed to
 // UVM_RANGE_GROUP_ID_NONE.
-// 使用UvmRegisterGpuVaSpace or UvmRegisterChannel在此GPU上注册的任何GPU VA空间或通道都将被取消注册。
-// 通过调用UvmSetPreferredLocation or UvmSetAccessedBy为此GPU设置的任何状态都将被清除。
+// 使用UvmRegisterGpuVaSpace or UvmRegisterChannel在此GPU上注册的任何GPU
+// VA空间或通道都将被取消注册。
+// 通过调用UvmSetPreferredLocation or
+// UvmSetAccessedBy为此GPU设置的任何状态都将被清除。
 // 任何与不可迁移范围组相关联并且将此GPU作为首选位置的页面都将其范围组关联更改为UVM_RANGE_GROUP_ID_NONE。
 //
-
-
-
-
-
-
-
 
 // Arguments:
 //     gpuUuid: (INPUT)
@@ -492,22 +493,33 @@ NV_STATUS UvmUnregisterGpu(const NvProcessorUuid *gpuUuid);
 // VA space can be registered for a given GPU at a time. Once a VA space has
 // been registered for a GPU, all page table updates for that VA space on that
 // GPU will be managed by the UVM driver.
+// 注册GPU的VA空间以用于UVM。
+// 一次只能为给定的GPU注册一个GPU VA空间。
+// 一旦为GPU注册了VA空间，该GPU上该VA空间的所有页表更新都将由UVM驱动程序管理。
 //
 // The GPU must have been registered using UvmRegisterGpu prior to making this
 // call.
+// 在进行此调用之前，必须使用UvmRegisterGpu注册GPU。
 //
 // On systems with GPUs that support transparent access to pageable memory, this
 // feature is enabled per GPU VA space. This setting must match for all
 // registered GPU VA spaces.
+// 在具有支持透明访问可分页内存的GPU系统上，每个GPU VA空间启用此功能。
+// 此设置必须与所有已注册的GPU VA空间匹配。
 //
 // Any VA ranges that were allocated using UvmAllocSemaphorePool will be mapped
 // on this GPU with the mapping and caching attributes as specified during that
 // call, or with default attributes if none were specified.
+// 使用UvmAllocSemaphorePool分配的任何VA范围
+// 都将使用该调用期间指定的映射和缓存属性映射到此GPU。
+// 如果未指定，则使用默认属性。
 //
 // Any VA ranges that had a preferred location set to this GPU will be mapped on
 // this GPU only if this GPU is not fault-capable and the VA range belongs to a
 // non-migratable range group. If such a mapping cannot be established, an error
 // is returned.
+// 仅当此GPU不具备故障能力且VA范围属于不可迁移范围组时，
+// 任何已将首选位置设置为此GPU的VA范围才会映射到此GPU。
 //
 // Any VA ranges which have accessed-by set for this GPU will be mapped on this
 // GPU. If that VA range resides in a PCIe peer GPU's memory and P2P support
@@ -517,13 +529,22 @@ NV_STATUS UvmUnregisterGpu(const NvProcessorUuid *gpuUuid);
 // fault-capable GPU, then a mapping will not be established.  If this is a
 // non-fault-capable GPU and a mapping cannot be established, then an error is
 // returned.
+// 已为此GPU设置访问权限的任何VA范围都将映射到此GPU。
+// 如果该VA范围位于PCIe对等GPU的内存中，
+// 并且两个GPU之间的P2P支持尚未通过UvmEnablePeerAccess，则不会建立映射。
+// 此外，如果为此VA范围启用了读取复制，或者其首选位置设置为此GPU，
+// 并且此GPU是具有故障能力的GPU，则不会建立映射。
+// 如果这是一个无故障能力的GPU并且无法建立映射，则返回错误。
 //
 // If P2P support has been enabled between this GPU and another GPU that also
 // has a GPU VA space registered, then the two GPU VA spaces must support the
 // same set of page sizes for GPU mappings. Otherwise, an error is returned.
+// 如果在此GPU和另一个也注册了GPU VA空间的GPU之间启用了P2P支持，
+// 那么两个GPU VA空间必须支持GPU映射的相同页面大小集。
 //
 // Note that all the aforementioned VA ranges must lie within the largest
 // possible virtual address supported by this GPU.
+// 请注意，所有上述VA范围必须位于此GPU支持的最大可能的虚拟地址内。
 //
 // Arguments:
 //     gpuUuid: (INPUT)
@@ -546,6 +567,10 @@ NV_STATUS UvmUnregisterGpu(const NvProcessorUuid *gpuUuid);
 //         GPU that is present in the accessed-by list of a VA range that
 //         resides on another non-fault-capable GPU, and P2P support between
 //         both GPUs is not enabled.
+//         gpuUuid引用的GPU未注册或已为此GPU注册了VA空间。
+//         或者这是一个不具备故障能力的GPU，
+//         它位于另一个不具备故障能力的GPU上的VA范围的访问列表中，
+//         并且两个GPU之间的P2P支持未启用。
 //
 //     NV_ERR_OTHER_DEVICE_FOUND:
 //         The UUID does not match the UUID of the device that is associated
@@ -558,14 +583,21 @@ NV_STATUS UvmUnregisterGpu(const NvProcessorUuid *gpuUuid);
 //         not match the value in previously-registered GPU VA spaces, or that
 //         value is set but pageable memory access has been disabled via
 //         UvmInitialize.
+//         VA空间最初分配有与UVM不兼容的标志。
+//         这包括以下情况：启用对给定GPU VA空间的可分页内存的透明访问的设置值
+//         与先前注册的GPU VA空间中的值不匹配，
+//         或者该值已设置但可分页内存访问已通过UvmInitialize禁用。
 //
 //     NV_ERR_NOT_COMPATIBLE:
 //         The GPU referred to by gpuUuid has P2P support enabled with another
 //         GPU and the set of page sizes supported by the specified VA space
 //         doesn't match that of the VA space registered on the peer GPU.
+//         gpuUuid所指定的GPU启用了另一个GPU的P2P支持，
+//         并且指定的VA空间支持的页面大小集与对等GPU上注册的VA空间的页面大小不匹配。
 //
 //     NV_ERR_INVALID_ARGUMENT:
 //         Some problem with the platform specific arguments was detected.
+//         检测到平台特定参数的一些问题。
 //
 //     NV_ERR_NOT_SUPPORTED:
 //         A GPU VA space has already been registered using a different UVM file
@@ -577,20 +609,23 @@ NV_STATUS UvmUnregisterGpu(const NvProcessorUuid *gpuUuid);
 //     NV_ERR_PAGE_TABLE_NOT_AVAIL:
 //         The system requires that the UVM file descriptor be associated with a
 //         single process, and that process has exited.
+//         系统要求UVM文件描述符与单个进程相关联，并且该进程已退出。
 //
 //     NV_ERR_GENERIC:
 //         Unexpected error. We try hard to avoid returning this error code,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmRegisterGpuVaSpace(const NvProcessorUuid             *gpuUuid,
-                                const UvmGpuVaSpacePlatformParams *platformParams);
+NV_STATUS
+UvmRegisterGpuVaSpace(const NvProcessorUuid *gpuUuid,
+                      const UvmGpuVaSpacePlatformParams *platformParams);
 
 //------------------------------------------------------------------------------
 // UvmUnregisterGpuVaSpace
 //
 // Unregisters the GPU VA space that was previously registered via a call to
 // UvmRegisterGpuVaSpace.
+// Unregisters注销
 //
 // Any page table mappings created by UVM on that GPU for that VA space will be
 // unmapped. Any channels that were registered on this GPU using
@@ -784,10 +819,9 @@ NV_STATUS UvmDisablePeerAccess(const NvProcessorUuid *gpuUuidA,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmRegisterChannel(const NvProcessorUuid          *gpuUuid,
+NV_STATUS UvmRegisterChannel(const NvProcessorUuid *gpuUuid,
                              const UvmChannelPlatformParams *platformParams,
-                             void                           *base,
-                             NvLength                        length);
+                             void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmUnregisterChannel
@@ -849,7 +883,8 @@ NV_STATUS UvmUnregisterChannel(const UvmChannelPlatformParams *platformParams);
 // The requested alignment must be either a power of two that is at least the
 // smallest CPU page size or left zero to indicate default alignment which is
 // the smallest CPU page size.
-// 请求的对齐必须是 至少是最小CPU页面大小的2的幂，或者留为0以指示默认对齐是最小的CPU页面大小。
+// 请求的对齐必须是
+// 至少是最小CPU页面大小的2的幂，或者留为0以指示默认对齐是最小的CPU页面大小。
 //
 // The length of the VA reservation must be a multiple of the smallest CPU page
 // size.
@@ -929,11 +964,8 @@ NV_STATUS UvmUnregisterChannel(const UvmChannelPlatformParams *platformParams);
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmReserveVa(void     **base,
-                       NvLength   length,
-                       void      *minVa,
-                       void      *maxVa,
-                       NvLength   alignment);
+NV_STATUS UvmReserveVa(void **base, NvLength length, void *minVa, void *maxVa,
+                       NvLength alignment);
 
 //------------------------------------------------------------------------------
 // UvmReleaseVa
@@ -966,8 +998,7 @@ NV_STATUS UvmReserveVa(void     **base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmReleaseVa(void     *base,
-                       NvLength  length);
+NV_STATUS UvmReleaseVa(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmCreateRangeGroup
@@ -1082,9 +1113,7 @@ NV_STATUS UvmDestroyRangeGroup(NvU64 rangeGroupId);
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmSetRangeGroup(void     *base,
-                           NvLength  length,
-                           NvU64     rangeGroupId);
+NV_STATUS UvmSetRangeGroup(void *base, NvLength length, NvU64 rangeGroupId);
 
 //------------------------------------------------------------------------------
 // UvmPreventMigrationRangeGroups
@@ -1101,7 +1130,7 @@ NV_STATUS UvmSetRangeGroup(void     *base,
 // 任何未填充的页面都填充在首选位置。
 // 如果任何页面没有首选位置，或者首选位置是具有故障能力的GPU，则返回错误。
 // 所有指定的范围组必须是使用UvmCreateRangeGroup分配的有效范围组。
-// 
+//
 // All pages associated with the specified range groups are mapped at the
 // preferred location and from all the GPUs present in the accessed-by list of
 // those pages, provided establishing a mapping is possible. If any page
@@ -1177,7 +1206,7 @@ NV_STATUS UvmSetRangeGroup(void     *base,
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmPreventMigrationRangeGroups(const NvU64 *rangeGroupIds,
-                                         NvLength     numGroupIds);
+                                         NvLength numGroupIds);
 
 //------------------------------------------------------------------------------
 // UvmAllowMigrationRangeGroups
@@ -1212,7 +1241,7 @@ NV_STATUS UvmPreventMigrationRangeGroups(const NvU64 *rangeGroupIds,
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmAllowMigrationRangeGroups(const NvU64 *rangeGroupIds,
-                                       NvLength     numGroupIds);
+                                       NvLength numGroupIds);
 
 //------------------------------------------------------------------------------
 // UvmAlloc
@@ -1291,12 +1320,10 @@ NV_STATUS UvmAllowMigrationRangeGroups(const NvU64 *rangeGroupIds,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmAlloc(void                  *base,
-                   NvLength               length,
+NV_STATUS UvmAlloc(void *base, NvLength length,
                    const NvProcessorUuid *preferredLocationUuid,
                    const NvProcessorUuid *accessedByUuids,
-                   NvLength               accessedByCount,
-                   NvU64                  rangeGroupId);
+                   NvLength accessedByCount, NvU64 rangeGroupId);
 
 //------------------------------------------------------------------------------
 // UvmFree
@@ -1328,9 +1355,12 @@ NV_STATUS UvmAlloc(void                  *base,
 // 如果VA范围来自先前通过UvmReserveVa保留的区域，则此VA范围将恢复为保留状态。
 //
 // Note that the reason this API does not take a length argument is because this
-// API is modeled after（modeled after仿照） the C library free() API. Partial（部分的） frees are not allowed
-// and the UVM usermode layer tracks（跟踪） the base and length of each allocated
-// range, so having a length argument would be redundant. This also eliminates（消除）
+// API is modeled after（modeled after仿照） the C library free() API.
+// Partial（部分的） frees are not allowed
+// and the UVM usermode layer tracks（跟踪） the base and length of each
+// allocated
+// range, so having a length argument would be redundant. This also
+// eliminates（消除）
 // the need for the caller to track the length of each allocation.
 //
 // Arguments:
@@ -1340,7 +1370,8 @@ NV_STATUS UvmAlloc(void                  *base,
 //
 // Errors:
 //     NV_ERR_INVALID_ADDRESS:
-//         base does not match an address that was passed into（was passed into被传递到） a UVM allocator
+//         base does not match an address that was passed into（was passed
+//         into被传递到） a UVM allocator
 //         API.
 //
 //     NV_ERR_GENERIC:
@@ -1426,13 +1457,6 @@ NV_STATUS UvmCleanUpZombieResources(void);
 // 可以通过调用UvmFree来取消映射和释放VA范围。
 //
 
-
-
-
-
-
-
-
 // Arguments:
 //     base: (INPUT)
 //         Base address of the virtual address range.
@@ -1477,13 +1501,11 @@ NV_STATUS UvmCleanUpZombieResources(void);
 //         perGpuAttribs为NULL但gpuAttribsCount为零，或者反之亦然，
 //         或者在多个GPU上请求缓存。
 
-
-
-
 //
 //     NV_ERR_NOT_SUPPORTED:
 //         The current process is not the one which called UvmInitialize, and
-//         UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE was not specified（指定） to
+//         UVM_INIT_FLAGS_MULTI_PROCESS_SHARING_MODE was not specified（指定）
+//         to
 //         UvmInitialize.
 //
 //     NV_ERR_GENERIC:
@@ -1491,10 +1513,9 @@ NV_STATUS UvmCleanUpZombieResources(void);
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmAllocSemaphorePool(void                          *base,
-                                NvLength                       length,
+NV_STATUS UvmAllocSemaphorePool(void *base, NvLength length,
                                 const UvmGpuMappingAttributes *perGpuAttribs,
-                                NvLength                       gpuAttribsCount);
+                                NvLength gpuAttribsCount);
 
 //------------------------------------------------------------------------------
 // UvmMigrate
@@ -1559,7 +1580,8 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // 如果VA范围内的任何页面的访问者列表不为空，
 // 则所有适当的处理器到这些页面的映射被更新以引用新的位置，如果建立这样的映射是可能的。
 // 否则，这些映射将被清除。
-// 请注意，在这种情况下，软件管理的可分页内存不支持迁移MAP_SHARED, file-backed或PROT_NONE映射。
+// 请注意，在这种情况下，软件管理的可分页内存不支持迁移MAP_SHARED,
+// file-backed或PROT_NONE映射。
 //
 // If any pages in the given VA range are associated with a range group which
 // has been made non-migratable via UvmPreventMigrationRangeGroups, then those
@@ -1578,11 +1600,11 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 // present, intact with only its mapping changed to read-only if it wasn't
 // already mapped that way.
 // 如果在VA范围内的任何页面上启用了读取复制，则这些页面在目标处理器处被重复读取，
-// 而源副本（如果存在）则保持不变，只有其映射更改为只读（如果尚未映射）方法。 
+// 而源副本（如果存在）则保持不变，只有其映射更改为只读（如果尚未映射）方法。
 //
 // Pages in the VA range are migrated even if their preferred location is set to
 // a processor other than the destination processor.
-// 即使将首选位置设置为目标处理器以外的处理器，也会迁移VA范围内的页面。 
+// 即使将首选位置设置为目标处理器以外的处理器，也会迁移VA范围内的页面。
 //
 // If the accessed-by list of any of the pages in the VA range is not empty,
 // then mappings to those pages from all the appropriate processors are updated
@@ -1641,7 +1663,8 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 //         a GPU with a GPU VA space registered for it. Or destinationUuid is a
 //         non-fault-capable GPU, and that GPU is present in the accessed-by
 //         list of the VA range but that GPU is not the preferred location.
-//         destinationUuid不代表一个有效的处理器，例如一个为其注册了GPU VA空间的CPU或GPU。
+//         destinationUuid不代表一个有效的处理器，例如一个为其注册了GPU
+//         VA空间的CPU或GPU。
 //         或者，destinationUuid是无故障能力的GPU，并且该GPU存在于VA范围的访问者列表中，但该GPU不是首选位置。
 //
 //     NV_ERR_NO_MEMORY:
@@ -1668,14 +1691,12 @@ NV_STATUS UvmAllocSemaphorePool(void                          *base,
 //
 //------------------------------------------------------------------------------
 #if UVM_API_REV_IS_AT_MOST(5)
-NV_STATUS UvmMigrate(void                  *base,
-                     NvLength               length,
+NV_STATUS UvmMigrate(void *base, NvLength length,
                      const NvProcessorUuid *destinationUuid);
 #else
-NV_STATUS UvmMigrate(void                  *base,
-                     NvLength               length,
+NV_STATUS UvmMigrate(void *base, NvLength length,
                      const NvProcessorUuid *destinationUuid,
-                     NvU32                  preferredCpuMemoryNode);
+                     NvU32 preferredCpuMemoryNode);
 #endif
 
 //------------------------------------------------------------------------------
@@ -1759,18 +1780,14 @@ NV_STATUS UvmMigrate(void                  *base,
 //
 //------------------------------------------------------------------------------
 #if UVM_API_REV_IS_AT_MOST(5)
-NV_STATUS UvmMigrateAsync(void                  *base,
-                          NvLength               length,
+NV_STATUS UvmMigrateAsync(void *base, NvLength length,
                           const NvProcessorUuid *destinationUuid,
-                          void                  *semaphoreAddress,
-                          NvU32                  semaphorePayload);
+                          void *semaphoreAddress, NvU32 semaphorePayload);
 #else
-NV_STATUS UvmMigrateAsync(void                  *base,
-                          NvLength               length,
+NV_STATUS UvmMigrateAsync(void *base, NvLength length,
                           const NvProcessorUuid *destinationUuid,
-                          NvU32                  preferredCpuMemoryNode,
-                          void                  *semaphoreAddress,
-                          NvU32                  semaphorePayload);
+                          NvU32 preferredCpuMemoryNode, void *semaphoreAddress,
+                          NvU32 semaphorePayload);
 #endif
 
 //------------------------------------------------------------------------------
@@ -1822,7 +1839,7 @@ NV_STATUS UvmMigrateAsync(void                  *base,
 //         range group was non-migratable.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmMigrateRangeGroup(NvU64                  rangeGroupId,
+NV_STATUS UvmMigrateRangeGroup(NvU64 rangeGroupId,
                                const NvProcessorUuid *destinationUuid);
 
 //------------------------------------------------------------------------------
@@ -1863,8 +1880,7 @@ NV_STATUS UvmMigrateRangeGroup(NvU64                  rangeGroupId,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmPopulatePageable(void     *base,
-                              NvLength  length);
+NV_STATUS UvmPopulatePageable(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmMemMap
@@ -1875,20 +1891,21 @@ NV_STATUS UvmPopulatePageable(void     *base,
 // 该映射对任何有故障能力的CPU和GPU的访问都是有效的。
 //
 // The virtual address range specified by (base, length) must have been
-// previously reserved保留 via a call to UvmReserveVa. Both base and length must be
+// previously reserved保留 via a call to UvmReserveVa. Both base and length must
+// be
 // aligned to the smallest page size supported by the CPU. Note that using a
 // larger alignment for base and length, such as the largest GPU page size, may
 // result in higher performance.
 // 虚拟地址范围由base和length来确定，必须通过call或者UvmReserveVa提前保留，
-// base和length必须与CPU所支持的最小的page大小对其。
-// 值得注意的是使用一个更大的技术和长度对其，比如使用GPU的page大小能产生更好的性能。 
+// base和length必须与CPU所支持的最小的page大小对齐。
+// 值得注意的是使用一个更大的技术和长度对齐，比如使用GPU的page大小能产生更好的性能。
 //
 // The pages in the VA range are zero initialized. They are typically populated
 // on demand, for example, through CPU or GPU faults.
 // VA范围内的页面初始化为零，他们通常按需填充，例如，通过CPU或GPU故障。
 //
 // The VA range can be unmapped and freed via a call to UvmFree.
-// VA范围可以通过call或UvmFree进行unmapp和free
+// VA范围可以通过调用UvmFree进行unmapp和free
 //
 // Arguments:
 //     base: (INPUT)
@@ -1922,8 +1939,7 @@ NV_STATUS UvmPopulatePageable(void     *base,
 //         意外的错误，我们将尽量避免返回此错误代码，因为它的信息量不是很大。
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmMemMap(void     *base,
-                    NvLength  length);
+NV_STATUS UvmMemMap(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmCreateExternalRange
@@ -1996,8 +2012,7 @@ NV_STATUS UvmMemMap(void     *base,
 //         Internal memory allocation failed.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmCreateExternalRange(void     *base,
-                                 NvLength  length);
+NV_STATUS UvmCreateExternalRange(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmMapExternalAllocation
@@ -2141,12 +2156,11 @@ NV_STATUS UvmCreateExternalRange(void     *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmMapExternalAllocation(void                              *base,
-                                   NvLength                           length,
-                                   NvLength                           offset,
-                                   const UvmGpuMappingAttributes     *perGpuAttribs,
-                                   NvLength                           gpuAttribsCount,
-                                   const UvmAllocationPlatformParams *platformParams);
+NV_STATUS
+UvmMapExternalAllocation(void *base, NvLength length, NvLength offset,
+                         const UvmGpuMappingAttributes *perGpuAttribs,
+                         NvLength gpuAttribsCount,
+                         const UvmAllocationPlatformParams *platformParams);
 
 //------------------------------------------------------------------------------
 // UvmMapExternalSparse
@@ -2210,8 +2224,7 @@ NV_STATUS UvmMapExternalAllocation(void                              *base,
 //     NV_ERR_NO_MEMORY:
 //         Internal memory allocation failed.
 //------------------------------------------------------------------------------
-NV_STATUS UvmMapExternalSparse(void                  *base,
-                               NvLength               length,
+NV_STATUS UvmMapExternalSparse(void *base, NvLength length,
                                const NvProcessorUuid *gpuUuid);
 
 //------------------------------------------------------------------------------
@@ -2262,13 +2275,12 @@ NV_STATUS UvmMapExternalSparse(void                  *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmUnmapExternal(void                  *base,
-                           NvLength               length,
+NV_STATUS UvmUnmapExternal(void *base, NvLength length,
                            const NvProcessorUuid *gpuUuid);
 
 // TODO: Bug 2732305: Remove this declaration when the new external APIs have
 //       been implemented.
-NV_STATUS UvmUnmapExternalAllocation(void                  *base,
+NV_STATUS UvmUnmapExternalAllocation(void *base,
                                      const NvProcessorUuid *gpuUuid);
 
 //------------------------------------------------------------------------------
@@ -2303,8 +2315,10 @@ NV_STATUS UvmUnmapExternalAllocation(void                  *base,
 // created via this API on the GPU that the GPU VA space is associated with.
 // Notably the mappings won't be recreated when the GPU VA space is
 // re-registered, but the range should still be destroyed with UvmFree.
-// 请注意，调用UvmUnregisterGpuVaSpace将取消通过此API在与GPU VA空间关联的GPU上创建的所有映射。
-// 值得注意的是，重新注册GPU VA空间时不会重新创建映射，但仍应使用UvmFree破坏该范围。
+// 请注意，调用UvmUnregisterGpuVaSpace将取消通过此API在与GPU
+// VA空间关联的GPU上创建的所有映射。
+// 值得注意的是，重新注册GPU
+// VA空间时不会重新创建映射，但仍应使用UvmFree破坏该范围。
 //
 // This call neither creates nor modifies any CPU mappings, even if the VA range
 // came from a region previously reserved via UvmReserveVa. This implies that
@@ -2353,8 +2367,7 @@ NV_STATUS UvmUnmapExternalAllocation(void                  *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmMapDynamicParallelismRegion(void                  *base,
-                                         NvLength               length,
+NV_STATUS UvmMapDynamicParallelismRegion(void *base, NvLength length,
                                          const NvProcessorUuid *gpuUuid);
 
 //------------------------------------------------------------------------------
@@ -2430,8 +2443,7 @@ NV_STATUS UvmMapDynamicParallelismRegion(void                  *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEnableReadDuplication(void     *base,
-                                   NvLength  length);
+NV_STATUS UvmEnableReadDuplication(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmDisableReadDuplication
@@ -2480,8 +2492,7 @@ NV_STATUS UvmEnableReadDuplication(void     *base,
 //         because it is not very informative.
 //
 //-----------------------------------------------------------------------------
-NV_STATUS UvmDisableReadDuplication(void     *base,
-                                    NvLength  length);
+NV_STATUS UvmDisableReadDuplication(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmSetPreferredLocation
@@ -2546,7 +2557,8 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 // 以便从该处理器的下一次访问将导致错误并将页面迁移回其首选位置。
 // 换句话说，只有当页面位于其首选位置时，该页面才会映射到首选位置的处理器上。
 // 因此，当首选位置更改时，如果页面驻留在不同的处理器中，则从新的首选位置中删除到该给定范围内的页面的映射。
-// 请注意，如果首选位置的处理器是GPU，则仅当已为该GPU注册了GPU VA空间并且该页面位于其首选位置时，
+// 请注意，如果首选位置的处理器是GPU，则仅当已为该GPU注册了GPU
+// VA空间并且该页面位于其首选位置时，
 // 才会创建从该GPU到VA范围内的页面映射。
 //
 // If read duplication has been enabled for any pages in this VA range and
@@ -2628,8 +2640,7 @@ NV_STATUS UvmDisableReadDuplication(void     *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmSetPreferredLocation(void                  *base,
-                                  NvLength               length,
+NV_STATUS UvmSetPreferredLocation(void *base, NvLength length,
                                   const NvProcessorUuid *preferredLocationUuid);
 
 //------------------------------------------------------------------------------
@@ -2685,8 +2696,7 @@ NV_STATUS UvmSetPreferredLocation(void                  *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmUnsetPreferredLocation(void     *base,
-                                    NvLength  length);
+NV_STATUS UvmUnsetPreferredLocation(void *base, NvLength length);
 
 //------------------------------------------------------------------------------
 // UvmSetAccessedBy
@@ -2729,7 +2739,8 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 // for it or if the registered GPU VA space gets unregistered, then the policies
 // outlined above will take effect the next time a GPU VA space gets registered
 // for this GPU.
-// 如果指定的处理器是GPU，并且没有为其注册GPU VA空间，或者如果已注册的GPU VA空间未注册，
+// 如果指定的处理器是GPU，并且没有为其注册GPU VA空间，或者如果已注册的GPU
+// VA空间未注册，
 // 则上策略将在下次为该GPU注册GPU VA空间时生效。
 //
 // If read duplication is enabled in any pages in this VA range, then the page
@@ -2818,8 +2829,7 @@ NV_STATUS UvmUnsetPreferredLocation(void     *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmSetAccessedBy(void                  *base,
-                           NvLength               length,
+NV_STATUS UvmSetAccessedBy(void *base, NvLength length,
                            const NvProcessorUuid *accessedByUuid);
 
 //------------------------------------------------------------------------------
@@ -2875,8 +2885,7 @@ NV_STATUS UvmSetAccessedBy(void                  *base,
 //         because it is not very informative.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmUnsetAccessedBy(void                  *base,
-                             NvLength               length,
+NV_STATUS UvmUnsetAccessedBy(void *base, NvLength length,
                              const NvProcessorUuid *accessedByUuid);
 
 //------------------------------------------------------------------------------
@@ -3070,8 +3079,7 @@ unsigned UvmDebugVersion(void);
 //         internal resources are blocked by other threads.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmDebugCreateSession(unsigned         pid,
-                                UvmDebugSession *session);
+NV_STATUS UvmDebugCreateSession(unsigned pid, UvmDebugSession *session);
 
 //------------------------------------------------------------------------------
 // UvmDebugDestroySession
@@ -3137,9 +3145,8 @@ NV_STATUS UvmDebugDestroySession(UvmDebugSession session);
 //         the debug session is in use by some other thread.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmDebugCountersEnable(UvmDebugSession   session,
-                                 UvmCounterConfig *config,
-                                 unsigned          count);
+NV_STATUS UvmDebugCountersEnable(UvmDebugSession session,
+                                 UvmCounterConfig *config, unsigned count);
 
 //------------------------------------------------------------------------------
 // UvmDebugGetCounterHandle
@@ -3175,11 +3182,10 @@ NV_STATUS UvmDebugCountersEnable(UvmDebugSession   session,
 //         debug session is in use by some other thread.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmDebugGetCounterHandle(UvmDebugSession  session,
-                                   UvmCounterScope  scope,
-                                   UvmCounterName   counterName,
-                                   NvProcessorUuid  gpu,
-                                   NvUPtr          *pCounterHandle);
+NV_STATUS UvmDebugGetCounterHandle(UvmDebugSession session,
+                                   UvmCounterScope scope,
+                                   UvmCounterName counterName,
+                                   NvProcessorUuid gpu, NvUPtr *pCounterHandle);
 
 //------------------------------------------------------------------------------
 // UvmDebugGetCounterVal
@@ -3204,9 +3210,9 @@ NV_STATUS UvmDebugGetCounterHandle(UvmDebugSession  session,
 //         one of the specified handles is invalid.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmDebugGetCounterVal(UvmDebugSession     session,
-                                NvUPtr             *counterHandleArray,
-                                unsigned            handleCount,
+NV_STATUS UvmDebugGetCounterVal(UvmDebugSession session,
+                                NvUPtr *counterHandleArray,
+                                unsigned handleCount,
                                 unsigned long long *counterValArray);
 
 //------------------------------------------------------------------------------
@@ -3254,11 +3260,10 @@ NV_STATUS UvmDebugGetCounterVal(UvmDebugSession     session,
 //         queue create call is made on a session after the target dies.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventQueueCreate(UvmDebugSession        sessionHandle,
-                              UvmEventQueueHandle   *queueHandle,
-                              NvS64                  queueSize,
-                              NvU64                  notificationCount,
-                              UvmEventTimeStampType  timeStampType);
+NV_STATUS UvmEventQueueCreate(UvmDebugSession sessionHandle,
+                              UvmEventQueueHandle *queueHandle, NvS64 queueSize,
+                              NvU64 notificationCount,
+                              UvmEventTimeStampType timeStampType);
 
 //------------------------------------------------------------------------------
 // UvmEventQueueDestroy
@@ -3289,7 +3294,7 @@ NV_STATUS UvmEventQueueCreate(UvmDebugSession        sessionHandle,
 //         internal resources are blocked by other threads.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventQueueDestroy(UvmDebugSession     sessionHandle,
+NV_STATUS UvmEventQueueDestroy(UvmDebugSession sessionHandle,
                                UvmEventQueueHandle queueHandle);
 
 //------------------------------------------------------------------------------
@@ -3328,9 +3333,9 @@ NV_STATUS UvmEventQueueDestroy(UvmDebugSession     sessionHandle,
 //         internal resources are blocked by other threads.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventEnable(UvmDebugSession     sessionHandle,
+NV_STATUS UvmEventEnable(UvmDebugSession sessionHandle,
                          UvmEventQueueHandle queueHandle,
-                         unsigned            eventTypeFlags);
+                         unsigned eventTypeFlags);
 
 //------------------------------------------------------------------------------
 // UvmEventDisable
@@ -3368,9 +3373,9 @@ NV_STATUS UvmEventEnable(UvmDebugSession     sessionHandle,
 //         internal resources are blocked by other threads.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventDisable(UvmDebugSession     sessionHandle,
+NV_STATUS UvmEventDisable(UvmDebugSession sessionHandle,
                           UvmEventQueueHandle queueHandle,
-                          unsigned            eventTypeFlags);
+                          unsigned eventTypeFlags);
 
 //------------------------------------------------------------------------------
 // UvmEventWaitOnQueueHandles
@@ -3402,9 +3407,8 @@ NV_STATUS UvmEventDisable(UvmDebugSession     sessionHandle,
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmEventWaitOnQueueHandles(UvmEventQueueHandle *queueHandleArray,
-                                     unsigned             arraySize,
-                                     NvU64                timeout,
-                                     unsigned            *pNotificationFlags);
+                                     unsigned arraySize, NvU64 timeout,
+                                     unsigned *pNotificationFlags);
 
 //------------------------------------------------------------------------------
 // UvmEventGetNotificationHandles
@@ -3440,9 +3444,9 @@ NV_STATUS UvmEventWaitOnQueueHandles(UvmEventQueueHandle *queueHandleArray,
 //         One of the arguments is invalid.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventGetNotificationHandles(UvmEventQueueHandle  *queueHandleArray,
-                                         unsigned              arraySize,
-                                         void                **notificationHandleArray);
+NV_STATUS UvmEventGetNotificationHandles(UvmEventQueueHandle *queueHandleArray,
+                                         unsigned arraySize,
+                                         void **notificationHandleArray);
 
 //------------------------------------------------------------------------------
 // UvmEventGetGpuUuidTable
@@ -3472,7 +3476,7 @@ NV_STATUS UvmEventGetNotificationHandles(UvmEventQueueHandle  *queueHandleArray,
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmEventGetGpuUuidTable(NvProcessorUuid *gpuUuidTable,
-                                  unsigned        *validCount);
+                                  unsigned *validCount);
 
 //------------------------------------------------------------------------------
 // UvmEventFetch
@@ -3517,10 +3521,9 @@ NV_STATUS UvmEventGetGpuUuidTable(NvProcessorUuid *gpuUuidTable,
 //         Please re-run with a larger buffer.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventFetch(UvmDebugSession      sessionHandle,
-                        UvmEventQueueHandle  queueHandle,
-                        UvmEventEntry       *pBuffer,
-                        NvU64               *nEntries);
+NV_STATUS UvmEventFetch(UvmDebugSession sessionHandle,
+                        UvmEventQueueHandle queueHandle, UvmEventEntry *pBuffer,
+                        NvU64 *nEntries);
 
 //------------------------------------------------------------------------------
 // UvmEventSkipAll
@@ -3545,7 +3548,7 @@ NV_STATUS UvmEventFetch(UvmDebugSession      sessionHandle,
 //         One of the arguments is invalid.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventSkipAll(UvmDebugSession     sessionHandle,
+NV_STATUS UvmEventSkipAll(UvmDebugSession sessionHandle,
                           UvmEventQueueHandle queueHandle);
 
 //------------------------------------------------------------------------------
@@ -3576,8 +3579,8 @@ NV_STATUS UvmEventSkipAll(UvmDebugSession     sessionHandle,
 //         One of the arguments is invalid.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmEventQueryTimeStampType(UvmDebugSession        sessionHandle,
-                                     UvmEventQueueHandle    queueHandle,
+NV_STATUS UvmEventQueryTimeStampType(UvmDebugSession sessionHandle,
+                                     UvmEventQueueHandle queueHandle,
                                      UvmEventTimeStampType *timeStampType);
 
 //------------------------------------------------------------------------------
@@ -3621,18 +3624,14 @@ NV_STATUS UvmEventQueryTimeStampType(UvmDebugSession        sessionHandle,
 //         One of the arguments is invalid.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmDebugAccessMemory(UvmDebugSession     session,
-                               void               *baseAddress,
-                               NvU64               sizeInBytes,
-                               UvmDebugAccessType  accessType,
-                               void               *buffer,
-                               NvBool             *isBitmaskSet,
-                               NvU64              *bitmask);
+NV_STATUS UvmDebugAccessMemory(UvmDebugSession session, void *baseAddress,
+                               NvU64 sizeInBytes, UvmDebugAccessType accessType,
+                               void *buffer, NvBool *isBitmaskSet,
+                               NvU64 *bitmask);
 
 //
 // Uvm Tools uvm API
 //
-
 
 //------------------------------------------------------------------------------
 // UvmToolsCreateSession
@@ -3675,7 +3674,7 @@ NV_STATUS UvmDebugAccessMemory(UvmDebugSession     session,
 //         Internal memory allocation failed.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsCreateSession(UvmFileDescriptor      fd,
+NV_STATUS UvmToolsCreateSession(UvmFileDescriptor fd,
                                 UvmToolsSessionHandle *session);
 
 //------------------------------------------------------------------------------
@@ -3714,7 +3713,6 @@ NV_STATUS UvmToolsDestroySession(UvmToolsSessionHandle session);
 // - pause (Stop) capture of some of the events
 // 4. Destroy event Queue using UvmToolsDestroyEventQueue
 //
-
 
 NvLength UvmToolsGetEventControlSize(void);
 
@@ -3761,21 +3759,22 @@ NvLength UvmToolsGetNumberOfCounters(void);
 //         is not valid
 //
 //     NV_ERR_INSUFFICIENT_RESOURCES:
-//         There could be multiple reasons for this error. One would be that it's
+//         There could be multiple reasons for this error. One would be that
+//         it's
 //         not possible to allocate a queue of requested size. Another would be
 //         that either event_buffer or event_control memory couldn't be pinned
 //         (e.g. because of OS limitation of pinnable memory). Also it could not
 //         have been possible to create UvmToolsEventQueueDescriptor.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsCreateEventQueue(UvmToolsSessionHandle     session,
-                                   void                     *event_buffer,
-                                   NvLength                  event_buffer_size,
-                                   void                     *event_control,
+NV_STATUS UvmToolsCreateEventQueue(UvmToolsSessionHandle session,
+                                   void *event_buffer,
+                                   NvLength event_buffer_size,
+                                   void *event_control,
                                    UvmToolsEventQueueHandle *queue);
 
-UvmToolsEventQueueDescriptor UvmToolsGetEventQueueDescriptor(UvmToolsEventQueueHandle queue);
-
+UvmToolsEventQueueDescriptor
+UvmToolsGetEventQueueDescriptor(UvmToolsEventQueueHandle queue);
 
 //------------------------------------------------------------------------------
 // UvmToolsSetNotificationThreshold
@@ -3858,7 +3857,7 @@ NV_STATUS UvmToolsDestroyEventQueue(UvmToolsEventQueueHandle queue);
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmToolsEventQueueEnableEvents(UvmToolsEventQueueHandle queue,
-                                         NvU64                    eventTypeFlags);
+                                         NvU64 eventTypeFlags);
 
 //------------------------------------------------------------------------------
 // UvmToolsEventQueueDisableEvents
@@ -3891,8 +3890,7 @@ NV_STATUS UvmToolsEventQueueEnableEvents(UvmToolsEventQueueHandle queue,
 //
 //------------------------------------------------------------------------------
 NV_STATUS UvmToolsEventQueueDisableEvents(UvmToolsEventQueueHandle queue,
-                                          NvU64                    eventTypeFlags);
-
+                                          NvU64 eventTypeFlags);
 
 //------------------------------------------------------------------------------
 // UvmToolsCreateProcessAggregateCounters
@@ -3925,15 +3923,17 @@ NV_STATUS UvmToolsEventQueueDisableEvents(UvmToolsEventQueueHandle queue,
 //         Provided session is not valid
 //
 //     NV_ERR_INSUFFICIENT_RESOURCES
-//         There could be multiple reasons for this error. One would be that it's
+//         There could be multiple reasons for this error. One would be that
+//         it's
 //         not possible to allocate counters structure. Another would be that
 //         either event_buffer or event_control memory couldn't be pinned
 //         (e.g. because of OS limitation of pinnable memory)
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsCreateProcessAggregateCounters(UvmToolsSessionHandle   session,
-                                                 void                   *counters_buffer,
-                                                 UvmToolsCountersHandle *counters);
+NV_STATUS
+UvmToolsCreateProcessAggregateCounters(UvmToolsSessionHandle session,
+                                       void *counters_buffer,
+                                       UvmToolsCountersHandle *counters);
 
 //------------------------------------------------------------------------------
 // UvmToolsCreateProcessorCounters
@@ -3969,7 +3969,8 @@ NV_STATUS UvmToolsCreateProcessAggregateCounters(UvmToolsSessionHandle   session
 //         session handle does not refer to a valid tools session
 //
 //     NV_ERR_INSUFFICIENT_RESOURCES
-//         There could be multiple reasons for this error. One would be that it's
+//         There could be multiple reasons for this error. One would be that
+//         it's
 //         not possible to allocate counters structure. Another would be that
 //         either event_buffer or event_control memory couldn't be pinned
 //         (e.g. because of OS limitation of pinnable memory)
@@ -3978,9 +3979,9 @@ NV_STATUS UvmToolsCreateProcessAggregateCounters(UvmToolsSessionHandle   session
 //         processorUuid does not refer to any known resource in UVM driver
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsCreateProcessorCounters(UvmToolsSessionHandle   session,
-                                          void                   *counters_buffer,
-                                          const NvProcessorUuid  *processorUuid,
+NV_STATUS UvmToolsCreateProcessorCounters(UvmToolsSessionHandle session,
+                                          void *counters_buffer,
+                                          const NvProcessorUuid *processorUuid,
                                           UvmToolsCountersHandle *counters);
 
 //------------------------------------------------------------------------------
@@ -4036,7 +4037,7 @@ NV_STATUS UvmToolsDestroyCounters(UvmToolsCountersHandle counters);
 //         Counters handle does not refer to a valid counters structure.
 //------------------------------------------------------------------------------
 NV_STATUS UvmToolsEnableCounters(UvmToolsCountersHandle counters,
-                                 NvU64                  counterTypeFlags);
+                                 NvU64 counterTypeFlags);
 
 //------------------------------------------------------------------------------
 // UvmToolsDisableCounters
@@ -4070,7 +4071,7 @@ NV_STATUS UvmToolsEnableCounters(UvmToolsCountersHandle counters,
 //         Counters handle does not refer to a valid counters structure.
 //------------------------------------------------------------------------------
 NV_STATUS UvmToolsDisableCounters(UvmToolsCountersHandle counters,
-                                  NvU64                  counterTypeFlags);
+                                  NvU64 counterTypeFlags);
 
 //------------------------------------------------------------------------------
 // UvmToolsReadProcessMemory
@@ -4121,11 +4122,9 @@ NV_STATUS UvmToolsDisableCounters(UvmToolsCountersHandle counters,
 //         Read spans more than a single target process allocation.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsReadProcessMemory(UvmToolsSessionHandle  session,
-                                    void                  *buffer,
-                                    NvLength               size,
-                                    void                  *targetVa,
-                                    NvLength              *bytes_read);
+NV_STATUS UvmToolsReadProcessMemory(UvmToolsSessionHandle session, void *buffer,
+                                    NvLength size, void *targetVa,
+                                    NvLength *bytes_read);
 
 //------------------------------------------------------------------------------
 // UvmToolsWriteProcessMemory
@@ -4177,18 +4176,17 @@ NV_STATUS UvmToolsReadProcessMemory(UvmToolsSessionHandle  session,
 //         Write spans more than a single target process allocation.
 //
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsWriteProcessMemory(UvmToolsSessionHandle  session,
-                                     void                  *buffer,
-                                     NvLength               size,
-                                     void                  *targetVa,
-                                     NvLength              *bytes_read);
+NV_STATUS UvmToolsWriteProcessMemory(UvmToolsSessionHandle session,
+                                     void *buffer, NvLength size,
+                                     void *targetVa, NvLength *bytes_read);
 
 //------------------------------------------------------------------------------
 // UvmToolsGetProcessorUuidTable
 //
 // Populate a table with the UUIDs of all the currently registered processors
 // in the target process.  When a GPU is registered, it is added to the table.
-// When a GPU is unregistered, it is removed.  As long as a GPU remains registered,
+// When a GPU is unregistered, it is removed.  As long as a GPU remains
+// registered,
 // its index in the table does not change.  New registrations obtain the first
 // unused index.
 //
@@ -4210,9 +4208,9 @@ NV_STATUS UvmToolsWriteProcessMemory(UvmToolsSessionHandle  session,
 //     NV_ERR_INVALID_ADDRESS:
 //         writing to table failed.
 //------------------------------------------------------------------------------
-NV_STATUS UvmToolsGetProcessorUuidTable(UvmToolsSessionHandle  session,
-                                        NvProcessorUuid       *table,
-                                        NvLength              *count);
+NV_STATUS UvmToolsGetProcessorUuidTable(UvmToolsSessionHandle session,
+                                        NvProcessorUuid *table,
+                                        NvLength *count);
 
 //------------------------------------------------------------------------------
 // UvmToolsFlushEvents
